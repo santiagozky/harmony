@@ -250,3 +250,9 @@ INFO  2012-03-08 17:39:22,283 [main] - Special log message at: 1331224762283
 WARN  2012-03-08 17:39:22,283 [main] - Special log message at: 1331224762283
 ERROR 2012-03-08 17:39:22,283 [main] - Special log message at: 1331224762283
 FATAL 2012-03-08 17:39:22,283 [main] - Special log message at: 1331224762283
+TRACE 2012-03-09 11:32:16,615 [main] - Special log message at: 1331289136615
+DEBUG 2012-03-09 11:32:16,615 [main] - Special log message at: 1331289136615
+INFO  2012-03-09 11:32:16,616 [main] - Special log message at: 1331289136615
+WARN  2012-03-09 11:32:16,616 [main] - Special log message at: 1331289136615
+ERROR 2012-03-09 11:32:16,616 [main] - Special log message at: 1331289136615
+FATAL 2012-03-09 11:32:16,616 [main] - Special log message at: 1331289136615

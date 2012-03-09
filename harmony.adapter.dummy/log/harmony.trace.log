@@ -503,3 +503,104 @@ INFO  2012-03-08 17:38:38,438 [localDummy_RequestHandler_2b0a0016_getLinks] - re
 INFO  2012-03-08 17:38:38,494 [localDummy_RequestHandler_2b0a0016_getLinks] - Warning, it was impossible to get some EPR.
 INFO  2012-03-08 17:38:38,495 [localDummy_RequestHandler_2b0a0016_getLinks] - Using default SimpleSoapClient
 INFO  2012-03-08 17:38:38,501 [localDummy_RequestHandler_2b0a0017_addTopic] - rename_thread localDummy_RequestHandler_2b0a0016_getLinks
+INFO  2012-03-09 11:32:29,740 [main] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:29,748 [main] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,708 [localDummy_RequestHandler_54f40000_isAvailable] - rename_thread main
+DEBUG 2012-03-09 11:32:30,736 [localDummy_RequestHandler_54f40000_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:30,736 [localDummy_RequestHandler_54f40000_isAvailable] - IsAvailableType is local request
+INFO  2012-03-09 11:32:30,747 [localDummy_RequestHandler_54f40001_createReservation] - rename_thread localDummy_RequestHandler_54f40000_isAvailable
+DEBUG 2012-03-09 11:32:30,755 [localDummy_RequestHandler_54f40001_createReservation] - Checking responsibility for CreateReservationType
+DEBUG 2012-03-09 11:32:30,755 [localDummy_RequestHandler_54f40001_createReservation] - CreateReservationType is local request
+INFO  2012-03-09 11:32:30,761 [localDummy_RequestHandler_54f40002_getStatus] - rename_thread localDummy_RequestHandler_54f40001_createReservation
+DEBUG 2012-03-09 11:32:30,762 [localDummy_RequestHandler_54f40002_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:30,762 [localDummy_RequestHandler_54f40002_getStatus] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,762 [localDummy_RequestHandler_54f40002_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:30,772 [localDummy_RequestHandler_54f40003_cancelReservation] - rename_thread localDummy_RequestHandler_54f40002_getStatus
+DEBUG 2012-03-09 11:32:30,773 [localDummy_RequestHandler_54f40003_cancelReservation] - Checking responsibility for CancelReservationType
+DEBUG 2012-03-09 11:32:30,773 [localDummy_RequestHandler_54f40003_cancelReservation] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,773 [localDummy_RequestHandler_54f40003_cancelReservation] - CancelReservationType is local request
+INFO  2012-03-09 11:32:30,779 [localDummy_RequestHandler_54f40004_getStatus] - rename_thread localDummy_RequestHandler_54f40003_cancelReservation
+DEBUG 2012-03-09 11:32:30,781 [localDummy_RequestHandler_54f40004_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:30,781 [localDummy_RequestHandler_54f40004_getStatus] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,781 [localDummy_RequestHandler_54f40004_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:30,795 [localDummy_RequestHandler_54f40004_getStatus] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:30,796 [localDummy_RequestHandler_54f40004_getStatus] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,803 [localDummy_RequestHandler_54f40005_isAvailable] - rename_thread localDummy_RequestHandler_54f40004_getStatus
+DEBUG 2012-03-09 11:32:30,807 [localDummy_RequestHandler_54f40005_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:30,807 [localDummy_RequestHandler_54f40005_isAvailable] - IsAvailableType is local request
+INFO  2012-03-09 11:32:30,818 [localDummy_RequestHandler_54f40006_createReservation] - rename_thread localDummy_RequestHandler_54f40005_isAvailable
+DEBUG 2012-03-09 11:32:30,823 [localDummy_RequestHandler_54f40006_createReservation] - Checking responsibility for CreateReservationType
+DEBUG 2012-03-09 11:32:30,823 [localDummy_RequestHandler_54f40006_createReservation] - CreateReservationType is local request
+INFO  2012-03-09 11:32:30,832 [localDummy_RequestHandler_54f40007_getStatus] - rename_thread localDummy_RequestHandler_54f40006_createReservation
+DEBUG 2012-03-09 11:32:30,834 [localDummy_RequestHandler_54f40007_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:30,834 [localDummy_RequestHandler_54f40007_getStatus] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,834 [localDummy_RequestHandler_54f40007_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:30,847 [localDummy_RequestHandler_54f40008_cancelReservation] - rename_thread localDummy_RequestHandler_54f40007_getStatus
+DEBUG 2012-03-09 11:32:30,849 [localDummy_RequestHandler_54f40008_cancelReservation] - Checking responsibility for CancelReservationType
+DEBUG 2012-03-09 11:32:30,849 [localDummy_RequestHandler_54f40008_cancelReservation] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,849 [localDummy_RequestHandler_54f40008_cancelReservation] - CancelReservationType is local request
+INFO  2012-03-09 11:32:30,854 [localDummy_RequestHandler_54f40009_getStatus] - rename_thread localDummy_RequestHandler_54f40008_cancelReservation
+DEBUG 2012-03-09 11:32:30,855 [localDummy_RequestHandler_54f40009_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:30,856 [localDummy_RequestHandler_54f40009_getStatus] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,856 [localDummy_RequestHandler_54f40009_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:30,871 [localDummy_RequestHandler_54f4000a_getReservations] - rename_thread localDummy_RequestHandler_54f40009_getStatus
+DEBUG 2012-03-09 11:32:30,872 [localDummy_RequestHandler_54f4000a_getReservations] - Checking responsibility for GetReservationsType
+WARN  2012-03-09 11:32:30,873 [localDummy_RequestHandler_54f4000a_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+DEBUG 2012-03-09 11:32:30,873 [localDummy_RequestHandler_54f4000a_getReservations] - GetReservationsType is local request
+INFO  2012-03-09 11:32:30,884 [localDummy_RequestHandler_54f4000a_getReservations] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:30,884 [localDummy_RequestHandler_54f4000a_getReservations] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,887 [localDummy_RequestHandler_54f4000b_bind] - rename_thread localDummy_RequestHandler_54f4000a_getReservations
+DEBUG 2012-03-09 11:32:30,889 [localDummy_RequestHandler_54f4000b_bind] - Checking responsibility for BindType
+DEBUG 2012-03-09 11:32:30,889 [localDummy_RequestHandler_54f4000b_bind] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,889 [localDummy_RequestHandler_54f4000b_bind] - BindType is local request
+INFO  2012-03-09 11:32:30,911 [localDummy_RequestHandler_54f4000b_bind] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:30,912 [localDummy_RequestHandler_54f4000b_bind] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,914 [localDummy_RequestHandler_54f4000b_bind] - Is the resource available...
+INFO  2012-03-09 11:32:30,918 [localDummy_RequestHandler_54f4000c_isAvailable] - rename_thread localDummy_RequestHandler_54f4000b_bind
+DEBUG 2012-03-09 11:32:30,922 [localDummy_RequestHandler_54f4000c_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:30,922 [localDummy_RequestHandler_54f4000c_isAvailable] - IsAvailableType is local request
+INFO  2012-03-09 11:32:30,929 [localDummy_RequestHandler_54f4000c_isAvailable] - Create the actual reservation...
+INFO  2012-03-09 11:32:30,933 [localDummy_RequestHandler_54f4000d_createReservation] - rename_thread localDummy_RequestHandler_54f4000c_isAvailable
+DEBUG 2012-03-09 11:32:30,936 [localDummy_RequestHandler_54f4000d_createReservation] - Checking responsibility for CreateReservationType
+DEBUG 2012-03-09 11:32:30,936 [localDummy_RequestHandler_54f4000d_createReservation] - CreateReservationType is local request
+INFO  2012-03-09 11:32:30,940 [localDummy_RequestHandler_54f4000d_createReservation] - Got ID: 3@localDummy
+INFO  2012-03-09 11:32:30,940 [localDummy_RequestHandler_54f4000d_createReservation] - Ask for all reservations (3@localDummy)...
+INFO  2012-03-09 11:32:30,945 [localDummy_RequestHandler_54f4000e_getReservations] - rename_thread localDummy_RequestHandler_54f4000d_createReservation
+DEBUG 2012-03-09 11:32:30,946 [localDummy_RequestHandler_54f4000e_getReservations] - Checking responsibility for GetReservationsType
+WARN  2012-03-09 11:32:30,947 [localDummy_RequestHandler_54f4000e_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+DEBUG 2012-03-09 11:32:30,947 [localDummy_RequestHandler_54f4000e_getReservations] - GetReservationsType is local request
+DEBUG 2012-03-09 11:32:30,963 [localDummy_RequestHandler_54f4000e_getReservations] - Found reservation: 3@localDummy
+DEBUG 2012-03-09 11:32:30,963 [localDummy_RequestHandler_54f4000e_getReservations] - Found reservation: 3@localDummy
+DEBUG 2012-03-09 11:32:30,963 [localDummy_RequestHandler_54f4000e_getReservations] - Found reservation: 3@localDummy
+INFO  2012-03-09 11:32:30,963 [localDummy_RequestHandler_54f4000e_getReservations] - Found reservations: 3
+INFO  2012-03-09 11:32:30,963 [localDummy_RequestHandler_54f4000e_getReservations] - Ask for the status of the reservation...
+INFO  2012-03-09 11:32:30,965 [localDummy_RequestHandler_54f4000f_getStatus] - rename_thread localDummy_RequestHandler_54f4000e_getReservations
+DEBUG 2012-03-09 11:32:30,967 [localDummy_RequestHandler_54f4000f_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:30,967 [localDummy_RequestHandler_54f4000f_getStatus] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,967 [localDummy_RequestHandler_54f4000f_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:30,974 [localDummy_RequestHandler_54f4000f_getStatus] - Endpoints should be blocked now...
+INFO  2012-03-09 11:32:30,979 [localDummy_RequestHandler_54f40010_isAvailable] - rename_thread localDummy_RequestHandler_54f4000f_getStatus
+DEBUG 2012-03-09 11:32:30,982 [localDummy_RequestHandler_54f40010_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:30,982 [localDummy_RequestHandler_54f40010_isAvailable] - IsAvailableType is local request
+INFO  2012-03-09 11:32:30,989 [localDummy_RequestHandler_54f40010_isAvailable] - Cancel the reservation again...
+INFO  2012-03-09 11:32:30,992 [localDummy_RequestHandler_54f40011_cancelReservation] - rename_thread localDummy_RequestHandler_54f40010_isAvailable
+DEBUG 2012-03-09 11:32:30,993 [localDummy_RequestHandler_54f40011_cancelReservation] - Checking responsibility for CancelReservationType
+DEBUG 2012-03-09 11:32:30,993 [localDummy_RequestHandler_54f40011_cancelReservation] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:30,993 [localDummy_RequestHandler_54f40011_cancelReservation] - CancelReservationType is local request
+INFO  2012-03-09 11:32:30,997 [localDummy_RequestHandler_54f40011_cancelReservation] - Ask for the status of the reservation...
+INFO  2012-03-09 11:32:30,999 [localDummy_RequestHandler_54f40012_getStatus] - rename_thread localDummy_RequestHandler_54f40011_cancelReservation
+DEBUG 2012-03-09 11:32:31,001 [localDummy_RequestHandler_54f40012_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:31,001 [localDummy_RequestHandler_54f40012_getStatus] - Own: localDummy, Req: localDummy
+DEBUG 2012-03-09 11:32:31,001 [localDummy_RequestHandler_54f40012_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:31,008 [localDummy_RequestHandler_54f40012_getStatus] - Endpoints should not be blocked now...
+INFO  2012-03-09 11:32:31,018 [localDummy_RequestHandler_54f40013_isAvailable] - rename_thread localDummy_RequestHandler_54f40012_getStatus
+DEBUG 2012-03-09 11:32:31,022 [localDummy_RequestHandler_54f40013_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:31,022 [localDummy_RequestHandler_54f40013_isAvailable] - IsAvailableType is local request
+INFO  2012-03-09 11:32:31,045 [localDummy_RequestHandler_54f40013_isAvailable] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:31,045 [localDummy_RequestHandler_54f40013_isAvailable] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:31,054 [localDummy_RequestHandler_54f40014_getDomains] - rename_thread localDummy_RequestHandler_54f40013_isAvailable
+INFO  2012-03-09 11:32:31,065 [localDummy_RequestHandler_54f40015_getEndpoints] - rename_thread localDummy_RequestHandler_54f40014_getDomains
+INFO  2012-03-09 11:32:31,076 [localDummy_RequestHandler_54f40016_getLinks] - rename_thread localDummy_RequestHandler_54f40015_getEndpoints
+INFO  2012-03-09 11:32:31,105 [localDummy_RequestHandler_54f40016_getLinks] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:31,106 [localDummy_RequestHandler_54f40016_getLinks] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:31,110 [localDummy_RequestHandler_54f40017_addTopic] - rename_thread localDummy_RequestHandler_54f40016_getLinks

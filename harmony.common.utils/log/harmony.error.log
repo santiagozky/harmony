@@ -46,3 +46,7 @@ ERROR 2012-03-08 17:39:22,236 [main] - Error log message at: 1331224762235
 FATAL 2012-03-08 17:39:22,278 [main] - Fatal log message at: 1331224762278
 ERROR 2012-03-08 17:39:22,298 [main] - logError
 FATAL 2012-03-08 17:39:22,298 [main] - logFatal
+ERROR 2012-03-09 11:32:16,531 [main] - Error log message at: 1331289136530
+FATAL 2012-03-09 11:32:16,609 [main] - Fatal log message at: 1331289136609
+ERROR 2012-03-09 11:32:16,626 [main] - logError
+FATAL 2012-03-09 11:32:16,627 [main] - logFatal

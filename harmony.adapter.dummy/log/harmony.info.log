@@ -238,3 +238,51 @@ INFO  2012-03-08 17:38:38,438 [localDummy_RequestHandler_2b0a0016_getLinks] - re
 INFO  2012-03-08 17:38:38,494 [localDummy_RequestHandler_2b0a0016_getLinks] - Warning, it was impossible to get some EPR.
 INFO  2012-03-08 17:38:38,495 [localDummy_RequestHandler_2b0a0016_getLinks] - Using default SimpleSoapClient
 INFO  2012-03-08 17:38:38,501 [localDummy_RequestHandler_2b0a0017_addTopic] - rename_thread localDummy_RequestHandler_2b0a0016_getLinks
+INFO  2012-03-09 11:32:29,740 [main] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:29,748 [main] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,708 [localDummy_RequestHandler_54f40000_isAvailable] - rename_thread main
+INFO  2012-03-09 11:32:30,747 [localDummy_RequestHandler_54f40001_createReservation] - rename_thread localDummy_RequestHandler_54f40000_isAvailable
+INFO  2012-03-09 11:32:30,761 [localDummy_RequestHandler_54f40002_getStatus] - rename_thread localDummy_RequestHandler_54f40001_createReservation
+INFO  2012-03-09 11:32:30,772 [localDummy_RequestHandler_54f40003_cancelReservation] - rename_thread localDummy_RequestHandler_54f40002_getStatus
+INFO  2012-03-09 11:32:30,779 [localDummy_RequestHandler_54f40004_getStatus] - rename_thread localDummy_RequestHandler_54f40003_cancelReservation
+INFO  2012-03-09 11:32:30,795 [localDummy_RequestHandler_54f40004_getStatus] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:30,796 [localDummy_RequestHandler_54f40004_getStatus] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,803 [localDummy_RequestHandler_54f40005_isAvailable] - rename_thread localDummy_RequestHandler_54f40004_getStatus
+INFO  2012-03-09 11:32:30,818 [localDummy_RequestHandler_54f40006_createReservation] - rename_thread localDummy_RequestHandler_54f40005_isAvailable
+INFO  2012-03-09 11:32:30,832 [localDummy_RequestHandler_54f40007_getStatus] - rename_thread localDummy_RequestHandler_54f40006_createReservation
+INFO  2012-03-09 11:32:30,847 [localDummy_RequestHandler_54f40008_cancelReservation] - rename_thread localDummy_RequestHandler_54f40007_getStatus
+INFO  2012-03-09 11:32:30,854 [localDummy_RequestHandler_54f40009_getStatus] - rename_thread localDummy_RequestHandler_54f40008_cancelReservation
+INFO  2012-03-09 11:32:30,871 [localDummy_RequestHandler_54f4000a_getReservations] - rename_thread localDummy_RequestHandler_54f40009_getStatus
+WARN  2012-03-09 11:32:30,873 [localDummy_RequestHandler_54f4000a_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+INFO  2012-03-09 11:32:30,884 [localDummy_RequestHandler_54f4000a_getReservations] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:30,884 [localDummy_RequestHandler_54f4000a_getReservations] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,887 [localDummy_RequestHandler_54f4000b_bind] - rename_thread localDummy_RequestHandler_54f4000a_getReservations
+INFO  2012-03-09 11:32:30,911 [localDummy_RequestHandler_54f4000b_bind] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:30,912 [localDummy_RequestHandler_54f4000b_bind] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:30,914 [localDummy_RequestHandler_54f4000b_bind] - Is the resource available...
+INFO  2012-03-09 11:32:30,918 [localDummy_RequestHandler_54f4000c_isAvailable] - rename_thread localDummy_RequestHandler_54f4000b_bind
+INFO  2012-03-09 11:32:30,929 [localDummy_RequestHandler_54f4000c_isAvailable] - Create the actual reservation...
+INFO  2012-03-09 11:32:30,933 [localDummy_RequestHandler_54f4000d_createReservation] - rename_thread localDummy_RequestHandler_54f4000c_isAvailable
+INFO  2012-03-09 11:32:30,940 [localDummy_RequestHandler_54f4000d_createReservation] - Got ID: 3@localDummy
+INFO  2012-03-09 11:32:30,940 [localDummy_RequestHandler_54f4000d_createReservation] - Ask for all reservations (3@localDummy)...
+INFO  2012-03-09 11:32:30,945 [localDummy_RequestHandler_54f4000e_getReservations] - rename_thread localDummy_RequestHandler_54f4000d_createReservation
+WARN  2012-03-09 11:32:30,947 [localDummy_RequestHandler_54f4000e_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+INFO  2012-03-09 11:32:30,963 [localDummy_RequestHandler_54f4000e_getReservations] - Found reservations: 3
+INFO  2012-03-09 11:32:30,963 [localDummy_RequestHandler_54f4000e_getReservations] - Ask for the status of the reservation...
+INFO  2012-03-09 11:32:30,965 [localDummy_RequestHandler_54f4000f_getStatus] - rename_thread localDummy_RequestHandler_54f4000e_getReservations
+INFO  2012-03-09 11:32:30,974 [localDummy_RequestHandler_54f4000f_getStatus] - Endpoints should be blocked now...
+INFO  2012-03-09 11:32:30,979 [localDummy_RequestHandler_54f40010_isAvailable] - rename_thread localDummy_RequestHandler_54f4000f_getStatus
+INFO  2012-03-09 11:32:30,989 [localDummy_RequestHandler_54f40010_isAvailable] - Cancel the reservation again...
+INFO  2012-03-09 11:32:30,992 [localDummy_RequestHandler_54f40011_cancelReservation] - rename_thread localDummy_RequestHandler_54f40010_isAvailable
+INFO  2012-03-09 11:32:30,997 [localDummy_RequestHandler_54f40011_cancelReservation] - Ask for the status of the reservation...
+INFO  2012-03-09 11:32:30,999 [localDummy_RequestHandler_54f40012_getStatus] - rename_thread localDummy_RequestHandler_54f40011_cancelReservation
+INFO  2012-03-09 11:32:31,008 [localDummy_RequestHandler_54f40012_getStatus] - Endpoints should not be blocked now...
+INFO  2012-03-09 11:32:31,018 [localDummy_RequestHandler_54f40013_isAvailable] - rename_thread localDummy_RequestHandler_54f40012_getStatus
+INFO  2012-03-09 11:32:31,045 [localDummy_RequestHandler_54f40013_isAvailable] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:31,045 [localDummy_RequestHandler_54f40013_isAvailable] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:31,054 [localDummy_RequestHandler_54f40014_getDomains] - rename_thread localDummy_RequestHandler_54f40013_isAvailable
+INFO  2012-03-09 11:32:31,065 [localDummy_RequestHandler_54f40015_getEndpoints] - rename_thread localDummy_RequestHandler_54f40014_getDomains
+INFO  2012-03-09 11:32:31,076 [localDummy_RequestHandler_54f40016_getLinks] - rename_thread localDummy_RequestHandler_54f40015_getEndpoints
+INFO  2012-03-09 11:32:31,105 [localDummy_RequestHandler_54f40016_getLinks] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:31,106 [localDummy_RequestHandler_54f40016_getLinks] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:31,110 [localDummy_RequestHandler_54f40017_addTopic] - rename_thread localDummy_RequestHandler_54f40016_getLinks

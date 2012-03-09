@@ -868,3 +868,148 @@ INFO  2012-03-08 17:38:33,997 [uva.arrm_RequestHandler_198c0015_getStatus] - ren
 DEBUG 2012-03-08 17:38:33,999 [uva.arrm_RequestHandler_198c0015_getStatus] - Checking responsibility for GetStatusType
 DEBUG 2012-03-08 17:38:33,999 [uva.arrm_RequestHandler_198c0015_getStatus] - Own: uva.arrm, Req: uva.arrm
 DEBUG 2012-03-08 17:38:33,999 [uva.arrm_RequestHandler_198c0015_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:25,822 [main] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:25,835 [main] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:27,548 [unknown_RequestHandler_489c0000_addTopic] - rename_thread main
+INFO  2012-03-09 11:32:27,675 [unknown_RequestHandler_489c0000_addTopic] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:27,676 [unknown_RequestHandler_489c0000_addTopic] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:27,723 [uva.arrm_RequestHandler_489c0001_isAvailable] - rename_thread unknown_RequestHandler_489c0000_addTopic
+DEBUG 2012-03-09 11:32:27,731 [uva.arrm_RequestHandler_489c0001_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:27,731 [uva.arrm_RequestHandler_489c0001_isAvailable] - IsAvailableType is local request
+DEBUG 2012-03-09 11:32:27,731 [uva.arrm_RequestHandler_489c0001_isAvailable] - isAvailable called with following parameter: 
+DEBUG 2012-03-09 11:32:27,732 [uva.arrm_RequestHandler_489c0001_isAvailable] -  Type: FIXED
+DEBUG 2012-03-09 11:32:27,732 [uva.arrm_RequestHandler_489c0001_isAvailable] -  Start time: 2012-03-09T11:32:27.678+01:00
+DEBUG 2012-03-09 11:32:27,732 [uva.arrm_RequestHandler_489c0001_isAvailable] -  Duration: 100
+DEBUG 2012-03-09 11:32:27,732 [uva.arrm_RequestHandler_489c0001_isAvailable] -  From: 10.9.1.2
+DEBUG 2012-03-09 11:32:27,732 [uva.arrm_RequestHandler_489c0001_isAvailable] -  To: 10.9.1.1
+DEBUG 2012-03-09 11:32:27,732 [uva.arrm_RequestHandler_489c0001_isAvailable] -  MinBW: 100
+DEBUG 2012-03-09 11:32:27,733 [uva.arrm_RequestHandler_489c0001_isAvailable] -  MaxBW: null
+DEBUG 2012-03-09 11:32:27,733 [uva.arrm_RequestHandler_489c0001_isAvailable] -  Delay: 100
+INFO  2012-03-09 11:32:27,746 [uva.arrm_RequestHandler_489c0002_createReservation] - rename_thread uva.arrm_RequestHandler_489c0001_isAvailable
+DEBUG 2012-03-09 11:32:27,785 [uva.arrm_RequestHandler_489c0002_createReservation] - Checking responsibility for CreateReservationType
+DEBUG 2012-03-09 11:32:27,785 [uva.arrm_RequestHandler_489c0002_createReservation] - CreateReservationType is local request
+DEBUG 2012-03-09 11:32:27,785 [uva.arrm_RequestHandler_489c0002_createReservation] - createReservation called with following parameter: 
+DEBUG 2012-03-09 11:32:27,785 [uva.arrm_RequestHandler_489c0002_createReservation] -  Type: FIXED
+DEBUG 2012-03-09 11:32:27,785 [uva.arrm_RequestHandler_489c0002_createReservation] -  Start time: 2012-03-09T11:32:27.742+01:00
+DEBUG 2012-03-09 11:32:27,785 [uva.arrm_RequestHandler_489c0002_createReservation] -  Duration: 100
+DEBUG 2012-03-09 11:32:27,785 [uva.arrm_RequestHandler_489c0002_createReservation] -  From: 10.9.1.1
+DEBUG 2012-03-09 11:32:27,786 [uva.arrm_RequestHandler_489c0002_createReservation] -  To: 10.9.1.2
+DEBUG 2012-03-09 11:32:27,786 [uva.arrm_RequestHandler_489c0002_createReservation] -  MinBW: 100
+DEBUG 2012-03-09 11:32:27,786 [uva.arrm_RequestHandler_489c0002_createReservation] -  MaxBW: null
+DEBUG 2012-03-09 11:32:27,786 [uva.arrm_RequestHandler_489c0002_createReservation] -  Delay: 100
+INFO  2012-03-09 11:32:27,794 [uva.arrm_RequestHandler_489c0003_getStatus] - rename_thread uva.arrm_RequestHandler_489c0002_createReservation
+DEBUG 2012-03-09 11:32:27,796 [uva.arrm_RequestHandler_489c0003_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:27,796 [uva.arrm_RequestHandler_489c0003_getStatus] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:27,796 [uva.arrm_RequestHandler_489c0003_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:27,810 [uva.arrm_RequestHandler_489c0004_cancelReservation] - rename_thread uva.arrm_RequestHandler_489c0003_getStatus
+DEBUG 2012-03-09 11:32:27,812 [uva.arrm_RequestHandler_489c0004_cancelReservation] - Checking responsibility for CancelReservationType
+DEBUG 2012-03-09 11:32:27,812 [uva.arrm_RequestHandler_489c0004_cancelReservation] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:27,812 [uva.arrm_RequestHandler_489c0004_cancelReservation] - CancelReservationType is local request
+DEBUG 2012-03-09 11:32:27,813 [uva.arrm_RequestHandler_489c0004_cancelReservation] - cancelReservation called with following parameter: 
+DEBUG 2012-03-09 11:32:27,813 [uva.arrm_RequestHandler_489c0004_cancelReservation] -  GRI: 1
+INFO  2012-03-09 11:32:27,819 [uva.arrm_RequestHandler_489c0005_getStatus] - rename_thread uva.arrm_RequestHandler_489c0004_cancelReservation
+DEBUG 2012-03-09 11:32:27,820 [uva.arrm_RequestHandler_489c0005_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:27,820 [uva.arrm_RequestHandler_489c0005_getStatus] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:27,820 [uva.arrm_RequestHandler_489c0005_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:27,828 [uva.arrm_RequestHandler_489c0005_getStatus] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:27,828 [uva.arrm_RequestHandler_489c0005_getStatus] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:27,833 [uva.arrm_RequestHandler_489c0006_isAvailable] - rename_thread uva.arrm_RequestHandler_489c0005_getStatus
+DEBUG 2012-03-09 11:32:27,836 [uva.arrm_RequestHandler_489c0006_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:27,836 [uva.arrm_RequestHandler_489c0006_isAvailable] - IsAvailableType is local request
+DEBUG 2012-03-09 11:32:27,836 [uva.arrm_RequestHandler_489c0006_isAvailable] - isAvailable called with following parameter: 
+DEBUG 2012-03-09 11:32:27,836 [uva.arrm_RequestHandler_489c0006_isAvailable] -  Type: FIXED
+DEBUG 2012-03-09 11:32:27,836 [uva.arrm_RequestHandler_489c0006_isAvailable] -  Start time: 2012-03-09T11:32:27.829+01:00
+DEBUG 2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] -  Duration: 100
+DEBUG 2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] -  From: 10.9.1.2
+DEBUG 2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] -  To: 10.9.1.1
+DEBUG 2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] -  MinBW: 100
+DEBUG 2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] -  MaxBW: null
+DEBUG 2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] -  Delay: 100
+INFO  2012-03-09 11:32:27,848 [uva.arrm_RequestHandler_489c0007_createReservation] - rename_thread uva.arrm_RequestHandler_489c0006_isAvailable
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] - Checking responsibility for CreateReservationType
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] - CreateReservationType is local request
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] - createReservation called with following parameter: 
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] -  Type: FIXED
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] -  Start time: 2012-03-09T11:32:27.844+01:00
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] -  Duration: 100
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] -  From: 10.9.1.1
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] -  To: 10.9.1.2
+DEBUG 2012-03-09 11:32:27,852 [uva.arrm_RequestHandler_489c0007_createReservation] -  MinBW: 100
+DEBUG 2012-03-09 11:32:27,853 [uva.arrm_RequestHandler_489c0007_createReservation] -  MaxBW: null
+DEBUG 2012-03-09 11:32:27,853 [uva.arrm_RequestHandler_489c0007_createReservation] -  Delay: 100
+INFO  2012-03-09 11:32:27,858 [uva.arrm_RequestHandler_489c0008_getStatus] - rename_thread uva.arrm_RequestHandler_489c0007_createReservation
+DEBUG 2012-03-09 11:32:27,860 [uva.arrm_RequestHandler_489c0008_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:27,860 [uva.arrm_RequestHandler_489c0008_getStatus] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:27,860 [uva.arrm_RequestHandler_489c0008_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:27,872 [uva.arrm_RequestHandler_489c0009_cancelReservation] - rename_thread uva.arrm_RequestHandler_489c0008_getStatus
+DEBUG 2012-03-09 11:32:27,874 [uva.arrm_RequestHandler_489c0009_cancelReservation] - Checking responsibility for CancelReservationType
+DEBUG 2012-03-09 11:32:27,875 [uva.arrm_RequestHandler_489c0009_cancelReservation] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:27,875 [uva.arrm_RequestHandler_489c0009_cancelReservation] - CancelReservationType is local request
+DEBUG 2012-03-09 11:32:27,875 [uva.arrm_RequestHandler_489c0009_cancelReservation] - cancelReservation called with following parameter: 
+DEBUG 2012-03-09 11:32:27,875 [uva.arrm_RequestHandler_489c0009_cancelReservation] -  GRI: 2
+INFO  2012-03-09 11:32:27,882 [uva.arrm_RequestHandler_489c000a_getStatus] - rename_thread uva.arrm_RequestHandler_489c0009_cancelReservation
+DEBUG 2012-03-09 11:32:27,883 [uva.arrm_RequestHandler_489c000a_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:27,883 [uva.arrm_RequestHandler_489c000a_getStatus] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:27,883 [uva.arrm_RequestHandler_489c000a_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:27,897 [uva.arrm_RequestHandler_489c000b_getReservations] - rename_thread uva.arrm_RequestHandler_489c000a_getStatus
+DEBUG 2012-03-09 11:32:27,899 [uva.arrm_RequestHandler_489c000b_getReservations] - Checking responsibility for GetReservationsType
+WARN  2012-03-09 11:32:27,899 [uva.arrm_RequestHandler_489c000b_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+DEBUG 2012-03-09 11:32:27,899 [uva.arrm_RequestHandler_489c000b_getReservations] - GetReservationsType is local request
+INFO  2012-03-09 11:32:27,911 [uva.arrm_RequestHandler_489c000b_getReservations] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:27,912 [uva.arrm_RequestHandler_489c000b_getReservations] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:27,917 [uva.arrm_RequestHandler_489c000c_bind] - rename_thread uva.arrm_RequestHandler_489c000b_getReservations
+DEBUG 2012-03-09 11:32:27,920 [uva.arrm_RequestHandler_489c000c_bind] - Checking responsibility for BindType
+DEBUG 2012-03-09 11:32:27,920 [uva.arrm_RequestHandler_489c000c_bind] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:27,921 [uva.arrm_RequestHandler_489c000c_bind] - BindType is local request
+INFO  2012-03-09 11:32:27,950 [uva.arrm_RequestHandler_489c000c_bind] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:27,950 [uva.arrm_RequestHandler_489c000c_bind] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:27,988 [uva.arrm_RequestHandler_489c000d_getDomains] - rename_thread uva.arrm_RequestHandler_489c000c_bind
+INFO  2012-03-09 11:32:28,014 [uva.arrm_RequestHandler_489c000e_getEndpoints] - rename_thread uva.arrm_RequestHandler_489c000d_getDomains
+INFO  2012-03-09 11:32:28,035 [uva.arrm_RequestHandler_489c000f_getLinks] - rename_thread uva.arrm_RequestHandler_489c000e_getEndpoints
+INFO  2012-03-09 11:32:28,049 [uva.arrm_RequestHandler_489c000f_getLinks] - Warning, it was impossible to get some EPR.
+INFO  2012-03-09 11:32:28,050 [uva.arrm_RequestHandler_489c000f_getLinks] - Using default SimpleSoapClient
+INFO  2012-03-09 11:32:28,055 [uva.arrm_RequestHandler_489c0010_isAvailable] - rename_thread uva.arrm_RequestHandler_489c000f_getLinks
+DEBUG 2012-03-09 11:32:28,060 [uva.arrm_RequestHandler_489c0010_isAvailable] - Checking responsibility for IsAvailableType
+DEBUG 2012-03-09 11:32:28,061 [uva.arrm_RequestHandler_489c0010_isAvailable] - IsAvailableType is local request
+DEBUG 2012-03-09 11:32:28,061 [uva.arrm_RequestHandler_489c0010_isAvailable] - isAvailable called with following parameter: 
+DEBUG 2012-03-09 11:32:28,061 [uva.arrm_RequestHandler_489c0010_isAvailable] -  Type: FIXED
+DEBUG 2012-03-09 11:32:28,061 [uva.arrm_RequestHandler_489c0010_isAvailable] -  Start time: 2012-03-09T11:32:28.051+01:00
+DEBUG 2012-03-09 11:32:28,061 [uva.arrm_RequestHandler_489c0010_isAvailable] -  Duration: 100
+DEBUG 2012-03-09 11:32:28,061 [uva.arrm_RequestHandler_489c0010_isAvailable] -  From: 10.9.1.2
+DEBUG 2012-03-09 11:32:28,062 [uva.arrm_RequestHandler_489c0010_isAvailable] -  To: 10.9.1.1
+DEBUG 2012-03-09 11:32:28,062 [uva.arrm_RequestHandler_489c0010_isAvailable] -  MinBW: 100
+DEBUG 2012-03-09 11:32:28,062 [uva.arrm_RequestHandler_489c0010_isAvailable] -  MaxBW: null
+DEBUG 2012-03-09 11:32:28,062 [uva.arrm_RequestHandler_489c0010_isAvailable] -  Delay: 800
+INFO  2012-03-09 11:32:28,074 [uva.arrm_RequestHandler_489c0011_createReservation] - rename_thread uva.arrm_RequestHandler_489c0010_isAvailable
+DEBUG 2012-03-09 11:32:28,079 [uva.arrm_RequestHandler_489c0011_createReservation] - Checking responsibility for CreateReservationType
+DEBUG 2012-03-09 11:32:28,079 [uva.arrm_RequestHandler_489c0011_createReservation] - CreateReservationType is local request
+DEBUG 2012-03-09 11:32:28,080 [uva.arrm_RequestHandler_489c0011_createReservation] - createReservation called with following parameter: 
+DEBUG 2012-03-09 11:32:28,080 [uva.arrm_RequestHandler_489c0011_createReservation] -  Type: FIXED
+DEBUG 2012-03-09 11:32:28,080 [uva.arrm_RequestHandler_489c0011_createReservation] -  Start time: 2012-03-09T11:32:28.070+01:00
+DEBUG 2012-03-09 11:32:28,080 [uva.arrm_RequestHandler_489c0011_createReservation] -  Duration: 100
+DEBUG 2012-03-09 11:32:28,080 [uva.arrm_RequestHandler_489c0011_createReservation] -  From: 10.9.1.1
+DEBUG 2012-03-09 11:32:28,081 [uva.arrm_RequestHandler_489c0011_createReservation] -  To: 10.9.1.2
+DEBUG 2012-03-09 11:32:28,081 [uva.arrm_RequestHandler_489c0011_createReservation] -  MinBW: 100
+DEBUG 2012-03-09 11:32:28,081 [uva.arrm_RequestHandler_489c0011_createReservation] -  MaxBW: null
+DEBUG 2012-03-09 11:32:28,081 [uva.arrm_RequestHandler_489c0011_createReservation] -  Delay: 800
+INFO  2012-03-09 11:32:28,096 [uva.arrm_RequestHandler_489c0012_getReservations] - rename_thread uva.arrm_RequestHandler_489c0011_createReservation
+DEBUG 2012-03-09 11:32:28,098 [uva.arrm_RequestHandler_489c0012_getReservations] - Checking responsibility for GetReservationsType
+WARN  2012-03-09 11:32:28,099 [uva.arrm_RequestHandler_489c0012_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+DEBUG 2012-03-09 11:32:28,099 [uva.arrm_RequestHandler_489c0012_getReservations] - GetReservationsType is local request
+DEBUG 2012-03-09 11:32:28,121 [uva.arrm_RequestHandler_489c0012_getReservations] - Found reservation: 1@uva.arrm
+DEBUG 2012-03-09 11:32:28,122 [uva.arrm_RequestHandler_489c0012_getReservations] - Found reservation: 2@uva.arrm
+DEBUG 2012-03-09 11:32:28,122 [uva.arrm_RequestHandler_489c0012_getReservations] - Found reservation: 3@uva.arrm
+INFO  2012-03-09 11:32:28,125 [uva.arrm_RequestHandler_489c0013_getStatus] - rename_thread uva.arrm_RequestHandler_489c0012_getReservations
+DEBUG 2012-03-09 11:32:28,127 [uva.arrm_RequestHandler_489c0013_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:28,127 [uva.arrm_RequestHandler_489c0013_getStatus] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:28,127 [uva.arrm_RequestHandler_489c0013_getStatus] - GetStatusType is local request
+INFO  2012-03-09 11:32:28,139 [uva.arrm_RequestHandler_489c0014_cancelReservation] - rename_thread uva.arrm_RequestHandler_489c0013_getStatus
+DEBUG 2012-03-09 11:32:28,140 [uva.arrm_RequestHandler_489c0014_cancelReservation] - Checking responsibility for CancelReservationType
+DEBUG 2012-03-09 11:32:28,141 [uva.arrm_RequestHandler_489c0014_cancelReservation] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:28,141 [uva.arrm_RequestHandler_489c0014_cancelReservation] - CancelReservationType is local request
+DEBUG 2012-03-09 11:32:28,141 [uva.arrm_RequestHandler_489c0014_cancelReservation] - cancelReservation called with following parameter: 
+DEBUG 2012-03-09 11:32:28,141 [uva.arrm_RequestHandler_489c0014_cancelReservation] -  GRI: 3
+INFO  2012-03-09 11:32:28,152 [uva.arrm_RequestHandler_489c0015_getStatus] - rename_thread uva.arrm_RequestHandler_489c0014_cancelReservation
+DEBUG 2012-03-09 11:32:28,153 [uva.arrm_RequestHandler_489c0015_getStatus] - Checking responsibility for GetStatusType
+DEBUG 2012-03-09 11:32:28,153 [uva.arrm_RequestHandler_489c0015_getStatus] - Own: uva.arrm, Req: uva.arrm
+DEBUG 2012-03-09 11:32:28,153 [uva.arrm_RequestHandler_489c0015_getStatus] - GetStatusType is local request

@@ -874,3 +874,149 @@ INFO  2012-03-08 17:38:34,000 [uva.arrm_RequestHandler_198c0015_getStatus] - dur
 INFO  2012-03-08 17:38:34,000 [uva.arrm_RequestHandler_198c0015_getStatus] - duration_reply_settype 1ms
 INFO  2012-03-08 17:38:34,004 [uva.arrm_RequestHandler_198c0015_getStatus] - duration_serializer_2 4ms
 INFO  2012-03-08 17:38:34,004 [uva.arrm_RequestHandler_198c0015_getStatus] - duration_requestHandler 7ms
+DEBUG 2012-03-09 11:32:27,577 [unknown_RequestHandler_489c0000_addTopic] - start_requestHandler
+INFO  2012-03-09 11:32:27,626 [unknown_RequestHandler_489c0000_addTopic] - duration_serializer_1 49ms
+INFO  2012-03-09 11:32:27,627 [unknown_RequestHandler_489c0000_addTopic] - duration_validator 1ms
+DEBUG 2012-03-09 11:32:27,723 [uva.arrm_RequestHandler_489c0001_isAvailable] - start_requestHandler
+INFO  2012-03-09 11:32:27,727 [uva.arrm_RequestHandler_489c0001_isAvailable] - duration_serializer_1 4ms
+INFO  2012-03-09 11:32:27,727 [uva.arrm_RequestHandler_489c0001_isAvailable] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,733 [uva.arrm_RequestHandler_489c0001_isAvailable] - duration_processing 6ms
+INFO  2012-03-09 11:32:27,733 [uva.arrm_RequestHandler_489c0001_isAvailable] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,738 [uva.arrm_RequestHandler_489c0001_isAvailable] - duration_serializer_2 5ms
+INFO  2012-03-09 11:32:27,738 [uva.arrm_RequestHandler_489c0001_isAvailable] - duration_requestHandler 15ms
+DEBUG 2012-03-09 11:32:27,746 [uva.arrm_RequestHandler_489c0002_createReservation] - start_requestHandler
+INFO  2012-03-09 11:32:27,749 [uva.arrm_RequestHandler_489c0002_createReservation] - duration_serializer_1 3ms
+INFO  2012-03-09 11:32:27,784 [uva.arrm_RequestHandler_489c0002_createReservation] - duration_validator 35ms
+INFO  2012-03-09 11:32:27,786 [uva.arrm_RequestHandler_489c0002_createReservation] - duration_processing 2ms
+INFO  2012-03-09 11:32:27,786 [uva.arrm_RequestHandler_489c0002_createReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,789 [uva.arrm_RequestHandler_489c0002_createReservation] - duration_serializer_2 3ms
+INFO  2012-03-09 11:32:27,789 [uva.arrm_RequestHandler_489c0002_createReservation] - duration_requestHandler 43ms
+DEBUG 2012-03-09 11:32:27,794 [uva.arrm_RequestHandler_489c0003_getStatus] - start_requestHandler
+INFO  2012-03-09 11:32:27,795 [uva.arrm_RequestHandler_489c0003_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:27,796 [uva.arrm_RequestHandler_489c0003_getStatus] - duration_validator 1ms
+INFO  2012-03-09 11:32:27,796 [uva.arrm_RequestHandler_489c0003_getStatus] - duration_processing 0ms
+INFO  2012-03-09 11:32:27,797 [uva.arrm_RequestHandler_489c0003_getStatus] - duration_reply_settype 1ms
+INFO  2012-03-09 11:32:27,802 [uva.arrm_RequestHandler_489c0003_getStatus] - duration_serializer_2 5ms
+INFO  2012-03-09 11:32:27,802 [uva.arrm_RequestHandler_489c0003_getStatus] - duration_requestHandler 8ms
+DEBUG 2012-03-09 11:32:27,810 [uva.arrm_RequestHandler_489c0004_cancelReservation] - start_requestHandler
+INFO  2012-03-09 11:32:27,812 [uva.arrm_RequestHandler_489c0004_cancelReservation] - duration_serializer_1 2ms
+INFO  2012-03-09 11:32:27,812 [uva.arrm_RequestHandler_489c0004_cancelReservation] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,813 [uva.arrm_RequestHandler_489c0004_cancelReservation] - duration_processing 1ms
+INFO  2012-03-09 11:32:27,813 [uva.arrm_RequestHandler_489c0004_cancelReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,816 [uva.arrm_RequestHandler_489c0004_cancelReservation] - duration_serializer_2 3ms
+INFO  2012-03-09 11:32:27,816 [uva.arrm_RequestHandler_489c0004_cancelReservation] - duration_requestHandler 6ms
+DEBUG 2012-03-09 11:32:27,819 [uva.arrm_RequestHandler_489c0005_getStatus] - start_requestHandler
+INFO  2012-03-09 11:32:27,820 [uva.arrm_RequestHandler_489c0005_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:27,820 [uva.arrm_RequestHandler_489c0005_getStatus] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,820 [uva.arrm_RequestHandler_489c0005_getStatus] - duration_processing 0ms
+INFO  2012-03-09 11:32:27,820 [uva.arrm_RequestHandler_489c0005_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,824 [uva.arrm_RequestHandler_489c0005_getStatus] - duration_serializer_2 4ms
+INFO  2012-03-09 11:32:27,824 [uva.arrm_RequestHandler_489c0005_getStatus] - duration_requestHandler 5ms
+DEBUG 2012-03-09 11:32:27,833 [uva.arrm_RequestHandler_489c0006_isAvailable] - start_requestHandler
+INFO  2012-03-09 11:32:27,836 [uva.arrm_RequestHandler_489c0006_isAvailable] - duration_serializer_1 3ms
+INFO  2012-03-09 11:32:27,836 [uva.arrm_RequestHandler_489c0006_isAvailable] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] - duration_processing 1ms
+INFO  2012-03-09 11:32:27,837 [uva.arrm_RequestHandler_489c0006_isAvailable] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,841 [uva.arrm_RequestHandler_489c0006_isAvailable] - duration_serializer_2 4ms
+INFO  2012-03-09 11:32:27,841 [uva.arrm_RequestHandler_489c0006_isAvailable] - duration_requestHandler 8ms
+DEBUG 2012-03-09 11:32:27,849 [uva.arrm_RequestHandler_489c0007_createReservation] - start_requestHandler
+INFO  2012-03-09 11:32:27,851 [uva.arrm_RequestHandler_489c0007_createReservation] - duration_serializer_1 2ms
+INFO  2012-03-09 11:32:27,851 [uva.arrm_RequestHandler_489c0007_createReservation] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,853 [uva.arrm_RequestHandler_489c0007_createReservation] - duration_processing 2ms
+INFO  2012-03-09 11:32:27,853 [uva.arrm_RequestHandler_489c0007_createReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,855 [uva.arrm_RequestHandler_489c0007_createReservation] - duration_serializer_2 2ms
+INFO  2012-03-09 11:32:27,855 [uva.arrm_RequestHandler_489c0007_createReservation] - duration_requestHandler 6ms
+DEBUG 2012-03-09 11:32:27,859 [uva.arrm_RequestHandler_489c0008_getStatus] - start_requestHandler
+INFO  2012-03-09 11:32:27,860 [uva.arrm_RequestHandler_489c0008_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:27,860 [uva.arrm_RequestHandler_489c0008_getStatus] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,860 [uva.arrm_RequestHandler_489c0008_getStatus] - duration_processing 0ms
+INFO  2012-03-09 11:32:27,860 [uva.arrm_RequestHandler_489c0008_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,865 [uva.arrm_RequestHandler_489c0008_getStatus] - duration_serializer_2 5ms
+INFO  2012-03-09 11:32:27,865 [uva.arrm_RequestHandler_489c0008_getStatus] - duration_requestHandler 6ms
+DEBUG 2012-03-09 11:32:27,873 [uva.arrm_RequestHandler_489c0009_cancelReservation] - start_requestHandler
+INFO  2012-03-09 11:32:27,874 [uva.arrm_RequestHandler_489c0009_cancelReservation] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:27,874 [uva.arrm_RequestHandler_489c0009_cancelReservation] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,875 [uva.arrm_RequestHandler_489c0009_cancelReservation] - duration_processing 1ms
+INFO  2012-03-09 11:32:27,875 [uva.arrm_RequestHandler_489c0009_cancelReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,879 [uva.arrm_RequestHandler_489c0009_cancelReservation] - duration_serializer_2 3ms
+INFO  2012-03-09 11:32:27,879 [uva.arrm_RequestHandler_489c0009_cancelReservation] - duration_requestHandler 5ms
+DEBUG 2012-03-09 11:32:27,882 [uva.arrm_RequestHandler_489c000a_getStatus] - start_requestHandler
+INFO  2012-03-09 11:32:27,883 [uva.arrm_RequestHandler_489c000a_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:27,883 [uva.arrm_RequestHandler_489c000a_getStatus] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,883 [uva.arrm_RequestHandler_489c000a_getStatus] - duration_processing 0ms
+INFO  2012-03-09 11:32:27,884 [uva.arrm_RequestHandler_489c000a_getStatus] - duration_reply_settype 1ms
+INFO  2012-03-09 11:32:27,887 [uva.arrm_RequestHandler_489c000a_getStatus] - duration_serializer_2 3ms
+INFO  2012-03-09 11:32:27,887 [uva.arrm_RequestHandler_489c000a_getStatus] - duration_requestHandler 5ms
+DEBUG 2012-03-09 11:32:27,897 [uva.arrm_RequestHandler_489c000b_getReservations] - start_requestHandler
+INFO  2012-03-09 11:32:27,899 [uva.arrm_RequestHandler_489c000b_getReservations] - duration_serializer_1 2ms
+INFO  2012-03-09 11:32:27,899 [uva.arrm_RequestHandler_489c000b_getReservations] - duration_validator 0ms
+INFO  2012-03-09 11:32:27,900 [uva.arrm_RequestHandler_489c000b_getReservations] - duration_processing 1ms
+INFO  2012-03-09 11:32:27,900 [uva.arrm_RequestHandler_489c000b_getReservations] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:27,904 [uva.arrm_RequestHandler_489c000b_getReservations] - duration_serializer_2 4ms
+INFO  2012-03-09 11:32:27,904 [uva.arrm_RequestHandler_489c000b_getReservations] - duration_requestHandler 7ms
+DEBUG 2012-03-09 11:32:27,917 [uva.arrm_RequestHandler_489c000c_bind] - start_requestHandler
+INFO  2012-03-09 11:32:27,920 [uva.arrm_RequestHandler_489c000c_bind] - duration_serializer_1 3ms
+INFO  2012-03-09 11:32:27,920 [uva.arrm_RequestHandler_489c000c_bind] - duration_validator 0ms
+DEBUG 2012-03-09 11:32:27,989 [uva.arrm_RequestHandler_489c000d_getDomains] - start_requestHandler
+INFO  2012-03-09 11:32:27,990 [uva.arrm_RequestHandler_489c000d_getDomains] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:27,991 [uva.arrm_RequestHandler_489c000d_getDomains] - duration_validator 1ms
+INFO  2012-03-09 11:32:27,991 [uva.arrm_RequestHandler_489c000d_getDomains] - duration_processing 0ms
+INFO  2012-03-09 11:32:27,991 [uva.arrm_RequestHandler_489c000d_getDomains] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:28,009 [uva.arrm_RequestHandler_489c000d_getDomains] - duration_serializer_2 18ms
+INFO  2012-03-09 11:32:28,009 [uva.arrm_RequestHandler_489c000d_getDomains] - duration_requestHandler 20ms
+DEBUG 2012-03-09 11:32:28,014 [uva.arrm_RequestHandler_489c000e_getEndpoints] - start_requestHandler
+INFO  2012-03-09 11:32:28,025 [uva.arrm_RequestHandler_489c000e_getEndpoints] - duration_serializer_1 11ms
+INFO  2012-03-09 11:32:28,026 [uva.arrm_RequestHandler_489c000e_getEndpoints] - duration_validator 1ms
+INFO  2012-03-09 11:32:28,026 [uva.arrm_RequestHandler_489c000e_getEndpoints] - duration_processing 0ms
+INFO  2012-03-09 11:32:28,026 [uva.arrm_RequestHandler_489c000e_getEndpoints] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:28,029 [uva.arrm_RequestHandler_489c000e_getEndpoints] - duration_serializer_2 3ms
+INFO  2012-03-09 11:32:28,029 [uva.arrm_RequestHandler_489c000e_getEndpoints] - duration_requestHandler 15ms
+DEBUG 2012-03-09 11:32:28,035 [uva.arrm_RequestHandler_489c000f_getLinks] - start_requestHandler
+INFO  2012-03-09 11:32:28,037 [uva.arrm_RequestHandler_489c000f_getLinks] - duration_serializer_1 2ms
+INFO  2012-03-09 11:32:28,037 [uva.arrm_RequestHandler_489c000f_getLinks] - duration_validator 0ms
+INFO  2012-03-09 11:32:28,037 [uva.arrm_RequestHandler_489c000f_getLinks] - duration_processing 0ms
+INFO  2012-03-09 11:32:28,037 [uva.arrm_RequestHandler_489c000f_getLinks] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:28,040 [uva.arrm_RequestHandler_489c000f_getLinks] - duration_serializer_2 3ms
+INFO  2012-03-09 11:32:28,040 [uva.arrm_RequestHandler_489c000f_getLinks] - duration_requestHandler 5ms
+DEBUG 2012-03-09 11:32:28,055 [uva.arrm_RequestHandler_489c0010_isAvailable] - start_requestHandler
+INFO  2012-03-09 11:32:28,060 [uva.arrm_RequestHandler_489c0010_isAvailable] - duration_serializer_1 4ms
+INFO  2012-03-09 11:32:28,060 [uva.arrm_RequestHandler_489c0010_isAvailable] - duration_validator 0ms
+INFO  2012-03-09 11:32:28,062 [uva.arrm_RequestHandler_489c0010_isAvailable] - duration_processing 2ms
+INFO  2012-03-09 11:32:28,062 [uva.arrm_RequestHandler_489c0010_isAvailable] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:28,066 [uva.arrm_RequestHandler_489c0010_isAvailable] - duration_serializer_2 4ms
+INFO  2012-03-09 11:32:28,066 [uva.arrm_RequestHandler_489c0010_isAvailable] - duration_requestHandler 10ms
+DEBUG 2012-03-09 11:32:28,075 [uva.arrm_RequestHandler_489c0011_createReservation] - start_requestHandler
+INFO  2012-03-09 11:32:28,079 [uva.arrm_RequestHandler_489c0011_createReservation] - duration_serializer_1 4ms
+INFO  2012-03-09 11:32:28,079 [uva.arrm_RequestHandler_489c0011_createReservation] - duration_validator 0ms
+INFO  2012-03-09 11:32:28,081 [uva.arrm_RequestHandler_489c0011_createReservation] - duration_processing 2ms
+INFO  2012-03-09 11:32:28,082 [uva.arrm_RequestHandler_489c0011_createReservation] - duration_reply_settype 1ms
+INFO  2012-03-09 11:32:28,088 [uva.arrm_RequestHandler_489c0011_createReservation] - duration_serializer_2 6ms
+INFO  2012-03-09 11:32:28,088 [uva.arrm_RequestHandler_489c0011_createReservation] - duration_requestHandler 13ms
+DEBUG 2012-03-09 11:32:28,096 [uva.arrm_RequestHandler_489c0012_getReservations] - start_requestHandler
+INFO  2012-03-09 11:32:28,098 [uva.arrm_RequestHandler_489c0012_getReservations] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:28,098 [uva.arrm_RequestHandler_489c0012_getReservations] - duration_validator 0ms
+INFO  2012-03-09 11:32:28,100 [uva.arrm_RequestHandler_489c0012_getReservations] - duration_processing 2ms
+INFO  2012-03-09 11:32:28,100 [uva.arrm_RequestHandler_489c0012_getReservations] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:28,107 [uva.arrm_RequestHandler_489c0012_getReservations] - duration_serializer_2 7ms
+INFO  2012-03-09 11:32:28,107 [uva.arrm_RequestHandler_489c0012_getReservations] - duration_requestHandler 10ms
+DEBUG 2012-03-09 11:32:28,125 [uva.arrm_RequestHandler_489c0013_getStatus] - start_requestHandler
+INFO  2012-03-09 11:32:28,127 [uva.arrm_RequestHandler_489c0013_getStatus] - duration_serializer_1 2ms
+INFO  2012-03-09 11:32:28,127 [uva.arrm_RequestHandler_489c0013_getStatus] - duration_validator 0ms
+INFO  2012-03-09 11:32:28,128 [uva.arrm_RequestHandler_489c0013_getStatus] - duration_processing 1ms
+INFO  2012-03-09 11:32:28,128 [uva.arrm_RequestHandler_489c0013_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:28,132 [uva.arrm_RequestHandler_489c0013_getStatus] - duration_serializer_2 4ms
+INFO  2012-03-09 11:32:28,132 [uva.arrm_RequestHandler_489c0013_getStatus] - duration_requestHandler 7ms
+DEBUG 2012-03-09 11:32:28,139 [uva.arrm_RequestHandler_489c0014_cancelReservation] - start_requestHandler
+INFO  2012-03-09 11:32:28,140 [uva.arrm_RequestHandler_489c0014_cancelReservation] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:28,140 [uva.arrm_RequestHandler_489c0014_cancelReservation] - duration_validator 0ms
+INFO  2012-03-09 11:32:28,141 [uva.arrm_RequestHandler_489c0014_cancelReservation] - duration_processing 1ms
+INFO  2012-03-09 11:32:28,142 [uva.arrm_RequestHandler_489c0014_cancelReservation] - duration_reply_settype 1ms
+INFO  2012-03-09 11:32:28,144 [uva.arrm_RequestHandler_489c0014_cancelReservation] - duration_serializer_2 2ms
+INFO  2012-03-09 11:32:28,145 [uva.arrm_RequestHandler_489c0014_cancelReservation] - duration_requestHandler 5ms
+DEBUG 2012-03-09 11:32:28,152 [uva.arrm_RequestHandler_489c0015_getStatus] - start_requestHandler
+INFO  2012-03-09 11:32:28,153 [uva.arrm_RequestHandler_489c0015_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 11:32:28,153 [uva.arrm_RequestHandler_489c0015_getStatus] - duration_validator 0ms
+INFO  2012-03-09 11:32:28,154 [uva.arrm_RequestHandler_489c0015_getStatus] - duration_processing 1ms
+INFO  2012-03-09 11:32:28,154 [uva.arrm_RequestHandler_489c0015_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 11:32:28,157 [uva.arrm_RequestHandler_489c0015_getStatus] - duration_serializer_2 3ms
+INFO  2012-03-09 11:32:28,157 [uva.arrm_RequestHandler_489c0015_getStatus] - duration_requestHandler 5ms
