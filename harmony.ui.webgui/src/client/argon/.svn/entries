@@ -1,40 +1,0 @@
-8
-
-dir
-4925
-https://svn.uva.netherlight.nl/projects/phosphorus-wp1/modules/ui/webgui/trunk/src/client/argon
-https://svn.uva.netherlight.nl/projects/phosphorus-wp1
-
-
-
-2009-08-20T15:46:29.948828Z
-4906
-carlos.baez@i2cat.net
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-2286f438-5c22-0410-bfe4-ef30cd3bb926
-
-dialog
-dir
-
-panel
-dir
-
-tree
-dir
-
-page
-dir
-
