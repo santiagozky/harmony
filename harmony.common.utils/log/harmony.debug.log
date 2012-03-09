@@ -180,3 +180,17 @@ INFO  2012-03-09 11:32:16,626 [main] - logInfo
 WARN  2012-03-09 11:32:16,626 [main] - logWarn
 ERROR 2012-03-09 11:32:16,626 [main] - logError
 FATAL 2012-03-09 11:32:16,627 [main] - logFatal
+ERROR 2012-03-09 15:50:02,680 [main] - Error log message at: 1331304602679
+DEBUG 2012-03-09 15:50:02,755 [main] - Error log message at: 1331304602679 should not be logged in logfile: log/harmony.error.log
+DEBUG 2012-03-09 15:50:02,774 [main] - Debug log message at: 1331304602774
+INFO  2012-03-09 15:50:02,855 [main] - Info log message at: 1331304602855
+DEBUG 2012-03-09 15:50:02,857 [main] - Info log message at: 1331304602855 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-09 15:50:02,861 [main] - Warn log message at: 1331304602861
+DEBUG 2012-03-09 15:50:02,862 [main] - Warn log message at: 1331304602861 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-09 15:50:02,869 [main] - Fatal log message at: 1331304602869
+DEBUG 2012-03-09 15:50:02,870 [main] - Fatal log message at: 1331304602869 should not be logged in logfile: log/harmony.fatal.log
+DEBUG 2012-03-09 15:50:02,939 [main] - logDebug
+INFO  2012-03-09 15:50:02,939 [main] - logInfo
+WARN  2012-03-09 15:50:02,939 [main] - logWarn
+ERROR 2012-03-09 15:50:02,939 [main] - logError
+FATAL 2012-03-09 15:50:02,939 [main] - logFatal

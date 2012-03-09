@@ -21,8 +21,8 @@
         <context-path>MyService</context-path>
         <wsdl>
             <wsdl-file>/wsdl/MyService.wsdl</wsdl-file>
-            <wsdl-port-type xmlns:pfx="http://ist_phosphorus.eu/nsp/webservice/notification">
-				pfx:networkNotificationPortType
+            <wsdl-port-type xmlns:pfx="http://ist_phosphorus.eu/nsp/webservice/topology">
+				pfx:TopologyIFPortType
 			</wsdl-port-type>
         </wsdl>
         <java-id-factory-class>
@@ -31,9 +31,9 @@
         <java-resource-class>org.apache.muse.core.SimpleResource</java-resource-class>
         <desc:capability xmlns:desc="http://ws.apache.org/muse/descriptor">
             <desc:capability-uri>
-				http://ist_phosphorus.eu/nsp/webservice/notification
+				http://ist_phosphorus.eu/nsp/webservice/topology
 			</desc:capability-uri>
-            <desc:java-capability-class>eu.ist_phosphorus.harmony.common.serviceinterface.notification.NotificationWS</desc:java-capability-class>
+            <desc:java-capability-class>eu.ist_phosphorus.harmony.common.serviceinterface.topology.TopologyWS</desc:java-capability-class>
         </desc:capability>
     </resource-type>
 </muse>

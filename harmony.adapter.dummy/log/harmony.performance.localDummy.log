@@ -958,3 +958,163 @@ INFO  2012-03-09 11:32:31,081 [localDummy_RequestHandler_54f40016_getLinks] - du
 DEBUG 2012-03-09 11:32:31,110 [localDummy_RequestHandler_54f40017_addTopic] - start_requestHandler
 INFO  2012-03-09 11:32:31,111 [localDummy_RequestHandler_54f40017_addTopic] - duration_serializer_1 1ms
 INFO  2012-03-09 11:32:31,111 [localDummy_RequestHandler_54f40017_addTopic] - duration_validator 0ms
+DEBUG 2012-03-09 15:50:14,854 [localDummy_RequestHandler_4bc50000_isAvailable] - start_requestHandler
+INFO  2012-03-09 15:50:14,888 [localDummy_RequestHandler_4bc50000_isAvailable] - duration_serializer_1 26ms
+INFO  2012-03-09 15:50:14,889 [localDummy_RequestHandler_4bc50000_isAvailable] - duration_validator 1ms
+INFO  2012-03-09 15:50:14,892 [localDummy_RequestHandler_4bc50000_isAvailable] - duration_processing 3ms
+INFO  2012-03-09 15:50:14,893 [localDummy_RequestHandler_4bc50000_isAvailable] - duration_reply_settype 1ms
+INFO  2012-03-09 15:50:14,895 [localDummy_RequestHandler_4bc50000_isAvailable] - duration_serializer_2 2ms
+INFO  2012-03-09 15:50:14,896 [localDummy_RequestHandler_4bc50000_isAvailable] - duration_requestHandler 33ms
+DEBUG 2012-03-09 15:50:14,904 [localDummy_RequestHandler_4bc50001_createReservation] - start_requestHandler
+INFO  2012-03-09 15:50:14,907 [localDummy_RequestHandler_4bc50001_createReservation] - duration_serializer_1 3ms
+INFO  2012-03-09 15:50:14,912 [localDummy_RequestHandler_4bc50001_createReservation] - duration_validator 5ms
+INFO  2012-03-09 15:50:14,913 [localDummy_RequestHandler_4bc50001_createReservation] - duration_processing 1ms
+INFO  2012-03-09 15:50:14,913 [localDummy_RequestHandler_4bc50001_createReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:14,916 [localDummy_RequestHandler_4bc50001_createReservation] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:14,916 [localDummy_RequestHandler_4bc50001_createReservation] - duration_requestHandler 12ms
+DEBUG 2012-03-09 15:50:14,919 [localDummy_RequestHandler_4bc50002_getStatus] - start_requestHandler
+INFO  2012-03-09 15:50:14,920 [localDummy_RequestHandler_4bc50002_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:14,921 [localDummy_RequestHandler_4bc50002_getStatus] - duration_validator 1ms
+INFO  2012-03-09 15:50:14,921 [localDummy_RequestHandler_4bc50002_getStatus] - duration_processing 0ms
+INFO  2012-03-09 15:50:14,921 [localDummy_RequestHandler_4bc50002_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:14,925 [localDummy_RequestHandler_4bc50002_getStatus] - duration_serializer_2 4ms
+INFO  2012-03-09 15:50:14,925 [localDummy_RequestHandler_4bc50002_getStatus] - duration_requestHandler 6ms
+DEBUG 2012-03-09 15:50:14,934 [localDummy_RequestHandler_4bc50003_cancelReservation] - start_requestHandler
+INFO  2012-03-09 15:50:14,935 [localDummy_RequestHandler_4bc50003_cancelReservation] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:14,935 [localDummy_RequestHandler_4bc50003_cancelReservation] - duration_validator 0ms
+INFO  2012-03-09 15:50:14,937 [localDummy_RequestHandler_4bc50003_cancelReservation] - duration_processing 2ms
+INFO  2012-03-09 15:50:14,937 [localDummy_RequestHandler_4bc50003_cancelReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:14,940 [localDummy_RequestHandler_4bc50003_cancelReservation] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:14,940 [localDummy_RequestHandler_4bc50003_cancelReservation] - duration_requestHandler 6ms
+DEBUG 2012-03-09 15:50:14,943 [localDummy_RequestHandler_4bc50004_getStatus] - start_requestHandler
+INFO  2012-03-09 15:50:14,944 [localDummy_RequestHandler_4bc50004_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:14,944 [localDummy_RequestHandler_4bc50004_getStatus] - duration_validator 0ms
+INFO  2012-03-09 15:50:14,945 [localDummy_RequestHandler_4bc50004_getStatus] - duration_processing 1ms
+INFO  2012-03-09 15:50:14,945 [localDummy_RequestHandler_4bc50004_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:14,949 [localDummy_RequestHandler_4bc50004_getStatus] - duration_serializer_2 4ms
+INFO  2012-03-09 15:50:14,949 [localDummy_RequestHandler_4bc50004_getStatus] - duration_requestHandler 6ms
+DEBUG 2012-03-09 15:50:14,976 [localDummy_RequestHandler_4bc50005_isAvailable] - start_requestHandler
+INFO  2012-03-09 15:50:14,979 [localDummy_RequestHandler_4bc50005_isAvailable] - duration_serializer_1 3ms
+INFO  2012-03-09 15:50:14,980 [localDummy_RequestHandler_4bc50005_isAvailable] - duration_validator 1ms
+INFO  2012-03-09 15:50:14,980 [localDummy_RequestHandler_4bc50005_isAvailable] - duration_processing 0ms
+INFO  2012-03-09 15:50:14,980 [localDummy_RequestHandler_4bc50005_isAvailable] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:14,982 [localDummy_RequestHandler_4bc50005_isAvailable] - duration_serializer_2 2ms
+INFO  2012-03-09 15:50:14,982 [localDummy_RequestHandler_4bc50005_isAvailable] - duration_requestHandler 6ms
+DEBUG 2012-03-09 15:50:14,994 [localDummy_RequestHandler_4bc50006_createReservation] - start_requestHandler
+INFO  2012-03-09 15:50:14,998 [localDummy_RequestHandler_4bc50006_createReservation] - duration_serializer_1 4ms
+INFO  2012-03-09 15:50:14,998 [localDummy_RequestHandler_4bc50006_createReservation] - duration_validator 0ms
+INFO  2012-03-09 15:50:14,999 [localDummy_RequestHandler_4bc50006_createReservation] - duration_processing 1ms
+INFO  2012-03-09 15:50:14,999 [localDummy_RequestHandler_4bc50006_createReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,003 [localDummy_RequestHandler_4bc50006_createReservation] - duration_serializer_2 4ms
+INFO  2012-03-09 15:50:15,003 [localDummy_RequestHandler_4bc50006_createReservation] - duration_requestHandler 9ms
+DEBUG 2012-03-09 15:50:15,008 [localDummy_RequestHandler_4bc50007_getStatus] - start_requestHandler
+INFO  2012-03-09 15:50:15,010 [localDummy_RequestHandler_4bc50007_getStatus] - duration_serializer_1 2ms
+INFO  2012-03-09 15:50:15,010 [localDummy_RequestHandler_4bc50007_getStatus] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,011 [localDummy_RequestHandler_4bc50007_getStatus] - duration_processing 1ms
+INFO  2012-03-09 15:50:15,011 [localDummy_RequestHandler_4bc50007_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,016 [localDummy_RequestHandler_4bc50007_getStatus] - duration_serializer_2 5ms
+INFO  2012-03-09 15:50:15,016 [localDummy_RequestHandler_4bc50007_getStatus] - duration_requestHandler 8ms
+DEBUG 2012-03-09 15:50:15,027 [localDummy_RequestHandler_4bc50008_cancelReservation] - start_requestHandler
+INFO  2012-03-09 15:50:15,029 [localDummy_RequestHandler_4bc50008_cancelReservation] - duration_serializer_1 2ms
+INFO  2012-03-09 15:50:15,029 [localDummy_RequestHandler_4bc50008_cancelReservation] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,029 [localDummy_RequestHandler_4bc50008_cancelReservation] - duration_processing 0ms
+INFO  2012-03-09 15:50:15,029 [localDummy_RequestHandler_4bc50008_cancelReservation] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,031 [localDummy_RequestHandler_4bc50008_cancelReservation] - duration_serializer_2 2ms
+INFO  2012-03-09 15:50:15,031 [localDummy_RequestHandler_4bc50008_cancelReservation] - duration_requestHandler 4ms
+DEBUG 2012-03-09 15:50:15,035 [localDummy_RequestHandler_4bc50009_getStatus] - start_requestHandler
+INFO  2012-03-09 15:50:15,036 [localDummy_RequestHandler_4bc50009_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:15,036 [localDummy_RequestHandler_4bc50009_getStatus] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,036 [localDummy_RequestHandler_4bc50009_getStatus] - duration_processing 0ms
+INFO  2012-03-09 15:50:15,036 [localDummy_RequestHandler_4bc50009_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,040 [localDummy_RequestHandler_4bc50009_getStatus] - duration_serializer_2 4ms
+INFO  2012-03-09 15:50:15,040 [localDummy_RequestHandler_4bc50009_getStatus] - duration_requestHandler 5ms
+DEBUG 2012-03-09 15:50:15,057 [localDummy_RequestHandler_4bc5000a_getReservations] - start_requestHandler
+INFO  2012-03-09 15:50:15,059 [localDummy_RequestHandler_4bc5000a_getReservations] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:15,060 [localDummy_RequestHandler_4bc5000a_getReservations] - duration_validator 1ms
+INFO  2012-03-09 15:50:15,062 [localDummy_RequestHandler_4bc5000a_getReservations] - duration_processing 2ms
+INFO  2012-03-09 15:50:15,062 [localDummy_RequestHandler_4bc5000a_getReservations] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,066 [localDummy_RequestHandler_4bc5000a_getReservations] - duration_serializer_2 4ms
+INFO  2012-03-09 15:50:15,067 [localDummy_RequestHandler_4bc5000a_getReservations] - duration_requestHandler 8ms
+DEBUG 2012-03-09 15:50:15,076 [localDummy_RequestHandler_4bc5000b_bind] - start_requestHandler
+INFO  2012-03-09 15:50:15,078 [localDummy_RequestHandler_4bc5000b_bind] - duration_serializer_1 2ms
+INFO  2012-03-09 15:50:15,078 [localDummy_RequestHandler_4bc5000b_bind] - duration_validator 0ms
+DEBUG 2012-03-09 15:50:15,117 [localDummy_RequestHandler_4bc5000c_isAvailable] - start_requestHandler
+INFO  2012-03-09 15:50:15,120 [localDummy_RequestHandler_4bc5000c_isAvailable] - duration_serializer_1 3ms
+INFO  2012-03-09 15:50:15,121 [localDummy_RequestHandler_4bc5000c_isAvailable] - duration_validator 1ms
+INFO  2012-03-09 15:50:15,121 [localDummy_RequestHandler_4bc5000c_isAvailable] - duration_processing 0ms
+INFO  2012-03-09 15:50:15,121 [localDummy_RequestHandler_4bc5000c_isAvailable] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,125 [localDummy_RequestHandler_4bc5000c_isAvailable] - duration_serializer_2 4ms
+INFO  2012-03-09 15:50:15,125 [localDummy_RequestHandler_4bc5000c_isAvailable] - duration_requestHandler 8ms
+DEBUG 2012-03-09 15:50:15,145 [localDummy_RequestHandler_4bc5000d_createReservation] - start_requestHandler
+INFO  2012-03-09 15:50:15,148 [localDummy_RequestHandler_4bc5000d_createReservation] - duration_serializer_1 3ms
+INFO  2012-03-09 15:50:15,149 [localDummy_RequestHandler_4bc5000d_createReservation] - duration_validator 1ms
+INFO  2012-03-09 15:50:15,155 [localDummy_RequestHandler_4bc5000d_createReservation] - duration_processing 6ms
+INFO  2012-03-09 15:50:15,156 [localDummy_RequestHandler_4bc5000d_createReservation] - duration_reply_settype 1ms
+INFO  2012-03-09 15:50:15,159 [localDummy_RequestHandler_4bc5000d_createReservation] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:15,159 [localDummy_RequestHandler_4bc5000d_createReservation] - duration_requestHandler 14ms
+DEBUG 2012-03-09 15:50:15,172 [localDummy_RequestHandler_4bc5000e_getReservations] - start_requestHandler
+INFO  2012-03-09 15:50:15,174 [localDummy_RequestHandler_4bc5000e_getReservations] - duration_serializer_1 2ms
+INFO  2012-03-09 15:50:15,174 [localDummy_RequestHandler_4bc5000e_getReservations] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,180 [localDummy_RequestHandler_4bc5000e_getReservations] - duration_processing 6ms
+INFO  2012-03-09 15:50:15,180 [localDummy_RequestHandler_4bc5000e_getReservations] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,188 [localDummy_RequestHandler_4bc5000e_getReservations] - duration_serializer_2 8ms
+INFO  2012-03-09 15:50:15,188 [localDummy_RequestHandler_4bc5000e_getReservations] - duration_requestHandler 16ms
+DEBUG 2012-03-09 15:50:15,205 [localDummy_RequestHandler_4bc5000f_getStatus] - start_requestHandler
+INFO  2012-03-09 15:50:15,206 [localDummy_RequestHandler_4bc5000f_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:15,206 [localDummy_RequestHandler_4bc5000f_getStatus] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,207 [localDummy_RequestHandler_4bc5000f_getStatus] - duration_processing 1ms
+INFO  2012-03-09 15:50:15,207 [localDummy_RequestHandler_4bc5000f_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,212 [localDummy_RequestHandler_4bc5000f_getStatus] - duration_serializer_2 5ms
+INFO  2012-03-09 15:50:15,212 [localDummy_RequestHandler_4bc5000f_getStatus] - duration_requestHandler 7ms
+DEBUG 2012-03-09 15:50:15,222 [localDummy_RequestHandler_4bc50010_isAvailable] - start_requestHandler
+INFO  2012-03-09 15:50:15,226 [localDummy_RequestHandler_4bc50010_isAvailable] - duration_serializer_1 4ms
+INFO  2012-03-09 15:50:15,227 [localDummy_RequestHandler_4bc50010_isAvailable] - duration_validator 1ms
+INFO  2012-03-09 15:50:15,231 [localDummy_RequestHandler_4bc50010_isAvailable] - duration_processing 4ms
+INFO  2012-03-09 15:50:15,232 [localDummy_RequestHandler_4bc50010_isAvailable] - duration_reply_settype 1ms
+INFO  2012-03-09 15:50:15,235 [localDummy_RequestHandler_4bc50010_isAvailable] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:15,235 [localDummy_RequestHandler_4bc50010_isAvailable] - duration_requestHandler 13ms
+DEBUG 2012-03-09 15:50:15,241 [localDummy_RequestHandler_4bc50011_cancelReservation] - start_requestHandler
+INFO  2012-03-09 15:50:15,243 [localDummy_RequestHandler_4bc50011_cancelReservation] - duration_serializer_1 2ms
+INFO  2012-03-09 15:50:15,243 [localDummy_RequestHandler_4bc50011_cancelReservation] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,243 [localDummy_RequestHandler_4bc50011_cancelReservation] - duration_processing 0ms
+INFO  2012-03-09 15:50:15,244 [localDummy_RequestHandler_4bc50011_cancelReservation] - duration_reply_settype 1ms
+INFO  2012-03-09 15:50:15,247 [localDummy_RequestHandler_4bc50011_cancelReservation] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:15,247 [localDummy_RequestHandler_4bc50011_cancelReservation] - duration_requestHandler 6ms
+DEBUG 2012-03-09 15:50:15,252 [localDummy_RequestHandler_4bc50012_getStatus] - start_requestHandler
+INFO  2012-03-09 15:50:15,253 [localDummy_RequestHandler_4bc50012_getStatus] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:15,253 [localDummy_RequestHandler_4bc50012_getStatus] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,254 [localDummy_RequestHandler_4bc50012_getStatus] - duration_processing 1ms
+INFO  2012-03-09 15:50:15,254 [localDummy_RequestHandler_4bc50012_getStatus] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,259 [localDummy_RequestHandler_4bc50012_getStatus] - duration_serializer_2 5ms
+INFO  2012-03-09 15:50:15,259 [localDummy_RequestHandler_4bc50012_getStatus] - duration_requestHandler 7ms
+DEBUG 2012-03-09 15:50:15,283 [localDummy_RequestHandler_4bc50013_isAvailable] - start_requestHandler
+INFO  2012-03-09 15:50:15,287 [localDummy_RequestHandler_4bc50013_isAvailable] - duration_serializer_1 4ms
+INFO  2012-03-09 15:50:15,287 [localDummy_RequestHandler_4bc50013_isAvailable] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,288 [localDummy_RequestHandler_4bc50013_isAvailable] - duration_processing 1ms
+INFO  2012-03-09 15:50:15,288 [localDummy_RequestHandler_4bc50013_isAvailable] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,291 [localDummy_RequestHandler_4bc50013_isAvailable] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:15,292 [localDummy_RequestHandler_4bc50013_isAvailable] - duration_requestHandler 8ms
+DEBUG 2012-03-09 15:50:15,321 [localDummy_RequestHandler_4bc50014_getDomains] - start_requestHandler
+INFO  2012-03-09 15:50:15,323 [localDummy_RequestHandler_4bc50014_getDomains] - duration_serializer_1 2ms
+INFO  2012-03-09 15:50:15,323 [localDummy_RequestHandler_4bc50014_getDomains] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,323 [localDummy_RequestHandler_4bc50014_getDomains] - duration_processing 0ms
+INFO  2012-03-09 15:50:15,323 [localDummy_RequestHandler_4bc50014_getDomains] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,326 [localDummy_RequestHandler_4bc50014_getDomains] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:15,327 [localDummy_RequestHandler_4bc50014_getDomains] - duration_requestHandler 5ms
+DEBUG 2012-03-09 15:50:15,341 [localDummy_RequestHandler_4bc50015_getEndpoints] - start_requestHandler
+INFO  2012-03-09 15:50:15,343 [localDummy_RequestHandler_4bc50015_getEndpoints] - duration_serializer_1 2ms
+INFO  2012-03-09 15:50:15,343 [localDummy_RequestHandler_4bc50015_getEndpoints] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,343 [localDummy_RequestHandler_4bc50015_getEndpoints] - duration_processing 0ms
+INFO  2012-03-09 15:50:15,343 [localDummy_RequestHandler_4bc50015_getEndpoints] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,346 [localDummy_RequestHandler_4bc50015_getEndpoints] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:15,346 [localDummy_RequestHandler_4bc50015_getEndpoints] - duration_requestHandler 5ms
+DEBUG 2012-03-09 15:50:15,350 [localDummy_RequestHandler_4bc50016_getLinks] - start_requestHandler
+INFO  2012-03-09 15:50:15,351 [localDummy_RequestHandler_4bc50016_getLinks] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:15,351 [localDummy_RequestHandler_4bc50016_getLinks] - duration_validator 0ms
+INFO  2012-03-09 15:50:15,351 [localDummy_RequestHandler_4bc50016_getLinks] - duration_processing 0ms
+INFO  2012-03-09 15:50:15,351 [localDummy_RequestHandler_4bc50016_getLinks] - duration_reply_settype 0ms
+INFO  2012-03-09 15:50:15,354 [localDummy_RequestHandler_4bc50016_getLinks] - duration_serializer_2 3ms
+INFO  2012-03-09 15:50:15,354 [localDummy_RequestHandler_4bc50016_getLinks] - duration_requestHandler 4ms
+DEBUG 2012-03-09 15:50:15,388 [localDummy_RequestHandler_4bc50017_addTopic] - start_requestHandler
+INFO  2012-03-09 15:50:15,390 [localDummy_RequestHandler_4bc50017_addTopic] - duration_serializer_1 1ms
+INFO  2012-03-09 15:50:15,390 [localDummy_RequestHandler_4bc50017_addTopic] - duration_validator 0ms

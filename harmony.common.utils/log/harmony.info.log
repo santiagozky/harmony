@@ -102,3 +102,11 @@ INFO  2012-03-09 11:32:16,626 [main] - logInfo
 WARN  2012-03-09 11:32:16,626 [main] - logWarn
 ERROR 2012-03-09 11:32:16,626 [main] - logError
 FATAL 2012-03-09 11:32:16,627 [main] - logFatal
+ERROR 2012-03-09 15:50:02,680 [main] - Error log message at: 1331304602679
+INFO  2012-03-09 15:50:02,855 [main] - Info log message at: 1331304602855
+WARN  2012-03-09 15:50:02,861 [main] - Warn log message at: 1331304602861
+FATAL 2012-03-09 15:50:02,869 [main] - Fatal log message at: 1331304602869
+INFO  2012-03-09 15:50:02,939 [main] - logInfo
+WARN  2012-03-09 15:50:02,939 [main] - logWarn
+ERROR 2012-03-09 15:50:02,939 [main] - logError
+FATAL 2012-03-09 15:50:02,939 [main] - logFatal

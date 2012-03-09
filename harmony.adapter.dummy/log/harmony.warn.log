@@ -10,3 +10,5 @@ WARN  2012-03-08 17:38:38,239 [localDummy_RequestHandler_2b0a000a_getReservation
 WARN  2012-03-08 17:38:38,324 [localDummy_RequestHandler_2b0a000e_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
 WARN  2012-03-09 11:32:30,873 [localDummy_RequestHandler_54f4000a_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
 WARN  2012-03-09 11:32:30,947 [localDummy_RequestHandler_54f4000e_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+WARN  2012-03-09 15:50:15,060 [localDummy_RequestHandler_4bc5000a_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+WARN  2012-03-09 15:50:15,179 [localDummy_RequestHandler_4bc5000e_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()

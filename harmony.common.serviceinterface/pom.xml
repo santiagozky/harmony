@@ -16,7 +16,7 @@
 		
 		<resources>
 			<resource>
-				<directory>${resources.di}</directory>
+				<directory>${resources.dir}</directory>
 			</resource>
 		</resources>
 
