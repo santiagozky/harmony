@@ -163,7 +163,7 @@
 								<DIR_SCRIPTS>${scripts.dir}</DIR_SCRIPTS>
 								<DIR_LOG>${log.dir}</DIR_LOG>
 								<DIR_TEMP>${temp.dir}</DIR_TEMP>
-								<DIR_SRC>${src.dir}</DIR_SRC>
+								<DIR_SRC>${project.build.directory}/generated-sources/xsdClasses</DIR_SRC>
 								<DIR_RESOURCES>${resources.dir}</DIR_RESOURCES>
 								<DIR_SERVLET>${temp.dir}/servlets</DIR_SERVLET>
 								<DIR_SERVLET_RESERVATION>${temp.dir}/servlets/reservation</DIR_SERVLET_RESERVATION>
@@ -201,7 +201,7 @@
 								<DIR_SCRIPTS>${scripts.dir}</DIR_SCRIPTS>
 								<DIR_LOG>${log.dir}</DIR_LOG>
 								<DIR_TEMP>${temp.dir}</DIR_TEMP>
-								<DIR_SRC>${src.dir}</DIR_SRC>
+								<DIR_SRC>${project.build.directory}/generated-sources/xsdClasses</DIR_SRC>
 								<DIR_RESOURCES>${resources.dir}</DIR_RESOURCES>
 								<DIR_SERVLET>${temp.dir}/servlets</DIR_SERVLET>
 								<DIR_SERVLET_RESERVATION>${temp.dir}/servlets/reservation</DIR_SERVLET_RESERVATION>
@@ -242,7 +242,7 @@
 								<DIR_SCRIPTS>${scripts.dir}</DIR_SCRIPTS>
 								<DIR_LOG>${log.dir}</DIR_LOG>
 								<DIR_TEMP>${temp.dir}</DIR_TEMP>
-								<DIR_SRC>${src.dir}</DIR_SRC>
+								<DIR_SRC>${project.build.directory}/generated-sources/xsdClasses</DIR_SRC>
 								<DIR_RESOURCES>${resources.dir}</DIR_RESOURCES>
 								<DIR_SERVLET>${temp.dir}/servlets</DIR_SERVLET>
 								<DIR_SERVLET_RESERVATION>${temp.dir}/servlets/reservation</DIR_SERVLET_RESERVATION>
@@ -281,7 +281,7 @@
 								<DIR_SCRIPTS>${scripts.dir}</DIR_SCRIPTS>
 								<DIR_LOG>${log.dir}</DIR_LOG>
 								<DIR_TEMP>${temp.dir}</DIR_TEMP>
-								<DIR_SRC>${src.dir}</DIR_SRC>
+								<DIR_SRC>${project.build.directory}/generated-sources/xsdClasses</DIR_SRC>
 								<DIR_RESOURCES>${resources.dir}</DIR_RESOURCES>
 								<DIR_SERVLET>${temp.dir}/servlets</DIR_SERVLET>
 								<DIR_SERVLET_RESERVATION>${temp.dir}/servlets/reservation</DIR_SERVLET_RESERVATION>
@@ -321,7 +321,7 @@
 								<DIR_SCRIPTS>${scripts.dir}</DIR_SCRIPTS>
 								<DIR_LOG>${log.dir}</DIR_LOG>
 								<DIR_TEMP>${temp.dir}</DIR_TEMP>
-								<DIR_SRC>${src.dir}</DIR_SRC>
+								<DIR_SRC>${project.build.directory}/generated-sources/xsdClasses</DIR_SRC>
 								<DIR_RESOURCES>${resources.dir}</DIR_RESOURCES>
 								<DIR_SERVLET>${temp.dir}/servlets</DIR_SERVLET>
 								<DIR_SERVLET_RESERVATION>${temp.dir}/servlets/reservation</DIR_SERVLET_RESERVATION>
