@@ -1,9 +1,0 @@
-INFO  2012-03-08 17:29:19,263 [main] - Warning, it was impossible to get some EPR.
-INFO  2012-03-08 17:29:19,275 [main] - Using default SimpleSoapClient
-DEBUG 2012-03-08 17:29:19,276 [main] - Call type: Webservice @ http://nsp.cs.uni-bonn.de:8080/harmony-idb/services/Reservation
-INFO  2012-03-08 17:29:19,609 [main] - Warning, it was impossible to get some EPR.
-INFO  2012-03-08 17:29:19,609 [main] - Using default SimpleSoapClient
-DEBUG 2012-03-08 17:29:19,610 [main] - Call type: Webservice @ http://nsp.cs.uni-bonn.de:8080/harmony-idb/services/Reservation
-INFO  2012-03-08 17:29:19,667 [main] - Warning, it was impossible to get some EPR.
-INFO  2012-03-08 17:29:19,667 [main] - Using default SimpleSoapClient
-DEBUG 2012-03-08 17:29:19,667 [main] - Call type: Webservice @ http://nsp.cs.uni-bonn.de:8080/harmony-idb/services/Reservation

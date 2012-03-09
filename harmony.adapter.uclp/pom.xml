@@ -265,7 +265,7 @@
 		<dependency>
 			<groupId>org.aaaarch</groupId>
 			<artifactId>gaaa-toolkit</artifactId>
-			<version>v06-20081128</version>
+			<version>v09</version>
 		</dependency>
 
 

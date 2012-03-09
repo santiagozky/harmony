@@ -13,7 +13,7 @@
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
 
-		
+
 	</build>
 	<dependencies>
 
@@ -139,41 +139,41 @@
 			<version>4.4</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/muse-platform-mini-2.2.0  -->
-		<!-- SHA1: 81053ab68fb4dba8b4c387aa51d8eaaecc3eaec0 -->
+
+
 		<dependency>
 			<groupId>org.apache.muse</groupId>
 			<artifactId>muse-platform-mini </artifactId>
 			<version>2.2.0</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/harmony-common-utils  -->
-		<!-- SHA1: 4092ad66bef8f89fb0bc98f9d0b89a25bcfb420e -->
+
+
 		<dependency>
 			<groupId>${groupId}</groupId>
 			<artifactId>common-utils </artifactId>
 			<version>1</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/gaaa-tk-lib-v06-20081128  -->
-		<!-- SHA1: dc7ac2f72b61cf04d5e629374590f0a7cc3ab3f5 -->
+
+
 		<dependency>
-		<groupId>org.aaaarch</groupId>
-  <artifactId>gaaa-toolkit</artifactId>
-  <version>v06-20081128</version>
+			<groupId>org.aaaarch</groupId>
+			<artifactId>gaaa-toolkit</artifactId>
+			<version>v09</version>
 		</dependency>
 
 
 
-<dependency>
-	<groupId>org.hibernate</groupId>
-	<artifactId>ejb3-persistence</artifactId>
-	<version>1.0.2.GA</version>
-</dependency>
-            
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>ejb3-persistence</artifactId>
+			<version>1.0.2.GA</version>
+		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/mysql-connector-java  -->
-		<!-- SHA1: 5f4d840db6dede1a57a518d508d10b41dfcda881 -->
+
+
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java </artifactId>
@@ -181,8 +181,8 @@
 		</dependency>
 
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/muse-tools-2.2.0  -->
-		<!-- SHA1: 17f08483e8f5f96896379792fe9e11f7eeb84875 -->
+
+
 		<dependency>
 			<groupId>org.apache.muse</groupId>
 			<artifactId>muse-tools </artifactId>
@@ -190,16 +190,16 @@
 		</dependency>
 
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/harmony-common-serviceinterface  -->
-		<!-- SHA1: 2cf5aa6c6c24d59293687260377b011bc410c5a7 -->
+
+
 		<dependency>
 			<groupId>${groupId}</groupId>
 			<artifactId>common-serviceinterface </artifactId>
 			<version>1</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/harmony-adapter-dummy  -->
-		<!-- SHA1: 4684893a4ab6cda36fa3c574a35631f3ac3fb815 -->
+
+
 		<dependency>
 			<groupId>${groupId}</groupId>
 			<artifactId>adapter-dummy </artifactId>
@@ -208,16 +208,16 @@
 
 
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/bcprov-jdk15-139  -->
-		<!-- SHA1: 17ed3649ef0c6524699fa02f2c30d5b8caa0cc9b -->
+
+
 		<dependency>
 			<groupId>bouncycastle</groupId>
 			<artifactId>bcprov-jdk15</artifactId>
 			<version>140</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/xmlsecSamples  -->
-		<!-- SHA1: 887ce5b87ff8c77593d31200f91982cc7fb9fe05 -->
+
+
 		<dependency>
 			<groupId>org.apache.santuario</groupId>
 			<artifactId>xmlsecSamples </artifactId>
@@ -225,13 +225,10 @@
 		</dependency>
 
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/harmony-secure-idb-2  -->
-		<!-- SHA1: 05734718509a7eff4011969d5b1a703d57c4935c -->
-	<!-- 	<dependency>
-			<groupId>unknown</groupId>
-			<artifactId>harmony-secure-idb-2 </artifactId>
-			<version>unknown</version>
-		</dependency> -->
+
+
+		<!-- <dependency> <groupId>unknown</groupId> <artifactId>harmony-secure-idb-2 
+			</artifactId> <version>unknown</version> </dependency> -->
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -241,40 +238,40 @@
 
 
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/muse-complete-2.2.0  -->
-		<!-- SHA1: 859875e3ade3e76443c2c08a711022ee22df0c7a -->
+
+
 		<dependency>
 			<groupId>org.apache.muse</groupId>
 			<artifactId>muse-complete</artifactId>
 			<version>2.2.0</version>
 		</dependency>
 
-<dependency>
-	<groupId>c3p0</groupId>
-	<artifactId>c3p0</artifactId>
-	<version>0.9.1.2</version>
-</dependency>
-            
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
 
 
 
-<dependency>
-  <groupId>sun-xacml</groupId>
-  <artifactId>sun-xacml</artifactId><!-- originally 1.6 -->
-  <version>2.0</version>
-</dependency>
+
+		<dependency>
+			<groupId>sun-xacml</groupId>
+			<artifactId>sun-xacml</artifactId><!-- originally 1.6 -->
+			<version>2.0</version>
+		</dependency>
 
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/dom4j  -->
-		<!-- SHA1: 4c15608c562abd5ce6d0b1315465409606d847be -->
+
+
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j </artifactId>
 			<version>1.6.1</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/jta  -->
-		<!-- SHA1: 204fece56d07603cea5a91f04685b61cdcbbb167 -->
+
+
 		<dependency>
 			<groupId>javax.transaction</groupId>
 			<artifactId>jta </artifactId>
@@ -283,16 +280,16 @@
 
 
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/harmony-database  -->
-		<!-- SHA1: 08017102f781141fa7d640c6b1dca549ce5b2f39 -->
+
+
 		<dependency>
 			<groupId>${groupId}</groupId>
 			<artifactId>database </artifactId>
 			<version>1</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/commons-collections  -->
-		<!-- SHA1: 52c1cf3afda6bac2d655dc2c723894e62fcea8c8 -->
+
+
 		<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections </artifactId>
@@ -300,9 +297,6 @@
 		</dependency>
 
 
-
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.idb/lib/harmony-notifications  -->
-		<!-- SHA1: 13188479cfd36e9cfc3d88c96dd193f62130a474 -->
 		<dependency>
 			<groupId>${groupId}</groupId>
 			<artifactId>notifications </artifactId>
