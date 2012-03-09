@@ -1,0 +1,62 @@
+#!/bin/bash
+
+clear
+echo "Harmony Dummy Adapter Quick Installer and Tester";
+echo "================================================";
+echo
+echo "Version: 2008-09-30";
+echo "Author: Alexander Willner (willner@cs.uni-bonn.de)";
+echo
+echo "(press enter)";
+echo
+read;
+
+
+echo "Checking environment (press enter)...";
+read;
+
+JAVA=`java -version 2>&1|head -n1`;
+ANT=`ant -version 2>&1`;
+
+if ! [[ -n "$JAVA" && $JAVA == *1.6* ]]; then
+  echo "Java 1.6 not found. I found: ";
+  echo $JAVA;
+  exit;
+fi
+if ! [[ -n "$ANT" && $ANT == *1.7* ]]; then
+  echo "Ant 1.7 not found. I found: ";
+  echo $ANT;
+  exit;
+fi
+if [ "$WEBAPPS_HOME" == "" ]; then
+  echo "WEBAPPS_HOME not set! Use e.g. 'export WEBAPPS_HOME=$CATALINA_HOME/webapps'.";
+  exit;
+fi
+
+echo "Downloading sources (press enter)...";
+read;
+svn co --username phosphorus-wp1-guest --password read4me https://svn.uva.netherlight.nl/projects/phosphorus-wp1/modules/adapter/dummy/trunk/ adapter.dummy
+
+echo "Initializing system (press enter)...";
+read;
+
+cd adapter.dummy;
+export ANT_OPTS="$ANT_OPTS -Djavax.net.ssl.trustStore=resources/utils/keystore -XX:MaxPermSize=512M -Xms512M -Xmx512M";
+ant prepare init build;
+
+
+echo "Testing system w/o webservice (press enter)...";
+read;
+perl -p -e 's/test.callWebservice\s*=.*/test.callWebservice = false/' resources/properties/test.properties > tmp; mv tmp resources/properties/test.properties
+ant test
+
+echo "Deploying into the servlet container (press enter)...";
+read;
+echo dir.webapps=$WEBAPPS_HOME > build.local.properties
+ant deploy
+
+echo "Testing system with webservices (press enter - and have servlet container running)...";
+read;
+perl -p -e 's/test.callWebservice\s*=.*/test.callWebservice = true/' resources/properties/test.properties > tmp; mv tmp resources/properties/test.properties
+ant test
+

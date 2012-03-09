@@ -1,0 +1,176 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>${groupId}</groupId>
+		<artifactId>${artifactId}</artifactId>
+		<version>${version}</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${groupId}</groupId>
+	<artifactId>translator-g2mpls</artifactId>
+	<version>1</version>
+	<build>
+		<directory>target</directory>
+		<outputDirectory>target/classes</outputDirectory>
+		<finalName>${artifactId}-${version}</finalName>
+		
+	</build>
+	<dependencies>
+
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<dependency>
+			<groupId>dnsjava</groupId>
+			<artifactId>dnsjava</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mockrunner</groupId>
+			<artifactId>mockrunner-jdk1.5-j2ee1.3</artifactId>
+			<version>0.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>cglib-nodep</groupId>
+					<artifactId>cglib-nodep</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>jboss</groupId>
+					<artifactId>jboss-jee</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5.20110712</version>
+		</dependency>
+
+
+
+
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>stax</groupId>
+			<artifactId>stax-api</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.mockrunner</groupId>
+			<artifactId>mockrunner-jdk1.5-j2ee1.3</artifactId>
+			<version>0.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>cglib-nodep</groupId>
+					<artifactId>cglib-nodep</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>jboss</groupId>
+					<artifactId>jboss-jee</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.bluestemsoftware.open.maven.tparty</groupId>
+			<artifactId>xerces-impl</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+		
+		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.g2mpls/lib/harmony-common-utils  -->
+		<!-- SHA1: 4092ad66bef8f89fb0bc98f9d0b89a25bcfb420e -->
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>common-utils</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.g2mpls/lib/muse-platform-mini-2.2.0  -->
+		<!-- SHA1: 81053ab68fb4dba8b4c387aa51d8eaaecc3eaec0 -->
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>muse-platform-mini</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.g2mpls/lib/muse-tools-2.2.0  -->
+		<!-- SHA1: 17f08483e8f5f96896379792fe9e11f7eeb84875 -->
+		<dependency>
+			<groupId>org.apache.muse</groupId>
+			<artifactId>muse-tools</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.g2mpls/lib/harmony-common-serviceinterface  -->
+		<!-- SHA1: 2cf5aa6c6c24d59293687260377b011bc410c5a7 -->
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>common-serviceinterface</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.g2mpls/lib/harmony-adapter-dummy  -->
+		<!-- SHA1: 4684893a4ab6cda36fa3c574a35631f3ac3fb815 -->
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>adapter-dummy</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.g2mpls/lib/muse-complete-2.2.0  -->
+		<!-- SHA1: 859875e3ade3e76443c2c08a711022ee22df0c7a -->
+		<dependency>
+			<groupId>org.apache.muse</groupId>
+			<artifactId>muse-complete</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+	
+
+
+
+
+	</dependencies>
+</project>
+

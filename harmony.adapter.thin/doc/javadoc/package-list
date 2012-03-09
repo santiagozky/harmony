@@ -1,0 +1,10 @@
+eu.ist_phosphorus.harmony.adapter.thin.database
+eu.ist_phosphorus.harmony.adapter.thin.database.exceptions
+eu.ist_phosphorus.harmony.adapter.thin.database.orm
+eu.ist_phosphorus.harmony.adapter.thin.handler
+eu.ist_phosphorus.harmony.adapter.thin.implementation
+eu.ist_phosphorus.harmony.adapter.thin.scheduler
+eu.ist_phosphorus.harmony.adapter.thin.scheduler.jobs
+eu.ist_phosphorus.harmony.adapter.thin.utils
+eu.ist_phosphorus.harmony.adapter.thin.webservice
+eu.ist_phosphorus.harmony.test.adapter.thin.webservice

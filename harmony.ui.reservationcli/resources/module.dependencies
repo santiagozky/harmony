@@ -1,0 +1,9 @@
+xercesImpl.jar
+servlet-api.jar
+harmony-adapter-dummy.jar
+commons-cli-2.0.jar
+muse-complete-2.2.0.jar
+log4j.jar
+dnsjava.jar
+harmony-common-serviceinterface.jar
+harmony-common-utils.jar

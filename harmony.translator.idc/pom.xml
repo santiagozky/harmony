@@ -1,0 +1,825 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+		<groupId>${groupId}</groupId>
+		<artifactId>${artifactId}</artifactId>
+		<version>${version}</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${groupId}</groupId>
+  <artifactId>translator-idc</artifactId>
+  <version>1</version>
+<build>
+ <directory>target</directory>
+ <outputDirectory>target/classes</outputDirectory>
+
+ 
+</build>
+<dependencies>
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-corba-1.4.1  -->
+<!-- SHA1: 49810f6fabb06fd7dca17dd8f9bcf2b38c0fa85d -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-corba</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/mex-1.4.1  -->
+<!-- SHA1: 2372a274441669df3fd18e52f2ebc66f0a285c6d -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/wss4j-1.5.4  -->
+<!-- SHA1: 7f4df04cd5638779720586f32d90b605339161b0 -->
+
+
+
+<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-jaxbri-1.4.1  -->
+<!-- SHA1: ae104438f71230e132a0e3aeff4f5589c3c170f7 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-jaxbri</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/soapmonitor-1.4.1  -->
+<!-- SHA1: 2f38877283f10e0410b7d083554dc996131c586b -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-codegen-1.4.1  -->
+<!-- SHA1: c86b848eeac8ed897dc37372652cbc10a5950c1b -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-codegen</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/rampart-policy-1.4  -->
+<!-- SHA1: e1a2dbb71d4c79968d078f5f3cf0be5059144678 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/mail-1.4  -->
+<!-- SHA1: 1aa1579ae5ecd41920c4f355b0a9ef40b68315dd -->
+<dependency>
+   <groupId>javax.mail</groupId>
+   <artifactId>mail</artifactId>
+   <version>1.4</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-kernel-1.4  -->
+<!-- SHA1: a354efba402da16d4007529364ed7696d257e5fa -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-kernel</artifactId>
+   <version>1.4</version>
+</dependency>
+
+
+		<dependency>
+			<groupId>dnsjava</groupId>
+			<artifactId>dnsjava</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/backport-util-concurrent-3.1  -->
+<!-- SHA1: 682f7ac17fed79e92f8e87d8455192b63376347b -->
+<dependency>
+   <groupId>backport-util-concurrent</groupId>
+   <artifactId>backport-util-concurrent</artifactId>
+   <version>3.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-json-1.4.1  -->
+<!-- SHA1: b909482a03ef842b46aec7d17bc593fad08b1ad4 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-json</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-jaxws-1.4.1  -->
+<!-- SHA1: 6569273afc155f0c7e7b39df4d579cb32097ca1b -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-jaxws</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xmlsec-1.4.1  -->
+<!-- SHA1: a784f4ce46e870bf703373e77e2190d9b04a1239 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-clustering-1.4.1  -->
+<!-- SHA1: a4d23a253f158537d82432e028e7f962e21ddbc9 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-clustering</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/woden-api-1.0M8  -->
+<!-- SHA1: 47e50e5962288ff4cc5c4f3ce4d81507516e684f -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jaxen-1.1.1  -->
+<!-- SHA1: 9f5d3c5974dbe5cf69c2c2ec7d8a4eb6e0fce7f9 -->
+<dependency>
+   <groupId>jaxen</groupId>
+   <artifactId>jaxen</artifactId>
+   <version>1.1.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axiom-impl-1.2.7  -->
+<!-- SHA1: 378b814d1a6129a3e8175d95cf60d48c60ae9d51 -->
+<dependency>
+   <groupId>org.apache.ws.commons.axiom</groupId>
+   <artifactId>axiom-impl</artifactId>
+   <version>1.2.7</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jalopy-1.5rc3  -->
+<!-- SHA1: a6b23c9c7d3852ee494046d9680aa86bcccf8ece -->
+<dependency>
+   <groupId>jalopy</groupId>
+   <artifactId>jalopy</artifactId>
+   <version>1.5rc3</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/woden-impl-dom-1.0M8  -->
+<!-- SHA1: 28582a42a6f50a69a9552526b970a5a6f9b2da27 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/junit-4.4  -->
+<!-- SHA1: 7ad72ddce6539b0b7aa870475555abdde7b31df2 -->
+<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mockrunner</groupId>
+			<artifactId>mockrunner-jdk1.5-j2ee1.3</artifactId>
+			<version>0.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>cglib-nodep</groupId>
+					<artifactId>cglib-nodep</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>jboss</groupId>
+					<artifactId>jboss-jee</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/XmlSchema-1.4.2  -->
+<!-- SHA1: 7cf868b0d6a5b68be0dea014126b986b3387755a -->
+<dependency>
+   <groupId>org.apache.ws.schema</groupId>
+   <artifactId>XmlSchema</artifactId>
+   <version>1.4.2</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xalan-2.7.0  -->
+<!-- SHA1: a33c0097f1c70b20fa7ded220ea317eb3500515e -->
+<dependency>
+   <groupId>xalan</groupId>
+   <artifactId>xalan</artifactId>
+   <version>2.7.0</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/servlet-api  -->
+<!-- SHA1: 5c2125db1b4824021060085a83c23cf0543f75bc -->
+<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5.20110712</version>
+		</dependency>
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/geronimo-annotation_1.0_spec-1.1  -->
+<!-- SHA1: 376152978a2947bcb42ce799696316b2303e6745 -->
+<dependency>
+   <groupId>org.apache.geronimo.specs</groupId>
+   <artifactId>geronimo-annotation_1.0_spec</artifactId>
+   <version>1.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xmlbeans-2.3.0  -->
+<!-- SHA1: 8704dcf5c9f10265a08f5020b0fab70eb64ac3c4 -->
+<dependency>
+   <groupId>org.apache.xmlbeans</groupId>
+   <artifactId>xmlbeans</artifactId>
+   <version>2.3.0</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/wsdl4j-1.6.2  -->
+<!-- SHA1: dec1669fb6801b7328e01ad72fc9e10b69ea06c1 -->
+<dependency>
+   <groupId>wsdl4j</groupId>
+   <artifactId>wsdl4j</artifactId>
+   <version>1.6.2</version>
+</dependency>
+
+
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/commons-io-1.4  -->
+<!-- SHA1: a8762d07e76cfde2395257a5da47ba7c1dbd3dce -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/geronimo-stax-api_1.0_spec-1.0.1  -->
+<!-- SHA1: 1c171093a8b43aa550c6050ac441abe713ebb4f2 -->
+<dependency>
+   <groupId>org.apache.geronimo.specs</groupId>
+   <artifactId>geronimo-stax-api_1.0_spec</artifactId>
+   <version>1.0.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-saaj-1.4.1  -->
+<!-- SHA1: 311f56be3127d9b18cc3bf531594f589b3a62b67 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-saaj</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/httpcore-nio-4.0-beta1  -->
+<!-- SHA1: a0d825beaa0bc0b03fcf11315abc4b7fd60fe2e8 -->
+<dependency>
+   <groupId>org.apache.httpcomponents</groupId>
+   <artifactId>httpcore-nio</artifactId>
+   <version>4.0-beta1</version>
+</dependency>
+
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/commons-httpclient-3.1  -->
+<!-- SHA1: 964cd74171f427720480efdec40a7c7f6e58426a -->
+<dependency>
+   <groupId>commons-httpclient</groupId>
+   <artifactId>commons-httpclient</artifactId>
+   <version>3.1</version>
+</dependency>
+
+
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-jibx-1.4.1  -->
+<!-- SHA1: 3477c4655760538bbd3d5d789760abddd21c0901 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-jibx</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/commons-codec-1.3  -->
+<!-- SHA1: fd32786786e2adb664d5ecc965da47629dca14ba -->
+<dependency>
+   <groupId>commons-codec</groupId>
+   <artifactId>commons-codec</artifactId>
+   <version>1.3</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xml-apis  -->
+<!-- SHA1: 3845d5aabd62dc1954f2c0e84a799068c917ad2b -->
+<dependency>
+   <groupId>xml-apis</groupId>
+   <artifactId>xml-apis</artifactId>
+   <version>1.3.03</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axiom-dom-1.2.7  -->
+<!-- SHA1: 635fd539a59d3ff0eb33e7a4ac324fe3456e01e2 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xercesImpl-2.8.1  -->
+<!-- SHA1: 25101e37ec0c907db6f0612cbf106ee519c1aef1 -->
+<dependency>
+   <groupId>xerces</groupId>
+   <artifactId>xercesImpl</artifactId>
+   <version>2.8.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/neethi-2.0.4  -->
+<!-- SHA1: c5bbf05c56ef0d68eec17a7eb1ed9241052fd763 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-ant-plugin-1.4.1  -->
+<!-- SHA1: 2c6b6ccb10cbf9bd67bc3dc1d8c580834708bb78 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-ant-plugin</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/commons-logging-1.1.1  -->
+<!-- SHA1: 5043bfebc3db072ed80fbd362e7caf00e885d8ae -->
+<dependency>
+   <groupId>commons-logging</groupId>
+   <artifactId>commons-logging</artifactId>
+   <version>1.1.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xml-apis-1.3.04  -->
+<!-- SHA1: 90b215f48fe42776c8c7f6e3509ec54e84fd65ef -->
+<dependency>
+   <groupId>xml-apis</groupId>
+   <artifactId>xml-apis</artifactId>
+   <version>1.3.04</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jibx-run-1.1.5  -->
+<!-- SHA1: 8084efaf10c16ce30ae93811312dc5f6fa23d120 -->
+<dependency>
+   <groupId>org.jibx</groupId>
+   <artifactId>jibx-run</artifactId>
+   <version>1.1.5</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jibx-bind-1.1.5  -->
+<!-- SHA1: 3e06b1aaf8b8de8599d02e66bfc0486695fd621e -->
+<dependency>
+   <groupId>org.jibx</groupId>
+   <artifactId>jibx-bind</artifactId>
+   <version>1.1.5</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/mail  -->
+<!-- SHA1: ccb81df1f922665013e65243b8100f97bab91bcb -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/wstx-asl-3.2.4  -->
+<!-- SHA1: aada03a08ae547bee92caf3b1e0cd756134e9226 -->
+<dependency>
+   <groupId>woodstox</groupId>
+   <artifactId>wstx-asl</artifactId>
+   <version>3.2.4</version>
+</dependency>
+
+
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/commons-fileupload-1.2  -->
+<!-- SHA1: a10c06183fe21f3bb3dda3b5946b93db6e2ad5cc -->
+<dependency>
+   <groupId>commons-fileupload</groupId>
+   <artifactId>commons-fileupload</artifactId>
+   <version>1.2</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/rampart-core-1.4  -->
+<!-- SHA1: be51cc2bdd0976b9dfd5448b30d48146defcef37 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-xmlbeans-1.4.1  -->
+<!-- SHA1: 620c03e55a2e93518e76a3a9b03c43a4f9e7120e -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-xmlbeans</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/stax-api  -->
+<!-- SHA1: e24f088cbc8ca0ea1fbbd98fcb374a4a02c58f15 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-fastinfoset-1.4.1  -->
+<!-- SHA1: 9ac60c60c96e848e42e998a58eee42152cd27d4d -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-fastinfoset</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-adb-1.4  -->
+<!-- SHA1: 79ec58e703dd8a9f915c683a5df85d405854062b -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-adb</artifactId>
+   <version>1.4</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xml-resolver-1.2  -->
+<!-- SHA1: 3d0f97750b3a03e0971831566067754ba4bfd68c -->
+<dependency>
+   <groupId>xml-resolver</groupId>
+   <artifactId>xml-resolver</artifactId>
+   <version>1.2</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jaxb-api-2.1  -->
+<!-- SHA1: d68570e722cffe2000358ce9c661a0b0bf1ebe11 -->
+<dependency>
+   <groupId>javax.xml.bind</groupId>
+   <artifactId>jaxb-api</artifactId>
+   <version>2.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-metadata-1.4.1  -->
+<!-- SHA1: 64a654d229fad5adcddee3d15a0e116d2ca9ae45 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-metadata</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/wsdl4j  -->
+<!-- SHA1: 6b5bb4b219912b63788c22755574774d301ff338 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jettison-1.0-RC2  -->
+<!-- SHA1: ed8b88087fc3fdce7f7c6262c9609ebdc9276fa1 -->
+<dependency>
+   <groupId>org.codehaus.jettison</groupId>
+   <artifactId>jettison</artifactId>
+   <version>1.0-RC2</version>
+</dependency>
+
+
+<dependency>
+	<groupId>org.opensaml</groupId>
+	<artifactId>opensaml</artifactId>
+	<version>1.1</version>
+</dependency>
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-kernel-1.4.1  -->
+<!-- SHA1: fd59331a4bbc734c290744316e627ea343329f49 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-kernel</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-saaj-api-1.4.1  -->
+<!-- SHA1: 3792b3ad00a1fa73318aded50e91351732fa0d27 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-saaj-api</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-jws-api-1.4.1  -->
+<!-- SHA1: c45c79efc2c783cc8ce2d80172805129abca3fdb -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-jws-api</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-java2wsdl-1.4.1  -->
+<!-- SHA1: 9fa941d5b3570213fdee287c05c6e57c9a6b3555 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-java2wsdl</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/annogen-0.1.0  -->
+<!-- SHA1: a8de34ea7aa93765d24dc16ec9c61af5160bb899 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/activation-1.1  -->
+<!-- SHA1: e6cb541461c2834bdea3eb920f1884d1eb508b50 -->
+<dependency>
+   <groupId>javax.activation</groupId>
+   <artifactId>activation</artifactId>
+   <version>1.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/mockrunner-servlet  -->
+<!-- SHA1: 66cffb9418a2ca7db804fa0c767da0f8ea182fe8 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/bcprov-jdk15-132  -->
+<!-- SHA1: 8537af9a01b8fa6dd3f62bcd33593d7b4fe90ba6 -->
+<dependency>
+			<groupId>bouncycastle</groupId>
+			<artifactId>bcprov-jdk15</artifactId>
+			<version>140</version>
+		</dependency>
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-adb-codegen-1.4.1  -->
+<!-- SHA1: de16607a48a76d84184b3b9885ffe81ea62b7278 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-adb-codegen</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jaxb-xjc-2.1.6  -->
+<!-- SHA1: 3bea649c07989a0af4991e0ff0bff081ccdcdf39 -->
+<dependency>
+   <groupId>com.sun.xml.bind</groupId>
+   <artifactId>jaxb-xjc</artifactId>
+   <version>2.1.6</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-spring-1.4.1  -->
+<!-- SHA1: c9d1a9a7bcb5665c4b3e5224be95e353f8285912 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-spring</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axiom-api-1.2.7  -->
+<!-- SHA1: aa260a5f3fcaee3b95b551a9bbcbe63f56e5a2ad -->
+<dependency>
+   <groupId>org.apache.ws.commons.axiom</groupId>
+   <artifactId>axiom-api</artifactId>
+   <version>1.2.7</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/rampart-trust-1.4  -->
+<!-- SHA1: 6e77576b4ac3d0e2e3693e68a071d67f06045783 -->
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/jaxb-impl-2.1.6  -->
+<!-- SHA1: 6bd6c0a32e2e1b999420d77f6c27313dd29f42a5 -->
+<dependency>
+   <groupId>com.sun.xml.bind</groupId>
+   <artifactId>jaxb-impl</artifactId>
+   <version>2.1.6</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/httpcore-4.0-beta1  -->
+<!-- SHA1: c642a5f7c20539840957584b1af2ad798cd1ba52 -->
+<dependency>
+   <groupId>org.apache.httpcomponents</groupId>
+   <artifactId>httpcore</artifactId>
+   <version>4.0-beta1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-mtompolicy-1.4.1  -->
+<!-- SHA1: 64152b83642c88832a7b9872bb66eae637c4ac7a -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-mtompolicy</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-adb-1.4.1  -->
+<!-- SHA1: 800c809fde5746d679e4083d64b3c6f4cb95f74b -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-adb</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/log4j-1.2.15  -->
+<!-- SHA1: f0a0d2e29ed910808c33135a3a5a51bba6358f7b -->
+<dependency>
+   <groupId>log4j</groupId>
+   <artifactId>log4j</artifactId>
+   <version>1.2.15</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/xercesImpl  -->
+<!-- SHA1: 3c92b7a863fe214c170ec7b3a5d3954f5cec49c6 -->
+		<dependency>
+			<groupId>org.bluestemsoftware.open.maven.tparty</groupId>
+			<artifactId>xerces-impl</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/axis2-jaxws-api-1.4.1  -->
+<!-- SHA1: c8d0729ed97a23b31845f30645603a3458ca4980 -->
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-jaxws-api</artifactId>
+   <version>1.4.1</version>
+</dependency>
+
+
+
+
+<dependency>
+	<groupId>org.apache.axis2</groupId>
+	<artifactId>mex</artifactId>
+	<version>1.41</version>
+</dependency>
+
+		<dependency>
+			<groupId>org.apache.ws.security</groupId>
+			<artifactId>wss4j</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>soapmonitor</artifactId>
+			<version>1.41</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>org.apache.rampart</groupId>
+			<artifactId>rampart-policy</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.santuario</groupId>
+			<artifactId>xmlsec</artifactId>
+			<version>1.4.1</version>
+		</dependency>
+		
+		<dependency>
+	<groupId>org.apache.woden</groupId>
+	<artifactId>woden-api</artifactId>
+	<version>1.0M9</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.woden</groupId>
+	<artifactId>woden-impl-dom</artifactId>
+	<version>1.0M9</version>
+</dependency>
+
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>org.apache.ws.commons.axiom</groupId>
+			<artifactId>axiom-dom</artifactId>
+			<version>1.2.12</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.apache.neethi</groupId>
+			<artifactId>neethi</artifactId>
+			<version>2.0.5</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>org.apache.rampart</groupId>
+			<artifactId>rampart-core</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>stax</groupId>
+			<artifactId>stax-api</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>annogen</groupId>
+			<artifactId>annogen</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.mockrunner</groupId>
+			<artifactId>mockrunner-jdk1.5-j2ee1.3</artifactId>
+			<version>0.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>cglib-nodep</groupId>
+					<artifactId>cglib-nodep</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>jboss</groupId>
+					<artifactId>jboss-jee</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+				<dependency>
+			<groupId>org.apache.rampart</groupId>
+			<artifactId>rampart-trust</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		
+		
+		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/OSCARS-client-api  -->
+<!-- SHA1: 2fe011ec709afe1449699248c74e11511b8658eb -->
+<dependency>
+   <groupId>unknown</groupId>
+   <artifactId>OSCARS-client-api </artifactId>
+   <version>unknown</version>
+</dependency>
+
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/muse-platform-mini-2.2.0  -->
+<!-- SHA1: 81053ab68fb4dba8b4c387aa51d8eaaecc3eaec0 -->
+<dependency>
+   <groupId>org.apache.muse</groupId>
+   <artifactId>muse-platform-mini</artifactId>
+   <version>2.2.0</version>
+</dependency>
+
+
+<dependency>
+   <groupId>${groupId}</groupId>
+   <artifactId>common-utils </artifactId>
+   <version>1</version>
+</dependency>
+
+
+<dependency>
+   <groupId>org.apache.muse</groupId>
+   <artifactId>muse-tools</artifactId>
+   <version>2.2.0</version>
+</dependency>
+
+
+ <dependency>
+   <groupId>${groupId}</groupId>
+   <artifactId>common-serviceinterface </artifactId>
+   <version>1</version>
+</dependency>
+
+
+
+
+<dependency>
+   <groupId>org.apache.muse</groupId>
+   <artifactId>muse-complete</artifactId>
+   <version>2.2.0</version>
+</dependency>
+
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.translator.idc/lib/harmony-adapter-dummy  -->
+<!-- SHA1: 4684893a4ab6cda36fa3c574a35631f3ac3fb815 -->
+<dependency>
+   <groupId>${groupId}</groupId>
+   <artifactId>adapter-dummy </artifactId>
+   <version>1</version>
+</dependency>
+		
+		
+
+</dependencies>
+</project>
+

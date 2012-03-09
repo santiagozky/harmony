@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: eu.ist_phosphorus.harmony.test.adapter.arrm.webservice.TestNotificationWS
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.393 sec

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/server/nsp
+END
+GuiTopologyClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/server/nsp/GuiTopologyClient.java
+END
+NspClientProxyImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/server/nsp/NspClientProxyImpl.java
+END
+TokenCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/server/nsp/TokenCache.java
+END
+GuiReservationClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/server/nsp/GuiReservationClient.java
+END
+NspClassMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/server/nsp/NspClassMapper.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/argon/panel
+END
+ArgonEndpointListPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/argon/panel/ArgonEndpointListPanel.java
+END
+ArgonRouterListPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/argon/panel/ArgonRouterListPanel.java
+END
+ArgonReservationListPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/argon/panel/ArgonReservationListPanel.java
+END
+ArgonInternalLinkListPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/argon/panel/ArgonInternalLinkListPanel.java
+END

@@ -1,0 +1,105 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+
+
+  <packaging>pom</packaging>
+
+  <modules>
+		<module>harmony.adapter.argon</module>
+		<module>harmony.adapter.arrm</module>
+		<module>harmony.adapter.dummy</module>
+		<module>harmony.adapter.thin</module>
+		<module>harmony.adapter.uclp</module>
+		<module>harmony.common.ant</module>
+		<module>harmony.common.security</module>
+		<module>harmony.common.serviceinterface</module>
+		<module>harmony.common.utils</module>
+		<module>harmony.common.synthesizer</module>
+		<module>harmony.database</module>
+		<module>harmony.idb</module>
+		<module>harmony.notifications</module>
+		<module>harmony.template</module>
+		<module>harmony.test</module>
+		<module>harmony.translator.autobahn</module>
+		<module>harmony.translator.g2mpls</module>
+		<module>harmony.translator.idc</module>
+		<module>harmony.ui.reservationcli</module>
+		<module>harmony.ui.topologygui</module>
+		<module>harmony.ui.webgui</module>
+
+	</modules>
+<properties>
+    <groupId>eu.ist_phosphorus.harmony</groupId>
+    <artifactId>harmony</artifactId>
+    <version>1.0</version>
+    <resources.dir>resources</resources.dir>
+    <webservices.dir>${resources.dir}/webservices</webservices.dir>
+    <scripts.dir>${resources.dir}/scripts</scripts.dir>
+    <muse.dir>/home/santiago/tools/muse</muse.dir>
+    <src.dir>${basedir}/src</src.dir>
+    <log.dir>${basedir}/log</log.dir>
+    <temp.dir>${basedir}/temp</temp.dir>
+</properties>
+<build>
+<resources>
+        <resource>
+        <directory>resources</directory>
+            <includes>
+                <include> **/*.properties</include>
+                 <include> **/*.xml</include>
+                     <include> **/*.dtd</include>
+            </includes>
+            
+        </resource>
+    </resources>
+    <testResources>
+        <testResource>
+        <directory>resources</directory>
+            <includes>
+                <include> **/*.properties</include>
+                 <include> **/*.xml</include>
+                     <include> **/*.dtd</include>
+            </includes>
+        </testResource>
+    </testResources>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+     <source>1.5</source>
+     <target>1.5</target>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>
+<dependencies>
+<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+		</dependency>
+		
+</dependencies>
+<repositories>
+<repository>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </snapshots>
+      <id>myproxy</id>
+      <name>MyProxy API and Client</name>
+      <url>https://cilogon.svn.sourceforge.net/svnroot/cilogon/m2-repo/</url>
+      <layout>default</layout>
+    </repository>
+</repositories>
+</project>

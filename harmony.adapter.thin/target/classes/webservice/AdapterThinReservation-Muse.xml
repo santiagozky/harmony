@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<muse xmlns="http://ws.apache.org/muse/descriptor"
+	xmlns:wsrf-sgw="http://docs.oasis-open.org/wsrf/sgw-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ws.apache.org/muse/descriptor muse-descriptor.xsd">
+	<router>
+		<java-router-class>
+			org.apache.muse.core.routing.SimpleResourceRouter
+		</java-router-class>
+		<logging>
+			<log-file>log/muse.log</log-file>
+			<log-level>FINE</log-level>
+		</logging>
+		<persistence>
+			<java-persistence-class>
+				org.apache.muse.core.routing.RouterFilePersistence
+			</java-persistence-class>
+			<persistence-location>router-entries</persistence-location>
+		</persistence>
+	</router>
+	<resource-type use-router-persistence="true">
+		<context-path>MyService</context-path>
+		<wsdl>
+			<wsdl-file>Reservation-WS.wsdl</wsdl-file>
+			<wsdl-port-type
+				xmlns:pfx="http://ist_phosphorus.eu/nsp/webservice/reservation">
+				pfx:networkReservationPortType
+			</wsdl-port-type>
+		</wsdl>
+		<java-id-factory-class>
+			org.apache.muse.core.routing.CounterResourceIdFactory
+		</java-id-factory-class>
+		<java-resource-class>
+			org.apache.muse.core.SimpleResource
+		</java-resource-class>
+		<desc:capability
+			xmlns:desc="http://ws.apache.org/muse/descriptor">
+			<desc:capability-uri>
+				http://ist_phosphorus.eu/nsp/webservice/reservation
+			</desc:capability-uri>
+			<desc:java-capability-class>
+				eu.ist_phosphorus.nrps.thin.webservice.reservation.MyCapability
+			</desc:java-capability-class>
+		</desc:capability>
+	</resource-type>
+</muse>

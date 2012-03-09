@@ -1,0 +1,10 @@
+#===============================================================================
+# Any module related properties goes here
+#===============================================================================
+
+dir.public=resources/public
+
+# Export filenames
+zipfile=harmony-ui-webgui.zip
+jarfile=harmony-ui-webgui.jar
+warfile=gui.war

@@ -1,0 +1,41 @@
+================================================================================
+                                                                   
+           _/_/_/    _/_/_/_/    _/_/    _/_/_/    _/      _/  _/_/_/_/   
+          _/    _/  _/        _/    _/  _/    _/  _/_/  _/_/  _/          
+         _/_/_/    _/_/_/    _/_/_/_/  _/    _/  _/  _/  _/  _/_/_/       
+        _/    _/  _/        _/    _/  _/    _/  _/      _/  _/            
+       _/    _/  _/_/_/_/  _/    _/  _/_/_/    _/      _/  _/_/_/_/         
+
+                           - Harmony Reservation CLI -
+================================================================================
+
+First step:
+===========
+> chmod +x resources/scripts/reservationClient.bsh
+
+
+To create a reservation:
+========================
+> ./resources/scripts/reservationClient.bsh -a create -s 129.0.0.1 -t 129.0.0.2
+Reservation ID: 5
+
+To create a malleable reservation:
+==================================
+> ./resources/scripts/reservationClient.bsh -a createMalleable -s 10.7.227.8 -t 10.7.225.72 -m 20000 -lb 100 -hb 500 -st 60 -dl 180
+Reservation ID: 5
+
+
+To get the status of a reservation:
+===================================
+> ./resources/scripts/reservationClient.bsh -a getStatus -i 5
+Status: ACTIVE
+Details:
+ * Domain: localDummy - ACTIVE
+
+
+To cancel a reservation:
+========================
+> ./resources/scripts/reservationClient.bsh -a cancel -i 5
+Success: true
+
+

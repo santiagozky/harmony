@@ -1,0 +1,88 @@
+8
+
+dir
+4925
+https://svn.uva.netherlight.nl/projects/phosphorus-wp1/modules/ui/webgui/trunk/src/client
+https://svn.uva.netherlight.nl/projects/phosphorus-wp1
+
+
+
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2286f438-5c22-0410-bfe4-ef30cd3bb926
+
+helper
+dir
+
+tools
+dir
+
+LogoPanel.java
+file
+
+
+
+
+2009-08-28T09:57:01.593750Z
+08409eba3e499fa232440b018aec762c
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+
+demonstrator
+dir
+
+reservation
+dir
+
+ManagementGui.java
+file
+
+
+
+
+2009-08-28T09:57:01.593750Z
+40e2d8ebc9ac736232743fbc1a833794
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+
+interfaces
+dir
+
+attic
+dir
+
+types
+dir
+
+argon
+dir
+
+mock
+dir
+
+about
+dir
+
+template
+dir
+
+classes
+dir
+

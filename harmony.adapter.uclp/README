@@ -1,0 +1,9 @@
+IST Phosphorus Harmony UCLP Adapter
+===================================
+
+1.) ant prepare
+2.) Look at README.1st
+3.) Deploy UCLP Adapter Webservice:
+    - ant build deploy
+    - cp temp/harmony-adapter-uclp.war $CATALINA_HOME/webapps
+

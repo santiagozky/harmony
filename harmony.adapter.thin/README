@@ -1,0 +1,9 @@
+IST Phosphorus Harmony Thin Adapter
+===================================
+
+1.) ant prepare
+2.) Look at README.1st
+3.) Deploy Thin Adapter Webservice:
+    - ant build deploy
+    - cp temp/harmony-adapter-thin.war $CATALINA_HOME/webapps
+

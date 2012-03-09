@@ -1,0 +1,10 @@
+INFO  2012-03-07 18:32:20,511 [main] - Using default SimpleSoapClient
+INFO  2012-03-07 18:32:21,413 [Thread-0] - Getting AAA
+INFO  2012-03-08 17:36:17,498 [main] - Using default SimpleSoapClient
+INFO  2012-03-08 17:36:18,534 [Thread-0] - Getting AAA
+INFO  2012-03-08 17:36:19,178 [unknown_RequestHandler_0c6a0000_getStatus] - rename_thread Thread-0
+INFO  2012-03-08 17:36:19,241 [unknown_RequestHandler_0c6a0001_isAvailable] - rename_thread Thread-2
+INFO  2012-03-08 17:36:19,279 [unknown_RequestHandler_0c6a0002_createReservation] - rename_thread Thread-3
+INFO  2012-03-08 17:36:19,303 [unknown_RequestHandler_0c6a0003_activate] - rename_thread Thread-4
+INFO  2012-03-08 17:36:19,319 [unknown_RequestHandler_0c6a0004_cancelReservation] - rename_thread Thread-5
+INFO  2012-03-08 17:36:19,333 [unknown_RequestHandler_0c6a0005_bind] - rename_thread Thread-6

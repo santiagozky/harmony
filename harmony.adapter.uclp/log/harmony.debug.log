@@ -1,0 +1,54 @@
+INFO  2012-03-07 18:32:20,511 [main] - Using default SimpleSoapClient
+INFO  2012-03-07 18:32:21,413 [Thread-0] - Getting AAA
+INFO  2012-03-08 17:36:17,498 [main] - Using default SimpleSoapClient
+INFO  2012-03-08 17:36:18,534 [Thread-0] - Getting AAA
+DEBUG 2012-03-08 17:36:18,670 [Thread-0] - Failed to load cog.properties. Using defaults.
+java.io.FileNotFoundException: /home/santiago/.globus/cog.properties (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:137)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at org.globus.common.CoGProperties.load(CoGProperties.java:142)
+	at org.globus.common.CoGProperties.getDefault(CoGProperties.java:104)
+	at org.globus.gsi.gssapi.KeyPairCache.getKeyPairCache(KeyPairCache.java:80)
+	at org.globus.gsi.gssapi.GlobusGSSContextImpl.<init>(GlobusGSSContextImpl.java:131)
+	at org.globus.gsi.gssapi.GlobusGSSManagerImpl.createContext(GlobusGSSManagerImpl.java:267)
+	at org.globus.myproxy.MyProxy.getSocket(MyProxy.java:263)
+	at org.globus.myproxy.MyProxy.get(MyProxy.java:973)
+	at org.globus.myproxy.MyProxy.get(MyProxy.java:934)
+	at eu.ist_phosphorus.harmony.adapter.uclp.handler.ReservationHandler.<init>(ReservationHandler.java:225)
+	at eu.ist_phosphorus.harmony.adapter.uclp.handler.ReservationHandler.getInstance(ReservationHandler.java:151)
+	at eu.ist_phosphorus.harmony.adapter.uclp.webservice.ReservationWS.getStatus(ReservationWS.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at eu.ist_phosphorus.harmony.common.serviceinterface.reservation.CommonReservationClient.callServer(CommonReservationClient.java:134)
+	at eu.ist_phosphorus.harmony.common.serviceinterface.reservation.CommonReservationClient.getStatus(CommonReservationClient.java:245)
+	at eu.ist_phosphorus.harmony.common.serviceinterface.reservation.SimpleReservationClient.getStatus(SimpleReservationClient.java:573)
+	at eu.ist_phosphorus.harmony.common.serviceinterface.reservation.SimpleReservationClient.getStatus(SimpleReservationClient.java:585)
+	at eu.ist_phosphorus.harmony.test.adapter.uclp.webservice.TestWebservice.testGetStatus(TestWebservice.java:332)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.FailOnTimeout$1.run(FailOnTimeout.java:28)
+DEBUG 2012-03-08 17:36:18,711 [Thread-0] - Looking for matching resources in directory tree [/home/santiago/.globus/certificates]
+DEBUG 2012-03-08 17:36:18,711 [Thread-0] - Searching directory [/home/santiago/.globus/certificates] for files matching pattern [/home/santiago/.globus/certificates/*.0]
+DEBUG 2012-03-08 17:36:18,713 [Thread-0] - Resolved location pattern [file:/home/santiago/.globus/certificates/*.0] to resources [file [/home/santiago/.globus/certificates/polar.argia.i2cat.net-CAcert.0]]
+DEBUG 2012-03-08 17:36:19,122 [Thread-0] - Provider set to : BC
+INFO  2012-03-08 17:36:19,178 [unknown_RequestHandler_0c6a0000_getStatus] - rename_thread Thread-0
+DEBUG 2012-03-08 17:36:19,205 [unknown_RequestHandler_0c6a0000_getStatus] - Checking responsibility for GetStatusType
+INFO  2012-03-08 17:36:19,241 [unknown_RequestHandler_0c6a0001_isAvailable] - rename_thread Thread-2
+DEBUG 2012-03-08 17:36:19,259 [unknown_RequestHandler_0c6a0001_isAvailable] - Checking responsibility for IsAvailableType
+INFO  2012-03-08 17:36:19,279 [unknown_RequestHandler_0c6a0002_createReservation] - rename_thread Thread-3
+DEBUG 2012-03-08 17:36:19,290 [unknown_RequestHandler_0c6a0002_createReservation] - Checking responsibility for CreateReservationType
+INFO  2012-03-08 17:36:19,303 [unknown_RequestHandler_0c6a0003_activate] - rename_thread Thread-4
+DEBUG 2012-03-08 17:36:19,306 [unknown_RequestHandler_0c6a0003_activate] - Checking responsibility for ActivateType
+INFO  2012-03-08 17:36:19,319 [unknown_RequestHandler_0c6a0004_cancelReservation] - rename_thread Thread-5
+DEBUG 2012-03-08 17:36:19,321 [unknown_RequestHandler_0c6a0004_cancelReservation] - Checking responsibility for CancelReservationType
+INFO  2012-03-08 17:36:19,333 [unknown_RequestHandler_0c6a0005_bind] - rename_thread Thread-6
+DEBUG 2012-03-08 17:36:19,337 [unknown_RequestHandler_0c6a0005_bind] - Checking responsibility for BindType

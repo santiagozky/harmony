@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes
+END
+Service.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/Service.java
+END
+Reservation.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/Reservation.java
+END
+DomainList.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/DomainList.java
+END
+ServiceStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/ServiceStatus.java
+END
+CancelResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/CancelResponse.java
+END
+Domain.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/Domain.java
+END
+DomainStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/DomainStatus.java
+END
+RouterList.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/RouterList.java
+END
+RemoveResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/RemoveResponse.java
+END
+EndpointList.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/EndpointList.java
+END
+Router.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/Router.java
+END
+Endpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/Endpoint.java
+END
+Status.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/Status.java
+END
+InternalLinkList.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/InternalLinkList.java
+END
+InternalLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/InternalLink.java
+END
+ReservationList.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/ReservationList.java
+END

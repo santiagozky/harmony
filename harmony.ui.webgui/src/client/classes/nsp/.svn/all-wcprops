@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp
+END
+LinkIdentifierType.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/LinkIdentifierType.java
+END
+GetReservationsResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetReservationsResponseType.java
+END
+GetEndpointsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetEndpointsType.java
+END
+ConnectionStatusType.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/ConnectionStatusType.java
+END
+CreateReservationResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/CreateReservationResponseType.java
+END
+ServiceStatusType.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/ServiceStatusType.java
+END
+EditDomainType.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/EditDomainType.java
+END
+GetLinksType.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetLinksType.java
+END
+EndpointType.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/EndpointType.java
+END
+GetEndpointsResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetEndpointsResponseType.java
+END
+GetStatusType.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetStatusType.java
+END
+CreateReservation.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/CreateReservation.java
+END
+StatusType.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/StatusType.java
+END
+FixedReservationConstraintType.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/FixedReservationConstraintType.java
+END
+EditEndpointType.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/EditEndpointType.java
+END
+InterdomainLinkType.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/InterdomainLinkType.java
+END
+DomainRelationshipType.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/DomainRelationshipType.java
+END
+GetDomainsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetDomainsType.java
+END
+DomainConnectionStatusType.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/DomainConnectionStatusType.java
+END
+Link.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/Link.java
+END
+GetLinksResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetLinksResponseType.java
+END
+ConnectionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/ConnectionType.java
+END
+EndpointInterfaceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/EndpointInterfaceType.java
+END
+ReservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/ReservationType.java
+END
+GetStatusResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetStatusResponseType.java
+END
+CreateReservationResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/CreateReservationResponse.java
+END
+ConnectionConstraintType.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/ConnectionConstraintType.java
+END
+MalleableReservationConstraintType.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/MalleableReservationConstraintType.java
+END
+ServiceConstraintType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/ServiceConstraintType.java
+END
+CancelReservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/CancelReservationType.java
+END
+GetDomainsResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetDomainsResponseType.java
+END
+DomainStatusType.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/DomainStatusType.java
+END
+GetReservationsComplexType.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetReservationsComplexType.java
+END
+DomainInformationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/DomainInformationType.java
+END
+GetReservationResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetReservationResponseType.java
+END
+DeferrableReservationConstraintType.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/DeferrableReservationConstraintType.java
+END
+GetReservationsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/GetReservationsType.java
+END
+EditEndpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/EditEndpoint.java
+END
+CreateReservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/CreateReservationType.java
+END
+CancelReservationResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/classes/nsp/CancelReservationResponseType.java
+END

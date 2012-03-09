@@ -1,0 +1,106 @@
+8
+
+dir
+4925
+https://svn.uva.netherlight.nl/projects/phosphorus-wp1/modules/ui/webgui/trunk
+https://svn.uva.netherlight.nl/projects/phosphorus-wp1
+
+
+
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2286f438-5c22-0410-bfe4-ef30cd3bb926
+
+.classpath
+file
+
+
+
+
+2009-05-20T10:47:42.593750Z
+be104c8b70ad1b8839ad160033defb02
+2008-12-10T15:19:37.709730Z
+4551
+gassen@cs.uni-bonn.de
+
+.project
+file
+
+
+
+
+2009-05-20T10:47:42.593750Z
+6846fbe923d1ae189b5bbba819eaddea
+2008-07-05T15:16:41.654273Z
+3533
+willner@cs.uni-bonn.de
+
+src
+dir
+
+resources
+dir
+
+build.properties
+file
+
+
+
+
+2009-05-20T10:47:42.593750Z
+756e5e567631427c7bd6b02b3946eec1
+2008-10-09T11:45:49.182646Z
+4316
+gassen@cs.uni-bonn.de
+
+lgpl.txt
+file
+
+
+
+
+2009-08-28T09:57:02.640625Z
+b52f2d57d10c4f7ee67a7eb9615d5d24
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+
+README
+file
+
+
+
+
+2009-05-20T10:47:42.593750Z
+c9f4b8e996f2a32b47e134d33d4ef79a
+2008-04-03T14:43:06.633236Z
+2793
+gassen@cs.uni-bonn.de
+
+build.xml
+file
+
+
+
+
+2009-05-20T10:47:42.593750Z
+e5641624d58a1507625716abb19f6867
+2008-11-13T15:40:16.991530Z
+4471
+gassen@cs.uni-bonn.de
+

@@ -1,0 +1,14 @@
+eu.ist_phosphorus.harmony.idb
+eu.ist_phosphorus.harmony.idb.database.hibernate
+eu.ist_phosphorus.harmony.idb.exceptions.database
+eu.ist_phosphorus.harmony.idb.reservation
+eu.ist_phosphorus.harmony.idb.reservation.exceptions
+eu.ist_phosphorus.harmony.idb.reservation.handler
+eu.ist_phosphorus.harmony.idb.reservation.pathcomputer
+eu.ist_phosphorus.harmony.idb.topology.handler
+eu.ist_phosphorus.harmony.idb.utils
+eu.ist_phosphorus.harmony.idb.webservice
+eu.ist_phosphorus.harmony.test.idb
+eu.ist_phosphorus.harmony.test.idb.database
+eu.ist_phosphorus.harmony.test.idb.handler
+eu.ist_phosphorus.harmony.test.idb.webservice

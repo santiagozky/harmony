@@ -1,0 +1,204 @@
+ERROR 2012-03-07 17:53:14,231 [main] - Error log message at: 1331139194230
+DEBUG 2012-03-07 17:53:14,234 [main] - Error log message at: 1331139194230 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-07 17:53:14,239 [main] - Trace log message at: 1331139194239
+DEBUG 2012-03-07 17:53:14,242 [main] - Debug log message at: 1331139194241
+TRACE 2012-03-07 17:53:14,242 [main] - Debug log message at: 1331139194241 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-07 17:53:14,244 [main] - Info log message at: 1331139194244
+DEBUG 2012-03-07 17:53:14,244 [main] - Info log message at: 1331139194244 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-07 17:53:14,247 [main] - Warn log message at: 1331139194247
+DEBUG 2012-03-07 17:53:14,247 [main] - Warn log message at: 1331139194247 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-07 17:53:14,250 [main] - Fatal log message at: 1331139194250
+DEBUG 2012-03-07 17:53:14,250 [main] - Fatal log message at: 1331139194250 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-07 17:53:14,269 [main] - logTrace
+DEBUG 2012-03-07 17:53:14,269 [main] - logDebug
+INFO  2012-03-07 17:53:14,269 [main] - logInfo
+WARN  2012-03-07 17:53:14,269 [main] - logWarn
+ERROR 2012-03-07 17:53:14,269 [main] - logError
+FATAL 2012-03-07 17:53:14,270 [main] - logFatal
+ERROR 2012-03-07 17:53:53,731 [main] - Error log message at: 1331139233730
+DEBUG 2012-03-07 17:53:53,733 [main] - Error log message at: 1331139233730 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-07 17:53:53,739 [main] - Trace log message at: 1331139233739
+DEBUG 2012-03-07 17:53:53,741 [main] - Debug log message at: 1331139233741
+TRACE 2012-03-07 17:53:53,742 [main] - Debug log message at: 1331139233741 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-07 17:53:53,744 [main] - Info log message at: 1331139233744
+DEBUG 2012-03-07 17:53:53,744 [main] - Info log message at: 1331139233744 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-07 17:53:53,747 [main] - Warn log message at: 1331139233747
+DEBUG 2012-03-07 17:53:53,747 [main] - Warn log message at: 1331139233747 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-07 17:53:53,749 [main] - Fatal log message at: 1331139233749
+DEBUG 2012-03-07 17:53:53,750 [main] - Fatal log message at: 1331139233749 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-07 17:53:53,772 [main] - logTrace
+DEBUG 2012-03-07 17:53:53,772 [main] - logDebug
+INFO  2012-03-07 17:53:53,772 [main] - logInfo
+WARN  2012-03-07 17:53:53,772 [main] - logWarn
+ERROR 2012-03-07 17:53:53,773 [main] - logError
+FATAL 2012-03-07 17:53:53,773 [main] - logFatal
+ERROR 2012-03-07 17:53:54,525 [main] - Error log message at: 1331139234524
+DEBUG 2012-03-07 17:53:54,527 [main] - Error log message at: 1331139234524 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-07 17:53:54,533 [main] - Trace log message at: 1331139234533
+DEBUG 2012-03-07 17:53:54,535 [main] - Debug log message at: 1331139234535
+TRACE 2012-03-07 17:53:54,536 [main] - Debug log message at: 1331139234535 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-07 17:53:54,538 [main] - Info log message at: 1331139234538
+DEBUG 2012-03-07 17:53:54,539 [main] - Info log message at: 1331139234538 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-07 17:53:54,542 [main] - Warn log message at: 1331139234542
+DEBUG 2012-03-07 17:53:54,542 [main] - Warn log message at: 1331139234542 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-07 17:53:54,545 [main] - Fatal log message at: 1331139234545
+DEBUG 2012-03-07 17:53:54,545 [main] - Fatal log message at: 1331139234545 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-07 17:53:54,560 [main] - logTrace
+DEBUG 2012-03-07 17:53:54,560 [main] - logDebug
+INFO  2012-03-07 17:53:54,560 [main] - logInfo
+WARN  2012-03-07 17:53:54,561 [main] - logWarn
+ERROR 2012-03-07 17:53:54,561 [main] - logError
+FATAL 2012-03-07 17:53:54,561 [main] - logFatal
+ERROR 2012-03-07 17:54:02,228 [main] - Error log message at: 1331139242227
+DEBUG 2012-03-07 17:54:02,231 [main] - Error log message at: 1331139242227 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-07 17:54:02,236 [main] - Trace log message at: 1331139242236
+DEBUG 2012-03-07 17:54:02,239 [main] - Debug log message at: 1331139242239
+TRACE 2012-03-07 17:54:02,240 [main] - Debug log message at: 1331139242239 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-07 17:54:02,242 [main] - Info log message at: 1331139242242
+DEBUG 2012-03-07 17:54:02,243 [main] - Info log message at: 1331139242242 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-07 17:54:02,245 [main] - Warn log message at: 1331139242245
+DEBUG 2012-03-07 17:54:02,246 [main] - Warn log message at: 1331139242245 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-07 17:54:02,249 [main] - Fatal log message at: 1331139242249
+DEBUG 2012-03-07 17:54:02,250 [main] - Fatal log message at: 1331139242249 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-07 17:54:02,265 [main] - logTrace
+DEBUG 2012-03-07 17:54:02,265 [main] - logDebug
+INFO  2012-03-07 17:54:02,265 [main] - logInfo
+WARN  2012-03-07 17:54:02,265 [main] - logWarn
+ERROR 2012-03-07 17:54:02,265 [main] - logError
+FATAL 2012-03-07 17:54:02,266 [main] - logFatal
+ERROR 2012-03-08 11:12:08,165 [main] - Error log message at: 1331201528164
+DEBUG 2012-03-08 11:12:08,202 [main] - Error log message at: 1331201528164 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 11:12:08,224 [main] - Trace log message at: 1331201528224
+DEBUG 2012-03-08 11:12:08,228 [main] - Debug log message at: 1331201528228
+TRACE 2012-03-08 11:12:08,229 [main] - Debug log message at: 1331201528228 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 11:12:08,232 [main] - Info log message at: 1331201528232
+DEBUG 2012-03-08 11:12:08,233 [main] - Info log message at: 1331201528232 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 11:12:08,236 [main] - Warn log message at: 1331201528236
+DEBUG 2012-03-08 11:12:08,237 [main] - Warn log message at: 1331201528236 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 11:12:08,241 [main] - Fatal log message at: 1331201528241
+DEBUG 2012-03-08 11:12:08,242 [main] - Fatal log message at: 1331201528241 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 11:12:08,299 [main] - logTrace
+DEBUG 2012-03-08 11:12:08,299 [main] - logDebug
+INFO  2012-03-08 11:12:08,299 [main] - logInfo
+WARN  2012-03-08 11:12:08,299 [main] - logWarn
+ERROR 2012-03-08 11:12:08,299 [main] - logError
+FATAL 2012-03-08 11:12:08,299 [main] - logFatal
+ERROR 2012-03-08 11:12:21,405 [main] - Error log message at: 1331201541404
+DEBUG 2012-03-08 11:12:21,408 [main] - Error log message at: 1331201541404 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 11:12:21,413 [main] - Trace log message at: 1331201541413
+DEBUG 2012-03-08 11:12:21,417 [main] - Debug log message at: 1331201541417
+TRACE 2012-03-08 11:12:21,419 [main] - Debug log message at: 1331201541417 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 11:12:21,424 [main] - Info log message at: 1331201541424
+DEBUG 2012-03-08 11:12:21,425 [main] - Info log message at: 1331201541424 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 11:12:21,429 [main] - Warn log message at: 1331201541429
+DEBUG 2012-03-08 11:12:21,430 [main] - Warn log message at: 1331201541429 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 11:12:21,433 [main] - Fatal log message at: 1331201541433
+DEBUG 2012-03-08 11:12:21,434 [main] - Fatal log message at: 1331201541433 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 11:12:21,454 [main] - logTrace
+DEBUG 2012-03-08 11:12:21,454 [main] - logDebug
+INFO  2012-03-08 11:12:21,454 [main] - logInfo
+WARN  2012-03-08 11:12:21,455 [main] - logWarn
+ERROR 2012-03-08 11:12:21,455 [main] - logError
+FATAL 2012-03-08 11:12:21,455 [main] - logFatal
+ERROR 2012-03-08 11:12:22,501 [main] - Error log message at: 1331201542500
+DEBUG 2012-03-08 11:12:22,503 [main] - Error log message at: 1331201542500 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 11:12:22,509 [main] - Trace log message at: 1331201542509
+DEBUG 2012-03-08 11:12:22,512 [main] - Debug log message at: 1331201542512
+TRACE 2012-03-08 11:12:22,513 [main] - Debug log message at: 1331201542512 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 11:12:22,516 [main] - Info log message at: 1331201542516
+DEBUG 2012-03-08 11:12:22,517 [main] - Info log message at: 1331201542516 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 11:12:22,521 [main] - Warn log message at: 1331201542521
+DEBUG 2012-03-08 11:12:22,522 [main] - Warn log message at: 1331201542521 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 11:12:22,525 [main] - Fatal log message at: 1331201542525
+DEBUG 2012-03-08 11:12:22,525 [main] - Fatal log message at: 1331201542525 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 11:12:22,541 [main] - logTrace
+DEBUG 2012-03-08 11:12:22,541 [main] - logDebug
+INFO  2012-03-08 11:12:22,541 [main] - logInfo
+WARN  2012-03-08 11:12:22,541 [main] - logWarn
+ERROR 2012-03-08 11:12:22,541 [main] - logError
+FATAL 2012-03-08 11:12:22,541 [main] - logFatal
+ERROR 2012-03-08 17:32:34,005 [main] - Error log message at: 1331224354005
+DEBUG 2012-03-08 17:32:34,045 [main] - Error log message at: 1331224354005 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 17:32:34,070 [main] - Trace log message at: 1331224354070
+DEBUG 2012-03-08 17:32:34,085 [main] - Debug log message at: 1331224354085
+TRACE 2012-03-08 17:32:34,097 [main] - Debug log message at: 1331224354085 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 17:32:34,102 [main] - Info log message at: 1331224354102
+DEBUG 2012-03-08 17:32:34,103 [main] - Info log message at: 1331224354102 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 17:32:34,105 [main] - Warn log message at: 1331224354105
+DEBUG 2012-03-08 17:32:34,106 [main] - Warn log message at: 1331224354105 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 17:32:34,109 [main] - Fatal log message at: 1331224354109
+DEBUG 2012-03-08 17:32:34,110 [main] - Fatal log message at: 1331224354109 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 17:32:34,166 [main] - logTrace
+DEBUG 2012-03-08 17:32:34,166 [main] - logDebug
+INFO  2012-03-08 17:32:34,166 [main] - logInfo
+WARN  2012-03-08 17:32:34,166 [main] - logWarn
+ERROR 2012-03-08 17:32:34,166 [main] - logError
+FATAL 2012-03-08 17:32:34,166 [main] - logFatal
+ERROR 2012-03-08 17:34:59,007 [main] - Error log message at: 1331224499007
+DEBUG 2012-03-08 17:34:59,010 [main] - Error log message at: 1331224499007 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 17:34:59,016 [main] - Trace log message at: 1331224499016
+DEBUG 2012-03-08 17:34:59,019 [main] - Debug log message at: 1331224499019
+TRACE 2012-03-08 17:34:59,020 [main] - Debug log message at: 1331224499019 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 17:34:59,024 [main] - Info log message at: 1331224499024
+DEBUG 2012-03-08 17:34:59,025 [main] - Info log message at: 1331224499024 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 17:34:59,028 [main] - Warn log message at: 1331224499028
+DEBUG 2012-03-08 17:34:59,028 [main] - Warn log message at: 1331224499028 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 17:34:59,032 [main] - Fatal log message at: 1331224499032
+DEBUG 2012-03-08 17:34:59,032 [main] - Fatal log message at: 1331224499032 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 17:34:59,049 [main] - logTrace
+DEBUG 2012-03-08 17:34:59,049 [main] - logDebug
+INFO  2012-03-08 17:34:59,049 [main] - logInfo
+WARN  2012-03-08 17:34:59,050 [main] - logWarn
+ERROR 2012-03-08 17:34:59,050 [main] - logError
+FATAL 2012-03-08 17:34:59,050 [main] - logFatal
+ERROR 2012-03-08 17:35:58,171 [main] - Error log message at: 1331224558171
+DEBUG 2012-03-08 17:35:58,174 [main] - Error log message at: 1331224558171 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 17:35:58,180 [main] - Trace log message at: 1331224558180
+DEBUG 2012-03-08 17:35:58,184 [main] - Debug log message at: 1331224558184
+TRACE 2012-03-08 17:35:58,186 [main] - Debug log message at: 1331224558184 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 17:35:58,190 [main] - Info log message at: 1331224558190
+DEBUG 2012-03-08 17:35:58,191 [main] - Info log message at: 1331224558190 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 17:35:58,196 [main] - Warn log message at: 1331224558196
+DEBUG 2012-03-08 17:35:58,197 [main] - Warn log message at: 1331224558196 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 17:35:58,199 [main] - Fatal log message at: 1331224558199
+DEBUG 2012-03-08 17:35:58,200 [main] - Fatal log message at: 1331224558199 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 17:35:58,219 [main] - logTrace
+DEBUG 2012-03-08 17:35:58,219 [main] - logDebug
+INFO  2012-03-08 17:35:58,219 [main] - logInfo
+WARN  2012-03-08 17:35:58,220 [main] - logWarn
+ERROR 2012-03-08 17:35:58,220 [main] - logError
+FATAL 2012-03-08 17:35:58,220 [main] - logFatal
+ERROR 2012-03-08 17:38:24,115 [main] - Error log message at: 1331224704114
+DEBUG 2012-03-08 17:38:24,118 [main] - Error log message at: 1331224704114 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 17:38:24,124 [main] - Trace log message at: 1331224704124
+DEBUG 2012-03-08 17:38:24,128 [main] - Debug log message at: 1331224704128
+TRACE 2012-03-08 17:38:24,130 [main] - Debug log message at: 1331224704128 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 17:38:24,134 [main] - Info log message at: 1331224704134
+DEBUG 2012-03-08 17:38:24,134 [main] - Info log message at: 1331224704134 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 17:38:24,138 [main] - Warn log message at: 1331224704138
+DEBUG 2012-03-08 17:38:24,139 [main] - Warn log message at: 1331224704138 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 17:38:24,142 [main] - Fatal log message at: 1331224704142
+DEBUG 2012-03-08 17:38:24,145 [main] - Fatal log message at: 1331224704142 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 17:38:24,160 [main] - logTrace
+DEBUG 2012-03-08 17:38:24,160 [main] - logDebug
+INFO  2012-03-08 17:38:24,160 [main] - logInfo
+WARN  2012-03-08 17:38:24,161 [main] - logWarn
+ERROR 2012-03-08 17:38:24,161 [main] - logError
+FATAL 2012-03-08 17:38:24,161 [main] - logFatal
+ERROR 2012-03-08 17:39:22,236 [main] - Error log message at: 1331224762235
+DEBUG 2012-03-08 17:39:22,238 [main] - Error log message at: 1331224762235 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-03-08 17:39:22,245 [main] - Trace log message at: 1331224762245
+DEBUG 2012-03-08 17:39:22,250 [main] - Debug log message at: 1331224762250
+TRACE 2012-03-08 17:39:22,253 [main] - Debug log message at: 1331224762250 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-03-08 17:39:22,259 [main] - Info log message at: 1331224762259
+DEBUG 2012-03-08 17:39:22,260 [main] - Info log message at: 1331224762259 should not be logged in logfile: log/harmony.info.log
+WARN  2012-03-08 17:39:22,266 [main] - Warn log message at: 1331224762266
+DEBUG 2012-03-08 17:39:22,267 [main] - Warn log message at: 1331224762266 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-03-08 17:39:22,278 [main] - Fatal log message at: 1331224762278
+DEBUG 2012-03-08 17:39:22,279 [main] - Fatal log message at: 1331224762278 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-03-08 17:39:22,297 [main] - logTrace
+DEBUG 2012-03-08 17:39:22,297 [main] - logDebug
+INFO  2012-03-08 17:39:22,298 [main] - logInfo
+WARN  2012-03-08 17:39:22,298 [main] - logWarn
+ERROR 2012-03-08 17:39:22,298 [main] - logError
+FATAL 2012-03-08 17:39:22,298 [main] - logFatal

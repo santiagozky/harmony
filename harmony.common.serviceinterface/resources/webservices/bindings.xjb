@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings version="2.1"
+              xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xsi:schemaLocation=" http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
+  <jxb:bindings schemaLocation="Topology-Types.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb"/>
+    </jxb:schemaBindings>
+  </jxb:bindings>
+
+  <jxb:bindings schemaLocation="Reservation-Types.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb"/>
+    </jxb:schemaBindings>
+  </jxb:bindings>
+  
+  <jxb:bindings schemaLocation="Notification-Types.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb"/>
+    </jxb:schemaBindings>
+  </jxb:bindings>
+
+  
+ 
+</jxb:bindings>

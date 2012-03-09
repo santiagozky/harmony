@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/template/page
+END
+CreatePage.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/template/page/CreatePage.java
+END
+DefaultPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/template/page/DefaultPage.java
+END
+LinkAdminPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/template/page/LinkAdminPage.java
+END
+RouterAdminPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/template/page/RouterAdminPage.java
+END
+ReservationAdminPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/template/page/ReservationAdminPage.java
+END
+CrudPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/template/page/CrudPage.java
+END

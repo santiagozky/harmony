@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+	<!-- Console Appender, only for log-levels above and alike WARN -->
+	<appender name="HARMONY_CONSOLE" class="org.apache.log4j.ConsoleAppender" >
+ 		<param name="threshold" value="debug" />
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%-5p - [%t] - %m%n" />
+ 		</layout>
+ 		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="debug" />
+			<param name="LevelMax" value="debug" />
+		</filter>
+ 	</appender>
+
+
+ 	<!-- EMail Appender, activate: add HARMONY_EMAIL to root-category -->
+ 	<appender name="HARMONY_EMAIL" class="eu.ist_phosphorus.harmony.common.utils.logging.PhosphorusSMTPAppender" >
+		<param name="SMTPHost" value="postfix.cs.uni-bonn.de" />
+		<param name="SMTPUsername" value="nsp" />
+ 		<param name="SMTPPassword" value="4Notifcation" />
+		<param name="From" value="nsp@cs.uni-bonn.de" />
+ 		<param name="To" value="nsp@cs.uni-bonn.de" />
+		<!-- %a Harmony-tag; %h Host-tag; %l Level-tag (static link to fatal) -->
+		<param name="Subject" value="%a: An error has appeared.Level on: [%h] %l" />
+		<param name="EvaluatorClass" value="eu.ist_phosphorus.harmony.common.utils.Log4JTriggerEvaluator" />
+		<param name="BufferSize" value="1" />
+ 		<param name="threshold" value="fatal" />
+		<param name="EvaluatorClass" value="eu.ist_phosphorus.harmony.common.utils.Log4JTriggerEvaluator" />
+ 		<layout class="org.apache.log4j.PatternLayout" >
+ 			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n %C" />
+ 		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="fatal" />
+			<param name="LevelMax" value="fatal" />
+		</filter>
+ 	</appender>
+ 	
+ 		<!-- Rolling File Appender, only for log-levels above and alike TRACE-->
+	<appender name="HARMONY_TRACE" class="org.apache.log4j.RollingFileAppender" > 
+ 		<param name="threshold" value="all" />
+ 		<param name="File" value="log/harmony.trace.log" /> 
+ 		<param name="MaxFileSize" value="10mb" />
+ 		<param name="MaxBackupIndex" value="20" />
+ 		<!-- <param name="datePattern" value="'.'yyyy-MM-dd" /> --> 
+ 		<param name="append" value="true" /> 
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n" />
+ 		</layout>
+ 	</appender> 
+
+ 		<!-- Rolling File Appender, only for log-levels above and alike DEBUG-->
+	<appender name="HARMONY_DEBUG" class="org.apache.log4j.RollingFileAppender" > 
+ 		<param name="threshold" value="debug" />
+ 		<param name="File" value="log/harmony.debug.log" /> 
+ 		<param name="MaxFileSize" value="10mb" />
+ 		<param name="MaxBackupIndex" value="20" />
+ 		<!-- <param name="datePattern" value="'.'yyyy-MM-dd" /> --> 
+ 		<param name="append" value="true" /> 
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n" />
+ 		</layout>
+ 	</appender> 
+ 	
+ 		<!-- Rolling File Appender, only for log-levels above and alike INFO-->
+	<appender name="HARMONY_INFO" class="org.apache.log4j.RollingFileAppender" > 
+ 		<param name="threshold" value="info" />
+ 		<param name="File" value="log/harmony.info.log" /> 
+ 		<param name="MaxFileSize" value="10mb" />
+ 		<param name="MaxBackupIndex" value="20" />
+ 		<!-- <param name="datePattern" value="'.'yyyy-MM-dd" /> --> 
+ 		<param name="append" value="true" /> 
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n" />
+ 		</layout>
+ 	</appender> 
+
+ 	 		<!-- Rolling File Appender, only for log-levels above and alike WARN-->
+	<appender name="HARMONY_WARN" class="org.apache.log4j.RollingFileAppender" > 
+ 		<param name="threshold" value="warn" />
+ 		<param name="File" value="log/harmony.warn.log" /> 
+ 		<param name="MaxFileSize" value="10mb" />
+ 		<param name="MaxBackupIndex" value="20" />
+ 		<!-- <param name="datePattern" value="'.'yyyy-MM-dd" /> --> 
+ 		<param name="append" value="true" /> 
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n" />
+ 		</layout>
+ 	</appender> 
+
+ 		<!-- Rolling File Appender, only for log-levels above and alike ERROR-->
+	<appender name="HARMONY_ERROR" class="org.apache.log4j.RollingFileAppender" > 
+ 		<param name="threshold" value="error" />
+ 		<param name="File" value="log/harmony.error.log" /> 
+ 		<param name="MaxFileSize" value="10mb" />
+ 		<param name="MaxBackupIndex" value="20" />
+ 		<!-- <param name="datePattern" value="'.'yyyy-MM-dd" /> --> 
+ 		<param name="append" value="true" /> 
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n" />
+ 		</layout>
+ 	</appender> 
+ 	
+ 	 		<!-- Rolling File Appender, only for log-levels above and alike FATAL-->
+	<appender name="HARMONY_FATAL" class="org.apache.log4j.RollingFileAppender" > 
+ 		<param name="threshold" value="fatal" />
+ 		<param name="File" value="log/harmony.fatal.log" /> 
+ 		<param name="MaxFileSize" value="10mb" />
+ 		<param name="MaxBackupIndex" value="20" />
+ 		<!-- <param name="datePattern" value="'.'yyyy-MM-dd" /> --> 
+ 		<param name="append" value="true" /> 
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n" />
+ 		</layout>
+ 	</appender> 
+
+	<!-- Rolling File Appender, only for performance-outputs -->
+ 	<appender name="PERFORMANCE_APP" class="org.apache.log4j.RollingFileAppender" >
+ 		<param name="File" value="log/harmony.performance.log" />
+ 		<param name="append" value="true" />
+ 		<param name="MaxFileSize" value="10mb" />
+ 		<param name="MaxBackupIndex" value="20" />
+ 		<layout class="org.apache.log4j.PatternLayout" > 
+ 			<param name="ConversionPattern" value="%d{ISO8601} [%t] - %m%n" />
+ 		</layout>
+ 	</appender>
+	
+	<!-- category for performance-outputs with individual Log-Level -->
+ 	<category name="Performance">
+ 		<priority value="PERFORMANCE_LOG" class="eu.ist_phosphorus.harmony.common.utils.PerformanceLogLevel"></priority>
+ 		<appender-ref ref="PERFORMANCE_APP" />
+ 	</category>
+
+        <category name="org.hibernate"> 
+                <priority value="INFO"/> 
+        </category> 
+        <category name="com.mchange"> 
+                <priority value="INFO"/> 
+        </category> 
+
+	<!-- root category -->
+ 	<root>
+ 	    <priority value ="TRACE" /> 
+		<appender-ref ref="HARMONY_CONSOLE" />
+		<appender-ref ref="HARMONY_TRACE" />
+		<appender-ref ref="HARMONY_DEBUG" />
+		<appender-ref ref="HARMONY_INFO" />
+		<appender-ref ref="HARMONY_WARN" />
+		<appender-ref ref="HARMONY_ERROR" />
+		<appender-ref ref="HARMONY_FATAL" />
+	<!--	<appender-ref ref="HARMONY_EMAIL" /> -->
+	</root>
+	
+</log4j:configuration>

@@ -1,0 +1,6 @@
+DIR_HOME=`pwd`
+export MUSE_HOME=/usr/Labor-IV/phosphorus/bin/muse/
+export DIR_LOG=$DIR_HOME/log/
+export DIR_SCRIPTS=$DIR_HOME/resources/scripts/
+
+mkdir -p $DIR_LOG

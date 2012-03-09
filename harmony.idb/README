@@ -1,0 +1,26 @@
+================================================================================
+                                                                   
+           _/_/_/    _/_/_/_/    _/_/    _/_/_/    _/      _/  _/_/_/_/   
+          _/    _/  _/        _/    _/  _/    _/  _/_/  _/_/  _/          
+         _/_/_/    _/_/_/    _/_/_/_/  _/    _/  _/  _/  _/  _/_/_/       
+        _/    _/  _/        _/    _/  _/    _/  _/      _/  _/            
+       _/    _/  _/_/_/_/  _/    _/  _/_/_/    _/      _/  _/_/_/_/         
+
+                            - Harmony IDB -
+================================================================================
+
+
+1.) Edit the service properties: resources/properties/hsi.properties
+2.) Add dir.webapps to build.local.properties
+
+Local testing:
+==============
+ * test.properties: test.callWebservice = false
+ * idb.properties: passViaWebservice = false
+ * Also you could remove the harmony-adapter-dummy.jar file and link the adapter
+   project within eclipse for better debugging.
+
+Webservice testing:
+==================
+ * test.properties: test.callWebservice = true
+ * idb.properties: passViaWebservice = true

@@ -1,0 +1,22 @@
+================================================================================
+
+           _/_/_/    _/_/_/_/    _/_/    _/_/_/    _/      _/  _/_/_/_/
+          _/    _/  _/        _/    _/  _/    _/  _/_/  _/_/  _/
+         _/_/_/    _/_/_/    _/_/_/_/  _/    _/  _/  _/  _/  _/_/_/
+        _/    _/  _/        _/    _/  _/    _/  _/      _/  _/
+       _/    _/  _/_/_/_/  _/    _/  _/_/_/    _/      _/  _/_/_/_/
+
+                       - Harmony Service Interface -
+================================================================================
+
+== Prerequisites ==
+ * Download and install the software to YOUR_PATH_HERE:
+   * ''Apache Muse'': http://www.apache.org/dist/ws/muse/2.2.0/bin/muse-2.2.0-bin.zip 
+   * ''Sun JAXB'': https://jaxb.dev.java.net/2.1.7/jaxb-2_1_7.zip 
+
+== Configuration ==
+ * Create the file ''build.local.properties'' and set the values:
+   * dir.tools=YOUR_PATH_HERE
+   * dir.jaxb=${dir.tools}/jaxb
+   * dir.muse=${dir.tools}/muse
+ * Grant write access to YOUR_PATH_HERE/muse

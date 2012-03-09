@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/interfaces
+END
+NspClientProxyAsync.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/interfaces/NspClientProxyAsync.java
+END
+NspClientProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/interfaces/NspClientProxy.java
+END
+ArgonManagementServiceAsync.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/interfaces/ArgonManagementServiceAsync.java
+END
+ArgonManagementService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/interfaces/ArgonManagementService.java
+END
+CommonServiceAsync.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/interfaces/CommonServiceAsync.java
+END
+CommonService.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/phosphorus-wp1/!svn/ver/4906/modules/ui/webgui/trunk/src/client/interfaces/CommonService.java
+END

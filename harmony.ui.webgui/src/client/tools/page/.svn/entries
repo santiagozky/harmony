@@ -1,0 +1,52 @@
+8
+
+dir
+4925
+https://svn.uva.netherlight.nl/projects/phosphorus-wp1/modules/ui/webgui/trunk/src/client/tools/page
+https://svn.uva.netherlight.nl/projects/phosphorus-wp1
+
+
+
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2286f438-5c22-0410-bfe4-ef30cd3bb926
+
+NameResolverPage.java
+file
+
+
+
+
+2009-08-28T09:56:55.625000Z
+140b3060159d0234f892b726ffccf753
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+
+ConsoleSettingsPage.java
+file
+
+
+
+
+2009-08-28T09:56:55.625000Z
+6338439cce2e3ef8f9e0959f77616528
+2009-08-20T15:46:29.948828Z
+4906
+carlos.baez@i2cat.net
+

@@ -1,0 +1,5 @@
+eu.ist_phosphorus.harmony.adapter.argon
+eu.ist_phosphorus.harmony.adapter.argon.handler
+eu.ist_phosphorus.harmony.adapter.argon.implementation
+eu.ist_phosphorus.harmony.adapter.argon.webservice
+eu.ist_phosphorus.harmony.test.adapter.argon.webservice

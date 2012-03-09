@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+  spec="1.5.0+"
+  codebase="https://boennsch.cs.uni-bonn.de/phosphorus"
+  href="gmpls_gui.jnlp">
+  <information>
+    <title>Phosphorus - GMPLS Gui</title>
+    <vendor>Phosphorus WP1</vendor>
+    <homepage href="https://boennsch.cs.uni-bonn.de/trac/phosphorus/"/>
+    <description>NSP GMPLS Administration Tool</description>
+    <description kind="short">Graphical User Interface to administrate the NSP
+    GMPLS.</description>
+    <icon href="phosphoruslogo.png"/>
+  </information>
+  <security>
+      <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.5+" java-vm-args="-esa"/>
+    <jar href="gmpls-client.jar"/>
+    <extension name="jars" href="webstart_jars.jsp"/>
+  </resources>
+  <application-desc />
+</jnlp> 

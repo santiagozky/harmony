@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>${groupId}</groupId>
+		<artifactId>${artifactId}</artifactId>
+		<version>${version}</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${groupId}</groupId>
+	<artifactId>ui-webgui</artifactId>
+	<version>1</version>
+	
+	 <properties> 
+    <!-- Convenience property to set the GWT version --> 
+    <gwtVersion>2.2.0</gwtVersion> 
+    <!-- GWT needs at least java 1.5 --> 
+    <maven.compiler.source>1.5</maven.compiler.source> 
+    <maven.compiler.target>1.5</maven.compiler.target> 
+    <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory> 
+  </properties>
+
+	
+	<build>
+<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>2.4.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration> 
+          <runTarget>ManagementGui.html</runTarget> 
+          <hostedWebapp>${webappDirectory}</hostedWebapp> 
+          
+        </configuration> 
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+
+			</plugin>
+		</plugins>
+
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>2.2.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>2.2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>common-serviceinterface</artifactId>
+			<version>1</version>
+		</dependency>
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>common-utils</artifactId>
+			<version>1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5.20110712</version>
+		</dependency>
+		<dependency>
+			<groupId>de.unibonn.viola.argon</groupId>
+			<artifactId>argonLibs</artifactId>
+			<version>1</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>2.4.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<packaging>war</packaging>
+</project>
+

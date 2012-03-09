@@ -1,0 +1,6 @@
+eu.ist_phosphorus.harmony.adapter.uclp
+eu.ist_phosphorus.harmony.adapter.uclp.handler
+eu.ist_phosphorus.harmony.adapter.uclp.implementation
+eu.ist_phosphorus.harmony.adapter.uclp.utils
+eu.ist_phosphorus.harmony.adapter.uclp.webservice
+eu.ist_phosphorus.harmony.test.adapter.uclp.webservice
