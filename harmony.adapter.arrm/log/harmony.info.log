@@ -322,3 +322,39 @@ WARN  2012-03-09 15:51:52,855 [uva.arrm_RequestHandler_c9160012_getReservations]
 INFO  2012-03-09 15:51:52,874 [uva.arrm_RequestHandler_c9160013_getStatus] - rename_thread uva.arrm_RequestHandler_c9160012_getReservations
 INFO  2012-03-09 15:51:52,885 [uva.arrm_RequestHandler_c9160014_cancelReservation] - rename_thread uva.arrm_RequestHandler_c9160013_getStatus
 INFO  2012-03-09 15:51:52,894 [uva.arrm_RequestHandler_c9160015_getStatus] - rename_thread uva.arrm_RequestHandler_c9160014_cancelReservation
+INFO  2012-03-12 10:23:22,514 [main] - Warning, it was impossible to get some EPR.
+INFO  2012-03-12 10:23:22,550 [main] - Using default SimpleSoapClient
+INFO  2012-03-12 10:23:23,748 [unknown_RequestHandler_21e30000_addTopic] - rename_thread main
+INFO  2012-03-12 10:23:23,866 [unknown_RequestHandler_21e30000_addTopic] - Warning, it was impossible to get some EPR.
+INFO  2012-03-12 10:23:23,867 [unknown_RequestHandler_21e30000_addTopic] - Using default SimpleSoapClient
+INFO  2012-03-12 10:23:23,877 [uva.arrm_RequestHandler_21e30001_isAvailable] - rename_thread unknown_RequestHandler_21e30000_addTopic
+INFO  2012-03-12 10:23:23,899 [uva.arrm_RequestHandler_21e30002_createReservation] - rename_thread uva.arrm_RequestHandler_21e30001_isAvailable
+INFO  2012-03-12 10:23:23,948 [uva.arrm_RequestHandler_21e30003_getStatus] - rename_thread uva.arrm_RequestHandler_21e30002_createReservation
+INFO  2012-03-12 10:23:23,965 [uva.arrm_RequestHandler_21e30004_cancelReservation] - rename_thread uva.arrm_RequestHandler_21e30003_getStatus
+INFO  2012-03-12 10:23:23,977 [uva.arrm_RequestHandler_21e30005_getStatus] - rename_thread uva.arrm_RequestHandler_21e30004_cancelReservation
+INFO  2012-03-12 10:23:23,989 [uva.arrm_RequestHandler_21e30005_getStatus] - Warning, it was impossible to get some EPR.
+INFO  2012-03-12 10:23:23,990 [uva.arrm_RequestHandler_21e30005_getStatus] - Using default SimpleSoapClient
+INFO  2012-03-12 10:23:23,995 [uva.arrm_RequestHandler_21e30006_isAvailable] - rename_thread uva.arrm_RequestHandler_21e30005_getStatus
+INFO  2012-03-12 10:23:24,009 [uva.arrm_RequestHandler_21e30007_createReservation] - rename_thread uva.arrm_RequestHandler_21e30006_isAvailable
+INFO  2012-03-12 10:23:24,019 [uva.arrm_RequestHandler_21e30008_getStatus] - rename_thread uva.arrm_RequestHandler_21e30007_createReservation
+INFO  2012-03-12 10:23:24,030 [uva.arrm_RequestHandler_21e30009_cancelReservation] - rename_thread uva.arrm_RequestHandler_21e30008_getStatus
+INFO  2012-03-12 10:23:24,038 [uva.arrm_RequestHandler_21e3000a_getStatus] - rename_thread uva.arrm_RequestHandler_21e30009_cancelReservation
+INFO  2012-03-12 10:23:24,054 [uva.arrm_RequestHandler_21e3000b_getReservations] - rename_thread uva.arrm_RequestHandler_21e3000a_getStatus
+WARN  2012-03-12 10:23:24,056 [uva.arrm_RequestHandler_21e3000b_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+INFO  2012-03-12 10:23:24,159 [uva.arrm_RequestHandler_21e3000b_getReservations] - Warning, it was impossible to get some EPR.
+INFO  2012-03-12 10:23:24,159 [uva.arrm_RequestHandler_21e3000b_getReservations] - Using default SimpleSoapClient
+INFO  2012-03-12 10:23:24,163 [uva.arrm_RequestHandler_21e3000c_bind] - rename_thread uva.arrm_RequestHandler_21e3000b_getReservations
+INFO  2012-03-12 10:23:24,185 [uva.arrm_RequestHandler_21e3000c_bind] - Warning, it was impossible to get some EPR.
+INFO  2012-03-12 10:23:24,186 [uva.arrm_RequestHandler_21e3000c_bind] - Using default SimpleSoapClient
+INFO  2012-03-12 10:23:24,193 [uva.arrm_RequestHandler_21e3000d_getDomains] - rename_thread uva.arrm_RequestHandler_21e3000c_bind
+INFO  2012-03-12 10:23:24,202 [uva.arrm_RequestHandler_21e3000e_getEndpoints] - rename_thread uva.arrm_RequestHandler_21e3000d_getDomains
+INFO  2012-03-12 10:23:24,211 [uva.arrm_RequestHandler_21e3000f_getLinks] - rename_thread uva.arrm_RequestHandler_21e3000e_getEndpoints
+INFO  2012-03-12 10:23:24,222 [uva.arrm_RequestHandler_21e3000f_getLinks] - Warning, it was impossible to get some EPR.
+INFO  2012-03-12 10:23:24,222 [uva.arrm_RequestHandler_21e3000f_getLinks] - Using default SimpleSoapClient
+INFO  2012-03-12 10:23:24,227 [uva.arrm_RequestHandler_21e30010_isAvailable] - rename_thread uva.arrm_RequestHandler_21e3000f_getLinks
+INFO  2012-03-12 10:23:24,244 [uva.arrm_RequestHandler_21e30011_createReservation] - rename_thread uva.arrm_RequestHandler_21e30010_isAvailable
+INFO  2012-03-12 10:23:24,263 [uva.arrm_RequestHandler_21e30012_getReservations] - rename_thread uva.arrm_RequestHandler_21e30011_createReservation
+WARN  2012-03-12 10:23:24,264 [uva.arrm_RequestHandler_21e30012_getReservations] - No such method: eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType.getReservationID()
+INFO  2012-03-12 10:23:24,283 [uva.arrm_RequestHandler_21e30013_getStatus] - rename_thread uva.arrm_RequestHandler_21e30012_getReservations
+INFO  2012-03-12 10:23:24,295 [uva.arrm_RequestHandler_21e30014_cancelReservation] - rename_thread uva.arrm_RequestHandler_21e30013_getStatus
+INFO  2012-03-12 10:23:24,305 [uva.arrm_RequestHandler_21e30015_getStatus] - rename_thread uva.arrm_RequestHandler_21e30014_cancelReservation
