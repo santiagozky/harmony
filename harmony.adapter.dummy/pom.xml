@@ -21,6 +21,7 @@
 				<configuration>
 					<webXml>${resources.dir}/webservice/WEB-INF/web.xml</webXml>
 					<warSourceDirectory>${resources.dir}/webservice</warSourceDirectory>
+					<attachClasses>true</attachClasses>
 				</configuration>
 			</plugin>
 		</plugins>

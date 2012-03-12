@@ -14,14 +14,17 @@
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
 		<plugins>
-		<plugin>
-                <groupId>org.apache.axis2</groupId>
-                <artifactId>axis2-mar-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <includeDependencies>false</includeDependencies>
-                </configuration>
-            </plugin>
+		
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webXml>${resources.dir}/webservice/WEB-INF/web.xml</webXml>
+					<warSourceDirectory>${resources.dir}/webservice</warSourceDirectory>
+				</configuration>
+			</plugin>
+		
 		</plugins>
 	</build>
 	

@@ -12,8 +12,17 @@
 	<build>
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
-		<finalName>harmony-1</finalName>
 		
+			<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webXml>${resources.dir}/webservice/WEB-INF/web.xml</webXml>
+					<warSourceDirectory>${resources.dir}/webservice</warSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 	<dependencies>
 

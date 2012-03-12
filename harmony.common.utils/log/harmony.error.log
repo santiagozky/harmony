@@ -1,56 +1,24 @@
-ERROR 2012-03-07 17:53:14,231 [main] - Error log message at: 1331139194230
-FATAL 2012-03-07 17:53:14,250 [main] - Fatal log message at: 1331139194250
-ERROR 2012-03-07 17:53:14,269 [main] - logError
-FATAL 2012-03-07 17:53:14,270 [main] - logFatal
-ERROR 2012-03-07 17:53:53,731 [main] - Error log message at: 1331139233730
-FATAL 2012-03-07 17:53:53,749 [main] - Fatal log message at: 1331139233749
-ERROR 2012-03-07 17:53:53,773 [main] - logError
-FATAL 2012-03-07 17:53:53,773 [main] - logFatal
-ERROR 2012-03-07 17:53:54,525 [main] - Error log message at: 1331139234524
-FATAL 2012-03-07 17:53:54,545 [main] - Fatal log message at: 1331139234545
-ERROR 2012-03-07 17:53:54,561 [main] - logError
-FATAL 2012-03-07 17:53:54,561 [main] - logFatal
-ERROR 2012-03-07 17:54:02,228 [main] - Error log message at: 1331139242227
-FATAL 2012-03-07 17:54:02,249 [main] - Fatal log message at: 1331139242249
-ERROR 2012-03-07 17:54:02,265 [main] - logError
-FATAL 2012-03-07 17:54:02,266 [main] - logFatal
-ERROR 2012-03-08 11:12:08,165 [main] - Error log message at: 1331201528164
-FATAL 2012-03-08 11:12:08,241 [main] - Fatal log message at: 1331201528241
-ERROR 2012-03-08 11:12:08,299 [main] - logError
-FATAL 2012-03-08 11:12:08,299 [main] - logFatal
-ERROR 2012-03-08 11:12:21,405 [main] - Error log message at: 1331201541404
-FATAL 2012-03-08 11:12:21,433 [main] - Fatal log message at: 1331201541433
-ERROR 2012-03-08 11:12:21,455 [main] - logError
-FATAL 2012-03-08 11:12:21,455 [main] - logFatal
-ERROR 2012-03-08 11:12:22,501 [main] - Error log message at: 1331201542500
-FATAL 2012-03-08 11:12:22,525 [main] - Fatal log message at: 1331201542525
-ERROR 2012-03-08 11:12:22,541 [main] - logError
-FATAL 2012-03-08 11:12:22,541 [main] - logFatal
-ERROR 2012-03-08 17:32:34,005 [main] - Error log message at: 1331224354005
-FATAL 2012-03-08 17:32:34,109 [main] - Fatal log message at: 1331224354109
-ERROR 2012-03-08 17:32:34,166 [main] - logError
-FATAL 2012-03-08 17:32:34,166 [main] - logFatal
-ERROR 2012-03-08 17:34:59,007 [main] - Error log message at: 1331224499007
-FATAL 2012-03-08 17:34:59,032 [main] - Fatal log message at: 1331224499032
-ERROR 2012-03-08 17:34:59,050 [main] - logError
-FATAL 2012-03-08 17:34:59,050 [main] - logFatal
-ERROR 2012-03-08 17:35:58,171 [main] - Error log message at: 1331224558171
-FATAL 2012-03-08 17:35:58,199 [main] - Fatal log message at: 1331224558199
-ERROR 2012-03-08 17:35:58,220 [main] - logError
-FATAL 2012-03-08 17:35:58,220 [main] - logFatal
-ERROR 2012-03-08 17:38:24,115 [main] - Error log message at: 1331224704114
-FATAL 2012-03-08 17:38:24,142 [main] - Fatal log message at: 1331224704142
-ERROR 2012-03-08 17:38:24,161 [main] - logError
-FATAL 2012-03-08 17:38:24,161 [main] - logFatal
-ERROR 2012-03-08 17:39:22,236 [main] - Error log message at: 1331224762235
-FATAL 2012-03-08 17:39:22,278 [main] - Fatal log message at: 1331224762278
-ERROR 2012-03-08 17:39:22,298 [main] - logError
-FATAL 2012-03-08 17:39:22,298 [main] - logFatal
-ERROR 2012-03-09 11:32:16,531 [main] - Error log message at: 1331289136530
-FATAL 2012-03-09 11:32:16,609 [main] - Fatal log message at: 1331289136609
-ERROR 2012-03-09 11:32:16,626 [main] - logError
-FATAL 2012-03-09 11:32:16,627 [main] - logFatal
-ERROR 2012-03-09 15:50:02,680 [main] - Error log message at: 1331304602679
-FATAL 2012-03-09 15:50:02,869 [main] - Fatal log message at: 1331304602869
-ERROR 2012-03-09 15:50:02,939 [main] - logError
-FATAL 2012-03-09 15:50:02,939 [main] - logFatal
+ERROR 2012-03-12 11:06:37,974 [main] - Error log message at: 1331546797974
+FATAL 2012-03-12 11:06:37,994 [main] - Fatal log message at: 1331546797994
+ERROR 2012-03-12 11:06:38,003 [main] - logError
+FATAL 2012-03-12 11:06:38,003 [main] - logFatal
+ERROR 2012-03-12 11:06:45,060 [main] - Error log message at: 1331546805059
+FATAL 2012-03-12 11:06:45,079 [main] - Fatal log message at: 1331546805079
+ERROR 2012-03-12 11:06:45,094 [main] - logError
+FATAL 2012-03-12 11:06:45,094 [main] - logFatal
+ERROR 2012-03-12 11:07:17,400 [main] - Error log message at: 1331546837399
+FATAL 2012-03-12 11:07:17,421 [main] - Fatal log message at: 1331546837421
+ERROR 2012-03-12 11:07:17,433 [main] - logError
+FATAL 2012-03-12 11:07:17,433 [main] - logFatal
+ERROR 2012-03-12 11:14:22,931 [main] - Error log message at: 1331547262931
+FATAL 2012-03-12 11:14:22,982 [main] - Fatal log message at: 1331547262982
+ERROR 2012-03-12 11:14:22,995 [main] - logError
+FATAL 2012-03-12 11:14:22,995 [main] - logFatal
+ERROR 2012-03-12 11:15:42,220 [main] - Error log message at: 1331547342219
+FATAL 2012-03-12 11:15:42,270 [main] - Fatal log message at: 1331547342270
+ERROR 2012-03-12 11:15:42,282 [main] - logError
+FATAL 2012-03-12 11:15:42,282 [main] - logFatal
+ERROR 2012-03-12 12:37:33,021 [main] - Error log message at: 1331552253020
+FATAL 2012-03-12 12:37:33,049 [main] - Fatal log message at: 1331552253049
+ERROR 2012-03-12 12:37:33,061 [main] - logError
+FATAL 2012-03-12 12:37:33,061 [main] - logFatal
