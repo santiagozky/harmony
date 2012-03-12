@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}</artifactId>
-		<version>${version}</version>
+		<groupId>eu.ist_phosphorus.harmony</groupId>
+		<artifactId>harmony</artifactId>
+		<version>1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupId}</groupId>
+	<groupId>eu.ist_phosphorus.harmony</groupId>
 	<artifactId>test</artifactId>
 	<version>1</version>
 	<build>
@@ -152,7 +152,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-common-utils -->
 		<!-- SHA1: 4092ad66bef8f89fb0bc98f9d0b89a25bcfb420e -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-utils </artifactId>
 			<version>1</version>
 		</dependency>
@@ -172,7 +172,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-common-serviceinterface -->
 		<!-- SHA1: 2cf5aa6c6c24d59293687260377b011bc410c5a7 -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-serviceinterface </artifactId>
 			<version>1</version>
 		</dependency>
@@ -180,7 +180,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-adapter-dummy -->
 		<!-- SHA1: 4684893a4ab6cda36fa3c574a35631f3ac3fb815 -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>adapter-dummy </artifactId>
 			<version>1</version>
 		</dependency>
@@ -212,7 +212,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-idb -->
 		<!-- SHA1: b8c786fba5e3fe50232f21ecdad82f2d487945ba -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>idb </artifactId>
 			<version>1</version>
 		</dependency>
@@ -231,7 +231,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-database -->
 		<!-- SHA1: 08017102f781141fa7d640c6b1dca549ce5b2f39 -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>database </artifactId>
 			<version>1</version>
 		</dependency>
@@ -242,7 +242,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-notifications -->
 		<!-- SHA1: 13188479cfd36e9cfc3d88c96dd193f62130a474 -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>notifications </artifactId>
 			<version>1</version>
 		</dependency>

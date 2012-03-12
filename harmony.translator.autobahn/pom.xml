@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}</artifactId>
-		<version>${version}</version>
+		<groupId>eu.ist_phosphorus.harmony</groupId>
+		<artifactId>harmony</artifactId>
+		<version>1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupId}</groupId>
+	<groupId>eu.ist_phosphorus.harmony</groupId>
 	<artifactId>translator-autobahn</artifactId>
 	<version>1</version>
 	<build>
@@ -203,7 +203,7 @@
 
 
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>adapter-dummy</artifactId>
 			<version>1</version>
 		</dependency>
@@ -229,7 +229,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-utils</artifactId>
 			<version>1</version>
 		</dependency>
@@ -242,11 +242,12 @@
 
 
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-serviceinterface </artifactId>
 			<version>1</version>
 		</dependency>
 
 	</dependencies>
+	<packaging>war</packaging>
 </project>
 	
