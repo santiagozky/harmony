@@ -11,7 +11,7 @@
 
 # Config part =================================================================
 my $pathRoot = "eu/";
-my $commonClasses = "src/eu/ist_phosphorus/harmony/common/serviceinterface/databinding/jaxb/";
+
 my @commonFiles = ("BaseFaultType", "EndpointReferenceType", "AttributedURIType", "ReferenceParametersType", "MetadataType");
 
 my $extensionPackage = "eu.ist_phosphorus.harmony.common.serviceinterface.databinding.utils";
@@ -21,6 +21,7 @@ my @commonDependencies = ("ObjectFactory.java", "ProblemActionType.java");
 # Do not edit below this line =================================================
 
 my $inDir = $ARGV[0];
+my $commonClasses = $inDir;
 my $outDir = $ARGV[1];
 my $customExtension;
 
@@ -39,7 +40,7 @@ sub init() {
     
     #Common classes directory
     if (!(-e $commonClasses)) {
-        mkdir($commonClasses, 0755) || die "Cannot mkdir newdir: $!";
+        mkdir($commonClasses, 0755) || die "Cannot mkdir newdir: $commonClasses $!";
     }
     
     #Output exceptions directory

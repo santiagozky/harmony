@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}</artifactId>
-		<version>${version}</version>
+		<groupId>eu.ist_phosphorus.harmony</groupId>
+		<artifactId>harmony</artifactId>
+		<version>1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupId}</groupId>
+	<groupId>eu.ist_phosphorus.harmony</groupId>
   <artifactId>common-utils</artifactId>
   <version>1</version>
 <build>
@@ -60,12 +60,13 @@
 			<artifactId>muse-complete</artifactId>
 			<version>2.2.0</version>
 		</dependency>
-				<dependency>
-			<groupId>org.bluestemsoftware.open.maven.tparty</groupId>
-		<artifactId>xerces-impl</artifactId>
-			<version>2.9.0</version>
+
+
+		<dependency>
+			<groupId>org.apache.xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
 		</dependency>
-		
 	</dependencies>
 	
 	

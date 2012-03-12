@@ -1,8 +1,9 @@
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>${groupId}</groupId>
-  <artifactId>${artifactId}</artifactId>
-  <version>${version}</version>
+  <groupId>eu.ist_phosphorus.harmony</groupId>
+  <artifactId>harmony</artifactId>
+  <version>1</version>
 
 
   <packaging>pom</packaging>
@@ -15,7 +16,7 @@
 		<module>harmony.adapter.uclp</module>
 		<module>harmony.common.ant</module>
 		<module>harmony.common.security</module>
-		<module>harmony.common.serviceinterface</module>
+		<!-- module>harmony.common.serviceinterface</module -->
 		<module>harmony.common.utils</module>
 		<module>harmony.common.synthesizer</module>
 		<module>harmony.database</module>
@@ -25,7 +26,7 @@
 		<module>harmony.test</module>
 		<module>harmony.translator.autobahn</module>
 		<module>harmony.translator.g2mpls</module>
-		<module>harmony.translator.idc</module>
+		<!--module>harmony.translator.idc</module-->
 		<module>harmony.ui.reservationcli</module>
 		<module>harmony.ui.topologygui</module>
 		<module>harmony.ui.webgui</module>

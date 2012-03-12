@@ -1,9 +1,0 @@
-DEBUG 2012-03-07 18:28:36,489 [unknown_RequestHandler_8f890000_isAvailable] - start_requestHandler
-INFO  2012-03-07 18:28:36,524 [unknown_RequestHandler_8f890000_isAvailable] - duration_serializer_1 35ms
-INFO  2012-03-07 18:28:36,524 [unknown_RequestHandler_8f890000_isAvailable] - duration_validator 0ms
-DEBUG 2012-03-08 17:33:00,417 [unknown_RequestHandler_04010000_isAvailable] - start_requestHandler
-INFO  2012-03-08 17:33:00,448 [unknown_RequestHandler_04010000_isAvailable] - duration_serializer_1 30ms
-INFO  2012-03-08 17:33:00,449 [unknown_RequestHandler_04010000_isAvailable] - duration_validator 1ms
-DEBUG 2012-03-08 17:35:15,378 [unknown_RequestHandler_13310000_isAvailable] - start_requestHandler
-INFO  2012-03-08 17:35:15,401 [unknown_RequestHandler_13310000_isAvailable] - duration_serializer_1 23ms
-INFO  2012-03-08 17:35:15,402 [unknown_RequestHandler_13310000_isAvailable] - duration_validator 1ms

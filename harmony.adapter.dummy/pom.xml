@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}</artifactId>
-		<version>${version}</version>
+		<groupId>eu.ist_phosphorus.harmony</groupId>
+		<artifactId>harmony</artifactId>
+		<version>1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupId}</groupId>
+	<groupId>eu.ist_phosphorus.harmony</groupId>
 	<artifactId>adapter-dummy</artifactId>
 	<version>1</version>
 	<build>
@@ -21,6 +21,7 @@
 				<configuration>
 					<webXml>${resources.dir}/webservice/WEB-INF/web.xml</webXml>
 					<warSourceDirectory>${resources.dir}/webservice</warSourceDirectory>
+					<attachClasses>true</attachClasses>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -54,11 +55,7 @@
 			<artifactId>stax-api</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.bluestemsoftware.open.maven.tparty</groupId>
-			<artifactId>xerces-impl</artifactId>
-			<version>2.9.0</version>
-		</dependency>
+	
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
@@ -75,17 +72,13 @@
 			<artifactId>dnsjava</artifactId>
 			<version>2.1.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.mortbay.jetty</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5.20110712</version>
-		</dependency>
+
 
 
 
 
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-utils</artifactId>
 			<version>1</version>
 		</dependency>
@@ -94,7 +87,7 @@
 
 
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-serviceinterface</artifactId>
 			<version>1</version>
 		</dependency>
@@ -123,7 +116,7 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.15</version>
-			<scope>provided</scope>
+			
 			<exclusions>
 				<exclusion>
 					<groupId>com.sun.jdmk</groupId>
