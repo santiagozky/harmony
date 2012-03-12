@@ -11,7 +11,7 @@
 
 # Config part =================================================================
 my $pathRoot = "eu/";
-my $commonClasses = "src/eu/ist_phosphorus/harmony/common/serviceinterface/databinding/jaxb/";
+#my $commonClasses = "src/eu/ist_phosphorus/harmony/common/serviceinterface/databinding/jaxb/";
 my @commonFiles = ("BaseFaultType", "EndpointReferenceType", "AttributedURIType", "ReferenceParametersType", "MetadataType");
 
 my $extensionPackage = "eu.ist_phosphorus.harmony.common.serviceinterface.databinding.utils";
@@ -22,6 +22,7 @@ my @commonDependencies = ("ObjectFactory.java", "ProblemActionType.java");
 
 my $inDir = $ARGV[0];
 my $outDir = $ARGV[1];
+my $commonClasses= $inDir;
 my $customExtension;
 
 if( $outDir eq "" ) {

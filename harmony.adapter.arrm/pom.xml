@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}</artifactId>
-		<version>${version}</version>
+		<groupId>eu.ist_phosphorus.harmony</groupId>
+		<artifactId>harmony</artifactId>
+		<version>1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupId}</groupId>
+	<groupId>eu.ist_phosphorus.harmony</groupId>
 	<artifactId>adapter-arrm</artifactId>
 	<version>1</version>
 	<build>
@@ -25,11 +25,7 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.1.1</version>
-		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -39,7 +35,7 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.15</version>
-			<scope>provided</scope>
+			
 			<exclusions>
 				<exclusion>
 					<groupId>com.sun.jdmk</groupId>
@@ -51,11 +47,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>javax.jms</groupId>
-			<artifactId>jms</artifactId>
-			<version>1.1</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>com.mockrunner</groupId>
 			<artifactId>mockrunner-jdk1.5-j2ee1.3</artifactId>
@@ -76,11 +68,7 @@
 			<artifactId>stax-api</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.bluestemsoftware.open.maven.tparty</groupId>
-			<artifactId>xerces-impl</artifactId>
-			<version>2.9.0</version>
-		</dependency>
+
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
@@ -97,35 +85,21 @@
 			<artifactId>dnsjava</artifactId>
 			<version>2.1.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.mortbay.jetty</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5.20110712</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.apache.axis2</groupId>
 			<artifactId>axis2-kernel</artifactId>
-			<version>1.4</version>
+			<version>1.6.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.axis2</groupId>
 			<artifactId>axis2-adb</artifactId>
-			<version>1.4</version>
+			<version>1.6.1</version>
 		</dependency>
 
 
-		<dependency>
-			<groupId>org.apache.ws.commons.axiom</groupId>
-			<artifactId>axiom-api</artifactId>
-			<version>1.2.7</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.apache.ws.commons.axiom</groupId>
-			<artifactId>axiom-impl</artifactId>
-			<version>1.2.7</version>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.ws.schema</groupId>
 			<artifactId>XmlSchema</artifactId>
@@ -150,12 +124,6 @@
 			<artifactId>commons-httpclient</artifactId>
 			<version>3.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.neethi</groupId>
-			<artifactId>neethi</artifactId>
-			<version>2.0.4</version>
-		</dependency>
-
 
 
 
@@ -170,7 +138,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.adapter.arrm/lib/harmony-common-utils -->
 		<!-- SHA1: 4092ad66bef8f89fb0bc98f9d0b89a25bcfb420e -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-utils</artifactId>
 			<version>1</version>
 		</dependency>
@@ -190,7 +158,7 @@
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.adapter.arrm/lib/harmony-common-serviceinterface -->
 		<!-- SHA1: 2cf5aa6c6c24d59293687260377b011bc410c5a7 -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-serviceinterface</artifactId>
 			<version>1</version>
 		</dependency>
