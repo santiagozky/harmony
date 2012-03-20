@@ -209,10 +209,7 @@
 								<DIR_SERVLET_NOTIFICATION>${temp.dir}/servlets/notification</DIR_SERVLET_NOTIFICATION>
 								 <CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
-								<CLIENT_FLAGS>-synthesizer
-									eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer
-									-projectizer
-									org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
+								<CLIENT_FLAGS>-synthesizer eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer -projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Reservation-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/reservation</ws>
