@@ -1,11 +1,11 @@
 /**
-*  This code is part of the Harmony System implemented in Work Package 1 
-*  of the Phosphorus project. This work is supported by the European 
-*  Comission under the Sixth Framework Programme with contract number 
-*  IST-034115.
-*
-*  Copyright (C) 2006-2009 Phosphorus WP1 partners. Phosphorus Consortium.
-*  http://ist-phosphorus.eu/
+ *  This code is part of the Harmony System implemented in Work Package 1 
+ *  of the Phosphorus project. This work is supported by the European 
+ *  Comission under the Sixth Framework Programme with contract number 
+ *  IST-034115.
+ *
+ *  Copyright (C) 2006-2009 Phosphorus WP1 partners. Phosphorus Consortium.
+ *  http://ist-phosphorus.eu/
  *
  * This is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as
@@ -23,18 +23,21 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
 
-
 package eu.ist_phosphorus.harmony.idb.database;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
+//import org.hibernate.HibernateException;
+//import org.hibernate.Session;
+//import org.hibernate.SessionFactory;
+//import org.hibernate.cfg.AnnotationConfiguration;
 
 import eu.ist_phosphorus.harmony.common.utils.Config;
 import eu.ist_phosphorus.harmony.common.utils.PhLogger;
@@ -53,12 +56,12 @@ public class DbConnectionManager {
 	private static Logger logger = PhLogger.getLogger();
 
 	// private static Session privSession = null;
-	private static final ThreadLocal<Session> privSession = new ThreadLocal<Session>();
+	private static final ThreadLocal<EntityManager> privSession = new ThreadLocal<EntityManager>();
 
 	/**
-	 * static SessionFactory for Hibernate.
+	 * static SessionFactory for jpa.
 	 */
-	private final SessionFactory sf;
+	private final EntityManagerFactory sf;
 
 	/**
 	 * Instance for singleton.
@@ -77,22 +80,10 @@ public class DbConnectionManager {
 	protected DbConnectionManager() throws DatabaseException {
 		// TODO: Implement C3PO(connection-pool)
 
-		final AnnotationConfiguration config = new AnnotationConfiguration();
-		try {
+		this.sf = Persistence.createEntityManagerFactory("persistence",
+				System.getProperties());
+		// TODO make stateless session
 
-			config.setProperties(Config.getProperties("hibernate"));
-		} catch (IOException e) {
-			throw new DatabaseException("Cannot read hibernate properties:" + e);
-		}
-		try {
-			config.configure(Config.getURL("hibernate", "hibernate.cfg.xml"));
-		} catch (Exception e) {
-			throw new DatabaseException("Error configuring hibernate:" + e);
-		} // catch (FileNotFoundException e) {
-		// throw new DatabaseException("Error configuring hibernate:" + e);
-		// }
-		this.sf = config.buildSessionFactory();
-		this.sf.openStatelessSession();
 	}
 
 	/**
@@ -117,7 +108,8 @@ public class DbConnectionManager {
 	 * @return SessionFactory instance
 	 * @throws DatabaseException
 	 */
-	public static SessionFactory getSessionFactory() throws DatabaseException {
+	public static EntityManagerFactory getSessionFactory()
+			throws DatabaseException {
 		if (DbConnectionManager.instance == null) {
 			DbConnectionManager.instance = DbConnectionManager.getInstance();
 		}
@@ -127,22 +119,22 @@ public class DbConnectionManager {
 	/**
 	 * Create new Session from SessionFactory.
 	 * 
-	 * @return Session instance
+	 * @return EntityManager instance
 	 * @throws DatabaseException
 	 */
-	public static Session openSession() throws DatabaseException {
+	public static EntityManager openSession() throws DatabaseException {
 		if (DbConnectionManager.instance == null) {
 			DbConnectionManager.instance = DbConnectionManager.getInstance();
 		}
-		try {
-			return DbConnectionManager.instance.sf.openSession();
-		} catch (HibernateException e) {
-			throw new DatabaseException("Cannot create hibernate session: " + e);
-		}
+		// try {
+		return DbConnectionManager.instance.sf.createEntityManager();
+		// } catch (HibernateException e) {
+		// throw new DatabaseException("Cannot create hibernate session: " + e);
+		// }
 	}
 
-	public static Session getCurrentSession() throws DatabaseException {
-		Session s = DbConnectionManager.privSession.get();
+	public static EntityManager getCurrentSession() throws DatabaseException {
+		EntityManager s = DbConnectionManager.privSession.get();
 		if (s == null) {
 			s = DbConnectionManager.openSession();
 			DbConnectionManager.privSession.set(s);
@@ -151,7 +143,7 @@ public class DbConnectionManager {
 	}
 
 	public static void closeSession() {
-		Session s = DbConnectionManager.privSession.get();
+		EntityManager s = DbConnectionManager.privSession.get();
 		DbConnectionManager.privSession.set(null);
 		if (s != null) {
 			s.close();
@@ -160,7 +152,7 @@ public class DbConnectionManager {
 
 	@Override
 	protected void finalize() throws DatabaseException {
-		Session s = DbConnectionManager.privSession.get();
+		EntityManager s = DbConnectionManager.privSession.get();
 		if (s != null) {
 			s.close();
 		}
