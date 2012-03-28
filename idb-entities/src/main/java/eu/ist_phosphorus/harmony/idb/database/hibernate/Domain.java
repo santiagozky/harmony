@@ -65,7 +65,6 @@ import eu.ist_phosphorus.harmony.idb.exceptions.database.DatabaseException;
  */
 @Entity
 @Table(name = "Domain")
-// @Proxy(lazy = false)
 public class Domain implements java.io.Serializable, Comparable<Domain> {
 
 	// Fields
@@ -203,7 +202,6 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return the supported technology adaption
 	 */
 	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
-	@MapKey
 	public Set<DomSupportedAdaption> getSupportedAdaptions() {
 		return this.supportedAdaptions;
 	}
@@ -337,7 +335,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return name
 	 */
 	@Id
-	@Column(name = "name")
+	@Column(name = "name", unique = true, nullable = false)
 	public final String getName() {
 		return this.name;
 	}
