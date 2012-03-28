@@ -290,7 +290,7 @@ public class MAPNRPSResvID implements java.io.Serializable {
 	}
 
 	public final void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	@Transient

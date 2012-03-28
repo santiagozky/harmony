@@ -158,9 +158,10 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public int compareTo(final DomSupportedAdaption domainAdaptionParam) {
-		if (this.adaption.length() < domainAdaptionParam.getAdaption().length()) {
+		if (this.getAdaption().length() < domainAdaptionParam.getAdaption()
+				.length()) {
 			return -1;
-		} else if (this.adaption.equals(domainAdaptionParam.getAdaption())) {
+		} else if (this.getAdaption().equals(domainAdaptionParam.getAdaption())) {
 			return 0;
 		} else {
 			return 1;
@@ -208,15 +209,15 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 */
 	@Transient
 	public DomSupportedAdaption getCopy() {
-		return new DomSupportedAdaption(this.domain, this.adaption);
+		return new DomSupportedAdaption(this.getDomain(), this.getAdaption());
 	}
 
 	public void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	public void save() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				save(this.session);
@@ -231,7 +232,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	}
 
 	public void delete() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				delete(this.session);

@@ -156,15 +156,15 @@ public class NrpsConnections implements java.io.Serializable {
 			final int bandwidth, final int directionality, final int latency,
 			final int status) {
 		super();
-		this.pkNrpsConnection = pkNrpsConnection;
-		this.connection = connection;
-		this.domain = domain;
-		this.sourceEndpoint = sourceEndpoint;
-		this.destinationEndpoint = destinationEndpoint;
-		this.bandwidth = bandwidth;
-		this.directionality = directionality;
-		this.latency = latency;
-		this.status = status;
+		this.setPkNrpsConnection(pkNrpsConnection);
+		this.setConnection(connection);
+		this.setDomain(domain);
+		this.setSourceEndpoint(sourceEndpoint);
+		this.setDestinationEndpoint(destinationEndpoint);
+		this.setBandwidth(bandwidth);
+		this.setDirectionality(directionality);
+		this.setLatency(latency);
+		this.setStatus(status);
 	}
 
 	/**
@@ -174,9 +174,10 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public final int compareTo(final NrpsConnections connParam) {
-		if (this.pkNrpsConnection < connParam.getPkNrpsConnection()) {
+		if (this.getPkNrpsConnection() < connParam.getPkNrpsConnection()) {
 			return -1;
-		} else if (this.pkNrpsConnection == connParam.getPkNrpsConnection()) {
+		} else if (this.getPkNrpsConnection() == connParam
+				.getPkNrpsConnection()) {
 			return 0;
 		} else {
 			return 1;
@@ -191,8 +192,9 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @throws DatabaseException
 	 */
 	public final void delete() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(connection,
-				domain, sourceEndpoint, destinationEndpoint))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(
+				this.getConnection(), this.getDomain(),
+				this.getSourceEndpoint(), this.getDestinationEndpoint()))) {
 			@Override
 			protected void dbOperation() {
 				delete(this.session);
@@ -238,9 +240,10 @@ public class NrpsConnections implements java.io.Serializable {
 	@Transient
 	public final NrpsConnections getCopy() {
 		final NrpsConnections newConn = new NrpsConnections(
-				this.pkNrpsConnection, this.connection, this.domain,
-				this.sourceEndpoint, this.destinationEndpoint, this.bandwidth,
-				this.directionality, this.latency, this.status);
+				this.getPkNrpsConnection(), this.getConnection(),
+				this.getDomain(), this.getSourceEndpoint(),
+				this.getDestinationEndpoint(), this.getBandwidth(),
+				this.getDirectionality(), this.getLatency(), this.getStatus());
 		return newConn;
 	}
 
@@ -311,7 +314,7 @@ public class NrpsConnections implements java.io.Serializable {
 	@Transient
 	public StatusType getStatusType() {
 
-		switch (this.status) {
+		switch (this.getStatus()) {
 		case STATUS_ACTIVE:
 			// logger.debug("\t\tNrpsConnection: " + getPkNrpsConnection()
 			// + " Status" + StatusType.ACTIVE);
@@ -354,7 +357,7 @@ public class NrpsConnections implements java.io.Serializable {
 		int result = new Long(this.getPkNrpsConnection()).hashCode()
 				^ new Integer(this.getBandwidth()).hashCode()
 				^ new Integer(this.getDirectionality()).hashCode()
-				^ new Integer(this.status).hashCode()
+				^ new Integer(this.getStatus()).hashCode()
 				^ new Integer(this.getLatency()).hashCode();
 
 		// in the underlying objects, don't use the hashCode()-method, because
@@ -393,8 +396,9 @@ public class NrpsConnections implements java.io.Serializable {
 	 *             if entity could not be saved
 	 */
 	public final void save() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(connection,
-				domain, sourceEndpoint, destinationEndpoint))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(
+				getConnection(), getDomain(), this.getSourceEndpoint(),
+				this.getDestinationEndpoint()))) {
 			@Override
 			protected void dbOperation() {
 				save(this.session);
@@ -495,28 +499,28 @@ public class NrpsConnections implements java.io.Serializable {
 	public void setStatus(final StatusType status) {
 		switch (status) {
 		case ACTIVE:
-			this.status = NrpsConnections.STATUS_ACTIVE;
+			this.setStatus(NrpsConnections.STATUS_ACTIVE);
 			break;
 		case CANCELLED_BY_SYSTEM:
-			this.status = NrpsConnections.STATUS_CANCELLED_BY_SYSTEM;
+			this.setStatus(NrpsConnections.STATUS_CANCELLED_BY_SYSTEM);
 			break;
 		case CANCELLED_BY_USER:
-			this.status = NrpsConnections.STATUS_CANCELLED_BY_USER;
+			this.setStatus(NrpsConnections.STATUS_CANCELLED_BY_USER);
 			break;
 		case COMPLETED:
-			this.status = NrpsConnections.STATUS_COMPLETED;
+			this.setStatus(NrpsConnections.STATUS_COMPLETED);
 			break;
 		case PENDING:
-			this.status = NrpsConnections.STATUS_PENDING;
+			this.setStatus(NrpsConnections.STATUS_PENDING);
 			break;
 		case SETUP_IN_PROGRESS:
-			this.status = NrpsConnections.STATUS_SETUP_IN_PROGRESS;
+			this.setStatus(NrpsConnections.STATUS_SETUP_IN_PROGRESS);
 			break;
 		case TEARDOWN_IN_PROGRESS:
-			this.status = NrpsConnections.STATUS_TEARDOWN_IN_PROGRESS;
+			this.setStatus(NrpsConnections.STATUS_TEARDOWN_IN_PROGRESS);
 			break;
 		case UNKNOWN:
-			this.status = NrpsConnections.STATUS_UNKNOWN;
+			this.setStatus(NrpsConnections.STATUS_UNKNOWN);
 			break;
 		default:
 			break;
@@ -527,10 +531,10 @@ public class NrpsConnections implements java.io.Serializable {
 
 		final Connections result = new Connections(
 				parentConnection.getConnectionId(),
-				parentConnection.getService(), this.bandwidth, this.bandwidth,
-				this.latency, this.directionality,
-				parentConnection.getDataAmount(), this.sourceEndpoint);
-		result.getEndpoints().add(this.destinationEndpoint);
+				parentConnection.getService(), this.getBandwidth(),
+				this.getBandwidth(), this.getLatency(), this.directionality,
+				parentConnection.getDataAmount(), this.getSourceEndpoint());
+		result.getEndpoints().add(this.getDestinationEndpoint());
 		return result;
 	}
 

@@ -603,7 +603,7 @@ public class Connections implements java.io.Serializable {
 	 *             if entity could not be saved
 	 */
 	public final void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	/**

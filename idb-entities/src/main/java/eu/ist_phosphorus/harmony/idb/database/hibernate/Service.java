@@ -155,13 +155,13 @@ public class Service implements java.io.Serializable {
 	public Service(final int serviceIdParam,
 			final Reservation reservationParam, final int serviceTypeParam,
 			final Date startTimeParam, final boolean automaticActivationParam) {
-		this.serviceId = serviceIdParam;
-		this.reservation = reservationParam;
+		this.setServiceId(serviceIdParam);
+		this.setReservation(reservationParam);
 		this.serviceType = serviceTypeParam;
-		this.startTime = startTimeParam;
-		this.deadline = new Date();
-		this.duration = 0;
-		this.automaticActivation = automaticActivationParam;
+		this.setStartTime(startTimeParam);
+		this.setDeadline(new Date());
+		this.setDuration(0);
+		this.setAutomaticActivation(automaticActivationParam);
 	}
 
 	/**
@@ -186,13 +186,13 @@ public class Service implements java.io.Serializable {
 			final Reservation reservationParam, final int serviceTypeParam,
 			final Date startTimeParam, final Date deadlineParam,
 			final int durationParam, final boolean automaticActivationParam) {
-		this.serviceId = serviceIdParam;
-		this.reservation = reservationParam;
-		this.serviceType = serviceTypeParam;
-		this.startTime = startTimeParam;
-		this.deadline = deadlineParam;
-		this.duration = durationParam;
-		this.automaticActivation = automaticActivationParam;
+		this.setServiceId(serviceIdParam);
+		this.setReservation(reservationParam);
+		this.setServiceId(serviceIdParam);
+		this.setStartTime(startTimeParam);
+		this.setDeadline(deadlineParam);
+		this.setDuration(durationParam);
+		this.setAutomaticActivation(automaticActivationParam);
 	}
 
 	/**
@@ -220,14 +220,16 @@ public class Service implements java.io.Serializable {
 			final Date startTimeParam, final Date deadlineParam,
 			final int durationParam, final boolean automaticActivationParam,
 			final HashMap<Integer, Connections> connectionsParam) {
-		this.serviceId = serviceIdParam;
+
 		this.reservation = reservationParam;
 		this.serviceType = serviceTypeParam;
-		this.startTime = startTimeParam;
-		this.deadline = deadlineParam;
-		this.duration = durationParam;
-		this.automaticActivation = automaticActivationParam;
-		this.connections = connectionsParam;
+		this.setConnections(connectionsParam);
+		this.setReservation(reservationParam);
+		this.setServiceId(serviceIdParam);
+		this.setStartTime(startTimeParam);
+		this.setDeadline(deadlineParam);
+		this.setDuration(durationParam);
+		this.setAutomaticActivation(automaticActivationParam);
 	}
 
 	// Property accessors
@@ -439,9 +441,9 @@ public class Service implements java.io.Serializable {
 	 */
 	@Transient
 	public final Service getCopy() {
-		Service result = new Service(this.serviceId, this.reservation,
-				this.serviceType, this.startTime, this.deadline, this.duration,
-				this.automaticActivation);
+		Service result = new Service(this.getServiceId(), this.reservation,
+				this.serviceType, this.getStartTime(), this.getDeadline(),
+				this.getDuration(), this.automaticActivation);
 		for (Connections c : getConnections().values()) {
 			result.getConnections().put(new Integer(c.getConnectionId()), c);
 		}
@@ -467,9 +469,9 @@ public class Service implements java.io.Serializable {
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public final int compareTo(final Service serviceParam) {
-		if (this.PK_service < serviceParam.getPK_service()) {
+		if (this.getPK_service() < serviceParam.getPK_service()) {
 			return -1;
-		} else if (this.PK_service == serviceParam.getPK_service()) {
+		} else if (this.getPK_service() == serviceParam.getPK_service()) {
 			return 0;
 		} else {
 			return 1;
@@ -538,27 +540,27 @@ public class Service implements java.io.Serializable {
 		result.setServiceID(this.getServiceId());
 		result.setAutomaticActivation(this.isAutomaticActivation());
 
-		if (this.duration > 0) {
-			if (null != this.deadline) {// DeferrableReservation
+		if (this.getDuration() > 0) {
+			if (null != this.getDeadline()) {// DeferrableReservation
 				eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.DeferrableReservationConstraintType df = new eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.DeferrableReservationConstraintType();
-				df.setDuration(this.duration);
-				df.setDeadline(Helpers.DateToXmlCalendar(this.deadline));
-				df.setStartTime(Helpers.DateToXmlCalendar(this.startTime));
+				df.setDuration(this.getDuration());
+				df.setDeadline(Helpers.DateToXmlCalendar(this.getDeadline()));
+				df.setStartTime(Helpers.DateToXmlCalendar(this.getStartTime()));
 
 				result.setDeferrableReservationConstraints(df);
 				result.setTypeOfReservation(ReservationType.DEFERRABLE);
 			} else {// FixedReservation
 				FixedReservationConstraintType fr = new FixedReservationConstraintType();
-				fr.setDuration(this.duration);
-				fr.setStartTime(Helpers.DateToXmlCalendar(this.startTime));
+				fr.setDuration(this.getDuration());
+				fr.setStartTime(Helpers.DateToXmlCalendar(this.getStartTime()));
 				result.setFixedReservationConstraints(fr);
 				result.setTypeOfReservation(ReservationType.FIXED);
 			}
-		} else if (null != this.deadline) {
+		} else if (null != this.getDeadline()) {
 			// MalleableReservation
 			MalleableReservationConstraintType mr = new MalleableReservationConstraintType();
-			mr.setDeadline(Helpers.DateToXmlCalendar(this.deadline));
-			mr.setStartTime(Helpers.DateToXmlCalendar(this.startTime));
+			mr.setDeadline(Helpers.DateToXmlCalendar(this.getDeadline()));
+			mr.setStartTime(Helpers.DateToXmlCalendar(this.getStartTime()));
 			result.setMalleableReservationConstraints(mr);
 			result.setTypeOfReservation(ReservationType.MALLEABLE);
 		} else {
@@ -614,7 +616,7 @@ public class Service implements java.io.Serializable {
 	}
 
 	public final void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	public final void save() throws DatabaseException {
@@ -652,7 +654,7 @@ public class Service implements java.io.Serializable {
 	@SuppressWarnings("unchecked")
 	public final void loadConnections() throws DatabaseException {
 		List<Connections> tmpConns = (List<Connections>) (new TransactionManager(
-				new Long(this.PK_service)) {
+				new Long(this.getPK_service())) {
 			@Override
 			protected void dbOperation() {
 				QConnections connections = QConnections.connections;
@@ -686,11 +688,11 @@ public class Service implements java.io.Serializable {
 		for (Connections conn : this.connections.values()) {
 			connDebug += conn.getDebugInfo();
 		}
-		return "\n\tServiceId: " + this.serviceId + "\n\tpkService"
-				+ this.PK_service + "\n\tserviceType" + this.serviceType
-				+ "\n\tstarttime" + this.startTime.toString() + "\n\tduration"
-				+ this.duration + "\n\tDeadline" + this.deadline
-				+ "\n\tConnections: " + connDebug;
+		return "\n\tServiceId: " + this.getServiceId() + "\n\tpkService"
+				+ this.getPK_service() + "\n\tserviceType" + this.serviceType
+				+ "\n\tstarttime" + this.getStartTime().toString()
+				+ "\n\tduration" + this.getDuration() + "\n\tDeadline"
+				+ this.getDeadline() + "\n\tConnections: " + connDebug;
 	}
 
 	public static StatusType aggregateStatus(StatusType s1, StatusType s2) {

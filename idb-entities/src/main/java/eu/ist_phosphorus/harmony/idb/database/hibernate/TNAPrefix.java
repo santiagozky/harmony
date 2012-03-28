@@ -93,7 +93,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 */
 	public TNAPrefix(final Domain domainParam) {
 		super();
-		this.domain = domainParam;
+		this.setDomain(domainParam);
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 */
 	public TNAPrefix(final Domain domainParam, final String prefixParam) {
 		super();
-		this.domain = domainParam;
+		this.setDomain(domainParam);
 		setPrefix(prefixParam);
 	}
 
@@ -164,9 +164,9 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public int compareTo(final TNAPrefix domainPrefixParam) {
-		if (this.prefix.length() < domainPrefixParam.getPrefix().length()) {
+		if (this.getPrefix().length() < domainPrefixParam.getPrefix().length()) {
 			return -1;
-		} else if (this.prefix.equals(domainPrefixParam.getPrefix())) {
+		} else if (this.getPrefix().equals(domainPrefixParam.getPrefix())) {
 			return 0;
 		} else {
 			return 1;
@@ -214,15 +214,16 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 */
 	@Transient
 	public TNAPrefix getCopy() {
-		return new TNAPrefix(this.domain, this.prefix);
+		return new TNAPrefix(this.getDomain(), this.getPrefix());
 	}
 
 	public void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	public void save() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(this
+				.getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				save(this.session);
@@ -236,7 +237,8 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	}
 
 	public void delete() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(this
+				.getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				delete(this.session);

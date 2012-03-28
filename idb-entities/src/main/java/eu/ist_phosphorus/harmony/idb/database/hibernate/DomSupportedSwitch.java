@@ -81,7 +81,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 */
 	public DomSupportedSwitch(final Domain domainParam) {
 		super();
-		this.domain = domainParam;
+		this.setDomain(domainParam);
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 */
 	public DomSupportedSwitch(final Domain domainParam, final String switchParam) {
 		super();
-		this.domain = domainParam;
+		this.setDomain(domainParam);
 		setSwitch(switchParam);
 	}
 
@@ -157,9 +157,9 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public int compareTo(final DomSupportedSwitch domainSwitchParam) {
-		if (this.switchd.length() < domainSwitchParam.getSwitch().length()) {
+		if (this.getSwitch().length() < domainSwitchParam.getSwitch().length()) {
 			return -1;
-		} else if (this.switchd.equals(domainSwitchParam.getSwitch())) {
+		} else if (this.getSwitch().equals(domainSwitchParam.getSwitch())) {
 			return 0;
 		} else {
 			return 1;
@@ -207,15 +207,16 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 */
 	@Transient
 	public DomSupportedSwitch getCopy() {
-		return new DomSupportedSwitch(this.domain, this.switchd);
+		return new DomSupportedSwitch(this.getDomain(), this.getSwitch());
 	}
 
 	public void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	public void save() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(this
+				.getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				save(this.session);
@@ -230,7 +231,8 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	}
 
 	public void delete() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(this
+				.getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				delete(this.session);

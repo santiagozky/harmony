@@ -294,9 +294,9 @@ public class InterDomainLink implements java.io.Serializable,
 	 */
 	@Transient
 	public final InterDomainLink getCopy() {
-		InterDomainLink copy = new InterDomainLink(this.linkName,
+		InterDomainLink copy = new InterDomainLink(this.getLinkName(),
 				this.getSourceDomain(), this.getDestinationDomain(),
-				this.getSourceEndpoint(), this.linkCosts);
+				this.getSourceEndpoint(), this.getLinkCosts());
 		copy.setPk_Interdomainlink(getPk_Interdomainlink());
 		return copy;
 	}
@@ -308,9 +308,9 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public final int compareTo(final InterDomainLink link) {
-		if (this.linkName.length() < link.getPk_Interdomainlink()) {
+		if (this.getLinkName().length() < link.getPk_Interdomainlink()) {
 			return -1;
-		} else if (this.linkName.length() == link.getPk_Interdomainlink()) {
+		} else if (this.getLinkName().length() == link.getPk_Interdomainlink()) {
 			return 0;
 		} else {
 			return 1;
@@ -436,7 +436,7 @@ public class InterDomainLink implements java.io.Serializable,
 	}
 
 	public final void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	@Override

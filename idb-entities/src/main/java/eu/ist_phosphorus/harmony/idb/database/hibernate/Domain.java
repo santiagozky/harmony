@@ -34,6 +34,7 @@ import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.FetchType;
@@ -42,6 +43,8 @@ import javax.persistence.MapKey;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
+import org.apache.openjpa.persistence.jdbc.DataStoreIdColumn;
 
 import com.mysema.query.jpa.impl.JPAQuery;
 
@@ -200,7 +203,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return the supported technology adaption
 	 */
 	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
-	@MapKey(name = "PK_Adaption")
+	@MapKey
 	public Set<DomSupportedAdaption> getSupportedAdaptions() {
 		return this.supportedAdaptions;
 	}
@@ -228,7 +231,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return the supported technology switch matrix
 	 */
 	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
-	@MapKey(name = "PK_Switch")
+	@MapKey
 	public Set<DomSupportedSwitch> getSupportedSwitchMatrix() {
 		return this.supportedSwitchMatrix;
 	}
@@ -257,7 +260,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return the supported bandwidth
 	 */
 	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
-	@MapKey(name = "PK_Bandwidth")
+	@MapKey
 	public Set<DomSupportedBandwidth> getSupportedBandwidths() {
 		return this.supportedBandwidths;
 	}
@@ -334,6 +337,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return name
 	 */
 	@Id
+	@Column(name = "name")
 	public final String getName() {
 		return this.name;
 	}
@@ -436,7 +440,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return the prefixes
 	 */
 	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
-	@MapKey(name = "prefix")
+	@MapKey
 	public final Set<TNAPrefix> getPrefixes() {
 		return this.prefixes;
 	}
@@ -463,7 +467,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return the endpoints
 	 */
 	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.REMOVE })
-	@MapKey(name = "TNA")
+	@MapKey
 	public Set<Endpoint> getEndpoints() {
 		return this.endpoints;
 	}
@@ -485,7 +489,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return the nrpsConnections
 	 */
 	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.REMOVE })
-	@MapKey(name = "pkNrpsConnection")
+	@MapKey
 	public Set<NrpsConnections> getNrpsConnections() {
 		return this.nrpsConnections;
 	}
@@ -572,18 +576,18 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	@Transient
 	public final Domain getCopy() {
 		final Domain newDomain = new Domain();
-		newDomain.name = this.name;
-		newDomain.seqNo = this.seqNo;
-		newDomain.description = this.description;
-		newDomain.registered = this.registered;
-		newDomain.reservationEPR = this.reservationEPR;
-		newDomain.reservationURI = this.reservationURI;
-		newDomain.topologyEPR = this.topologyEPR;
-		newDomain.notificationEPR = this.notificationEPR;
-		newDomain.relationship = this.relationship;
-		newDomain.avgDelay = this.avgDelay;
-		newDomain.maxBW = this.maxBW;
-		for (final Endpoint e : this.getEndpoints()) {
+		newDomain.setName(getName());
+		newDomain.setSeqNo(getSeqNo());
+		newDomain.setDescription(getDescription());
+		newDomain.setRegistered(getRegistered());
+		newDomain.setReservationEPR(getReservationEPR());
+		newDomain.reservationURI = getReservationURI();
+		newDomain.setTopologyEPR(getTopologyEPR());
+		newDomain.setNotificationEPR(getNotificationEPR());
+		newDomain.setRelationship(getRelationship());
+		newDomain.setAvgDelay(getAvgDelay());
+		newDomain.setMaxBW(getMaxBW());
+		for (final Endpoint e : getEndpoints()) {
 			newDomain.getEndpoints().add(e.getCopy(this));
 		}
 		for (final TNAPrefix p : this.getPrefixes()) {
@@ -726,9 +730,9 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public final int compareTo(final Domain domain) {
-		if (this.name.length() < domain.getName().length()) {
+		if (this.getName().length() < domain.getName().length()) {
 			return -1;
-		} else if (this.name.length() == domain.getName().length()) {
+		} else if (this.getName().length() == domain.getName().length()) {
 			return 0;
 		} else {
 			return 1;

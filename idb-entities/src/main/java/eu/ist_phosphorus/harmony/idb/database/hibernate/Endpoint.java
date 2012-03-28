@@ -213,7 +213,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	public Endpoint(String tna, String name, String description, int type,
 			int bandwidth, boolean disabled, int priority, Domain d) {
 		this(tna, name, description, type, bandwidth, disabled, priority);
-		this.domain = d;
+		this.setDomain(d);
 	}
 
 	public final void set(Endpoint e) {
@@ -499,8 +499,9 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 */
 	@Transient
 	public Endpoint getCopy() {
-		return new Endpoint(this.TNA, this.name, this.description, this.type,
-				this.bandwidth, this.disabled, this.priority);
+		return new Endpoint(this.getTNA(), this.getName(),
+				this.getDescription(), this.getType(), this.getBandwidth(),
+				this.isDisabled(), this.getPriority());
 	}
 
 	/**
@@ -508,8 +509,9 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 */
 	@Transient
 	public Endpoint getCopy(Domain d) {
-		return new Endpoint(this.TNA, this.name, this.description, this.type,
-				this.bandwidth, this.disabled, this.priority, d);
+		return new Endpoint(this.getTNA(), this.getName(),
+				this.getDescription(), this.getType(), this.getBandwidth(),
+				this.isDisabled(), this.getPriority(), d);
 	}
 
 	/**
@@ -519,11 +521,11 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	public final int compareTo(final Endpoint endpoint) {
-		if (Endpoint.ipv4ToInt(this.TNA) < Endpoint
-				.ipv4ToInt(endpoint.getTNA())) {
-			return -1;
-		} else if (Endpoint.ipv4ToInt(this.TNA) == Endpoint.ipv4ToInt(endpoint
+		if (Endpoint.ipv4ToInt(this.getTNA()) < Endpoint.ipv4ToInt(endpoint
 				.getTNA())) {
+			return -1;
+		} else if (Endpoint.ipv4ToInt(this.getTNA()) == Endpoint
+				.ipv4ToInt(endpoint.getTNA())) {
 			return 0;
 		} else {
 			return 1;
@@ -724,10 +726,11 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 *             if entity could not be saved
 	 */
 	public final void save() throws DatabaseException {
-		HashSet<Object> refresh = new HashSet<Object>(Arrays.asList(domain));
-		refresh.addAll(connections.values());
-		refresh.addAll(endpointInConnections.values());
-		refresh.addAll(interDomainLinks);
+		HashSet<Object> refresh = new HashSet<Object>(
+				Arrays.asList(getDomain()));
+		refresh.addAll(getConnections().values());
+		refresh.addAll(getEndpointInConnections().values());
+		refresh.addAll(getInterDomainLinks());
 		new TransactionManager(refresh) {
 			@Override
 			protected void dbOperation() throws Exception {
@@ -737,7 +740,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	}
 
 	public final void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	/**
@@ -812,10 +815,11 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @throws DatabaseException
 	 */
 	public final void delete() throws DatabaseException {
-		HashSet<Object> refresh = new HashSet<Object>(Arrays.asList(domain));
-		refresh.addAll(connections.values());
-		refresh.addAll(endpointInConnections.values());
-		refresh.addAll(interDomainLinks);
+		HashSet<Object> refresh = new HashSet<Object>(
+				Arrays.asList(getDomain()));
+		refresh.addAll(getConnections().values());
+		refresh.addAll(getEndpointInConnections().values());
+		refresh.addAll(getInterDomainLinks());
 		new TransactionManager(refresh) {
 			@Override
 			protected void dbOperation() throws Exception {

@@ -204,15 +204,16 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 */
 	@Transient
 	public DomSupportedBandwidth getCopy() {
-		return new DomSupportedBandwidth(this.domain, this.bw);
+		return new DomSupportedBandwidth(this.getDomain(), this.bw);
 	}
 
 	public void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	public void save() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(this
+				.getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				save(this.session);
@@ -227,7 +228,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	}
 
 	public void delete() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(domain))) {
+		new TransactionManager(new HashSet<Object>(Arrays.asList(getDomain()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				delete(this.session);

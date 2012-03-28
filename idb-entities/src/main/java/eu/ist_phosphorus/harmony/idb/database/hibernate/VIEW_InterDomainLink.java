@@ -138,11 +138,11 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 			final String descriptionParam, final int delayParam, int costsParam) {
 		super();
 
-		this.destEndpoint = destEndpointParam;
-		this.sourceEndpoint = sourceEndpointParam;
-		this.name = nameParam;
-		this.description = descriptionParam;
-		this.delay = delayParam;
+		this.setDestEndpoint(destEndpointParam);
+		this.setSourceEndpoint(sourceEndpointParam);
+		this.setName(nameParam);
+		this.setDescription(descriptionParam);
+		this.setDelay(delayParam);
 		this.setCosts(costsParam);
 	}
 
@@ -292,9 +292,10 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 */
 	@Transient
 	public final VIEW_InterDomainLink getCopy() {
-		VIEW_InterDomainLink copy = new VIEW_InterDomainLink(
-				this.destEndpoint.getCopy(), this.sourceEndpoint.getCopy(),
-				this.name, this.description, this.delay, this.costs);
+		VIEW_InterDomainLink copy = new VIEW_InterDomainLink(this
+				.getDestEndpoint().getCopy(), this.getSourceEndpoint()
+				.getCopy(), this.getName(), this.getDescription(),
+				this.getDelay(), this.getCosts());
 
 		return copy;
 	}
@@ -307,7 +308,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 */
 
 	public final int compareTo(final VIEW_InterDomainLink link) {
-		return this.name.compareTo(link.name);
+		return this.name.compareTo(link.getName());
 	}
 
 	public eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.Link toJaxb() {

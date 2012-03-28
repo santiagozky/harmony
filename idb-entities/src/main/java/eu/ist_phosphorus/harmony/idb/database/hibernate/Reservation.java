@@ -589,7 +589,7 @@ public class Reservation implements java.io.Serializable {
 	}
 
 	public final void save(EntityManager session) {
-		session.merge(this);
+		session.persist(this);
 	}
 
 	public final void save() throws DatabaseException {
