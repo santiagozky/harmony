@@ -40,6 +40,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapKey;
+import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -105,7 +106,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	/**
 	 * Connections that belong to the endpoint.
 	 */
-	private Map<String, Connections> connections = new HashMap<String, Connections>(
+	private Map<Integer, Connections> connections = new HashMap<Integer, Connections>(
 			0);
 
 	private Map<String, Connections> endpointInConnections = new HashMap<String, Connections>(
@@ -189,7 +190,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	public Endpoint(final String TNAParam, final String nameParam,
 			final String descriptionParam, final int typeParam,
 			final int bandwidthParam,
-			final HashMap<String, Connections> connectionsParam) {
+			final HashMap<Integer, Connections> connectionsParam) {
 		setTNA(TNAParam);
 		this.name = nameParam;
 		this.description = descriptionParam;
@@ -379,8 +380,8 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	}
 
 	@OneToMany(mappedBy = "startpoint", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.REMOVE })
-	@MapKey(name = "connectionId")
-	public Map<String, Connections> getConnections() {
+	@MapKeyColumn(name = "connectionId")
+	public Map<Integer, Connections> getConnections() {
 		return this.connections;
 	}
 
@@ -393,14 +394,14 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 */
 	@Transient
 	public Connections getConnection(final int connectionId) {
-		return getConnections().get(String.valueOf(connectionId));
+		return getConnections().get(connectionId);
 	}
 
 	/**
 	 * @param connections
 	 *            the prefixes to set
 	 */
-	public void setConnections(Map<String, Connections> connections) {
+	public void setConnections(Map<Integer, Connections> connections) {
 		this.connections = connections;
 	}
 
@@ -412,8 +413,8 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 */
 	public void addConnection(final Connections connectionParam) {
 		connectionParam.setStartpoint(this);
-		getConnections().put(String.valueOf(connectionParam.getConnectionId()),
-				connectionParam);
+		getConnections()
+				.put(connectionParam.getConnectionId(), connectionParam);
 	}
 
 	@OneToMany(mappedBy = "sourceEndpoint", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.REMOVE })
