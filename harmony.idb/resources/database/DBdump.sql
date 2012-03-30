@@ -43,7 +43,7 @@ CREATE TABLE `Connections` (
 
 DROP TABLE IF EXISTS `Domain`;
 CREATE TABLE `Domain` (
-  `id` varchar(40) collate utf8_bin NOT NULL,
+  `name` varchar(40) collate utf8_bin NOT NULL,
   `seqno` int(11) unsigned default NULL,
   `description` varchar(100) collate utf8_bin default NULL,
   `registered` datetime NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE `Domain` (
   `maxBW` int(11) default NULL,
   `Disabled` tinyint(1) NOT NULL default '0',
   `Priority` int(11) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY  (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -387,7 +387,7 @@ ALTER TABLE `Connections`
 -- Constraints der Tabelle `Endpoint`
 --
 ALTER TABLE `Endpoint`
-  ADD CONSTRAINT `Endpoint_ibfk_1` FOREIGN KEY (`fkDomainName`) REFERENCES `Domain` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `Endpoint_ibfk_1` FOREIGN KEY (`fkDomainName`) REFERENCES `Domain` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints der Tabelle `InterDomainLink`
@@ -409,13 +409,12 @@ ALTER TABLE `MAP_ConnEndpoint`
   ADD CONSTRAINT `MAP_ConnEndpoint_ibfk_1` FOREIGN KEY (`FK_Connection`) REFERENCES `Connections` (`PK_Connections`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `MAP_ConnEndpoint_ibfk_2` FOREIGN KEY (`FK_DestEndpointTNA`) REFERENCES `Endpoint` (`TNA`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-
 --
 -- Constraints der Tabelle `MAP_NRPSResvID`
 --
 ALTER TABLE `MAP_NRPSResvID`
   ADD CONSTRAINT `MAP_NRPSResvID_ibfk_1` FOREIGN KEY (`FK_reservationID`) REFERENCES `Reservation` (`reservationID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `MAP_NRPSResvID_ibfk_2` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `MAP_NRPSResvID_ibfk_2` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints der Tabelle `NrpsConnection`
@@ -424,7 +423,7 @@ ALTER TABLE `NrpsConnection`
   ADD CONSTRAINT `NrpsConnection_ibfk_10` FOREIGN KEY (`FK_Source`) REFERENCES `Endpoint` (`TNA`),
   ADD CONSTRAINT `NrpsConnection_ibfk_11` FOREIGN KEY (`FK_Destination`) REFERENCES `Endpoint` (`TNA`),
   ADD CONSTRAINT `NrpsConnection_ibfk_8` FOREIGN KEY (`FK_Connection`) REFERENCES `Connections` (`PK_Connections`) ON DELETE CASCADE,
-  ADD CONSTRAINT `NrpsConnection_ibfk_9` FOREIGN KEY (`FK_Domain`) REFERENCES `Domain` (`id`);
+  ADD CONSTRAINT `NrpsConnection_ibfk_9` FOREIGN KEY (`FK_Domain`) REFERENCES `Domain` (`name`);
 
 --
 -- Constraints der Tabelle `Service`
@@ -436,22 +435,22 @@ ALTER TABLE `Service`
 -- Constraints der Tabelle `TNAPrefix`
 --
 ALTER TABLE `TNAPrefix`
-  ADD CONSTRAINT `TNAPrefix_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `TNAPrefix_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints der Tabelle `DomSupportedAdaption`
 --
 ALTER TABLE `DomSupportedAdaption`
-  ADD CONSTRAINT `DomSupportedAdaption_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `DomSupportedAdaption_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints der Tabelle `DomSupportedSwitch`
 --
 ALTER TABLE `DomSupportedSwitch`
-  ADD CONSTRAINT `DomSupportedSwitch_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `DomSupportedSwitch_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints der Tabelle `DomSupportedBandwidth`
 --
 ALTER TABLE `DomSupportedBandwidth`
-  ADD CONSTRAINT `DomSupportedBandwidth_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `DomSupportedBandwidth_ibfk_1` FOREIGN KEY (`FK_domainName`) REFERENCES `Domain` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
