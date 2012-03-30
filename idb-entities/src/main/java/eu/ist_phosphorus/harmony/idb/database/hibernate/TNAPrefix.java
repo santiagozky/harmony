@@ -133,7 +133,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	@Id
 	public String getPrefix() {
 		if (this.prefix == null) {
-			this.prefix = "";
+			this.setPrefix("");
 		}
 		return this.prefix;
 	}

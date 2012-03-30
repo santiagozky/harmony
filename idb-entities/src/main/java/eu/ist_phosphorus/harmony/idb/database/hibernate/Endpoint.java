@@ -45,6 +45,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.EntityManager;
+import javax.persistence.Column;
 
 import org.apache.openjpa.kernel.jpql.JPQL;
 
@@ -217,7 +218,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 		this.setDomain(d);
 	}
 
-	public final void set(Endpoint e) {
+	public void set(Endpoint e) {
 		this.setTNA(e.getTNA());
 		this.setName(e.getName());
 		this.setDescription(e.getDescription());
@@ -233,6 +234,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 */
 
 	@Id
+	@Column(length = 15)
 	public String getTNA() {
 		return this.TNA;
 	}
@@ -349,7 +351,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @return the domain
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "fkDomainName")
+	@JoinColumn(name = "fkDomainName", nullable = false)
 	public Domain getDomain() {
 		return this.domain;
 	}
@@ -365,7 +367,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	/**
 	 * @return the endpointInConnections
 	 */
-	@ManyToMany(mappedBy = "endpoints", targetEntity = Connections.class)
+	@ManyToMany(mappedBy = "endpoints")
 	public Map<String, Connections> getEndpointInConnections() {
 		return this.endpointInConnections;
 	}
@@ -446,7 +448,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 *            endpoint to be checked
 	 * @return true if equal
 	 */
-	public final boolean isEqual(final Endpoint endpoint) {
+	public boolean isEqual(final Endpoint endpoint) {
 		if (this.hashCode() == endpoint.hashCode()) {
 			return true;
 		}
@@ -458,7 +460,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @return
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(final Object o) {
 		if (o.getClass() == Endpoint.class) {
 			return isEqual((Endpoint) o);
 		}
@@ -466,7 +468,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	}
 
 	@Override
-	public final int hashCode() {
+	public int hashCode() {
 		// till the mappings are correct check only domain-intern attributes
 		// no underlying objects
 		int result = this.getTNA().hashCode()
@@ -521,7 +523,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @return -1 0 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final Endpoint endpoint) {
+	public int compareTo(final Endpoint endpoint) {
 		if (Endpoint.ipv4ToInt(this.getTNA()) < Endpoint.ipv4ToInt(endpoint
 				.getTNA())) {
 			return -1;
@@ -636,7 +638,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	}
 
 	@Override
-	public final String toString() {
+	public String toString() {
 		return "<tna>" + getTNA() + "</tna><name>" + getName()
 				+ "</name><description" + getDescription()
 				+ "</description><domainName>" + getDomain().getName()
@@ -726,7 +728,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @throws DatabaseException
 	 *             if entity could not be saved
 	 */
-	public final void save() throws DatabaseException {
+	public void save() throws DatabaseException {
 		HashSet<Object> refresh = new HashSet<Object>(
 				Arrays.asList(getDomain()));
 		refresh.addAll(getConnections().values());
@@ -740,7 +742,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 		};
 	}
 
-	public final void save(EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
@@ -779,7 +781,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	}
 
 	@SuppressWarnings("unchecked")
-	public final Set<VIEW_InterDomainLink> loadLinks() throws DatabaseException {
+	public Set<VIEW_InterDomainLink> loadLinks() throws DatabaseException {
 		return (Set<VIEW_InterDomainLink>) (new TransactionManager(this) {
 			@Override
 			protected void dbOperation() {
@@ -806,7 +808,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 		}).getResult();
 	}
 
-	public final void delete(EntityManager session) {
+	public void delete(EntityManager session) {
 		session.remove(this);
 	}
 
@@ -815,7 +817,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * 
 	 * @throws DatabaseException
 	 */
-	public final void delete() throws DatabaseException {
+	public void delete() throws DatabaseException {
 		HashSet<Object> refresh = new HashSet<Object>(
 				Arrays.asList(getDomain()));
 		refresh.addAll(getConnections().values());

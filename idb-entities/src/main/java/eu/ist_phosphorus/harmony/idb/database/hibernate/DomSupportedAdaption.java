@@ -30,6 +30,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.FetchType;
@@ -120,7 +121,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 * @return domain
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "FK_domainName")
+	@JoinColumn(name = "FK_domainName", nullable = false)
 	public Domain getDomain() {
 		return this.domain;
 	}
@@ -136,6 +137,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	/**
 	 * @return technology adaption of the domain
 	 */
+	@Column(length = 40, nullable = false)
 	public String getAdaption() {
 		if (this.adaption == null) {
 			this.adaption = "";

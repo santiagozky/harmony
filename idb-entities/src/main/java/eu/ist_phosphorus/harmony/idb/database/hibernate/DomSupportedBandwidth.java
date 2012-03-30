@@ -119,7 +119,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 * @return domain
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "FK_domainName")
+	@JoinColumn(name = "FK_domainName", nullable = false)
 	public Domain getDomain() {
 		return this.domain;
 	}

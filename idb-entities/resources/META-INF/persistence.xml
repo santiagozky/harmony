@@ -32,6 +32,8 @@
             <property name="openjpa.ConnectionUserName" value="root"/>
             <property name="openjpa.ConnectionPassword" value="toor"/>
             <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE"/>
+            <property name="openjpa.jdbc.MappingDefaults"
+                                value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict" />
         </properties>
     </persistence-unit>
 </persistence>

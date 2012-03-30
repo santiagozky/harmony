@@ -43,8 +43,8 @@
 				<artifactId>openjpa-maven-plugin</artifactId>
 				<version>2.2.0</version>
 				<configuration>
-					<includes>**/entities/*.class</includes>
-					<excludes>**/entities/XML*.class</excludes>
+					<includes>**/database/hibernate/*.class</includes>
+					<excludes>**/hibernate/XML*.class</excludes>
 					<addDefaultConstructor>true</addDefaultConstructor>
 					<enforcePropertyRestrictions>true</enforcePropertyRestrictions>
 				</configuration>

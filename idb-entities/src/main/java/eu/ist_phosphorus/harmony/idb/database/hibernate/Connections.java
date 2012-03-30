@@ -182,7 +182,7 @@ public class Connections implements java.io.Serializable {
 	 * 
 	 * @return connectionId
 	 */
-	public final int getConnectionId() {
+	public int getConnectionId() {
 		return this.connectionId;
 	}
 
@@ -209,7 +209,7 @@ public class Connections implements java.io.Serializable {
 	 * @param connectionIdParam
 	 *            ID of the Connection
 	 */
-	public final void setConnectionId(final int connectionIdParam) {
+	public void setConnectionId(final int connectionIdParam) {
 		this.connectionId = connectionIdParam;
 	}
 
@@ -220,7 +220,7 @@ public class Connections implements java.io.Serializable {
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "FK_Service")
-	public final Service getService() {
+	public Service getService() {
 		return this.service;
 	}
 
@@ -230,7 +230,7 @@ public class Connections implements java.io.Serializable {
 	 * @param serviceParam
 	 *            service
 	 */
-	public final void setService(final Service serviceParam) {
+	public void setService(final Service serviceParam) {
 		this.service = serviceParam;
 	}
 
@@ -239,7 +239,7 @@ public class Connections implements java.io.Serializable {
 	 * 
 	 * @return minBandwidth
 	 */
-	public final int getMinBandwidth() {
+	public int getMinBandwidth() {
 		return this.minBandwidth;
 	}
 
@@ -249,7 +249,7 @@ public class Connections implements java.io.Serializable {
 	 * @param minBandwidthParam
 	 *            min bandwidth used by Connection
 	 */
-	public final void setMinBandwidth(final int minBandwidthParam) {
+	public void setMinBandwidth(final int minBandwidthParam) {
 		this.minBandwidth = minBandwidthParam;
 	}
 
@@ -258,7 +258,7 @@ public class Connections implements java.io.Serializable {
 	 * 
 	 * @return maxBandwidth
 	 */
-	public final int getMaxBandwidth() {
+	public int getMaxBandwidth() {
 		return this.maxBandwidth;
 	}
 
@@ -268,7 +268,7 @@ public class Connections implements java.io.Serializable {
 	 * @param maxBandwidthParam
 	 *            max. bandwidth used by Connection
 	 */
-	public final void setMaxBandwidth(final int maxBandwidthParam) {
+	public void setMaxBandwidth(final int maxBandwidthParam) {
 		this.maxBandwidth = maxBandwidthParam;
 	}
 
@@ -278,7 +278,7 @@ public class Connections implements java.io.Serializable {
 	 * @return maxLatency
 	 */
 	@Basic(optional = true)
-	public final int getMaxLatency() {
+	public int getMaxLatency() {
 		return this.maxLatency;
 	}
 
@@ -288,7 +288,7 @@ public class Connections implements java.io.Serializable {
 	 * @param maxLatencyParam
 	 *            max. latency allowed for this Connection
 	 */
-	public final void setMaxLatency(final int maxLatencyParam) {
+	public void setMaxLatency(final int maxLatencyParam) {
 		this.maxLatency = maxLatencyParam;
 	}
 
@@ -297,7 +297,7 @@ public class Connections implements java.io.Serializable {
 	 * 
 	 * @return directionality
 	 */
-	public final int getDirectionality() {
+	public int getDirectionality() {
 		return this.directionality;
 	}
 
@@ -307,7 +307,7 @@ public class Connections implements java.io.Serializable {
 	 * @param directionalityParam
 	 *            directionality
 	 */
-	public final void setDirectionality(final int directionalityParam) {
+	public void setDirectionality(final int directionalityParam) {
 		this.directionality = directionalityParam;
 	}
 
@@ -317,7 +317,7 @@ public class Connections implements java.io.Serializable {
 	 * @return dataAmount
 	 */
 	@Basic(optional = true)
-	public final int getDataAmount() {
+	public int getDataAmount() {
 		return this.dataAmount;
 	}
 
@@ -327,7 +327,7 @@ public class Connections implements java.io.Serializable {
 	 * @param dataAmountParam
 	 *            dataAmount
 	 */
-	public final void setDataAmount(final int dataAmountParam) {
+	public void setDataAmount(final int dataAmountParam) {
 		this.dataAmount = dataAmountParam;
 	}
 
@@ -337,8 +337,8 @@ public class Connections implements java.io.Serializable {
 	 * @return startpoint
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "FK_StartpointTNA")
-	public final Endpoint getStartpoint() {
+	@JoinColumn(name = "FK_StartpointTNA", nullable = false)
+	public Endpoint getStartpoint() {
 		return this.startpoint;
 	}
 
@@ -348,7 +348,7 @@ public class Connections implements java.io.Serializable {
 	 * @param startpointParam
 	 *            Start of Connection
 	 */
-	public final void setStartpoint(final Endpoint startpointParam) {
+	public void setStartpoint(final Endpoint startpointParam) {
 		this.startpoint = startpointParam;
 	}
 
@@ -359,7 +359,7 @@ public class Connections implements java.io.Serializable {
 	 */
 	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Endpoint.class)
 	@JoinTable(name = "MAP_ConnEndpoint", joinColumns = @JoinColumn(name = "FK_Connection"), inverseJoinColumns = @JoinColumn(name = "FK_DestEndpointTNA"))
-	public final Set<Endpoint> getEndpoints() {
+	public Set<Endpoint> getEndpoints() {
 		return this.endpoints;
 	}
 
@@ -369,11 +369,11 @@ public class Connections implements java.io.Serializable {
 	 * @param endpointsParam
 	 *            destination of the Connection
 	 */
-	public final void setEndpoints(final Set<Endpoint> endpointsParam) {
+	public void setEndpoints(final Set<Endpoint> endpointsParam) {
 		this.endpoints = endpointsParam;
 	}
 
-	public final void addEndpoint(final Endpoint endpointParam) {
+	public void addEndpoint(final Endpoint endpointParam) {
 		getEndpoints().add(endpointParam);
 	}
 
@@ -382,7 +382,7 @@ public class Connections implements java.io.Serializable {
 	 */
 	@OneToMany(mappedBy = "connection", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
 	@MapKey(name = "domain")
-	public final Map<Domain, NrpsConnections> getNrpsConnections() {
+	public Map<Domain, NrpsConnections> getNrpsConnections() {
 		return this.nrpsConnections;
 	}
 
@@ -399,7 +399,7 @@ public class Connections implements java.io.Serializable {
 	 *            connection to be checked
 	 * @return true if equals
 	 */
-	public final boolean isEqual(final Connections connParam) {
+	public boolean isEqual(final Connections connParam) {
 		if (this.hashCode() == connParam.hashCode()) {
 			return true;
 		}
@@ -411,7 +411,7 @@ public class Connections implements java.io.Serializable {
 	 * @return
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(final Object o) {
 		if (o.getClass() == Connections.class) {
 			return isEqual((Connections) o);
 		}
@@ -419,7 +419,7 @@ public class Connections implements java.io.Serializable {
 	}
 
 	@Override
-	public final int hashCode() {
+	public int hashCode() {
 		int result = Long.valueOf(getPK_Connections()).hashCode()
 				^ new Integer(this.getConnectionId()).hashCode()
 				^ new Integer(this.getMinBandwidth()).hashCode()
@@ -453,7 +453,7 @@ public class Connections implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final Connections connParam) {
+	public int compareTo(final Connections connParam) {
 		if (this.connectionId < connParam.connectionId) {
 			return -1;
 		} else if (this.connectionId == connParam.connectionId) {
@@ -467,7 +467,7 @@ public class Connections implements java.io.Serializable {
 	 * @return copy of connection
 	 */
 	@Transient
-	public final Connections getCopy() {
+	public Connections getCopy() {
 		Connections newConn = new Connections(this.connectionId, this.service,
 				this.minBandwidth, this.maxBandwidth, this.maxLatency,
 				this.directionality, this.dataAmount, this.startpoint);
@@ -523,7 +523,7 @@ public class Connections implements java.io.Serializable {
 	 * 
 	 * @return ConnectionConstraintType object representing this connection.
 	 */
-	public final ConnectionConstraintType toJaxb() {
+	public ConnectionConstraintType toJaxb() {
 
 		ConnectionConstraintType result = new ConnectionConstraintType();
 
@@ -553,7 +553,7 @@ public class Connections implements java.io.Serializable {
 	 * check this query, fkConnection seems not to exists
 	 */
 	@SuppressWarnings("unchecked")
-	public final void loadNrpsConnections() throws DatabaseException {
+	public void loadNrpsConnections() throws DatabaseException {
 		throw new RuntimeException("operation not available");
 		// // get nrpsConnections from DB
 		// List<NrpsConnections> ncList = (List<NrpsConnections>) (new
@@ -602,7 +602,7 @@ public class Connections implements java.io.Serializable {
 	 * @throws DatabaseException
 	 *             if entity could not be saved
 	 */
-	public final void save(EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
@@ -612,7 +612,7 @@ public class Connections implements java.io.Serializable {
 	 * @throws DatabaseException
 	 *             if entity could not be saved
 	 */
-	public final void save() throws DatabaseException {
+	public void save() throws DatabaseException {
 		HashSet<Object> refresh = new HashSet<Object>(Arrays.asList(service,
 				startpoint));
 		refresh.addAll(getEndpoints());
@@ -625,7 +625,7 @@ public class Connections implements java.io.Serializable {
 		};
 	}
 
-	public final void delete(EntityManager session) {
+	public void delete(EntityManager session) {
 		session.remove(this);
 	}
 
@@ -636,7 +636,7 @@ public class Connections implements java.io.Serializable {
 	 *            instance of the {@link Connections} to be deleted
 	 * @throws DatabaseException
 	 */
-	public final void delete() throws DatabaseException {
+	public void delete() throws DatabaseException {
 		HashSet<Object> refresh = new HashSet<Object>(Arrays.asList(service,
 				startpoint));
 		refresh.addAll(endpoints);
@@ -686,7 +686,7 @@ public class Connections implements java.io.Serializable {
 	}
 
 	@Transient
-	public final String getDebugInfo() {
+	public String getDebugInfo() {
 		// String connDebug;
 		// for (NrpsConnections nrpsConn : nrpsConnections.values()) {
 		// connDebug += nrpsConn.getDebugInfo();
@@ -715,7 +715,7 @@ public class Connections implements java.io.Serializable {
 	}
 
 	@Override
-	public final String toString() {
+	public String toString() {
 		String result = "<pk>" + this.getPK_Connections() + "</pk>"
 				+ "<connectionId>" + this.getConnectionId()
 				+ "</connectionId><serviceId>"

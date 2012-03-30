@@ -30,6 +30,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.FetchType;
@@ -119,7 +120,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 * @return domain
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "FK_domainName")
+	@JoinColumn(name = "FK_domainName", nullable = false)
 	public Domain getDomain() {
 		return this.domain;
 	}
@@ -135,6 +136,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	/**
 	 * @return technology switch of the domain
 	 */
+	@Column(nullable = false, length = 40)
 	public String getSwitch() {
 		if (this.switchd == null) {
 			this.switchd = "";

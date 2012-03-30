@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -140,6 +141,7 @@ public class InterDomainLink implements java.io.Serializable,
 		this.PK_interdomainlink = pkInterdomainlink;
 	}
 
+	@Column(nullable = false, length = 40)
 	public String getLinkName() {
 		return this.linkName;
 	}
@@ -194,18 +196,20 @@ public class InterDomainLink implements java.io.Serializable,
 		return this.linkCosts;
 	}
 
-	public final String getSourceDomain() {
+	@Column(nullable = false, length = 40)
+	public String getSourceDomain() {
 		return this.sourceDomain;
 	}
 
-	public final void setSourceDomain(final String sourceDomainParam) {
+	public void setSourceDomain(final String sourceDomainParam) {
 		this.sourceDomain = sourceDomainParam;
 	}
 
 	/**
 	 * @return destination of the link
 	 */
-	public final String getDestinationDomain() {
+	@Column(nullable = false, length = 40)
+	public String getDestinationDomain() {
 		return this.destinationDomain;
 	}
 
@@ -213,7 +217,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @param destDomainParam
 	 *            destination of the link
 	 */
-	public final void setDestinationDomain(final String destDomainParam) {
+	public void setDestinationDomain(final String destDomainParam) {
 		this.destinationDomain = destDomainParam;
 	}
 
@@ -221,8 +225,8 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @return source of the link
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "FK_SourceEndpointTNA")
-	public final Endpoint getSourceEndpoint() {
+	@JoinColumn(name = "FK_SourceEndpointTNA", nullable = false)
+	public Endpoint getSourceEndpoint() {
 		return this.sourceEndpoint;
 	}
 
@@ -230,7 +234,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @param sourceEndpointParam
 	 *            source of the link
 	 */
-	public final void setSourceEndpoint(final Endpoint sourceEndpointParam) {
+	public void setSourceEndpoint(final Endpoint sourceEndpointParam) {
 		this.sourceEndpoint = sourceEndpointParam;
 	}
 
@@ -239,7 +243,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 *            to be checked
 	 * @return true if equal
 	 */
-	public final boolean isEqual(final InterDomainLink link) {
+	public boolean isEqual(final InterDomainLink link) {
 		if (this.hashCode() == link.hashCode()) {
 			return true;
 		}
@@ -251,7 +255,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @return
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(final Object o) {
 		if ((o != null) && (o.getClass() == InterDomainLink.class)) {
 			return isEqual((InterDomainLink) o);
 		}
@@ -259,7 +263,7 @@ public class InterDomainLink implements java.io.Serializable,
 	}
 
 	@Override
-	public final int hashCode() {
+	public int hashCode() {
 		int result = new Long(this.getPk_Interdomainlink()).hashCode()
 				^ ((this.getLinkName() == null) ? 0 : this.getLinkName()
 						.hashCode())
@@ -280,7 +284,7 @@ public class InterDomainLink implements java.io.Serializable,
 		return result;
 	}
 
-	public final boolean equalsWithoutPK(InterDomainLink l) {
+	public boolean equalsWithoutPK(InterDomainLink l) {
 		return this.getLinkName().equals(l.getLinkName())
 				&& this.sourceDomain.equals(l.getSourceDomain())
 				&& this.destinationDomain.equals(l.getDestinationDomain())
@@ -293,7 +297,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @return copy of the link
 	 */
 	@Transient
-	public final InterDomainLink getCopy() {
+	public InterDomainLink getCopy() {
 		InterDomainLink copy = new InterDomainLink(this.getLinkName(),
 				this.getSourceDomain(), this.getDestinationDomain(),
 				this.getSourceEndpoint(), this.getLinkCosts());
@@ -307,7 +311,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @return 1 0 -1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final InterDomainLink link) {
+	public int compareTo(final InterDomainLink link) {
 		if (this.getLinkName().length() < link.getPk_Interdomainlink()) {
 			return -1;
 		} else if (this.getLinkName().length() == link.getPk_Interdomainlink()) {
@@ -403,7 +407,7 @@ public class InterDomainLink implements java.io.Serializable,
 		}).getResult();
 	}
 
-	public final void delete() throws DatabaseException {
+	public void delete() throws DatabaseException {
 		new TransactionManager(new HashSet<Object>(
 				Arrays.asList(sourceEndpoint))) {
 			@Override
@@ -413,7 +417,7 @@ public class InterDomainLink implements java.io.Serializable,
 		};
 	}
 
-	public final void delete(EntityManager session) {
+	public void delete(EntityManager session) {
 		session.remove(this);
 	}
 
@@ -425,7 +429,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @throws DatabaseException
 	 *             if entity could not be saved
 	 */
-	public final void save() throws DatabaseException {
+	public void save() throws DatabaseException {
 		new TransactionManager(new HashSet<Object>(
 				Arrays.asList(sourceEndpoint))) {
 			@Override
@@ -435,7 +439,7 @@ public class InterDomainLink implements java.io.Serializable,
 		};
 	}
 
-	public final void save(EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
