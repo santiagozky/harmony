@@ -134,8 +134,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param tnaParam
 	 *            TNA of the endpoint
 	 */
-	public Endpoint(final String tnaParam, final Domain domain,
-			final int typeParam) {
+	public Endpoint(String tnaParam, Domain domain, int typeParam) {
 		super();
 		setTNA(tnaParam);
 		this.name = null;
@@ -161,9 +160,8 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param bandwidthParam
 	 *            bandwidth of the endpoint
 	 */
-	public Endpoint(final String TNAParam, final String nameParam,
-			final String descriptionParam, final Domain domain,
-			final int typeParam, final int bandwidthParam) {
+	public Endpoint(String TNAParam, String nameParam, String descriptionParam,
+			Domain domain, int typeParam, int bandwidthParam) {
 		setTNA(TNAParam);
 		this.name = nameParam;
 		this.description = descriptionParam;
@@ -188,10 +186,9 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param bandwidthParam
 	 *            bandwidth of the endpoint
 	 */
-	public Endpoint(final String TNAParam, final String nameParam,
-			final String descriptionParam, final int typeParam,
-			final int bandwidthParam,
-			final HashMap<Integer, Connections> connectionsParam) {
+	public Endpoint(String TNAParam, String nameParam, String descriptionParam,
+			int typeParam, int bandwidthParam,
+			HashMap<Integer, Connections> connectionsParam) {
 		setTNA(TNAParam);
 		this.name = nameParam;
 		this.description = descriptionParam;
@@ -243,8 +240,11 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param tnaParam
 	 *            TNA of endpoint
 	 */
-	public void setTNA(final String tnaParam) {
-		this.TNA = normalizeIPv4(tnaParam);
+	public void setTNA(String tnaParam) {
+		if (tnaParam != null && !tnaParam.equals("")) {
+			this.TNA = normalizeIPv4(tnaParam);
+		}
+
 	}
 
 	/**
@@ -292,7 +292,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param nameParam
 	 *            name of endpoint
 	 */
-	public void setName(final String nameParam) {
+	public void setName(String nameParam) {
 		this.name = nameParam;
 	}
 
@@ -308,7 +308,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param bandwidthParam
 	 *            bandwidth of endpoint
 	 */
-	public void setBandwidth(final int bandwidthParam) {
+	public void setBandwidth(int bandwidthParam) {
 		this.bandwidth = bandwidthParam;
 	}
 
@@ -323,7 +323,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param type
 	 *            type of endpoint
 	 */
-	public void setType(final int type) {
+	public void setType(int type) {
 		this.type = type;
 	}
 
@@ -343,7 +343,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param descriptionParam
 	 *            description of endpoint
 	 */
-	public void setDescription(final String descriptionParam) {
+	public void setDescription(String descriptionParam) {
 		this.description = descriptionParam;
 	}
 
@@ -395,7 +395,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @return Connection with the given Connection ID, or null if not found.
 	 */
 	@Transient
-	public Connections getConnection(final int connectionId) {
+	public Connections getConnection(int connectionId) {
 		return getConnections().get(connectionId);
 	}
 
@@ -413,7 +413,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param connection
 	 *            connection to be added.
 	 */
-	public void addConnection(final Connections connectionParam) {
+	public void addConnection(Connections connectionParam) {
 		connectionParam.setStartpoint(this);
 		getConnections()
 				.put(connectionParam.getConnectionId(), connectionParam);
@@ -438,7 +438,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param interDomainLink
 	 *            to be added.
 	 */
-	public void addInterDomainLink(final InterDomainLink link) {
+	public void addInterDomainLink(InterDomainLink link) {
 		link.setSourceEndpoint(this);
 		getInterDomainLinks().add(link);
 	}
@@ -448,7 +448,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 *            endpoint to be checked
 	 * @return true if equal
 	 */
-	public boolean isEqual(final Endpoint endpoint) {
+	public boolean isEqual(Endpoint endpoint) {
 		if (this.hashCode() == endpoint.hashCode()) {
 			return true;
 		}
@@ -460,7 +460,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @return
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == Endpoint.class) {
 			return isEqual((Endpoint) o);
 		}
@@ -523,7 +523,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @return -1 0 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final Endpoint endpoint) {
+	public int compareTo(Endpoint endpoint) {
 		if (Endpoint.ipv4ToInt(this.getTNA()) < Endpoint.ipv4ToInt(endpoint
 				.getTNA())) {
 			return -1;
@@ -565,12 +565,12 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @throws DatabaseException
 	 * @throws EndpointNotFoundFaultException
 	 */
-	public static final Endpoint loadOrCreateUserEndpoint(String tna)
+	public static Endpoint loadOrCreateUserEndpoint(String tna)
 			throws DatabaseException, EndpointNotFoundFaultException {
 		return loadOrCreateEndpoint(tna, EndpointInterfaceType.USER);
 	}
 
-	public static final Endpoint loadOrCreateEndpoint(String tna,
+	public static Endpoint loadOrCreateEndpoint(String tna,
 			EndpointInterfaceType type) throws DatabaseException,
 			EndpointNotFoundFaultException {
 		Endpoint e = Endpoint.load(tna);
@@ -595,7 +595,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 *            String representation of IPv4 address.
 	 * @return Integer representation of input IPv4 address.
 	 */
-	public static int ipv4ToInt(final String ipStr) {
+	public static int ipv4ToInt(String ipStr) {
 		int result = 0;
 		String[] s = ipStr.split("\\.");
 		if (s.length != 4) {
@@ -621,7 +621,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @param ipInt
 	 * @return
 	 */
-	public static String ipv4ToString(final int ipInt) {
+	public static String ipv4ToString(int ipInt) {
 		return "" + ((ipInt >> 24) & 0xff) + "." + ((ipInt >> 16) & 0xff) + "."
 				+ ((ipInt >> 8) & 0xff) + "." + (ipInt & 0xff);
 	}
@@ -633,7 +633,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 *            IPv4-address
 	 * @return String normalized IPv4-address
 	 */
-	public static String normalizeIPv4(final String addr) {
+	public static String normalizeIPv4(String addr) {
 		return ipv4ToString(ipv4ToInt(addr));
 	}
 
@@ -654,7 +654,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @return Endpoint object created from JAXB input.
 	 * @throws DatabaseException
 	 */
-	public static final Endpoint fromJaxb(EndpointType epJaxb)
+	public static Endpoint fromJaxb(EndpointType epJaxb)
 			throws DatabaseException {
 		Endpoint result = new Endpoint();
 		result.setTNA(epJaxb.getEndpointId());
@@ -688,7 +688,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 		return result;
 	}
 
-	public void mergeFromJaxb(final EndpointType jaxb) throws DatabaseException {
+	public void mergeFromJaxb(EndpointType jaxb) throws DatabaseException {
 		this.setTNA(jaxb.getEndpointId());
 
 		if (jaxb.isSetDomainId()) {
@@ -755,22 +755,21 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	 * @throws DatabaseException
 	 * @throws HibernateException
 	 */
-	public static final Endpoint load(final String endpointId)
-			throws DatabaseException {
+	public static Endpoint load(String endpointId) throws DatabaseException {
 		return (Endpoint) (new TransactionManagerLoad(Endpoint.class,
 				endpointId)).getResult();
 	}
 
 	@SuppressWarnings("unchecked")
-	public static final Set<Endpoint> loadAll() throws DatabaseException {
+	public static Set<Endpoint> loadAll() throws DatabaseException {
 		return (Set<Endpoint>) (new TransactionManager() {
 			@Override
 			protected void dbOperation() {
 				Set<Endpoint> result = new HashSet<Endpoint>();
 				QEndpoint endpoint = QEndpoint.endpoint;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<Endpoint> tmpEndpoint = query.from(endpoint).list(
-						endpoint);
+				List<Endpoint> tmpEndpoint = query.from(endpoint)
+						.list(endpoint);
 
 				for (Endpoint d : tmpEndpoint) {
 					result.add(d);
@@ -785,22 +784,22 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 		return (Set<VIEW_InterDomainLink>) (new TransactionManager(this) {
 			@Override
 			protected void dbOperation() {
-				final Set<VIEW_InterDomainLink> result = new HashSet<VIEW_InterDomainLink>();
+				Set<VIEW_InterDomainLink> result = new HashSet<VIEW_InterDomainLink>();
 				QVIEW_InterDomainLink interlink = QVIEW_InterDomainLink.vIEW_InterDomainLink;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<VIEW_InterDomainLink> tmpSrc = query
+				List<VIEW_InterDomainLink> tmpSrc = query
 						.from(interlink)
 						.where(interlink.sourceEndpoint.eq((Endpoint) this.arg))
 						.list(interlink);
 
-				final List<VIEW_InterDomainLink> tmpDst = query.from(interlink)
+				List<VIEW_InterDomainLink> tmpDst = query.from(interlink)
 						.where(interlink.destEndpoint.eq((Endpoint) this.arg))
 						.list(interlink);
 
-				for (final VIEW_InterDomainLink l : tmpSrc) {
+				for (VIEW_InterDomainLink l : tmpSrc) {
 					result.add(l);
 				}
-				for (final VIEW_InterDomainLink l : tmpDst) {
+				for (VIEW_InterDomainLink l : tmpDst) {
 					result.add(l);
 				}
 				this.result = result;

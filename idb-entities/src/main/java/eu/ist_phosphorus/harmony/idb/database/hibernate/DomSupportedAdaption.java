@@ -80,7 +80,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	/**
 	 * minimal constructor.
 	 */
-	public DomSupportedAdaption(final Domain domainParam) {
+	public DomSupportedAdaption(Domain domainParam) {
 		super();
 		this.domain = domainParam;
 	}
@@ -93,8 +93,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 * @param adaptionParam
 	 *            technology adaption of the domain
 	 */
-	public DomSupportedAdaption(final Domain domainParam,
-			final String adaptionParam) {
+	public DomSupportedAdaption(Domain domainParam, String adaptionParam) {
 		super();
 		this.domain = domainParam;
 		setAdaption(adaptionParam);
@@ -130,7 +129,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 * @param domainParam
 	 *            corresponding domain
 	 */
-	public void setDomain(final Domain domainParam) {
+	public void setDomain(Domain domainParam) {
 		this.domain = domainParam;
 	}
 
@@ -149,7 +148,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 * @param adaptionParam
 	 *            technology adaption of the domain
 	 */
-	public void setAdaption(final String adaptionParam) {
+	public void setAdaption(String adaptionParam) {
 		this.adaption = adaptionParam;
 	}
 
@@ -159,7 +158,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 * @return -1 0 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final DomSupportedAdaption domainAdaptionParam) {
+	public int compareTo(DomSupportedAdaption domainAdaptionParam) {
 		if (this.getAdaption().length() < domainAdaptionParam.getAdaption()
 				.length()) {
 			return -1;
@@ -175,7 +174,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 *            domainAdaption to be checked
 	 * @return true if equals
 	 */
-	public boolean isEqual(final DomSupportedAdaption domainAdaptionParam) {
+	public boolean isEqual(DomSupportedAdaption domainAdaptionParam) {
 		if (this.hashCode() == domainAdaptionParam.hashCode()) {
 			return true;
 		}
@@ -187,7 +186,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 	 * @return
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == DomSupportedAdaption.class) {
 			return isEqual((DomSupportedAdaption) o);
 		}
@@ -227,8 +226,7 @@ public class DomSupportedAdaption implements java.io.Serializable,
 		};
 	}
 
-	public static DomSupportedAdaption load(final long id)
-			throws DatabaseException {
+	public static DomSupportedAdaption load(long id) throws DatabaseException {
 		return (DomSupportedAdaption) (new TransactionManagerLoad(
 				DomSupportedAdaption.class, Long.valueOf(id))).getResult();
 	}
@@ -252,15 +250,14 @@ public class DomSupportedAdaption implements java.io.Serializable,
 		return (Set<DomSupportedAdaption>) (new TransactionManager(dom) {
 			@Override
 			protected void dbOperation() {
-				final Domain d = (Domain) this.arg;
+				Domain d = (Domain) this.arg;
 				QDomSupportedAdaption domAdaption = QDomSupportedAdaption.domSupportedAdaption;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<DomSupportedAdaption> aList = query
-						.from(domAdaption).where(domAdaption.domain.eq(d))
-						.list(domAdaption);
+				List<DomSupportedAdaption> aList = query.from(domAdaption)
+						.where(domAdaption.domain.eq(d)).list(domAdaption);
 
-				final Set<DomSupportedAdaption> adaptions = new HashSet<DomSupportedAdaption>();
-				for (final DomSupportedAdaption adaption : aList) {
+				Set<DomSupportedAdaption> adaptions = new HashSet<DomSupportedAdaption>();
+				for (DomSupportedAdaption adaption : aList) {
 					adaptions.add(adaption);
 				}
 				this.result = adaptions;

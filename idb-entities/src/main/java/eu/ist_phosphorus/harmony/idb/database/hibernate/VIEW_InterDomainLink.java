@@ -110,8 +110,8 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @param sourceEndpointParam
 	 *            source of the link
 	 */
-	public VIEW_InterDomainLink(final Endpoint destEndpointParam,
-			final Endpoint sourceEndpointParam) {
+	public VIEW_InterDomainLink(Endpoint destEndpointParam,
+			Endpoint sourceEndpointParam) {
 		this(destEndpointParam, sourceEndpointParam, null, null, 0, 0);
 	}
 
@@ -133,9 +133,9 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @param costsParam
 	 *            TODO
 	 */
-	public VIEW_InterDomainLink(final Endpoint destEndpointParam,
-			final Endpoint sourceEndpointParam, final String nameParam,
-			final String descriptionParam, final int delayParam, int costsParam) {
+	public VIEW_InterDomainLink(Endpoint destEndpointParam,
+			Endpoint sourceEndpointParam, String nameParam,
+			String descriptionParam, int delayParam, int costsParam) {
 		super();
 
 		this.setDestEndpoint(destEndpointParam);
@@ -153,7 +153,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "FK_DestEndpointTNA")
-	public final Endpoint getDestEndpoint() {
+	public Endpoint getDestEndpoint() {
 		return this.destEndpoint;
 	}
 
@@ -161,7 +161,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @param destEndpointParam
 	 *            destination of the link
 	 */
-	public final void setDestEndpoint(final Endpoint destEndpointParam) {
+	public void setDestEndpoint(Endpoint destEndpointParam) {
 		this.destEndpoint = destEndpointParam;
 	}
 
@@ -170,7 +170,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "FK_SourceEndpointTNA")
-	public final Endpoint getSourceEndpoint() {
+	public Endpoint getSourceEndpoint() {
 		return this.sourceEndpoint;
 	}
 
@@ -178,14 +178,14 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @param sourceEndpointParam
 	 *            source of the link
 	 */
-	public final void setSourceEndpoint(final Endpoint sourceEndpointParam) {
+	public void setSourceEndpoint(Endpoint sourceEndpointParam) {
 		this.sourceEndpoint = sourceEndpointParam;
 	}
 
 	/**
 	 * @return name of the link
 	 */
-	public final String getName() {
+	public String getName() {
 		return this.name;
 	}
 
@@ -193,7 +193,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @param nameParam
 	 *            name of the link
 	 */
-	public final void setName(final String nameParam) {
+	public void setName(String nameParam) {
 
 		if (nameParam == null) {
 			this.name = "";
@@ -206,7 +206,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @return delay of the link
 	 */
 	@Basic(optional = true)
-	public final int getDelay() {
+	public int getDelay() {
 		return this.delay;
 	}
 
@@ -214,7 +214,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @param delayParam
 	 *            delay of the link
 	 */
-	public final void setDelay(final int delayParam) {
+	public void setDelay(int delayParam) {
 		this.delay = delayParam;
 	}
 
@@ -238,7 +238,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @return description of the link
 	 */
 	@Id
-	public final String getDescription() {
+	public String getDescription() {
 		return this.description;
 	}
 
@@ -246,7 +246,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @param descriptionParam
 	 *            description of the link
 	 */
-	public final void setDescription(final String descriptionParam) {
+	public void setDescription(String descriptionParam) {
 		if (descriptionParam == null) {
 			this.description = "";
 		} else {
@@ -259,7 +259,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 *            to be checked
 	 * @return true if equal
 	 */
-	public final boolean isEqual(final VIEW_InterDomainLink link) {
+	public boolean isEqual(VIEW_InterDomainLink link) {
 		if (this.hashCode() == link.hashCode()) {
 			return true;
 		}
@@ -271,7 +271,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @return
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if ((o != null) && (o.getClass() == VIEW_InterDomainLink.class)) {
 			return isEqual((VIEW_InterDomainLink) o);
 		}
@@ -279,7 +279,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	}
 
 	@Override
-	public final int hashCode() {
+	public int hashCode() {
 		return (this.getName().hashCode() ^ this.getDescription().hashCode()
 				^ (Integer.valueOf(getDelay())).hashCode() ^ (Integer
 					.valueOf(getCosts())).hashCode());
@@ -291,7 +291,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @return copy of the link
 	 */
 	@Transient
-	public final VIEW_InterDomainLink getCopy() {
+	public VIEW_InterDomainLink getCopy() {
 		VIEW_InterDomainLink copy = new VIEW_InterDomainLink(this
 				.getDestEndpoint().getCopy(), this.getSourceEndpoint()
 				.getCopy(), this.getName(), this.getDescription(),
@@ -307,7 +307,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 
-	public final int compareTo(final VIEW_InterDomainLink link) {
+	public int compareTo(VIEW_InterDomainLink link) {
 		return this.name.compareTo(link.getName());
 	}
 
@@ -320,8 +320,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 		return result;
 	}
 
-	public static final Set<VIEW_InterDomainLink> loadAll()
-			throws DatabaseException {
+	public static Set<VIEW_InterDomainLink> loadAll() throws DatabaseException {
 		return (Set<VIEW_InterDomainLink>) (new TransactionManager() {
 			@Override
 			protected void dbOperation() {
@@ -329,8 +328,8 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 				QVIEW_InterDomainLink interlink = QVIEW_InterDomainLink.vIEW_InterDomainLink;
 				JPAQuery query = new JPAQuery(this.session);
 
-				final List<VIEW_InterDomainLink> tmpLink = query
-						.from(interlink).list(interlink);
+				List<VIEW_InterDomainLink> tmpLink = query.from(interlink)
+						.list(interlink);
 				for (VIEW_InterDomainLink l : tmpLink) {
 					result.add(l);
 				}
@@ -343,7 +342,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	 * Load link from the DB.
 	 */
 	@SuppressWarnings("unchecked")
-	public static final VIEW_InterDomainLink load(Endpoint source, Endpoint dest)
+	public static VIEW_InterDomainLink load(Endpoint source, Endpoint dest)
 			throws DatabaseException {
 		return (VIEW_InterDomainLink) (new TransactionManager(
 				new Tuple<Endpoint, Endpoint>(source, dest)) {
@@ -352,7 +351,7 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 				Tuple<Endpoint, Endpoint> ep = (Tuple<Endpoint, Endpoint>) this.arg;
 				QVIEW_InterDomainLink interlink = QVIEW_InterDomainLink.vIEW_InterDomainLink;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<VIEW_InterDomainLink> tmpLink = query
+				List<VIEW_InterDomainLink> tmpLink = query
 						.from(interlink)
 						.where(interlink.sourceEndpoint
 								.eq(ep.getFirstElement()).and(
@@ -370,8 +369,8 @@ public class VIEW_InterDomainLink implements java.io.Serializable,
 	/**
 	 * Load link from the DB.
 	 */
-	public static final VIEW_InterDomainLink load(String sourceTNA,
-			String destTNA) throws DatabaseException {
+	public static VIEW_InterDomainLink load(String sourceTNA, String destTNA)
+			throws DatabaseException {
 		Endpoint src = Endpoint.load(sourceTNA);
 		Endpoint dest = Endpoint.load(destTNA);
 		return load(src, dest);

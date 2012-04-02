@@ -128,9 +128,9 @@ public class Connections implements java.io.Serializable {
 	 * @param startpointParam
 	 *            initial value
 	 */
-	public Connections(final int connectionIdParam, final Service serviceParam,
-			final int minBandwidthParam, final int maxBandwidthParam,
-			final int directionalityParam, final Endpoint startpointParam) {
+	public Connections(int connectionIdParam, Service serviceParam,
+			int minBandwidthParam, int maxBandwidthParam,
+			int directionalityParam, Endpoint startpointParam) {
 		this.PK_Connections = 0;
 		this.connectionId = connectionIdParam;
 		this.service = serviceParam;
@@ -162,10 +162,10 @@ public class Connections implements java.io.Serializable {
 	 * @param startpointParam
 	 *            initial value
 	 */
-	public Connections(final int connectionIdParam, final Service serviceParam,
-			final int minBandwidthParam, final int maxBandwidthParam,
-			final int maxLatencyParam, final int directionalityParam,
-			final int dataAmountParam, final Endpoint startpointParam) {
+	public Connections(int connectionIdParam, Service serviceParam,
+			int minBandwidthParam, int maxBandwidthParam, int maxLatencyParam,
+			int directionalityParam, int dataAmountParam,
+			Endpoint startpointParam) {
 		this.PK_Connections = 0;
 		this.connectionId = connectionIdParam;
 		this.service = serviceParam;
@@ -209,7 +209,7 @@ public class Connections implements java.io.Serializable {
 	 * @param connectionIdParam
 	 *            ID of the Connection
 	 */
-	public void setConnectionId(final int connectionIdParam) {
+	public void setConnectionId(int connectionIdParam) {
 		this.connectionId = connectionIdParam;
 	}
 
@@ -230,7 +230,7 @@ public class Connections implements java.io.Serializable {
 	 * @param serviceParam
 	 *            service
 	 */
-	public void setService(final Service serviceParam) {
+	public void setService(Service serviceParam) {
 		this.service = serviceParam;
 	}
 
@@ -249,7 +249,7 @@ public class Connections implements java.io.Serializable {
 	 * @param minBandwidthParam
 	 *            min bandwidth used by Connection
 	 */
-	public void setMinBandwidth(final int minBandwidthParam) {
+	public void setMinBandwidth(int minBandwidthParam) {
 		this.minBandwidth = minBandwidthParam;
 	}
 
@@ -268,7 +268,7 @@ public class Connections implements java.io.Serializable {
 	 * @param maxBandwidthParam
 	 *            max. bandwidth used by Connection
 	 */
-	public void setMaxBandwidth(final int maxBandwidthParam) {
+	public void setMaxBandwidth(int maxBandwidthParam) {
 		this.maxBandwidth = maxBandwidthParam;
 	}
 
@@ -288,7 +288,7 @@ public class Connections implements java.io.Serializable {
 	 * @param maxLatencyParam
 	 *            max. latency allowed for this Connection
 	 */
-	public void setMaxLatency(final int maxLatencyParam) {
+	public void setMaxLatency(int maxLatencyParam) {
 		this.maxLatency = maxLatencyParam;
 	}
 
@@ -307,7 +307,7 @@ public class Connections implements java.io.Serializable {
 	 * @param directionalityParam
 	 *            directionality
 	 */
-	public void setDirectionality(final int directionalityParam) {
+	public void setDirectionality(int directionalityParam) {
 		this.directionality = directionalityParam;
 	}
 
@@ -327,7 +327,7 @@ public class Connections implements java.io.Serializable {
 	 * @param dataAmountParam
 	 *            dataAmount
 	 */
-	public void setDataAmount(final int dataAmountParam) {
+	public void setDataAmount(int dataAmountParam) {
 		this.dataAmount = dataAmountParam;
 	}
 
@@ -348,7 +348,7 @@ public class Connections implements java.io.Serializable {
 	 * @param startpointParam
 	 *            Start of Connection
 	 */
-	public void setStartpoint(final Endpoint startpointParam) {
+	public void setStartpoint(Endpoint startpointParam) {
 		this.startpoint = startpointParam;
 	}
 
@@ -369,11 +369,11 @@ public class Connections implements java.io.Serializable {
 	 * @param endpointsParam
 	 *            destination of the Connection
 	 */
-	public void setEndpoints(final Set<Endpoint> endpointsParam) {
+	public void setEndpoints(Set<Endpoint> endpointsParam) {
 		this.endpoints = endpointsParam;
 	}
 
-	public void addEndpoint(final Endpoint endpointParam) {
+	public void addEndpoint(Endpoint endpointParam) {
 		getEndpoints().add(endpointParam);
 	}
 
@@ -399,7 +399,7 @@ public class Connections implements java.io.Serializable {
 	 *            connection to be checked
 	 * @return true if equals
 	 */
-	public boolean isEqual(final Connections connParam) {
+	public boolean isEqual(Connections connParam) {
 		if (this.hashCode() == connParam.hashCode()) {
 			return true;
 		}
@@ -411,7 +411,7 @@ public class Connections implements java.io.Serializable {
 	 * @return
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == Connections.class) {
 			return isEqual((Connections) o);
 		}
@@ -434,7 +434,7 @@ public class Connections implements java.io.Serializable {
 		// result ^= ((this.getStartpoint() == null) ? 0 : this.getStartpoint()
 		// .getTNA().hashCode());
 
-		// for (final Endpoint e : getEndpoints()) {
+		// for ( Endpoint e : getEndpoints()) {
 		// result ^= e.getTNA().hashCode();
 		// }
 
@@ -453,7 +453,7 @@ public class Connections implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final Connections connParam) {
+	public int compareTo(Connections connParam) {
 		if (this.connectionId < connParam.connectionId) {
 			return -1;
 		} else if (this.connectionId == connParam.connectionId) {
@@ -492,8 +492,7 @@ public class Connections implements java.io.Serializable {
 	 * @throws DatabaseException
 	 * @throws EndpointNotFoundFaultException
 	 */
-	public static final Connections fromJaxb(
-			final ConnectionConstraintType resConn)
+	public static Connections fromJaxb(ConnectionConstraintType resConn)
 			throws EndpointNotFoundFaultException, DatabaseException {
 		Connections result = new Connections();
 		result.setConnectionId(resConn.getConnectionID());
@@ -588,8 +587,7 @@ public class Connections implements java.io.Serializable {
 	 * @return Connection loaded.
 	 * @throws DatabaseException
 	 */
-	public static final Connections load(final long dbKey)
-			throws DatabaseException {
+	public static Connections load(long dbKey) throws DatabaseException {
 		return (Connections) (new TransactionManagerLoad(Connections.class,
 				Long.valueOf(dbKey))).getResult();
 	}
@@ -658,14 +656,14 @@ public class Connections implements java.io.Serializable {
 	 * @throws DatabaseException
 	 */
 	/*
-	 * @SuppressWarnings("unchecked") protected final Set<Connections>
-	 * getConnectionsByEndpt(final String cepId) throws DatabaseException {
-	 * String epId = Endpoint.normalizeIPv4(cepId); final EntityManager session
-	 * = DbConnectionManager.openSession(); final Set<Connections> result = new
-	 * HashSet<Connections>(0); final List<Connections> tmpCon1 =
+	 * @SuppressWarnings("unchecked") protected Set<Connections>
+	 * getConnectionsByEndpt( String cepId) throws DatabaseException { String
+	 * epId = Endpoint.normalizeIPv4(cepId); EntityManager session =
+	 * DbConnectionManager.openSession(); Set<Connections> result = new
+	 * HashSet<Connections>(0); List<Connections> tmpCon1 =
 	 * session.createCriteria(Connections.class).setFetchMode("",
 	 * FetchMode.SELECT).add( Expression.sql("FK_StartpointID=" + epId)).list();
-	 * final List<MAPConnEndpoint> tmpCon2 =
+	 * List<MAPConnEndpoint> tmpCon2 =
 	 * session.createCriteria(MAPConnEndpoint.class).setFetchMode("",
 	 * FetchMode.SELECT).add( Expression.sql("FK_DestEndPointID=" +
 	 * epId)).list(); session.close(); for (Connections c : tmpCon1) {

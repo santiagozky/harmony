@@ -161,8 +161,8 @@ public class VIEW_ReservationMapping implements java.io.Serializable {
 	 * @return hashCode of the ReservationMapping
 	 */
 	@Override
-	public final int hashCode() {
-		final int result = (Long.valueOf(this.getReservationId())).hashCode()
+	public int hashCode() {
+		int result = (Long.valueOf(this.getReservationId())).hashCode()
 				^ (Long.valueOf(this.getJobId())).hashCode()
 				^ (Long.valueOf(this.getNrpsReservationId())).hashCode()
 				// ^ this.getDomain().hashCode()
@@ -182,7 +182,7 @@ public class VIEW_ReservationMapping implements java.io.Serializable {
 	 *            ReservationMapping to be checked
 	 * @return true if equals
 	 */
-	public final boolean isEqual(final VIEW_ReservationMapping resMapParam) {
+	public boolean isEqual(VIEW_ReservationMapping resMapParam) {
 		if (this.hashCode() == resMapParam.hashCode()) {
 			return true;
 		}
@@ -195,7 +195,7 @@ public class VIEW_ReservationMapping implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final VIEW_ReservationMapping resMapParam) {
+	public int compareTo(VIEW_ReservationMapping resMapParam) {
 		if (this.getReservationId() < resMapParam.getReservationId()) {
 			return -1;
 		} else if (this.getReservationId() == resMapParam.getReservationId()) {
@@ -211,7 +211,7 @@ public class VIEW_ReservationMapping implements java.io.Serializable {
 	 * @return true if equal, false else
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == VIEW_ReservationMapping.class) {
 			return this.isEqual((VIEW_ReservationMapping) o);
 		}
@@ -222,8 +222,8 @@ public class VIEW_ReservationMapping implements java.io.Serializable {
 	 * @return copy of ReservationMapping
 	 */
 	@Transient
-	public final VIEW_ReservationMapping getCopy() {
-		final VIEW_ReservationMapping result = new VIEW_ReservationMapping();
+	public VIEW_ReservationMapping getCopy() {
+		VIEW_ReservationMapping result = new VIEW_ReservationMapping();
 		result.setReservationId(this.getReservationId());
 		result.setJobId(this.getJobId());
 		result.setNrpsReservationId(this.getNrpsReservationId());
@@ -236,39 +236,39 @@ public class VIEW_ReservationMapping implements java.io.Serializable {
 		return result;
 	}
 
-	public void setConnectionId(final int connectionId) {
+	public void setConnectionId(int connectionId) {
 		this.connectionId = connectionId;
 	}
 
-	public void setDomain(final Domain domain) {
+	public void setDomain(Domain domain) {
 		this.domain = domain;
 	}
 
-	public void setJobId(final long jobId) {
+	public void setJobId(long jobId) {
 		this.jobId = jobId;
 	}
 
-	public void setNrpsReservationId(final long nrpsReservationId) {
+	public void setNrpsReservationId(long nrpsReservationId) {
 		this.nrpsReservationId = nrpsReservationId;
 	}
 
-	public void setConnection(final Connections connectionParam) {
+	public void setConnection(Connections connectionParam) {
 		this.connection = connectionParam;
 	}
 
-	public void setNrpsConnection(final NrpsConnections nrpsConnectionParam) {
+	public void setNrpsConnection(NrpsConnections nrpsConnectionParam) {
 		this.nrpsConnection = nrpsConnectionParam;
 	}
 
-	public void setService(final Service serviceParam) {
+	public void setService(Service serviceParam) {
 		this.service = serviceParam;
 	}
 
-	public void setReservationId(final long reservationIdParam) {
+	public void setReservationId(long reservationIdParam) {
 		this.reservationId = reservationIdParam;
 	}
 
-	public void setServiceId(final int serviceId) {
+	public void setServiceId(int serviceId) {
 		this.serviceId = serviceId;
 	}
 

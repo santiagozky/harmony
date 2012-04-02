@@ -79,7 +79,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	/**
 	 * minimal constructor.
 	 */
-	public DomSupportedBandwidth(final Domain domainParam) {
+	public DomSupportedBandwidth(Domain domainParam) {
 		super();
 		this.domain = domainParam;
 	}
@@ -92,7 +92,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 * @param bwParam
 	 *            supported bandwidth of the domain
 	 */
-	public DomSupportedBandwidth(final Domain domainParam, final long bwParam) {
+	public DomSupportedBandwidth(Domain domainParam, long bwParam) {
 		super();
 		this.domain = domainParam;
 		setBandwidth(bwParam);
@@ -128,7 +128,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 * @param domainParam
 	 *            corresponding domain
 	 */
-	public void setDomain(final Domain domainParam) {
+	public void setDomain(Domain domainParam) {
 		this.domain = domainParam;
 	}
 
@@ -143,7 +143,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 * @param bwParam
 	 *            supported bandwidth of the domain
 	 */
-	public void setBandwidth(final long bwParam) {
+	public void setBandwidth(long bwParam) {
 		this.bw = bwParam;
 	}
 
@@ -153,7 +153,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 * @return -1 0 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final DomSupportedBandwidth domainBwParam) {
+	public int compareTo(DomSupportedBandwidth domainBwParam) {
 		if (this.bw < domainBwParam.getBandwidth()) {
 			return -1;
 		} else if (this.bw == domainBwParam.getBandwidth()) {
@@ -168,7 +168,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 *            domainBw to be checked
 	 * @return true if equals
 	 */
-	public boolean isEqual(final DomSupportedBandwidth domainBwParam) {
+	public boolean isEqual(DomSupportedBandwidth domainBwParam) {
 		if (this.hashCode() == domainBwParam.hashCode()) {
 			return true;
 		}
@@ -180,7 +180,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 	 * @return
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == DomSupportedBandwidth.class) {
 			return isEqual((DomSupportedBandwidth) o);
 		}
@@ -221,8 +221,7 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 		};
 	}
 
-	public static DomSupportedBandwidth load(final long id)
-			throws DatabaseException {
+	public static DomSupportedBandwidth load(long id) throws DatabaseException {
 		return (DomSupportedBandwidth) (new TransactionManagerLoad(
 				DomSupportedBandwidth.class, Long.valueOf(id))).getResult();
 	}
@@ -246,15 +245,14 @@ public class DomSupportedBandwidth implements java.io.Serializable,
 		return (Set<DomSupportedBandwidth>) (new TransactionManager(dom) {
 			@Override
 			protected void dbOperation() {
-				final Domain d = (Domain) this.arg;
+				Domain d = (Domain) this.arg;
 				QDomSupportedBandwidth domBandwidth = QDomSupportedBandwidth.domSupportedBandwidth;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<DomSupportedBandwidth> bList = query
-						.from(domBandwidth).where(domBandwidth.domain.eq(d))
-						.list(domBandwidth);
+				List<DomSupportedBandwidth> bList = query.from(domBandwidth)
+						.where(domBandwidth.domain.eq(d)).list(domBandwidth);
 
-				final Set<DomSupportedBandwidth> bws = new HashSet<DomSupportedBandwidth>();
-				for (final DomSupportedBandwidth bw : bList) {
+				Set<DomSupportedBandwidth> bws = new HashSet<DomSupportedBandwidth>();
+				for (DomSupportedBandwidth bw : bList) {
 					bws.add(bw);
 				}
 				this.result = bws;

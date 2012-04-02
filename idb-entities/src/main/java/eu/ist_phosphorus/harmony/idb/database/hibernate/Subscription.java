@@ -28,6 +28,7 @@ package eu.ist_phosphorus.harmony.idb.database.hibernate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.GeneratedValue;
@@ -74,11 +75,13 @@ public class Subscription implements java.io.Serializable,
 	// Property accessors
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	// @Column(name = "subscriptionId", unique = true, nullable = false, length
+	// = 20)
 	public long getSubscriptionId() {
 		return this.subscriptionId;
 	}
 
-	public void setsubscriptionId(final long subscriptionId) {
+	public void setSubscriptionId(long subscriptionId) {
 		this.subscriptionId = subscriptionId;
 	}
 
@@ -86,7 +89,7 @@ public class Subscription implements java.io.Serializable,
 		return this.subscriptionTopic;
 	}
 
-	public void setSubscriptionTopic(final String subscriptionTopic) {
+	public void setSubscriptionTopic(String subscriptionTopic) {
 		this.subscriptionTopic = subscriptionTopic;
 	}
 
@@ -94,7 +97,7 @@ public class Subscription implements java.io.Serializable,
 		return this.subscriptionEPR;
 	}
 
-	public void setSubscriptionEPR(final String subscriptionEPR) {
+	public void setSubscriptionEPR(String subscriptionEPR) {
 		this.subscriptionEPR = subscriptionEPR;
 	}
 
@@ -107,8 +110,7 @@ public class Subscription implements java.io.Serializable,
 	/**
 	 * minimal Constructor.
 	 */
-	public Subscription(final String subscriptionTopic,
-			final String subscriptionEPR) {
+	public Subscription(String subscriptionTopic, String subscriptionEPR) {
 		this.subscriptionId = 0;
 		this.subscriptionTopic = subscriptionTopic;
 		this.subscriptionEPR = subscriptionEPR;
@@ -117,8 +119,8 @@ public class Subscription implements java.io.Serializable,
 	/**
 	 * full Constructor.
 	 */
-	public Subscription(final long subscriptionId,
-			final String subscriptionTopic, final String subscriptionEPR) {
+	public Subscription(long subscriptionId, String subscriptionTopic,
+			String subscriptionEPR) {
 		this.subscriptionId = subscriptionId;
 		this.subscriptionTopic = subscriptionTopic;
 		this.subscriptionEPR = subscriptionEPR;
@@ -127,7 +129,7 @@ public class Subscription implements java.io.Serializable,
 	/**
      */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == Subscription.class) {
 			return this.isEqual((Subscription) o);
 		}
@@ -138,7 +140,7 @@ public class Subscription implements java.io.Serializable,
 	 * @param o
 	 * @return
 	 */
-	public final boolean isEqual(final Subscription subscriptionParam) {
+	public boolean isEqual(Subscription subscriptionParam) {
 		if (this.hashCode() == subscriptionParam.hashCode()) {
 			return true;
 		}
@@ -149,8 +151,8 @@ public class Subscription implements java.io.Serializable,
      *
      */
 	@Override
-	public final int hashCode() {
-		final int result = new Long(this.getSubscriptionId()).hashCode()
+	public int hashCode() {
+		int result = new Long(this.getSubscriptionId()).hashCode()
 				^ this.getSubscriptionTopic().hashCode()
 				^ this.getSubscriptionEPR().hashCode();
 		return result;
@@ -160,11 +162,11 @@ public class Subscription implements java.io.Serializable,
 	 * @return copy of Subscription
 	 */
 	@Transient
-	public final Subscription getCopy() {
-		final Subscription newSubscription = new Subscription();
-		newSubscription.subscriptionId = this.getSubscriptionId();
-		newSubscription.subscriptionTopic = this.getSubscriptionTopic();
-		newSubscription.subscriptionEPR = this.getSubscriptionEPR();
+	public Subscription getCopy() {
+		Subscription newSubscription = new Subscription();
+		newSubscription.setSubscriptionId(this.getSubscriptionId());
+		newSubscription.setSubscriptionTopic(this.getSubscriptionTopic());
+		newSubscription.setSubscriptionEPR(this.getSubscriptionEPR());
 
 		return newSubscription;
 	}
@@ -175,7 +177,7 @@ public class Subscription implements java.io.Serializable,
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final Subscription subscription) {
+	public int compareTo(Subscription subscription) {
 		if (this.subscriptionId < subscription.getSubscriptionId()) {
 			return -1;
 		} else if (this.subscriptionId == subscription.getSubscriptionId()) {
@@ -186,7 +188,7 @@ public class Subscription implements java.io.Serializable,
 	}
 
 	@Override
-	public final String toString() {
+	public String toString() {
 		String result = "<subscription><id>" + this.getSubscriptionId()
 				+ "</id>" + "<topic>" + this.getSubscriptionTopic()
 				+ "</topic>" + "<epr>" + this.getSubscriptionEPR() + "</epr>";
@@ -195,26 +197,26 @@ public class Subscription implements java.io.Serializable,
 
 	/**
      */
-	public static final Subscription load(final long subscriptionID)
+	public static Subscription load(long subscriptionID)
 			throws DatabaseException {
 		return (Subscription) (new TransactionManagerLoad(Subscription.class,
 				new Long(subscriptionID))).getResult();
 	}
 
-	public final void save(final EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
-	public final void save() throws DatabaseException {
+	public void save() throws DatabaseException {
 		new TransactionManager() {
 			@Override
 			protected void dbOperation() {
-				Subscription.this.save(this.session);
+				save(this.session);
 			}
 		};
 	}
 
-	public final void delete() throws DatabaseException {
+	public void delete() throws DatabaseException {
 		new TransactionManager(this) {
 			@Override
 			protected void dbOperation() throws Exception {

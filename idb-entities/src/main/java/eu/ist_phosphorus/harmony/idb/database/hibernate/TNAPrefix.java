@@ -91,7 +91,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	/**
 	 * minimal constructor.
 	 */
-	public TNAPrefix(final Domain domainParam) {
+	public TNAPrefix(Domain domainParam) {
 		super();
 		this.setDomain(domainParam);
 	}
@@ -104,7 +104,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 * @param prefixParam
 	 *            prefix of the domain
 	 */
-	public TNAPrefix(final Domain domainParam, final String prefixParam) {
+	public TNAPrefix(Domain domainParam, String prefixParam) {
 		super();
 		this.setDomain(domainParam);
 		setPrefix(prefixParam);
@@ -123,7 +123,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 * @param domainParam
 	 *            corresponding domain
 	 */
-	public void setDomain(final Domain domainParam) {
+	public void setDomain(Domain domainParam) {
 		this.domain = domainParam;
 	}
 
@@ -133,7 +133,8 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	@Id
 	public String getPrefix() {
 		if (this.prefix == null) {
-			this.setPrefix("");
+			this.prefix = ""; // shouldnt use setPrefix("") because is not
+								// prepared for nulls or empty strings
 		}
 		return this.prefix;
 	}
@@ -142,7 +143,10 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 * @param prefixParam
 	 *            prefix of the domain
 	 */
-	public void setPrefix(final String prefixParam) {
+	public void setPrefix(String prefixParam) {
+		if (prefixParam == null) {
+			return;
+		}
 		String[] tmpSplit = prefixParam.split("\\/");
 		this.baseAddr = Endpoint.ipv4ToInt(tmpSplit[0]);
 		this.len = Integer.parseInt(tmpSplit[1]);
@@ -163,7 +167,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 * @return -1 0 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final TNAPrefix domainPrefixParam) {
+	public int compareTo(TNAPrefix domainPrefixParam) {
 		if (this.getPrefix().length() < domainPrefixParam.getPrefix().length()) {
 			return -1;
 		} else if (this.getPrefix().equals(domainPrefixParam.getPrefix())) {
@@ -178,7 +182,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 *            domainPrefix to be checked
 	 * @return true if equals
 	 */
-	public boolean isEqual(final TNAPrefix domainPrefixParam) {
+	public boolean isEqual(TNAPrefix domainPrefixParam) {
 		if (this.hashCode() == domainPrefixParam.hashCode()) {
 			return true;
 		}
@@ -190,7 +194,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 * @return
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == TNAPrefix.class) {
 			return isEqual((TNAPrefix) o);
 		}
@@ -231,7 +235,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 		};
 	}
 
-	public static TNAPrefix load(final String prefix) throws DatabaseException {
+	public static TNAPrefix load(String prefix) throws DatabaseException {
 		return (TNAPrefix) (new TransactionManagerLoad(TNAPrefix.class, prefix))
 				.getResult();
 	}
@@ -258,7 +262,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 *            prefix.
 	 * @return True if address matches the prefix, false otherwise.
 	 */
-	public boolean matchesPrefix(final String ip) {
+	public boolean matchesPrefix(String ip) {
 		return matchesPrefix(Endpoint.ipv4ToInt(ip));
 	}
 
@@ -271,7 +275,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 	 *            prefix.
 	 * @return True if address matches the prefix, false otherwise.
 	 */
-	public boolean matchesPrefix(final int ip) {
+	public boolean matchesPrefix(int ip) {
 		return (this.baseAddr == (ip & this.mask));
 	}
 
@@ -283,7 +287,7 @@ public class TNAPrefix implements java.io.Serializable, Comparable<TNAPrefix> {
 				Set<TNAPrefix> result = new HashSet<TNAPrefix>();
 				QTNAPrefix tnaPrefix = QTNAPrefix.tNAPrefix;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<TNAPrefix> tmpPrefix = query.from(tnaPrefix).list(
+				List<TNAPrefix> tmpPrefix = query.from(tnaPrefix).list(
 						tnaPrefix);
 
 				for (TNAPrefix d : tmpPrefix) {

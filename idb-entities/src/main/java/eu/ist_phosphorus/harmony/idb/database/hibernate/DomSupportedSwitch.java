@@ -59,7 +59,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -3439390262831916473L;
+	private static long serialVersionUID = -3439390262831916473L;
 
 	/** primary key of the table in the Database. */
 	private long PK_Switch;
@@ -80,7 +80,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	/**
 	 * minimal constructor.
 	 */
-	public DomSupportedSwitch(final Domain domainParam) {
+	public DomSupportedSwitch(Domain domainParam) {
 		super();
 		this.setDomain(domainParam);
 	}
@@ -93,7 +93,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 * @param switchParam
 	 *            technology switch of the domain
 	 */
-	public DomSupportedSwitch(final Domain domainParam, final String switchParam) {
+	public DomSupportedSwitch(Domain domainParam, String switchParam) {
 		super();
 		this.setDomain(domainParam);
 		setSwitch(switchParam);
@@ -129,7 +129,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 * @param domainParam
 	 *            corresponding domain
 	 */
-	public void setDomain(final Domain domainParam) {
+	public void setDomain(Domain domainParam) {
 		this.domain = domainParam;
 	}
 
@@ -148,7 +148,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 * @param switchParam
 	 *            technology switch of the domain
 	 */
-	public void setSwitch(final String switchParam) {
+	public void setSwitch(String switchParam) {
 		this.switchd = switchParam;
 	}
 
@@ -158,7 +158,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 * @return -1 0 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final DomSupportedSwitch domainSwitchParam) {
+	public int compareTo(DomSupportedSwitch domainSwitchParam) {
 		if (this.getSwitch().length() < domainSwitchParam.getSwitch().length()) {
 			return -1;
 		} else if (this.getSwitch().equals(domainSwitchParam.getSwitch())) {
@@ -173,7 +173,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 *            domainSwitch to be checked
 	 * @return true if equals
 	 */
-	public boolean isEqual(final DomSupportedSwitch domainSwitchParam) {
+	public boolean isEqual(DomSupportedSwitch domainSwitchParam) {
 		if (this.hashCode() == domainSwitchParam.hashCode()) {
 			return true;
 		}
@@ -185,7 +185,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 	 * @return
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == DomSupportedSwitch.class) {
 			return isEqual((DomSupportedSwitch) o);
 		}
@@ -226,8 +226,7 @@ public class DomSupportedSwitch implements java.io.Serializable,
 		};
 	}
 
-	public static DomSupportedSwitch load(final long id)
-			throws DatabaseException {
+	public static DomSupportedSwitch load(long id) throws DatabaseException {
 		return (DomSupportedSwitch) (new TransactionManagerLoad(
 				DomSupportedSwitch.class, Long.valueOf(id))).getResult();
 	}
@@ -252,14 +251,14 @@ public class DomSupportedSwitch implements java.io.Serializable,
 		return (Set<DomSupportedSwitch>) (new TransactionManager(dom) {
 			@Override
 			protected void dbOperation() {
-				final Domain d = (Domain) this.arg;
+				Domain d = (Domain) this.arg;
 				QDomSupportedSwitch domSwitch = QDomSupportedSwitch.domSupportedSwitch;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<DomSupportedSwitch> sList = query.from(domSwitch)
+				List<DomSupportedSwitch> sList = query.from(domSwitch)
 						.where(domSwitch.domain.eq(d)).list(domSwitch);
 
-				final Set<DomSupportedSwitch> switches = new HashSet<DomSupportedSwitch>();
-				for (final DomSupportedSwitch switchd : sList) {
+				Set<DomSupportedSwitch> switches = new HashSet<DomSupportedSwitch>();
+				for (DomSupportedSwitch switchd : sList) {
 					switches.add(switchd);
 				}
 				this.result = switches;

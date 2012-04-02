@@ -74,8 +74,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @return Connection loaded.
 	 * @throws DatabaseException
 	 */
-	public static final NrpsConnections load(final long dbKey)
-			throws DatabaseException {
+	public static NrpsConnections load(long dbKey) throws DatabaseException {
 		return (NrpsConnections) (new TransactionManagerLoad(
 				NrpsConnections.class, Long.valueOf(dbKey))).getResult();
 	}
@@ -150,11 +149,10 @@ public class NrpsConnections implements java.io.Serializable {
 		// is Empty
 	}
 
-	public NrpsConnections(final long pkNrpsConnection,
-			final Connections connection, final Domain domain,
-			final Endpoint sourceEndpoint, final Endpoint destinationEndpoint,
-			final int bandwidth, final int directionality, final int latency,
-			final int status) {
+	public NrpsConnections(long pkNrpsConnection, Connections connection,
+			Domain domain, Endpoint sourceEndpoint,
+			Endpoint destinationEndpoint, int bandwidth, int directionality,
+			int latency, int status) {
 		super();
 		this.setPkNrpsConnection(pkNrpsConnection);
 		this.setConnection(connection);
@@ -173,7 +171,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final NrpsConnections connParam) {
+	public int compareTo(NrpsConnections connParam) {
 		if (this.getPkNrpsConnection() < connParam.getPkNrpsConnection()) {
 			return -1;
 		} else if (this.getPkNrpsConnection() == connParam
@@ -191,7 +189,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 *            instance of the {@link NrpsConnections} to be deleted
 	 * @throws DatabaseException
 	 */
-	public final void delete() throws DatabaseException {
+	public void delete() throws DatabaseException {
 		new TransactionManager(new HashSet<Object>(Arrays.asList(
 				this.getConnection(), this.getDomain(),
 				this.getSourceEndpoint(), this.getDestinationEndpoint()))) {
@@ -202,7 +200,7 @@ public class NrpsConnections implements java.io.Serializable {
 		};
 	}
 
-	public final void delete(final EntityManager session) {
+	public void delete(EntityManager session) {
 		session.remove(this);
 	}
 
@@ -211,7 +209,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @return
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == NrpsConnections.class) {
 			return this.isEqual((NrpsConnections) o);
 		}
@@ -238,8 +236,8 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @return copy of connection
 	 */
 	@Transient
-	public final NrpsConnections getCopy() {
-		final NrpsConnections newConn = new NrpsConnections(
+	public NrpsConnections getCopy() {
+		NrpsConnections newConn = new NrpsConnections(
 				this.getPkNrpsConnection(), this.getConnection(),
 				this.getDomain(), this.getSourceEndpoint(),
 				this.getDestinationEndpoint(), this.getBandwidth(),
@@ -261,7 +259,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * 
 	 * @return directionality
 	 */
-	public final int getDirectionality() {
+	public int getDirectionality() {
 		return this.directionality;
 	}
 
@@ -353,7 +351,7 @@ public class NrpsConnections implements java.io.Serializable {
 	}
 
 	@Override
-	public final int hashCode() {
+	public int hashCode() {
 		int result = new Long(this.getPkNrpsConnection()).hashCode()
 				^ new Integer(this.getBandwidth()).hashCode()
 				^ new Integer(this.getDirectionality()).hashCode()
@@ -381,7 +379,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 *            connection to be checked
 	 * @return true if equals
 	 */
-	public final boolean isEqual(final NrpsConnections connParam) {
+	public boolean isEqual(NrpsConnections connParam) {
 		if (this.hashCode() == connParam.hashCode()) {
 			return true;
 		}
@@ -395,7 +393,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @throws DatabaseException
 	 *             if entity could not be saved
 	 */
-	public final void save() throws DatabaseException {
+	public void save() throws DatabaseException {
 		new TransactionManager(new HashSet<Object>(Arrays.asList(
 				getConnection(), getDomain(), this.getSourceEndpoint(),
 				this.getDestinationEndpoint()))) {
@@ -414,7 +412,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @throws DatabaseException
 	 *             if entity could not be saved
 	 */
-	public final void save(final EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
@@ -422,7 +420,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param bandwidth
 	 *            the bandwidth to set
 	 */
-	public void setBandwidth(final int bandwidth) {
+	public void setBandwidth(int bandwidth) {
 		this.bandwidth = bandwidth;
 	}
 
@@ -430,7 +428,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param connection
 	 *            the connection to set
 	 */
-	public void setConnection(final Connections connection) {
+	public void setConnection(Connections connection) {
 		this.connection = connection;
 	}
 
@@ -438,7 +436,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param destinationEndpoint
 	 *            the destinationEndpoint to set
 	 */
-	public void setDestinationEndpoint(final Endpoint destinationEndpoint) {
+	public void setDestinationEndpoint(Endpoint destinationEndpoint) {
 		this.destinationEndpoint = destinationEndpoint;
 	}
 
@@ -448,7 +446,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param directionalityParam
 	 *            directionality
 	 */
-	public final void setDirectionality(final int directionalityParam) {
+	public void setDirectionality(int directionalityParam) {
 		this.directionality = directionalityParam;
 	}
 
@@ -456,7 +454,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param domain
 	 *            the domain to set
 	 */
-	public void setDomain(final Domain domain) {
+	public void setDomain(Domain domain) {
 		this.domain = domain;
 	}
 
@@ -464,7 +462,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param latency
 	 *            the latency to set
 	 */
-	public void setLatency(final int latency) {
+	public void setLatency(int latency) {
 		this.latency = latency;
 	}
 
@@ -472,7 +470,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param pkNrpsConnection
 	 *            the pkNrpsConnection to set
 	 */
-	public void setPkNrpsConnection(final long pkNrpsConnection) {
+	public void setPkNrpsConnection(long pkNrpsConnection) {
 		this.pkNrpsConnection = pkNrpsConnection;
 	}
 
@@ -480,7 +478,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param sourceEndpoint
 	 *            the sourceEndpoint to set
 	 */
-	public void setSourceEndpoint(final Endpoint sourceEndpoint) {
+	public void setSourceEndpoint(Endpoint sourceEndpoint) {
 		this.sourceEndpoint = sourceEndpoint;
 	}
 
@@ -488,7 +486,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param status
 	 *            the status to set
 	 */
-	public void setStatus(final int status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -496,7 +494,7 @@ public class NrpsConnections implements java.io.Serializable {
 	 * @param status
 	 *            the status to set
 	 */
-	public void setStatus(final StatusType status) {
+	public void setStatus(StatusType status) {
 		switch (status) {
 		case ACTIVE:
 			this.setStatus(NrpsConnections.STATUS_ACTIVE);
@@ -527,9 +525,9 @@ public class NrpsConnections implements java.io.Serializable {
 		}
 	}
 
-	public final Connections toConnnections(final Connections parentConnection) {
+	public Connections toConnnections(Connections parentConnection) {
 
-		final Connections result = new Connections(
+		Connections result = new Connections(
 				parentConnection.getConnectionId(),
 				parentConnection.getService(), this.getBandwidth(),
 				this.getBandwidth(), this.getLatency(), this.directionality,

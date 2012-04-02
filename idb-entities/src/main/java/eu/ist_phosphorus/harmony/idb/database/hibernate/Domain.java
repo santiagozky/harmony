@@ -120,7 +120,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return this.registered;
 	}
 
-	public void setRegistered(final Date registered) {
+	public void setRegistered(Date registered) {
 		this.registered = registered;
 	}
 
@@ -129,7 +129,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return this.seqNo;
 	}
 
-	public void setSeqNo(final int seqNo) {
+	public void setSeqNo(int seqNo) {
 		this.seqNo = seqNo;
 	}
 
@@ -138,7 +138,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return this.relationship;
 	}
 
-	public void setRelationship(final String relationship) {
+	public void setRelationship(String relationship) {
 		this.relationship = relationship;
 	}
 
@@ -147,7 +147,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return this.avgDelay;
 	}
 
-	public void setAvgDelay(final int avgDelay) {
+	public void setAvgDelay(int avgDelay) {
 		this.avgDelay = avgDelay;
 	}
 
@@ -156,7 +156,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return this.maxBW;
 	}
 
-	public void setMaxBW(final int maxBW) {
+	public void setMaxBW(int maxBW) {
 		this.maxBW = maxBW;
 	}
 
@@ -211,16 +211,16 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * 
 	 * @param adaption
 	 */
-	public void setSupportedAdaptions(final Set<DomSupportedAdaption> adaption) {
+	public void setSupportedAdaptions(Set<DomSupportedAdaption> adaption) {
 		this.supportedAdaptions = adaption;
 	}
 
-	public boolean addAdaption(final DomSupportedAdaption adaption) {
+	public boolean addAdaption(DomSupportedAdaption adaption) {
 		adaption.setDomain(this);
 		return this.getSupportedAdaptions().add(adaption);
 	}
 
-	public boolean addAdaption(final String adaption) {
+	public boolean addAdaption(String adaption) {
 		return this.getSupportedAdaptions().add(
 				new DomSupportedAdaption(this, adaption));
 	}
@@ -239,17 +239,16 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * 
 	 * @param switchMatrix
 	 */
-	public void setSupportedSwitchMatrix(
-			final Set<DomSupportedSwitch> switchMatrix) {
+	public void setSupportedSwitchMatrix(Set<DomSupportedSwitch> switchMatrix) {
 		this.supportedSwitchMatrix = switchMatrix;
 	}
 
-	public boolean addSwitch(final DomSupportedSwitch switchParam) {
+	public boolean addSwitch(DomSupportedSwitch switchParam) {
 		switchParam.setDomain(this);
 		return this.getSupportedSwitchMatrix().add(switchParam);
 	}
 
-	public boolean addSwitch(final String switchParam) {
+	public boolean addSwitch(String switchParam) {
 		return this.getSupportedSwitchMatrix().add(
 				new DomSupportedSwitch(this, switchParam));
 	}
@@ -268,16 +267,16 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * 
 	 * @param bandwidth
 	 */
-	public void setSupportedBandwidths(final Set<DomSupportedBandwidth> bw) {
+	public void setSupportedBandwidths(Set<DomSupportedBandwidth> bw) {
 		this.supportedBandwidths = bw;
 	}
 
-	public boolean addBandwidth(final DomSupportedBandwidth bw) {
+	public boolean addBandwidth(DomSupportedBandwidth bw) {
 		bw.setDomain(this);
 		return this.getSupportedBandwidths().add(bw);
 	}
 
-	public boolean addBandwidth(final long bw) {
+	public boolean addBandwidth(long bw) {
 		return this.getSupportedBandwidths().add(
 				new DomSupportedBandwidth(this, bw));
 	}
@@ -299,8 +298,8 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 *            URI of the topologyEPR
 	 * @throws URISyntaxException
 	 */
-	public Domain(final String nameParam, final String reservationEPRParam,
-			final String topologyEPRParam) {
+	public Domain(String nameParam, String reservationEPRParam,
+			String topologyEPRParam) {
 		this.name = nameParam;
 		this.description = null;
 		this.setReservationEPR(reservationEPRParam);
@@ -320,9 +319,9 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 *            URI of the topologyEPR
 	 * @throws URISyntaxException
 	 */
-	public Domain(final String nameParam, final String descriptionParam,
-			final String reservationEPRParam, final String topologyEPRParam,
-			final String notificationEPRParam) {
+	public Domain(String nameParam, String descriptionParam,
+			String reservationEPRParam, String topologyEPRParam,
+			String notificationEPRParam) {
 		this.name = nameParam;
 		this.description = descriptionParam;
 		this.setReservationEPR(reservationEPRParam);
@@ -344,7 +343,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param nameParam
 	 *            name of the Domain
 	 */
-	public void setName(final String nameParam) {
+	public void setName(String nameParam) {
 		this.name = nameParam;
 	}
 
@@ -363,7 +362,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param descriptionParam
 	 *            description of the domain
 	 */
-	public void setDescription(final String descriptionParam) {
+	public void setDescription(String descriptionParam) {
 		this.description = descriptionParam;
 	}
 
@@ -382,10 +381,14 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 *            URI of the reservationEPR
 	 * @throws URISyntaxException
 	 */
-	public void setReservationEPR(final String reservationEPRParam) {
+	public void setReservationEPR(String reservationEPRParam) {
+		if (reservationEPRParam == null) {
+			return;
+		}
 		try {
+
 			this.reservationURI = new URI(reservationEPRParam);
-		} catch (final URISyntaxException e) {
+		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
 		this.reservationEPR = reservationEPRParam;
@@ -414,7 +417,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param topologyEPRParam
 	 *            URI of the topologyEPR
 	 */
-	public void setTopologyEPR(final String topologyEPRParam) {
+	public void setTopologyEPR(String topologyEPRParam) {
 		this.topologyEPR = topologyEPRParam;
 	}
 
@@ -430,7 +433,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param notificationEPR
 	 *            the notificationEPR to set
 	 */
-	public void setNotificationEPR(final String notificationEPR) {
+	public void setNotificationEPR(String notificationEPR) {
 		this.notificationEPR = notificationEPR;
 	}
 
@@ -447,24 +450,27 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param prefixes
 	 *            the prefixes to set
 	 */
-	public void setPrefixes(final Set<TNAPrefix> prefixes) {
+	public void setPrefixes(Set<TNAPrefix> prefixes) {
 		this.prefixes = prefixes;
 		// TODO: maybe set the domainName here
 	}
 
-	public boolean addPrefix(final TNAPrefix prefix) {
+	public boolean addPrefix(TNAPrefix prefix) {
 		prefix.setDomain(this);
 		return this.getPrefixes().add(prefix);
 	}
 
-	public boolean addPrefix(final String prefix) {
+	public boolean addPrefix(String prefix) {
 		return this.getPrefixes().add(new TNAPrefix(this, prefix));
 	}
 
 	/**
 	 * @return the endpoints
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.REMOVE })
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = {
+			javax.persistence.CascadeType.REMOVE,
+			javax.persistence.CascadeType.PERSIST })
+	// santiago: add cascade all
 	@MapKey
 	public Set<Endpoint> getEndpoints() {
 		return this.endpoints;
@@ -474,11 +480,11 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param endpoints
 	 *            the endpoints to set
 	 */
-	public void setEndpoints(final Set<Endpoint> endpoints) {
+	public void setEndpoints(Set<Endpoint> endpoints) {
 		this.endpoints = endpoints;
 	}
 
-	public boolean addEndpoint(final Endpoint end) {
+	public boolean addEndpoint(Endpoint end) {
 		end.setDomain(this);
 		return this.getEndpoints().add(end);
 	}
@@ -486,8 +492,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the nrpsConnections
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.REMOVE })
-	@MapKey
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
 	public Set<NrpsConnections> getNrpsConnections() {
 		return this.nrpsConnections;
 	}
@@ -496,11 +501,11 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param nrpsConnections
 	 *            the nrpsConnections to set
 	 */
-	public void setNrpsConnections(final Set<NrpsConnections> nrpsConnections) {
+	public void setNrpsConnections(Set<NrpsConnections> nrpsConnections) {
 		this.nrpsConnections = nrpsConnections;
 	}
 
-	public boolean addNrpsConnection(final NrpsConnections conn) {
+	public boolean addNrpsConnection(NrpsConnections conn) {
 		conn.setDomain(this);
 		return this.getNrpsConnections().add(conn);
 	}
@@ -511,7 +516,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return true if equals
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass().equals(Domain.class)) {
 			return this.isEqual((Domain) o);
 		}
@@ -522,7 +527,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @param o
 	 * @return
 	 */
-	public boolean isEqual(final Domain domainParam) {
+	public boolean isEqual(Domain domainParam) {
 		if (this.hashCode() == domainParam.hashCode()) {
 			return true;
 		}
@@ -573,7 +578,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 */
 	@Transient
 	public Domain getCopy() {
-		final Domain newDomain = new Domain();
+		Domain newDomain = new Domain();
 		newDomain.setName(getName());
 		newDomain.setSeqNo(getSeqNo());
 		newDomain.setDescription(getDescription());
@@ -585,31 +590,31 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		newDomain.setRelationship(getRelationship());
 		newDomain.setAvgDelay(getAvgDelay());
 		newDomain.setMaxBW(getMaxBW());
-		for (final Endpoint e : getEndpoints()) {
+		for (Endpoint e : getEndpoints()) {
 			newDomain.getEndpoints().add(e.getCopy(this));
 		}
-		for (final TNAPrefix p : this.getPrefixes()) {
+		for (TNAPrefix p : this.getPrefixes()) {
 			newDomain.getPrefixes().add(p.getCopy());
 		}
-		for (final NrpsConnections s : this.getNrpsConnections()) {
+		for (NrpsConnections s : this.getNrpsConnections()) {
 			newDomain.getNrpsConnections().add(s.getCopy());
 		}
-		for (final DomSupportedAdaption a : this.getSupportedAdaptions()) {
+		for (DomSupportedAdaption a : this.getSupportedAdaptions()) {
 			newDomain.getSupportedAdaptions().add(a);
 		}
-		for (final DomSupportedSwitch s : this.getSupportedSwitchMatrix()) {
+		for (DomSupportedSwitch s : this.getSupportedSwitchMatrix()) {
 			newDomain.getSupportedSwitchMatrix().add(s);
 		}
-		for (final DomSupportedBandwidth b : this.getSupportedBandwidths()) {
+		for (DomSupportedBandwidth b : this.getSupportedBandwidths()) {
 			newDomain.getSupportedBandwidths().add(b);
 		}
 		return newDomain;
 	}
 
-	public static Domain fromJaxb(final DomainInformationType jaxb) {
-		final Domain result = new Domain(jaxb.getDomainId(),
-				jaxb.getDescription(), jaxb.getReservationEPR(),
-				jaxb.getTopologyEPR(), jaxb.getNotificationEPR());
+	public static Domain fromJaxb(DomainInformationType jaxb) {
+		Domain result = new Domain(jaxb.getDomainId(), jaxb.getDescription(),
+				jaxb.getReservationEPR(), jaxb.getTopologyEPR(),
+				jaxb.getNotificationEPR());
 		if (jaxb.isSetSequenceNumber()) {
 			result.setSeqNo(jaxb.getSequenceNumber().intValue());
 		}
@@ -622,7 +627,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		if (jaxb.isSetMaxBW()) {
 			result.setMaxBW(jaxb.getMaxBW().intValue());
 		}
-		for (final String prefix : jaxb.getTNAPrefix()) {
+		for (String prefix : jaxb.getTNAPrefix()) {
 			result.addPrefix(prefix);
 		}
 		if (jaxb.isSetTechnology()) {
@@ -640,7 +645,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return result;
 	}
 
-	public void mergeFromJaxb(final DomainInformationType jaxb) {
+	public void mergeFromJaxb(DomainInformationType jaxb) {
 		this.setName(jaxb.getDomainId());
 		if (jaxb.getDescription() != null)
 			this.setDescription(jaxb.getDescription());
@@ -675,7 +680,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	}
 
 	public DomainInformationType toJaxb() {
-		final DomainInformationType result = new DomainInformationType();
+		DomainInformationType result = new DomainInformationType();
 		result.setDomainId(this.getName());
 		if (this.getSeqNo() > 0) {
 			result.setSequenceNumber(new Integer(this.getSeqNo()));
@@ -694,7 +699,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		if (this.getMaxBW() > 0) {
 			result.setMaxBW(new Integer(this.getMaxBW()));
 		}
-		for (final TNAPrefix p : this.getPrefixes()) {
+		for (TNAPrefix p : this.getPrefixes()) {
 			result.getTNAPrefix().add(p.getPrefix());
 		}
 
@@ -704,15 +709,15 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		if (!adaptions.isEmpty() || !matrix.isEmpty() || !bws.isEmpty()) {
 			DomainTechnologyType dtt = new DomainTechnologyType();
 			dtt.getDomainSupportedAdaptation();
-			for (final DomSupportedAdaption a : this.getSupportedAdaptions()) {
+			for (DomSupportedAdaption a : this.getSupportedAdaptions()) {
 				dtt.getDomainSupportedAdaptation().add(a.getAdaption());
 			}
 			dtt.getDomainSupportedSwitchMatrix();
-			for (final DomSupportedSwitch s : this.getSupportedSwitchMatrix()) {
+			for (DomSupportedSwitch s : this.getSupportedSwitchMatrix()) {
 				dtt.getDomainSupportedSwitchMatrix().add(s.getSwitch());
 			}
 			dtt.getDomainSupportedBandwidth();
-			for (final DomSupportedBandwidth b : this.getSupportedBandwidths()) {
+			for (DomSupportedBandwidth b : this.getSupportedBandwidths()) {
 				dtt.getDomainSupportedBandwidth().add(b.getBandwidth());
 			}
 			result.setTechnology(dtt);
@@ -727,7 +732,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final Domain domain) {
+	public int compareTo(Domain domain) {
 		if (this.getName().length() < domain.getName().length()) {
 			return -1;
 		} else if (this.getName().length() == domain.getName().length()) {
@@ -750,22 +755,22 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 				+ this.getRelationship() + "</relationship>" + "<avgDelay>"
 				+ this.getAvgDelay() + "</avgDelay>" + "<maxBW>"
 				+ this.getMaxBW() + "</maxBW>";
-		for (final DomSupportedAdaption a : this.getSupportedAdaptions()) {
+		for (DomSupportedAdaption a : this.getSupportedAdaptions()) {
 			result += a.toString();
 		}
-		for (final DomSupportedSwitch s : this.getSupportedSwitchMatrix()) {
+		for (DomSupportedSwitch s : this.getSupportedSwitchMatrix()) {
 			result += s.toString();
 		}
-		for (final DomSupportedBandwidth b : this.getSupportedBandwidths()) {
+		for (DomSupportedBandwidth b : this.getSupportedBandwidths()) {
 			result += b.toString();
 		}
-		for (final TNAPrefix p : this.getPrefixes()) {
+		for (TNAPrefix p : this.getPrefixes()) {
 			result += p.toString();
 		}
-		for (final Endpoint e : this.getEndpoints()) {
+		for (Endpoint e : this.getEndpoints()) {
 			result += e.toString();
 		}
-		for (final NrpsConnections con : this.getNrpsConnections()) {
+		for (NrpsConnections con : this.getNrpsConnections()) {
 			result += con.toString();
 		}
 		return result + "</domain>";
@@ -781,8 +786,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 * @return {@link Domain} for given ID, or null if domain was not found.
 	 * @throws DatabaseException
 	 */
-	public static final Domain load(final String domainName)
-			throws DatabaseException {
+	public static Domain load(String domainName) throws DatabaseException {
 		return (Domain) (new TransactionManagerLoad(Domain.class, domainName))
 				.getResult();
 	}
@@ -799,7 +803,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	 */
 	@Transient
 	@SuppressWarnings("unchecked")
-	public static final Domain getDomainMatchingTNA(final String tna)
+	public static Domain getDomainMatchingTNA(String tna)
 			throws DatabaseException {
 		return (Domain) (new TransactionManager(tna) {
 			@Override
@@ -807,11 +811,10 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 
 				QTNAPrefix qprefix = QTNAPrefix.tNAPrefix;
 				JPAQuery query = new JPAQuery(session);
-				final List<TNAPrefix> tmpPrefix = query.from(qprefix).list(
-						qprefix);
+				List<TNAPrefix> tmpPrefix = query.from(qprefix).list(qprefix);
 
 				TNAPrefix match = null;
-				for (final TNAPrefix prefix : tmpPrefix) {
+				for (TNAPrefix prefix : tmpPrefix) {
 					if (prefix.matchesPrefix((String) this.arg)) {
 						match = prefix; // TODO longest prefix match
 					}
@@ -825,16 +828,16 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static final Set<Domain> loadAll() throws DatabaseException {
+	public static Set<Domain> loadAll() throws DatabaseException {
 		return (Set<Domain>) (new TransactionManager() {
 			@Override
 			protected void dbOperation() {
-				final Set<Domain> result = new HashSet<Domain>();
+				Set<Domain> result = new HashSet<Domain>();
 				QDomain domain = QDomain.domain;
-				JPAQuery query = new JPAQuery(session);
-				final List<Domain> tmpDomain = query.from(domain).list(domain);
+				JPAQuery query = new JPAQuery(this.session);
+				List<Domain> tmpDomain = query.from(domain).list(domain);
 
-				for (final Domain d : tmpDomain) {
+				for (Domain d : tmpDomain) {
 					result.add(d);
 				}
 				this.result = result;
@@ -847,26 +850,24 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return (Set<VIEW_InterDomainLink>) (new TransactionManager() {
 			@Override
 			protected void dbOperation() {
-				final Set<VIEW_InterDomainLink> result = new HashSet<VIEW_InterDomainLink>();
-				for (final Endpoint e : Domain.this.getEndpoints()) {
+				Set<VIEW_InterDomainLink> result = new HashSet<VIEW_InterDomainLink>();
+				for (Endpoint e : Domain.this.getEndpoints()) {
 
 					QVIEW_InterDomainLink interlink = QVIEW_InterDomainLink.vIEW_InterDomainLink;
 					JPAQuery query = new JPAQuery(session);
-					final List<VIEW_InterDomainLink> tmpSrc = query
-							.from(interlink)
+					List<VIEW_InterDomainLink> tmpSrc = query.from(interlink)
 							.where(interlink.sourceEndpoint.eq(e))
 							.list(interlink);
 					interlink = QVIEW_InterDomainLink.vIEW_InterDomainLink;
 					query = new JPAQuery(session);
-					final List<VIEW_InterDomainLink> tmpDst = query
-							.from(interlink)
+					List<VIEW_InterDomainLink> tmpDst = query.from(interlink)
 							.where(interlink.destEndpoint.eq(e))
 							.list(interlink);
 
-					for (final VIEW_InterDomainLink l : tmpSrc) {
+					for (VIEW_InterDomainLink l : tmpSrc) {
 						result.add(l);
 					}
-					for (final VIEW_InterDomainLink l : tmpDst) {
+					for (VIEW_InterDomainLink l : tmpDst) {
 						result.add(l);
 					}
 				}
@@ -875,7 +876,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		}).getResult();
 	}
 
-	public void save(final EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
@@ -894,27 +895,27 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		return (Set<Reservation>) (new TransactionManager(this) {
 			@Override
 			protected void dbOperation() throws Exception {
-				final Domain me = (Domain) this.arg;
+				Domain me = (Domain) this.arg;
 
 				QNrpsConnections nrpsConnection = QNrpsConnections.nrpsConnections;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<NrpsConnections> cList = query.from(nrpsConnection)
+				List<NrpsConnections> cList = query.from(nrpsConnection)
 						.where(nrpsConnection.domain.eq(me))
 						.list(nrpsConnection);
 
-				final Set<Connections> connections = new HashSet<Connections>();
-				for (final NrpsConnections nConn : cList) {
+				Set<Connections> connections = new HashSet<Connections>();
+				for (NrpsConnections nConn : cList) {
 					connections.add(nConn.getConnection());
 				}
 
 				// get services for every connection
-				final Set<Service> services = new HashSet<Service>();
-				for (final Connections c : connections) {
+				Set<Service> services = new HashSet<Service>();
+				for (Connections c : connections) {
 					services.add(c.getService());
 				}
 				// get reservations for every Service
-				final Set<Reservation> reservations = new HashSet<Reservation>();
-				for (final Service s : services) {
+				Set<Reservation> reservations = new HashSet<Reservation>();
+				for (Service s : services) {
 					reservations.add(s.getReservation());
 				}
 
@@ -923,7 +924,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 		}).getResult();
 	}
 
-	public void delete(final EntityManager session) {
+	public void delete(EntityManager session) {
 
 		session.remove(this);
 	}

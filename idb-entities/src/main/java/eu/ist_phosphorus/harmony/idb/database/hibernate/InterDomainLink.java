@@ -67,7 +67,7 @@ public class InterDomainLink implements java.io.Serializable,
 	/**
      *
      */
-	private static final long serialVersionUID = 5215854051025689248L;
+	private static long serialVersionUID = 5215854051025689248L;
 
 	/**
 	 * Primary key.
@@ -119,9 +119,8 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @param sourceEndpointParam
 	 *            Source TNA of the link
 	 */
-	public InterDomainLink(final String linkName, final String sourceDomain,
-			final String destDomain, final Endpoint sourceEndpoint,
-			final int costs) {
+	public InterDomainLink(String linkName, String sourceDomain,
+			String destDomain, Endpoint sourceEndpoint, int costs) {
 		super();
 		this.linkName = linkName;
 		this.sourceDomain = sourceDomain;
@@ -201,7 +200,7 @@ public class InterDomainLink implements java.io.Serializable,
 		return this.sourceDomain;
 	}
 
-	public void setSourceDomain(final String sourceDomainParam) {
+	public void setSourceDomain(String sourceDomainParam) {
 		this.sourceDomain = sourceDomainParam;
 	}
 
@@ -217,7 +216,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @param destDomainParam
 	 *            destination of the link
 	 */
-	public void setDestinationDomain(final String destDomainParam) {
+	public void setDestinationDomain(String destDomainParam) {
 		this.destinationDomain = destDomainParam;
 	}
 
@@ -234,7 +233,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @param sourceEndpointParam
 	 *            source of the link
 	 */
-	public void setSourceEndpoint(final Endpoint sourceEndpointParam) {
+	public void setSourceEndpoint(Endpoint sourceEndpointParam) {
 		this.sourceEndpoint = sourceEndpointParam;
 	}
 
@@ -243,7 +242,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 *            to be checked
 	 * @return true if equal
 	 */
-	public boolean isEqual(final InterDomainLink link) {
+	public boolean isEqual(InterDomainLink link) {
 		if (this.hashCode() == link.hashCode()) {
 			return true;
 		}
@@ -255,7 +254,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @return
 	 */
 	@Override
-	public boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if ((o != null) && (o.getClass() == InterDomainLink.class)) {
 			return isEqual((InterDomainLink) o);
 		}
@@ -311,7 +310,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @return 1 0 -1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(final InterDomainLink link) {
+	public int compareTo(InterDomainLink link) {
 		if (this.getLinkName().length() < link.getPk_Interdomainlink()) {
 			return -1;
 		} else if (this.getLinkName().length() == link.getPk_Interdomainlink()) {
@@ -358,7 +357,7 @@ public class InterDomainLink implements java.io.Serializable,
 	/**
 	 * Load link from the DB.
 	 */
-	public static final Set<InterDomainLink> loadForSourceDomain(String domainId)
+	public static Set<InterDomainLink> loadForSourceDomain(String domainId)
 			throws DatabaseException {
 		Set<InterDomainLink> result = new HashSet<InterDomainLink>();
 		for (InterDomainLink l : InterDomainLink.loadAll()) {
@@ -375,8 +374,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @param InterDomainLinkId
 	 * @throws DatabaseException
 	 */
-	public static final InterDomainLink load(long linkID)
-			throws DatabaseException {
+	public static InterDomainLink load(long linkID) throws DatabaseException {
 		return (InterDomainLink) (new TransactionManagerLoad(
 				InterDomainLink.class, Long.valueOf(linkID))).getResult();
 	}
@@ -388,7 +386,7 @@ public class InterDomainLink implements java.io.Serializable,
 	 * @throws DatabaseException
 	 */
 	@SuppressWarnings("unchecked")
-	public static final Set<InterDomainLink> loadAll() throws DatabaseException {
+	public static Set<InterDomainLink> loadAll() throws DatabaseException {
 		return (Set<InterDomainLink>) (new TransactionManager() {
 			@Override
 			protected void dbOperation() {
@@ -396,8 +394,8 @@ public class InterDomainLink implements java.io.Serializable,
 				QInterDomainLink interlink = QInterDomainLink.interDomainLink;
 				JPAQuery query = new JPAQuery(this.session);
 
-				final List<InterDomainLink> tmpLink = query.from(interlink)
-						.list(interlink);
+				List<InterDomainLink> tmpLink = query.from(interlink).list(
+						interlink);
 
 				for (InterDomainLink l : tmpLink) {
 					result.add(l);

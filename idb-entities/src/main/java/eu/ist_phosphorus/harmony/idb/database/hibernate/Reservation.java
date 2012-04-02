@@ -131,7 +131,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param timeoutParam
 	 *            timeout Date.
 	 */
-	public Reservation(final long reservationIdParam, final Date timeoutParam) {
+	public Reservation(long reservationIdParam, Date timeoutParam) {
 		super();
 		this.reservationId = reservationIdParam;
 		this.timeout = timeoutParam;
@@ -148,9 +148,8 @@ public class Reservation implements java.io.Serializable {
 	 *            timeout of the reservation
 	 * @param jobIdParam
 	 */
-	public Reservation(final long reservationIdParam,
-			final String consumerUrlParam, final Date timeoutParam,
-			final long jobIdParam) {
+	public Reservation(long reservationIdParam, String consumerUrlParam,
+			Date timeoutParam, long jobIdParam) {
 		this.reservationId = reservationIdParam;
 		this.consumerUrl = consumerUrlParam;
 		this.timeout = timeoutParam;
@@ -168,8 +167,8 @@ public class Reservation implements java.io.Serializable {
 	 *            timeout of the reservation
 	 * @param jobIdParam
 	 */
-	public Reservation(final long reservationIdParam,
-			final String consumerUrlParam, final long jobIdParam) {
+	public Reservation(long reservationIdParam, String consumerUrlParam,
+			long jobIdParam) {
 		this.reservationId = reservationIdParam;
 		this.consumerUrl = consumerUrlParam;
 		this.timeout = new Date();
@@ -185,7 +184,7 @@ public class Reservation implements java.io.Serializable {
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public final long getReservationId() {
+	public long getReservationId() {
 		return this.reservationId;
 	}
 
@@ -195,7 +194,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param reservationIdParam
 	 *            Reservation ID.
 	 */
-	public final void setReservationId(final long reservationIdParam) {
+	public void setReservationId(long reservationIdParam) {
 		this.reservationId = reservationIdParam;
 	}
 
@@ -203,7 +202,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return consumer url
 	 */
 	@Basic(optional = true)
-	public final String getConsumerUrl() {
+	public String getConsumerUrl() {
 		return this.consumerUrl;
 	}
 
@@ -211,7 +210,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param consumerUrlParam
 	 *            consumer url
 	 */
-	public final void setConsumerUrl(final String consumerUrlParam) {
+	public void setConsumerUrl(String consumerUrlParam) {
 		this.consumerUrl = consumerUrlParam;
 	}
 
@@ -219,7 +218,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return timeout of the reservation
 	 */
 	@Basic(optional = true)
-	public final Date getTimeout() {
+	public Date getTimeout() {
 		return this.timeout;
 	}
 
@@ -227,14 +226,14 @@ public class Reservation implements java.io.Serializable {
 	 * @param timeoutParam
 	 *            timeout of the reservation
 	 */
-	public final void setTimeout(final Date timeoutParam) {
+	public void setTimeout(Date timeoutParam) {
 		this.timeout = timeoutParam;
 	}
 
 	/**
 	 * @return job id
 	 */
-	public final long getJobId() {
+	public long getJobId() {
 		return this.jobId;
 	}
 
@@ -242,7 +241,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param jobIdParam
 	 *            job id
 	 */
-	public final void setJobId(final long jobIdParam) {
+	public void setJobId(long jobIdParam) {
 		this.jobId = jobIdParam;
 	}
 
@@ -250,7 +249,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return the gri
 	 */
 	@Basic(optional = true)
-	public final String getGri() {
+	public String getGri() {
 		return this.gri;
 	}
 
@@ -258,7 +257,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param gri
 	 *            the gri to set
 	 */
-	public final void setGri(final String gri) {
+	public void setGri(String gri) {
 		this.gri = gri;
 	}
 
@@ -266,7 +265,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return the token
 	 */
 	@Basic(optional = true)
-	public final String getToken() {
+	public String getToken() {
 		return this.token;
 	}
 
@@ -274,7 +273,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param token
 	 *            the token to set
 	 */
-	public final void setToken(final String token) {
+	public void setToken(String token) {
 		this.token = token;
 	}
 
@@ -283,7 +282,7 @@ public class Reservation implements java.io.Serializable {
 	 */
 	@OneToMany(mappedBy = "reservation", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
 	@MapKey(name = "serviceId")
-	public final Map<Integer, Service> getServices() {
+	public Map<Integer, Service> getServices() {
 		return this.services;
 	}
 
@@ -291,7 +290,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param servicesParam
 	 *            set of services
 	 */
-	public final void setServices(final Map<Integer, Service> servicesParam) {
+	public void setServices(Map<Integer, Service> servicesParam) {
 		this.services = servicesParam;
 	}
 
@@ -301,7 +300,7 @@ public class Reservation implements java.io.Serializable {
 	 * @param service
 	 *            Service to be added.
 	 */
-	public final void addService(final Service servicesParam) {
+	public void addService(Service servicesParam) {
 		servicesParam.setReservation(this);
 		getServices().put(new Integer(servicesParam.getServiceId()),
 				servicesParam);
@@ -317,7 +316,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return Service with the given Service ID, or null if not found.
 	 */
 	@Transient
-	public final Service getService(final int serviceId) {
+	public Service getService(int serviceId) {
 		return getServices().get(new Integer(serviceId));
 	}
 
@@ -326,7 +325,7 @@ public class Reservation implements java.io.Serializable {
 	 *            reservation to be checked
 	 * @return true if equals
 	 */
-	public final boolean isEqual(final Reservation resParam) {
+	public boolean isEqual(Reservation resParam) {
 		if (this.hashCode() == resParam.hashCode()) {
 			return true;
 		}
@@ -338,7 +337,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == Reservation.class) {
 			return isEqual((Reservation) o);
 		}
@@ -368,7 +367,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return copy of Reservation
 	 */
 	@Transient
-	public final Reservation getCopy() {
+	public Reservation getCopy() {
 		Reservation copy = new Reservation(this.reservationId,
 				this.consumerUrl, this.timeout, this.jobId);
 		for (Service s : getServices().values()) {
@@ -378,7 +377,7 @@ public class Reservation implements java.io.Serializable {
 	}
 
 	@Override
-	public final String toString() {
+	public String toString() {
 		return "<reservationId>" + getReservationId() + "</reservationId>"
 				+ "<consumerUrl>" + getConsumerUrl()
 				+ "</consumerUrl><timeout>" + getTimeout()
@@ -391,7 +390,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final Reservation resParam) {
+	public int compareTo(Reservation resParam) {
 		if (this.reservationId < resParam.getReservationId()) {
 			return -1;
 		} else if (this.reservationId == resParam.getReservationId()) {
@@ -410,7 +409,7 @@ public class Reservation implements java.io.Serializable {
 	 * @throws DatabaseException
 	 * @throws EndpointNotFoundFaultException
 	 */
-	public static Reservation fromJaxb(final CreateReservationType jaxb)
+	public static Reservation fromJaxb(CreateReservationType jaxb)
 			throws EndpointNotFoundFaultException, DatabaseException {
 		Reservation result = new Reservation();
 		result.setReservationId(0l);
@@ -449,7 +448,7 @@ public class Reservation implements java.io.Serializable {
 	 * @throws EndpointNotFoundFaultException
 	 */
 	public static Reservation fromJaxb(
-			final eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.IsAvailableType jaxb)
+			eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.IsAvailableType jaxb)
 			throws EndpointNotFoundFaultException, DatabaseException {
 		Reservation result = new Reservation();
 		result.setReservationId(0L);
@@ -472,7 +471,7 @@ public class Reservation implements java.io.Serializable {
 	 * @return {@link Domain} for given ID, or null if domain was not found.
 	 * @throws DatabaseException
 	 */
-	public static final Reservation load(long resvID) throws DatabaseException {
+	public static Reservation load(long resvID) throws DatabaseException {
 		return (Reservation) (new TransactionManagerLoad(Reservation.class,
 				Long.valueOf(resvID))).getResult();
 	}
@@ -488,8 +487,8 @@ public class Reservation implements java.io.Serializable {
 	 * @throws DatabaseException
 	 * @throws InvalidReservationIDFaultException
 	 */
-	public static final Reservation load(String resvID)
-			throws DatabaseException, InvalidReservationIDFaultException {
+	public static Reservation load(String resvID) throws DatabaseException,
+			InvalidReservationIDFaultException {
 		return load(WebserviceUtils.convertReservationID(resvID));
 	}
 
@@ -500,15 +499,15 @@ public class Reservation implements java.io.Serializable {
 	 * @throws DatabaseException
 	 */
 	@SuppressWarnings("unchecked")
-	public static final Set<Reservation> loadAll() throws DatabaseException {
+	public static Set<Reservation> loadAll() throws DatabaseException {
 		return (Set<Reservation>) (new TransactionManager() {
 			@Override
 			protected void dbOperation() {
 				Set<Reservation> result = new HashSet<Reservation>();
 				QReservation reservation = QReservation.reservation;
 				JPAQuery query = new JPAQuery(this.session);
-				final List<Reservation> tmpReservation = query
-						.from(reservation).list(reservation);
+				List<Reservation> tmpReservation = query.from(reservation)
+						.list(reservation);
 				for (Reservation r : tmpReservation) {
 					result.add(r);
 				}
@@ -521,8 +520,8 @@ public class Reservation implements java.io.Serializable {
 	 * load all reservations from DB which lie in a given time-period.
 	 */
 	@SuppressWarnings("unchecked")
-	public static final Set<Reservation> loadAllInPeriod(Date startTime,
-			Date endTime) throws DatabaseException {
+	public static Set<Reservation> loadAllInPeriod(Date startTime, Date endTime)
+			throws DatabaseException {
 		return (Set<Reservation>) (new TransactionManager(
 				new Tuple<Date, Date>(startTime, endTime)) {
 			@Override
@@ -551,7 +550,7 @@ public class Reservation implements java.io.Serializable {
 				// one
 				JPAQuery query = new JPAQuery(this.session);
 				QReservation reservation = QReservation.reservation;
-				final List<Reservation> tmpReservation = query
+				List<Reservation> tmpReservation = query
 						.from(reservation)
 						.where(reservation.reservationId.in(subQuery
 								.list(reservationPeriod.reservationId)))
@@ -574,7 +573,7 @@ public class Reservation implements java.io.Serializable {
 	 * @throws DatabaseException
 	 */
 	@SuppressWarnings("unchecked")
-	public static final List<Reservation> loadJob(final long jobId)
+	public static List<Reservation> loadJob(final long jobId)
 			throws DatabaseException {
 		return (List<Reservation>) (new TransactionManager("jobID=" + jobId) {
 			@Override
@@ -588,11 +587,11 @@ public class Reservation implements java.io.Serializable {
 		}).getResult();
 	}
 
-	public final void save(EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
-	public final void save() throws DatabaseException {
+	public void save() throws DatabaseException {
 		new TransactionManager() {
 			@Override
 			protected void dbOperation() throws Exception {
@@ -601,11 +600,11 @@ public class Reservation implements java.io.Serializable {
 		};
 	}
 
-	public final void delete() throws DatabaseException {
+	public void delete() throws DatabaseException {
 		new TransactionManagerDelete(this);
 	}
 
-	public final void delete(EntityManager session) throws DatabaseException {
+	public void delete(EntityManager session) throws DatabaseException {
 		new TransactionManager() {
 			@Override
 			protected void dbOperation() throws Exception {
@@ -614,7 +613,7 @@ public class Reservation implements java.io.Serializable {
 		};
 	}
 
-	public final void loadOrCreateUserEndpoints() throws DatabaseException,
+	public void loadOrCreateUserEndpoints() throws DatabaseException,
 			EndpointNotFoundFaultException {
 		for (Service s : getServices().values()) {
 			s.loadOrCreateUserEndpoints();
@@ -654,7 +653,7 @@ public class Reservation implements java.io.Serializable {
 		return domainReservations;
 	}
 
-	public final CreateReservationType toJaxb() {
+	public CreateReservationType toJaxb() {
 		CreateReservationType createReservationType = new CreateReservationType();
 		for (Service service : this.getServices().values()) {
 			createReservationType.getService().add(service.toJaxb());
@@ -672,7 +671,7 @@ public class Reservation implements java.io.Serializable {
 	}
 
 	@Transient
-	public final String getDebugInfo() {
+	public String getDebugInfo() {
 		String serviceOut = "";
 		for (Service service : getServices().values()) {
 			serviceOut += service.getDebugInfo();
@@ -683,7 +682,7 @@ public class Reservation implements java.io.Serializable {
 	}
 
 	@Transient
-	public final Hashtable<Domain, GetStatusType> getGetStatusType() {
+	public Hashtable<Domain, GetStatusType> getGetStatusType() {
 		HashMap<String, GetStatusType> getStatusTypeMap = new HashMap<String, GetStatusType>(
 				0);
 		HashMap<String, MAPNRPSResvID> mappingNrps = new HashMap<String, MAPNRPSResvID>(

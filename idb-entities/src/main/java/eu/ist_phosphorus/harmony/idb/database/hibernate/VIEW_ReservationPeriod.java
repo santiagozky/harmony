@@ -95,8 +95,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @param startTimeParam
 	 *            start time
 	 */
-	private VIEW_ReservationPeriod(final int reservationIdParam,
-			final Date startTimeParam) {
+	private VIEW_ReservationPeriod(int reservationIdParam, Date startTimeParam) {
 		this.reservationId = reservationIdParam;
 		this.startTime = startTimeParam;
 		this.duration = 0;
@@ -115,9 +114,8 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @param endTimeParam
 	 *            end time
 	 */
-	private VIEW_ReservationPeriod(final long reservationIdParam,
-			final Date startTimeParam, final int durationParam,
-			final Date endTimeParam) {
+	private VIEW_ReservationPeriod(long reservationIdParam,
+			Date startTimeParam, int durationParam, Date endTimeParam) {
 		this.setReservationId(reservationIdParam);
 		this.setStartTime(startTimeParam);
 		this.setDuration(durationParam);
@@ -130,7 +128,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @return id of the corresponding reservation
 	 */
 	@Id
-	public final long getReservationId() {
+	public long getReservationId() {
 		return this.reservationId;
 	}
 
@@ -140,14 +138,14 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @param reservationIdParam
 	 *            id of the corresponding reservation
 	 */
-	private final void setReservationId(final long reservationIdParam) {
+	private void setReservationId(long reservationIdParam) {
 		this.reservationId = reservationIdParam;
 	}
 
 	/**
 	 * @return start time
 	 */
-	public final Date getStartTime() {
+	public Date getStartTime() {
 		return this.startTime;
 	}
 
@@ -157,7 +155,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @param startTimeParam
 	 *            start time
 	 */
-	private final void setStartTime(final Date startTimeParam) {
+	private void setStartTime(Date startTimeParam) {
 		this.startTime = startTimeParam;
 	}
 
@@ -165,7 +163,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @return duration
 	 */
 	@Basic(optional = true)
-	public final int getDuration() {
+	public int getDuration() {
 		return this.duration;
 	}
 
@@ -175,7 +173,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @param durationParam
 	 *            duration
 	 */
-	private final void setDuration(final int durationParam) {
+	private void setDuration(int durationParam) {
 		this.duration = durationParam;
 	}
 
@@ -183,7 +181,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @return end time
 	 */
 	@Basic(optional = true)
-	public final Date getEndTime() {
+	public Date getEndTime() {
 		return this.endTime;
 	}
 
@@ -193,7 +191,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @param endTimeParam
 	 *            end time
 	 */
-	private final void setEndTime(final Date endTimeParam) {
+	private void setEndTime(Date endTimeParam) {
 		this.endTime = endTimeParam;
 	}
 
@@ -202,7 +200,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 *            ReservationPeriod to be checked
 	 * @return true if equals
 	 */
-	public final boolean isEqual(final VIEW_ReservationPeriod resPerParam) {
+	public boolean isEqual(VIEW_ReservationPeriod resPerParam) {
 		if (this.hashCode() == resPerParam.hashCode()) {
 			return true;
 		}
@@ -215,7 +213,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @return true if equal, false else
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == VIEW_ReservationPeriod.class) {
 			return isEqual((VIEW_ReservationPeriod) o);
 		}
@@ -226,7 +224,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @return hashCode of the ReservationPeriod
 	 */
 	@Override
-	public final int hashCode() {
+	public int hashCode() {
 		int result = (Long.valueOf(getReservationId())).hashCode()
 				^ (Integer.valueOf(getDuration())).hashCode()
 				^ getStartTime().hashCode() ^ getEndTime().hashCode();
@@ -237,7 +235,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @return copy of ReservationPeriod
 	 */
 	@Transient
-	public final VIEW_ReservationPeriod getCopy() {
+	public VIEW_ReservationPeriod getCopy() {
 		VIEW_ReservationPeriod result = new VIEW_ReservationPeriod(
 				this.reservationId, this.startTime, this.duration, this.endTime);
 		return result;
@@ -249,7 +247,7 @@ public class VIEW_ReservationPeriod implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final VIEW_ReservationPeriod resPerParam) {
+	public int compareTo(VIEW_ReservationPeriod resPerParam) {
 		if (this.reservationId < resPerParam.getReservationId()) {
 			return -1;
 		} else if (this.reservationId == resPerParam.getReservationId()) {

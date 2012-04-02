@@ -152,9 +152,9 @@ public class Service implements java.io.Serializable {
 	 * @param automaticActivationParam
 	 *            automatic activation
 	 */
-	public Service(final int serviceIdParam,
-			final Reservation reservationParam, final int serviceTypeParam,
-			final Date startTimeParam, final boolean automaticActivationParam) {
+	public Service(int serviceIdParam, Reservation reservationParam,
+			int serviceTypeParam, Date startTimeParam,
+			boolean automaticActivationParam) {
 		this.setServiceId(serviceIdParam);
 		this.setReservation(reservationParam);
 		this.serviceType = serviceTypeParam;
@@ -182,10 +182,9 @@ public class Service implements java.io.Serializable {
 	 * @param automaticActivationParam
 	 *            automatic activation
 	 */
-	public Service(final int serviceIdParam,
-			final Reservation reservationParam, final int serviceTypeParam,
-			final Date startTimeParam, final Date deadlineParam,
-			final int durationParam, final boolean automaticActivationParam) {
+	public Service(int serviceIdParam, Reservation reservationParam,
+			int serviceTypeParam, Date startTimeParam, Date deadlineParam,
+			int durationParam, boolean automaticActivationParam) {
 		this.setServiceId(serviceIdParam);
 		this.setReservation(reservationParam);
 		this.setServiceId(serviceIdParam);
@@ -215,11 +214,10 @@ public class Service implements java.io.Serializable {
 	 * @param connectionsParam
 	 *            connections of the Service
 	 */
-	public Service(final int serviceIdParam,
-			final Reservation reservationParam, final int serviceTypeParam,
-			final Date startTimeParam, final Date deadlineParam,
-			final int durationParam, final boolean automaticActivationParam,
-			final HashMap<Integer, Connections> connectionsParam) {
+	public Service(int serviceIdParam, Reservation reservationParam,
+			int serviceTypeParam, Date startTimeParam, Date deadlineParam,
+			int durationParam, boolean automaticActivationParam,
+			HashMap<Integer, Connections> connectionsParam) {
 
 		this.reservation = reservationParam;
 		this.serviceType = serviceTypeParam;
@@ -239,7 +237,7 @@ public class Service implements java.io.Serializable {
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "FK_ReservationID")
-	public final Reservation getReservation() {
+	public Reservation getReservation() {
 		return this.reservation;
 	}
 
@@ -247,14 +245,14 @@ public class Service implements java.io.Serializable {
 	 * @param reservationParam
 	 *            corresponding reservation
 	 */
-	public final void setReservation(final Reservation reservationParam) {
+	public void setReservation(Reservation reservationParam) {
 		this.reservation = reservationParam;
 	}
 
 	/**
 	 * @return start time
 	 */
-	public final Date getStartTime() {
+	public Date getStartTime() {
 		return this.startTime;
 	}
 
@@ -262,7 +260,7 @@ public class Service implements java.io.Serializable {
 	 * @param startTimeParam
 	 *            start time
 	 */
-	public final void setStartTime(final Date startTimeParam) {
+	public void setStartTime(Date startTimeParam) {
 		this.startTime = startTimeParam;
 	}
 
@@ -270,7 +268,7 @@ public class Service implements java.io.Serializable {
 	 * @return deadline
 	 */
 	@Basic(optional = true)
-	public final Date getDeadline() {
+	public Date getDeadline() {
 		return this.deadline;
 	}
 
@@ -278,7 +276,7 @@ public class Service implements java.io.Serializable {
 	 * @param deadlineParam
 	 *            deadline
 	 */
-	public final void setDeadline(final Date deadlineParam) {
+	public void setDeadline(Date deadlineParam) {
 		/*
 		 * Date newDeadline = deadlineParam; if (newDeadline == null) {
 		 * XMLGregorianCalendar cal = Helpers.generateXMLCalendar();
@@ -298,7 +296,7 @@ public class Service implements java.io.Serializable {
 	 * @return duration
 	 */
 	@Basic(optional = true)
-	public final int getDuration() {
+	public int getDuration() {
 		return this.duration;
 	}
 
@@ -306,14 +304,14 @@ public class Service implements java.io.Serializable {
 	 * @param durationParam
 	 *            duration
 	 */
-	public final void setDuration(final int durationParam) {
+	public void setDuration(int durationParam) {
 		this.duration = durationParam;
 	}
 
 	/**
 	 * @return automatic activation
 	 */
-	public final boolean isAutomaticActivation() {
+	public boolean isAutomaticActivation() {
 		return this.automaticActivation;
 	}
 
@@ -321,8 +319,7 @@ public class Service implements java.io.Serializable {
 	 * @param automaticActivationParam
 	 *            automatic activation
 	 */
-	public final void setAutomaticActivation(
-			final boolean automaticActivationParam) {
+	public void setAutomaticActivation(boolean automaticActivationParam) {
 		this.automaticActivation = automaticActivationParam;
 	}
 
@@ -331,7 +328,7 @@ public class Service implements java.io.Serializable {
 	 */
 	@OneToMany(mappedBy = "service", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
 	@MapKey(name = "connectionId")
-	public final Map<Integer, Connections> getConnections() {
+	public Map<Integer, Connections> getConnections() {
 		return this.connections;
 	}
 
@@ -343,7 +340,7 @@ public class Service implements java.io.Serializable {
 	 * @return Connection with the given Connection ID, or null if not found.
 	 */
 	@Transient
-	public final Connections getConnection(final int connectionId) {
+	public Connections getConnection(int connectionId) {
 		return getConnections().get(new Integer(connectionId));
 	}
 
@@ -351,7 +348,7 @@ public class Service implements java.io.Serializable {
 	 * @param connections
 	 *            the prefixes to set
 	 */
-	public final void setConnections(Map<Integer, Connections> connections) {
+	public void setConnections(Map<Integer, Connections> connections) {
 		this.connections = connections;
 	}
 
@@ -392,7 +389,7 @@ public class Service implements java.io.Serializable {
 	 *            service to be checked
 	 * @return true if equals
 	 */
-	public final boolean isEqual(final Service serviceParam) {
+	public boolean isEqual(Service serviceParam) {
 		if (this.hashCode() == serviceParam.hashCode()) {
 			return true;
 		}
@@ -404,7 +401,7 @@ public class Service implements java.io.Serializable {
 	 * @return
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == Service.class) {
 			return isEqual((Service) o);
 		}
@@ -412,7 +409,7 @@ public class Service implements java.io.Serializable {
 	}
 
 	@Override
-	public final int hashCode() {
+	public int hashCode() {
 		int result = Long.valueOf(this.getPK_service()).hashCode()
 				^ new Integer(this.getServiceId()).hashCode()
 				^ new Long(Helpers.trimDateToSeconds(this.getStartTime()))
@@ -440,7 +437,7 @@ public class Service implements java.io.Serializable {
 	 * @return copy of service
 	 */
 	@Transient
-	public final Service getCopy() {
+	public Service getCopy() {
 		Service result = new Service(this.getServiceId(), this.reservation,
 				this.serviceType, this.getStartTime(), this.getDeadline(),
 				this.getDuration(), this.automaticActivation);
@@ -451,7 +448,7 @@ public class Service implements java.io.Serializable {
 	}
 
 	@Override
-	public final String toString() {
+	public String toString() {
 		return "<pk>" + getPK_service() + "</pk>" + "<serviceId>"
 				+ getServiceId() + "</serviceId><reservationId>"
 				+ getReservation().getReservationId()
@@ -468,7 +465,7 @@ public class Service implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final Service serviceParam) {
+	public int compareTo(Service serviceParam) {
 		if (this.getPK_service() < serviceParam.getPK_service()) {
 			return -1;
 		} else if (this.getPK_service() == serviceParam.getPK_service()) {
@@ -478,17 +475,17 @@ public class Service implements java.io.Serializable {
 		}
 	}
 
-	protected final void fromJaxbStartTime(XMLGregorianCalendar startTime) {
+	protected void fromJaxbStartTime(XMLGregorianCalendar startTime) {
 		this.setStartTime(new Date(startTime.toGregorianCalendar()
 				.getTimeInMillis()));
 	}
 
 	// Requires that startTime is already set!!
-	protected final void fromJaxbDeadline(XMLGregorianCalendar deadline) {
+	protected void fromJaxbDeadline(XMLGregorianCalendar deadline) {
 		this.setDeadline(deadline.toGregorianCalendar().getTime());
 	}
 
-	public static final Service fromJaxb(final ServiceConstraintType sJaxb)
+	public static Service fromJaxb(ServiceConstraintType sJaxb)
 			throws EndpointNotFoundFaultException, DatabaseException {
 		Service result = new Service();
 		result.setServiceId(sJaxb.getServiceID());
@@ -535,7 +532,7 @@ public class Service implements java.io.Serializable {
 		return result;
 	}
 
-	public final ServiceConstraintType toJaxb() {
+	public ServiceConstraintType toJaxb() {
 		ServiceConstraintType result = new ServiceConstraintType();
 		result.setServiceID(this.getServiceId());
 		result.setAutomaticActivation(this.isAutomaticActivation());
@@ -596,7 +593,7 @@ public class Service implements java.io.Serializable {
 	 * @param session
 	 */
 	@SuppressWarnings("unchecked")
-	public static final List<Service> loadWithUserID(int serviceUserId,
+	public static List<Service> loadWithUserID(int serviceUserId,
 			Reservation res) throws DatabaseException {
 		return (List<Service>) (new TransactionManager(
 				new Tuple<Integer, Reservation>(new Integer(serviceUserId), res)) {
@@ -615,11 +612,11 @@ public class Service implements java.io.Serializable {
 		}).getResult();
 	}
 
-	public final void save(EntityManager session) {
+	public void save(EntityManager session) {
 		session.persist(this);
 	}
 
-	public final void save() throws DatabaseException {
+	public void save() throws DatabaseException {
 		new TransactionManager(new HashSet<Object>(Arrays.asList(reservation))) {
 			@Override
 			protected void dbOperation() throws Exception {
@@ -628,11 +625,11 @@ public class Service implements java.io.Serializable {
 		};
 	}
 
-	public final void delete(EntityManager session) {
+	public void delete(EntityManager session) {
 		session.remove(this);
 	}
 
-	public final void delete() throws DatabaseException {
+	public void delete() throws DatabaseException {
 		new TransactionManager(new HashSet<Object>(Arrays.asList(reservation))) {
 			@Override
 			protected void dbOperation() {
@@ -641,7 +638,7 @@ public class Service implements java.io.Serializable {
 		};
 	}
 
-	public final void loadOrCreateUserEndpoints() throws DatabaseException,
+	public void loadOrCreateUserEndpoints() throws DatabaseException,
 			EndpointNotFoundFaultException {
 		for (Connections c : getConnections().values()) {
 			c.loadOrCreateUserEndpoints();
@@ -652,7 +649,7 @@ public class Service implements java.io.Serializable {
 	 * Load Connections from the DB. This will override all stored connections!!
 	 */
 	@SuppressWarnings("unchecked")
-	public final void loadConnections() throws DatabaseException {
+	public void loadConnections() throws DatabaseException {
 		List<Connections> tmpConns = (List<Connections>) (new TransactionManager(
 				new Long(this.getPK_service())) {
 			@Override
@@ -682,7 +679,7 @@ public class Service implements java.io.Serializable {
 	}
 
 	@Transient
-	public final String getDebugInfo() {
+	public String getDebugInfo() {
 		String connDebug = "";
 
 		for (Connections conn : this.connections.values()) {

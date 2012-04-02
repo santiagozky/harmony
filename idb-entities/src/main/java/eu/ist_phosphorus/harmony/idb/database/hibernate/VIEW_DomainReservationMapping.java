@@ -54,7 +54,7 @@ class VIEW_DomainReservationMappingPK implements Serializable {
 
 	@Override
 	public int hashCode() {
-		final int result = this.domainName.hashCode()
+		int result = this.domainName.hashCode()
 				^ (Long.valueOf(this.reservationId)).hashCode();
 		return result;
 	}
@@ -105,7 +105,7 @@ public class VIEW_DomainReservationMapping implements java.io.Serializable {
 		return this.domainName;
 	}
 
-	public final void setDomainName(final String domainNameParam) {
+	public void setDomainName(String domainNameParam) {
 		this.domainName = domainNameParam;
 	}
 
@@ -113,7 +113,7 @@ public class VIEW_DomainReservationMapping implements java.io.Serializable {
 		return this.reservationId;
 	}
 
-	public final void setReservationId(final long resIdParam) {
+	public void setReservationId(long resIdParam) {
 		this.reservationId = resIdParam;
 	}
 
@@ -121,8 +121,8 @@ public class VIEW_DomainReservationMapping implements java.io.Serializable {
 	 * @return hashCode of the ReservationMapping
 	 */
 	@Override
-	public final int hashCode() {
-		final int result = this.domainName.hashCode()
+	public int hashCode() {
+		int result = this.domainName.hashCode()
 				^ (Long.valueOf(this.getReservationId())).hashCode();
 		return result;
 	}
@@ -132,7 +132,7 @@ public class VIEW_DomainReservationMapping implements java.io.Serializable {
 	 *            ReservationMapping to be checked
 	 * @return true if equals
 	 */
-	public final boolean isEqual(final VIEW_DomainReservationMapping resMapParam) {
+	public boolean isEqual(VIEW_DomainReservationMapping resMapParam) {
 		if (this.hashCode() == resMapParam.hashCode()) {
 			return true;
 		}
@@ -145,7 +145,7 @@ public class VIEW_DomainReservationMapping implements java.io.Serializable {
 	 * @return -1 0 or 1
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public final int compareTo(final VIEW_DomainReservationMapping resMapParam) {
+	public int compareTo(VIEW_DomainReservationMapping resMapParam) {
 		if (this.getReservationId() < resMapParam.getReservationId()) {
 			return -1;
 		} else if (this.getReservationId() == resMapParam.getReservationId()) {
@@ -161,7 +161,7 @@ public class VIEW_DomainReservationMapping implements java.io.Serializable {
 	 * @return true if equal, false else
 	 */
 	@Override
-	public final boolean equals(final Object o) {
+	public boolean equals(Object o) {
 		if (o.getClass() == VIEW_DomainReservationMapping.class) {
 			return this.isEqual((VIEW_DomainReservationMapping) o);
 		}
@@ -170,7 +170,7 @@ public class VIEW_DomainReservationMapping implements java.io.Serializable {
 
 	@Transient
 	@SuppressWarnings("unchecked")
-	public static final List<VIEW_DomainReservationMapping> getMappingsForDomain(
+	public static List<VIEW_DomainReservationMapping> getMappingsForDomain(
 			final String domName) throws DatabaseException {
 		final List<VIEW_DomainReservationMapping> mappings = (List<VIEW_DomainReservationMapping>) (new TransactionManager(
 				domName) {
