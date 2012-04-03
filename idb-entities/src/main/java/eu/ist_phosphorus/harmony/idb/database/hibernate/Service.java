@@ -617,7 +617,8 @@ public class Service implements java.io.Serializable {
 	}
 
 	public void save() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(reservation))) {
+		new TransactionManager(new HashSet<Object>(
+				Arrays.asList(getReservation()))) {
 			@Override
 			protected void dbOperation() throws Exception {
 				save(this.session);
@@ -630,7 +631,8 @@ public class Service implements java.io.Serializable {
 	}
 
 	public void delete() throws DatabaseException {
-		new TransactionManager(new HashSet<Object>(Arrays.asList(reservation))) {
+		new TransactionManager(new HashSet<Object>(
+				Arrays.asList(getReservation()))) {
 			@Override
 			protected void dbOperation() {
 				delete(this.session);

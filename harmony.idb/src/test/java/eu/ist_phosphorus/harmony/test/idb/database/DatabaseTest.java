@@ -121,7 +121,7 @@ public abstract class DatabaseTest extends AbstractTest {
 	protected static Reservation createReferenceReservation()
 			throws DatabaseException {
 		// create reference reservation
-		final Reservation referenceReservation = new Reservation(0,
+		Reservation referenceReservation = new Reservation(0,
 				"TestConsumerURL", Helpers.generateXMLCalendar(10, 0)
 						.toGregorianCalendar().getTime(),
 				Helpers.getPositiveRandomLong());

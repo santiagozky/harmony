@@ -201,7 +201,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the supported technology adaption
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.ALL })
 	public Set<DomSupportedAdaption> getSupportedAdaptions() {
 		return this.supportedAdaptions;
 	}
@@ -228,7 +228,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the supported technology switch matrix
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.ALL })
 	@MapKey
 	public Set<DomSupportedSwitch> getSupportedSwitchMatrix() {
 		return this.supportedSwitchMatrix;
@@ -256,7 +256,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the supported bandwidth
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.ALL })
 	@MapKey
 	public Set<DomSupportedBandwidth> getSupportedBandwidths() {
 		return this.supportedBandwidths;
@@ -440,7 +440,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the prefixes
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.ALL })
 	@MapKey
 	public Set<TNAPrefix> getPrefixes() {
 		return this.prefixes;
@@ -467,7 +467,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the endpoints
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = {
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = {
 			javax.persistence.CascadeType.REMOVE,
 			javax.persistence.CascadeType.PERSIST })
 	// santiago: add cascade all
@@ -492,7 +492,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the nrpsConnections
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.ALL })
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.ALL })
 	public Set<NrpsConnections> getNrpsConnections() {
 		return this.nrpsConnections;
 	}

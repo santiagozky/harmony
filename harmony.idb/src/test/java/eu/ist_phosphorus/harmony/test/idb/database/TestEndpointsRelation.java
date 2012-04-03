@@ -1,11 +1,11 @@
 /**
-*  This code is part of the Harmony System implemented in Work Package 1 
-*  of the Phosphorus project. This work is supported by the European 
-*  Comission under the Sixth Framework Programme with contract number 
-*  IST-034115.
-*
-*  Copyright (C) 2006-2009 Phosphorus WP1 partners. Phosphorus Consortium.
-*  http://ist-phosphorus.eu/
+ *  This code is part of the Harmony System implemented in Work Package 1 
+ *  of the Phosphorus project. This work is supported by the European 
+ *  Comission under the Sixth Framework Programme with contract number 
+ *  IST-034115.
+ *
+ *  Copyright (C) 2006-2009 Phosphorus WP1 partners. Phosphorus Consortium.
+ *  http://ist-phosphorus.eu/
  *
  * This is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as
@@ -22,7 +22,6 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-
 
 package eu.ist_phosphorus.harmony.test.idb.database;
 
@@ -46,130 +45,133 @@ import eu.ist_phosphorus.harmony.idb.utils.TopologyHelpers;
 
 public class TestEndpointsRelation extends DatabaseTest {
 
-    /** reference domain. */
-    private static Domain domain;
+	/** reference domain. */
+	private static Domain domain;
 
-    @BeforeClass
-    public static void setUpBeforeClass() throws DatabaseException {
-        // create reference domain
-        TestEndpointsRelation.domain = DatabaseTest.createReferenceDomain();
-    }
+	@BeforeClass
+	public static void setUpBeforeClass() throws DatabaseException {
+		// create reference domain
+		TestEndpointsRelation.domain = DatabaseTest.createReferenceDomain();
+	}
 
-    @AfterClass
-    public static void tearDownAfterClass() throws DatabaseException {
-        // delete reference domain
-        TestEndpointsRelation.domain.delete();
-        Assert.assertNull("reference domain should be deleted", Domain
-                .load(TestEndpointsRelation.domain.getName()));
-    }
+	@AfterClass
+	public static void tearDownAfterClass() throws DatabaseException {
+		// delete reference domain
+		TestEndpointsRelation.domain.delete();
+		Assert.assertNull("reference domain should be deleted",
+				Domain.load(TestEndpointsRelation.domain.getName()));
+	}
 
-    /** test endpoint. */
-    private Endpoint endpoint;
+	/** test endpoint. */
+	private Endpoint endpoint;
 
-    @Override
-    public void setUpBeforeEveryTest() {
-        // create test endpoint
+	@Override
+	public void setUpBeforeEveryTest() {
+		// create test endpoint
 
-        this.endpoint = new Endpoint(TopologyHelpers.getRandomTNA(), Helpers
-                .getRandomString(), Helpers.getRandomString(),
-                TestEndpointsRelation.domain, Helpers.getPositiveRandomInt(),
-                Helpers.getPositiveRandomInt());
+		this.endpoint = new Endpoint(TopologyHelpers.getRandomTNA(),
+				Helpers.getRandomString(), Helpers.getRandomString(),
+				TestEndpointsRelation.domain, Helpers.getPositiveRandomInt(),
+				Helpers.getPositiveRandomInt());
 
-    }
+	}
 
-    @Override
-    public void tearDownAfterEveryTest() {
-        // TODO Auto-generated method stub
+	@Override
+	public void tearDownAfterEveryTest() {
+		// TODO Auto-generated method stub
 
-    }
+	}
 
-    @Override
-    public void testReferentialIntegrity() throws DatabaseException {
-        // save test endpoint
-        this.endpoint.save();
+	@Override
+	public void testReferentialIntegrity() throws DatabaseException {
+		// save test endpoint
+		this.endpoint.save();
 
-        final Domain referenceDomain = Domain.load(TestEndpointsRelation.domain
-                .getName());
+		final Domain referenceDomain = Domain.load(TestEndpointsRelation.domain
+				.getName());
 
-        final Set<Endpoint> referenceEndpoints = referenceDomain.getEndpoints();
-        Assert.assertNotNull("referenced endpoint should be existent",
-                referenceEndpoints);
-        Assert.assertTrue("referenced endpoint should be the same",
-                referenceEndpoints.contains(this.endpoint));
+		final Set<Endpoint> referenceEndpoints = referenceDomain.getEndpoints();
+		Assert.assertNotNull("referenced endpoint should be existent",
+				referenceEndpoints);
+		Assert.assertTrue("referenced endpoint should be the same",
+				referenceEndpoints.contains(this.endpoint));
 
-        // delet test endpoint
-        this.endpoint.delete();
-    }
+		// delet test endpoint
+		this.endpoint.delete();
+	}
 
-    @Override
-    public void testSaveLoadEditDeleteRelationTuple() throws DatabaseException {
-        // save
-        this.endpoint.save();
-        Assert.assertTrue("endpoint-TNA length should be larger than 0",
-                this.endpoint.getTNA().length() > 0);
+	@Override
+	public void testSaveLoadEditDeleteRelationTuple() throws DatabaseException {
+		// save
+		this.endpoint.save();
+		Assert.assertTrue("endpoint-TNA length should be larger than 0",
+				this.endpoint.getTNA().length() > 0);
 
-        // load
-        final Endpoint loadedEndpoint = Endpoint.load(this.endpoint.getTNA());
-        Assert.assertEquals("persisted and loaded endpoint should be equal",
-                this.endpoint, loadedEndpoint);
+		// load
+		Endpoint loadedEndpoint = Endpoint.load(this.endpoint.getTNA());
+		Assert.assertEquals("persisted and loaded endpoint should be equal",
+				this.endpoint, loadedEndpoint);
 
-        // edit
-        loadedEndpoint.setDescription("edited description");
-        loadedEndpoint.save();
+		// edit
+		loadedEndpoint.setDescription("edited description");
+		loadedEndpoint.save();
 
-        final Endpoint editedEndpoint = Endpoint.load(loadedEndpoint.getTNA());
-//        Assert.assertNotSame("edited endpoint should be different",
-//                loadedEndpoint, editedEndpoint);
+		final Endpoint editedEndpoint = Endpoint.load(loadedEndpoint.getTNA());
+		// Assert.assertNotSame("edited endpoint should be different",
+		// loadedEndpoint, editedEndpoint);
 
-        // delete
-        loadedEndpoint.delete();
-        Assert.assertNull("test endpoint should be deleted", Endpoint
-                .load(this.endpoint.getTNA()));
-    }
-    
-    @Test
-    public void testReferentialIntegrity2() throws DatabaseException, URISyntaxException {
-        // save the endpoint
-        this.endpoint.save();
+		// delete
+		loadedEndpoint.delete();
+		Assert.assertNull("test endpoint should be deleted",
+				Endpoint.load(this.endpoint.getTNA()));
+	}
 
-        Endpoint auxEnd = new Endpoint(TopologyHelpers.getRandomTNA(), Helpers
-                .getRandomString(), Helpers.getRandomString(),
-                TestEndpointsRelation.domain, Helpers.getPositiveRandomInt(),
-                Helpers.getPositiveRandomInt());
+	@Test
+	public void testReferentialIntegrity2() throws DatabaseException,
+			URISyntaxException {
+		// save the endpoint
+		this.endpoint.save();
 
-        auxEnd.save();
+		Endpoint auxEnd = new Endpoint(TopologyHelpers.getRandomTNA(),
+				Helpers.getRandomString(), Helpers.getRandomString(),
+				TestEndpointsRelation.domain, Helpers.getPositiveRandomInt(),
+				Helpers.getPositiveRandomInt());
 
-        // create reference reservation, service
-    	Reservation res = TestEndpointsRelation.createReferenceReservation();
-    	Service service = TestEndpointsRelation.createReferenceService(res);
+		auxEnd.save();
 
-        // create reference connection and put it in the endpoint object
-    	Connections conn = ReservationHelpers.getTestConnection();
-    	conn.setPK_Connections(0);
-    	conn.setStartpoint(this.endpoint);
-    	conn.getEndpoints().add(auxEnd);
-    	conn.setService(service);
-    	conn.save();
-        
-        // load endpoint new from DB and check if connection is existent
-        Endpoint testEnd = Endpoint.load(this.endpoint.getTNA());
-        Assert.assertNotNull("there should be connections in the endpoint",
-                testEnd.getConnections());
-        Assert.assertTrue("stored connection should be existent", testEnd
-                .getConnections().values().contains(conn));
+		// create reference reservation, service
+		Reservation res = TestEndpointsRelation.createReferenceReservation();
+		Service service = TestEndpointsRelation.createReferenceService(res);
 
-        // remove the connection
-        conn.getService().getConnections().remove(new Integer(conn.getConnectionId()));
-        conn.delete();
+		// create reference connection and put it in the endpoint object
+		Connections conn = ReservationHelpers.getTestConnection();
+		conn.setPK_Connections(0);
+		conn.setStartpoint(this.endpoint);
+		conn.getEndpoints().add(auxEnd);
+		conn.setService(service);
+		conn.save();
 
-        // load endpoint new from DB and check if connection is not existent anymore
-        testEnd = Endpoint.load(this.endpoint.getTNA());
-        Assert.assertFalse("there should be no connection anymore", testEnd
-                .getConnections().values().contains(conn));
-        Assert.assertNull("the connection should be deleted", Connections.load(conn
-        		.getPK_Connections()));
+		// load endpoint new from DB and check if connection is existent
+		Endpoint testEnd = Endpoint.load(this.endpoint.getTNA());
+		Assert.assertNotNull("there should be connections in the endpoint",
+				testEnd.getConnections());
+		Assert.assertTrue("stored connection should be existent", testEnd
+				.getConnections().values().contains(conn));
 
-        // delete the reference reservation
-        res.delete();
-    }
+		// remove the connection
+		conn.getService().getConnections()
+				.remove(new Integer(conn.getConnectionId()));
+		conn.delete();
+
+		// load endpoint new from DB and check if connection is not existent
+		// anymore
+		testEnd = Endpoint.load(this.endpoint.getTNA());
+		Assert.assertFalse("there should be no connection anymore", testEnd
+				.getConnections().values().contains(conn));
+		Assert.assertNull("the connection should be deleted",
+				Connections.load(conn.getPK_Connections()));
+
+		// delete the reference reservation
+		res.delete();
+	}
 }
