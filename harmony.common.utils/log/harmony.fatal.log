@@ -22,3 +22,5 @@ FATAL 2012-03-27 18:36:58,749 [main] - Fatal log message at: 1332866218749
 FATAL 2012-03-27 18:36:58,769 [main] - logFatal
 FATAL 2012-03-27 18:37:04,722 [main] - Fatal log message at: 1332866224722
 FATAL 2012-03-27 18:37:04,739 [main] - logFatal
+FATAL 2012-04-04 17:31:11,382 [main] - Fatal log message at: 1333553471382
+FATAL 2012-04-04 17:31:11,397 [main] - logFatal

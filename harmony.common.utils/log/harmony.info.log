@@ -94,3 +94,11 @@ INFO  2012-03-27 18:37:04,738 [main] - logInfo
 WARN  2012-03-27 18:37:04,739 [main] - logWarn
 ERROR 2012-03-27 18:37:04,739 [main] - logError
 FATAL 2012-03-27 18:37:04,739 [main] - logFatal
+ERROR 2012-04-04 17:31:11,325 [main] - Error log message at: 1333553471324
+INFO  2012-04-04 17:31:11,373 [main] - Info log message at: 1333553471373
+WARN  2012-04-04 17:31:11,379 [main] - Warn log message at: 1333553471379
+FATAL 2012-04-04 17:31:11,382 [main] - Fatal log message at: 1333553471382
+INFO  2012-04-04 17:31:11,397 [main] - logInfo
+WARN  2012-04-04 17:31:11,397 [main] - logWarn
+ERROR 2012-04-04 17:31:11,397 [main] - logError
+FATAL 2012-04-04 17:31:11,397 [main] - logFatal

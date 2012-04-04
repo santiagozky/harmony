@@ -202,3 +202,20 @@ INFO  2012-03-27 18:37:04,738 [main] - logInfo
 WARN  2012-03-27 18:37:04,739 [main] - logWarn
 ERROR 2012-03-27 18:37:04,739 [main] - logError
 FATAL 2012-03-27 18:37:04,739 [main] - logFatal
+ERROR 2012-04-04 17:31:11,325 [main] - Error log message at: 1333553471324
+DEBUG 2012-04-04 17:31:11,348 [main] - Error log message at: 1333553471324 should not be logged in logfile: log/harmony.error.log
+TRACE 2012-04-04 17:31:11,355 [main] - Trace log message at: 1333553471355
+DEBUG 2012-04-04 17:31:11,363 [main] - Debug log message at: 1333553471363
+TRACE 2012-04-04 17:31:11,366 [main] - Debug log message at: 1333553471363 should not be logged in logfile: log/harmony.debug.log
+INFO  2012-04-04 17:31:11,373 [main] - Info log message at: 1333553471373
+DEBUG 2012-04-04 17:31:11,375 [main] - Info log message at: 1333553471373 should not be logged in logfile: log/harmony.info.log
+WARN  2012-04-04 17:31:11,379 [main] - Warn log message at: 1333553471379
+DEBUG 2012-04-04 17:31:11,380 [main] - Warn log message at: 1333553471379 should not be logged in logfile: log/harmony.warn.log
+FATAL 2012-04-04 17:31:11,382 [main] - Fatal log message at: 1333553471382
+DEBUG 2012-04-04 17:31:11,383 [main] - Fatal log message at: 1333553471382 should not be logged in logfile: log/harmony.fatal.log
+TRACE 2012-04-04 17:31:11,396 [main] - logTrace
+DEBUG 2012-04-04 17:31:11,396 [main] - logDebug
+INFO  2012-04-04 17:31:11,397 [main] - logInfo
+WARN  2012-04-04 17:31:11,397 [main] - logWarn
+ERROR 2012-04-04 17:31:11,397 [main] - logError
+FATAL 2012-04-04 17:31:11,397 [main] - logFatal

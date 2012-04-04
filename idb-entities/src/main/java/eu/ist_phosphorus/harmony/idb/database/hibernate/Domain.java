@@ -201,7 +201,7 @@ public class Domain implements java.io.Serializable, Comparable<Domain> {
 	/**
 	 * @return the supported technology adaption
 	 */
-	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.ALL })
+	@OneToMany(mappedBy = "domain", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.PERSIST })
 	public Set<DomSupportedAdaption> getSupportedAdaptions() {
 		return this.supportedAdaptions;
 	}
