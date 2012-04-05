@@ -76,6 +76,11 @@
      <target>1.5</target>
     </configuration>
    </plugin>
+    <plugin>
+        <groupId>com.googlecode.maven-overview-plugin</groupId>
+        <artifactId>maven-overview-plugin</artifactId>
+        <version>RELEASE</version>
+      </plugin>
   </plugins>
   <pluginManagement>
       <plugins>

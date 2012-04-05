@@ -1,58 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
-  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
-  <classpathentry kind="src" path="resources" including="**/*.properties|**/*.xml|**/*.dtd" excluding="**/*.java"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/javax/jms/jms/1.1/jms-1.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/javax/mail/mail/1.4.4/mail-1.4.4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/asm/asm/3.2/asm-3.2.jar"/>
-  <classpathentry kind="src" path="/common-utils"/>
-  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.4/commons-lang-2.4.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/dnsjava/dnsjava/2.1.1/dnsjava-2.1.1.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/dnsjava/dnsjava/2.1.1/dnsjava-2.1.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jpa_2.0_spec/1.1/geronimo-jpa_2.0_spec-1.1.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/org/apache/geronimo/specs/geronimo-jpa_2.0_spec/1.1/geronimo-jpa_2.0_spec-1.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/junit/junit/4.4/junit-4.4.jar">
-    <attributes>
-      <attribute value="jar:file:/home/santiago/.m2/repository/junit/junit/4.4/junit-4.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.15/log4j-1.2.15.jar" sourcepath="M2_REPO/log4j/log4j/1.2.15/log4j-1.2.15-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/muse/muse-complete/2.2.0/muse-complete-2.2.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa/2.2.0/openjpa-2.2.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/net/sourceforge/serp/serp/1.13.1/serp-1.13.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
+	<classpathentry excluding="**" including="**/*.java" kind="src" output="target/classes" path="resources"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
