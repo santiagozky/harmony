@@ -8,11 +8,59 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.ist_phosphorus.harmony</groupId>
 	<artifactId>notifications</artifactId>
+	<name>notifications</name>
 	<version>1</version>
 	<build>
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
 		
+<plugins>
+    
+    <plugin>
+      <groupId>com.mysema.maven</groupId>
+      <artifactId>maven-apt-plugin</artifactId>
+      <version>0.3.2</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>process</goal>
+          </goals>
+          <configuration>
+            <outputDirectory>target/generated-sources/java</outputDirectory>
+            <processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+    <plugin>
+            <groupId>org.apache.openjpa</groupId>
+            <artifactId>openjpa-maven-plugin</artifactId>
+            <version>2.2.0</version>
+            <configuration>
+                <includes>**/entities/*.class</includes>
+                <excludes>**/entities/XML*.class</excludes>
+                <addDefaultConstructor>true</addDefaultConstructor>
+                <enforcePropertyRestrictions>true</enforcePropertyRestrictions>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>enhancer</id>
+                    <phase>process-classes</phase>
+                    <goals>
+                        <goal>enhance</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.openjpa</groupId>
+                    <artifactId>openjpa</artifactId>
+                    <!-- set the version to be the same as the level in your runtime -->
+                    <version>2.2.0</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+  </plugins>
 	</build>
 	<dependencies>
 
@@ -64,12 +112,6 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate</artifactId>
-			<version>3.2.6.ga</version>
-		</dependency>
-
 
 		<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>
@@ -78,26 +120,7 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<version>3.3.0.ga</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-annotations</artifactId>
-			<version>3.3.1.GA</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.6.6.Final</version>
-		</dependency>
-
+	
 
 		<dependency>
 			<groupId>javax.mail</groupId>
@@ -144,9 +167,31 @@
 			<artifactId>database</artifactId>
 			<version>1</version>
 		</dependency>
+	<dependency>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
+			<artifactId>idb-entities </artifactId>
+			<version>1</version>
+		</dependency>
 
 
-
+<dependency>
+  <groupId>com.mysema.querydsl</groupId>
+  <artifactId>querydsl-apt</artifactId>
+  <version>2.3.3</version>
+  <scope>provided</scope>
+</dependency>  
+     
+<dependency>
+  <groupId>com.mysema.querydsl</groupId>
+  <artifactId>querydsl-jpa</artifactId>
+  <version>2.3.3</version>
+</dependency>
+ 
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-log4j12</artifactId>
+  <version>1.6.1</version>
+</dependency>   
 	</dependencies>
 </project>
 

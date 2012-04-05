@@ -46,3 +46,59 @@ INFO  2012-03-12 12:37:33,061 [main] - logInfo
 WARN  2012-03-12 12:37:33,061 [main] - logWarn
 ERROR 2012-03-12 12:37:33,061 [main] - logError
 FATAL 2012-03-12 12:37:33,061 [main] - logFatal
+ERROR 2012-03-26 12:37:40,140 [main] - Error log message at: 1332758260140
+INFO  2012-03-26 12:37:40,228 [main] - Info log message at: 1332758260228
+WARN  2012-03-26 12:37:40,231 [main] - Warn log message at: 1332758260231
+FATAL 2012-03-26 12:37:40,234 [main] - Fatal log message at: 1332758260234
+INFO  2012-03-26 12:37:40,246 [main] - logInfo
+WARN  2012-03-26 12:37:40,246 [main] - logWarn
+ERROR 2012-03-26 12:37:40,246 [main] - logError
+FATAL 2012-03-26 12:37:40,247 [main] - logFatal
+ERROR 2012-03-27 15:38:28,601 [main] - Error log message at: 1332855508601
+INFO  2012-03-27 15:38:28,693 [main] - Info log message at: 1332855508693
+WARN  2012-03-27 15:38:28,698 [main] - Warn log message at: 1332855508698
+FATAL 2012-03-27 15:38:28,704 [main] - Fatal log message at: 1332855508704
+INFO  2012-03-27 15:38:28,714 [main] - logInfo
+WARN  2012-03-27 15:38:28,715 [main] - logWarn
+ERROR 2012-03-27 15:38:28,715 [main] - logError
+FATAL 2012-03-27 15:38:28,715 [main] - logFatal
+ERROR 2012-03-27 18:20:07,972 [main] - Error log message at: 1332865207972
+INFO  2012-03-27 18:20:08,039 [main] - Info log message at: 1332865208039
+WARN  2012-03-27 18:20:08,043 [main] - Warn log message at: 1332865208043
+FATAL 2012-03-27 18:20:08,049 [main] - Fatal log message at: 1332865208049
+INFO  2012-03-27 18:20:08,062 [main] - logInfo
+WARN  2012-03-27 18:20:08,062 [main] - logWarn
+ERROR 2012-03-27 18:20:08,062 [main] - logError
+FATAL 2012-03-27 18:20:08,062 [main] - logFatal
+ERROR 2012-03-27 18:24:06,241 [main] - Error log message at: 1332865446240
+INFO  2012-03-27 18:24:06,258 [main] - Info log message at: 1332865446258
+WARN  2012-03-27 18:24:06,263 [main] - Warn log message at: 1332865446262
+FATAL 2012-03-27 18:24:06,267 [main] - Fatal log message at: 1332865446266
+INFO  2012-03-27 18:24:06,283 [main] - logInfo
+WARN  2012-03-27 18:24:06,283 [main] - logWarn
+ERROR 2012-03-27 18:24:06,283 [main] - logError
+FATAL 2012-03-27 18:24:06,283 [main] - logFatal
+ERROR 2012-03-27 18:36:58,721 [main] - Error log message at: 1332866218720
+INFO  2012-03-27 18:36:58,739 [main] - Info log message at: 1332866218738
+WARN  2012-03-27 18:36:58,745 [main] - Warn log message at: 1332866218745
+FATAL 2012-03-27 18:36:58,749 [main] - Fatal log message at: 1332866218749
+INFO  2012-03-27 18:36:58,769 [main] - logInfo
+WARN  2012-03-27 18:36:58,769 [main] - logWarn
+ERROR 2012-03-27 18:36:58,769 [main] - logError
+FATAL 2012-03-27 18:36:58,769 [main] - logFatal
+ERROR 2012-03-27 18:37:04,693 [main] - Error log message at: 1332866224693
+INFO  2012-03-27 18:37:04,714 [main] - Info log message at: 1332866224714
+WARN  2012-03-27 18:37:04,719 [main] - Warn log message at: 1332866224719
+FATAL 2012-03-27 18:37:04,722 [main] - Fatal log message at: 1332866224722
+INFO  2012-03-27 18:37:04,738 [main] - logInfo
+WARN  2012-03-27 18:37:04,739 [main] - logWarn
+ERROR 2012-03-27 18:37:04,739 [main] - logError
+FATAL 2012-03-27 18:37:04,739 [main] - logFatal
+ERROR 2012-04-04 17:31:11,325 [main] - Error log message at: 1333553471324
+INFO  2012-04-04 17:31:11,373 [main] - Info log message at: 1333553471373
+WARN  2012-04-04 17:31:11,379 [main] - Warn log message at: 1333553471379
+FATAL 2012-04-04 17:31:11,382 [main] - Fatal log message at: 1333553471382
+INFO  2012-04-04 17:31:11,397 [main] - logInfo
+WARN  2012-04-04 17:31:11,397 [main] - logWarn
+ERROR 2012-04-04 17:31:11,397 [main] - logError
+FATAL 2012-04-04 17:31:11,397 [main] - logFatal

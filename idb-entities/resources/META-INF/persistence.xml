@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<persistence 
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+    version="1.0">
+    <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Reservation</class>
+       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Connections</class>
+       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Service</class>
+       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Endpoint</class>
+       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.NrpsConnections</class>
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.Subscription</class>
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.TNAPrefix</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_InterDomainLink</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_ReservationMapping</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_ReservationPeriod</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_DomainReservationMapping</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.MAPNRPSResvID</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.Domain</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.InterDomainLink</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.DomSupportedAdaption</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.DomSupportedSwitch</class>        
+		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.DomSupportedBandwidth</class>        
+        <properties>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true, SchemaAction='add,refresh,deleteTableContents')"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost/RealIDB"/>
+            <property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
+             <property name="openjpa.jdbc.DBDictionary" value="mysql(DriverVendor=mysql)" />
+            <property name="openjpa.ConnectionUserName" value="root"/>
+            <property name="openjpa.ConnectionPassword" value="toor"/>
+            <property name="openjpa.Log" value=""/><!-- DefaultLevel=WARN, Runtime=INFO, Tool=INFO, -->
+            <property name="openjpa.jdbc.MappingDefaults"
+                                value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict" />
+            <!-- property name="openjpa.MetaDataFactory"
+								value="org.apache.openjpa.persistence.jdbc.PersistenceMappingFactory" /> -->
+        </properties>
+    </persistence-unit>
+</persistence>

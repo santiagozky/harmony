@@ -14,6 +14,8 @@
 		<outputDirectory>target/classes</outputDirectory>
 
 
+    
+    
 	</build>
 	<dependencies>
 
@@ -51,30 +53,6 @@
 			<groupId>org.apache.santuario</groupId>
 			<artifactId>xmlsec</artifactId>
 			<version>1.4.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate</artifactId>
-			<version>3.2.6.ga</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<version>3.3.0.ga</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-annotations</artifactId>
-			<version>3.3.1.GA</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-annotations</artifactId>
-			<version>3.3.1.GA</version>
 		</dependency>
 
 		<dependency>
@@ -148,7 +126,11 @@
 			<version>5.1.18</version>
 		</dependency>
 
-
+<dependency>
+    <groupId>org.hsqldb</groupId>
+    <artifactId>hsqldb</artifactId>
+    <version>2.2.8</version>
+</dependency>
 
 
 		<dependency>
@@ -193,21 +175,6 @@
 		</dependency>
 
 
-
-
-		<!-- <dependency> <groupId>unknown</groupId> <artifactId>harmony-secure-idb-2 
-			</artifactId> <version>unknown</version> </dependency> -->
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.6.6.Final</version>
-		</dependency>
-
-
-
-
-
 		<dependency>
 			<groupId>org.apache.muse</groupId>
 			<artifactId>muse-complete</artifactId>
@@ -245,14 +212,37 @@
 			<artifactId>database </artifactId>
 			<version>1</version>
 		</dependency>
-
-
-		<dependency>
+	<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>
-			<artifactId>notifications </artifactId>
+			<artifactId>idb-entities</artifactId>
 			<version>1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
+			<artifactId>notifications</artifactId>
+			<version>1</version>
+		</dependency>
+
+
+<dependency>
+  <groupId>com.mysema.querydsl</groupId>
+  <artifactId>querydsl-apt</artifactId>
+  <version>2.3.3</version>
+  <scope>provided</scope>
+</dependency>  
+     
+<dependency>
+  <groupId>com.mysema.querydsl</groupId>
+  <artifactId>querydsl-jpa</artifactId>
+  <version>2.3.3</version>
+</dependency>
+ 
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-log4j12</artifactId>
+  <version>1.6.1</version>
+</dependency>   
 
 	</dependencies>
 </project>

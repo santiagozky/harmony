@@ -1,11 +1,11 @@
 /**
-*  This code is part of the Harmony System implemented in Work Package 1 
-*  of the Phosphorus project. This work is supported by the European 
-*  Comission under the Sixth Framework Programme with contract number 
-*  IST-034115.
-*
-*  Copyright (C) 2006-2009 Phosphorus WP1 partners. Phosphorus Consortium.
-*  http://ist-phosphorus.eu/
+ *  This code is part of the Harmony System implemented in Work Package 1 
+ *  of the Phosphorus project. This work is supported by the European 
+ *  Comission under the Sixth Framework Programme with contract number 
+ *  IST-034115.
+ *
+ *  Copyright (C) 2006-2009 Phosphorus WP1 partners. Phosphorus Consortium.
+ *  http://ist-phosphorus.eu/
  *
  * This is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as
@@ -23,12 +23,11 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
 
-
 package eu.ist_phosphorus.harmony.idb.database;
 
 import java.io.Serializable;
 
-import org.hibernate.Session;
+import javax.persistence.EntityManager;
 
 import eu.ist_phosphorus.harmony.idb.exceptions.database.DatabaseException;
 
@@ -42,54 +41,54 @@ import eu.ist_phosphorus.harmony.idb.exceptions.database.DatabaseException;
  */
 public class TransactionManagerLoad {
 	final private Class<?> type;
-   	final private Serializable dbKey;
-   	private Object result = null;
+	final private Serializable dbKey;
+	private Object result = null;
 
-    /**
-     * Constructor.
-     * 
-     * @param type
-     *            Type of object to be loaded (hibernate class).
-     * @param dbKey
-     *            Primary database key of object.
-     * @throws DatabaseException
-     */
-    public TransactionManagerLoad(Class<?> type, Serializable dbKey)
-	    throws DatabaseException {
-    	this.type = type;
-    	this.dbKey = dbKey;
-    	dbOperation();
-    }
+	/**
+	 * Constructor.
+	 * 
+	 * @param type
+	 *            Type of object to be loaded (hibernate class).
+	 * @param dbKey
+	 *            Primary database key of object.
+	 * @throws DatabaseException
+	 */
+	public TransactionManagerLoad(Class<?> type, Serializable dbKey)
+			throws DatabaseException {
+		this.type = type;
+		this.dbKey = dbKey;
+		dbOperation();
+	}
 
-    /** Retrieve result of a database operation. */
-    public Object getResult() {
-        return this.result;
-    }
+	/** Retrieve result of a database operation. */
+	public Object getResult() {
+		return this.result;
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * eu.ist_phosphorus.harmony.idb.database.TransactionManager#dbOperation()
-     */
-    private void dbOperation() throws DatabaseException {
-    	int i = 2;
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * eu.ist_phosphorus.harmony.idb.database.TransactionManager#dbOperation()
+	 */
+	private void dbOperation() throws DatabaseException {
+		int i = 2;
 
-   		Session session = DbConnectionManager.getCurrentSession();
+		EntityManager session = DbConnectionManager.getCurrentSession();
 
-        DatabaseException exception = null;
-        try {
-        	while((this.result == null) && (i-- > 0)) {
-        		this.result = session.get(this.type, this.dbKey);
-        	}
-        } catch (final Exception ex) {
-            exception = new DatabaseException(ex.getMessage(), ex);
-        }
+		DatabaseException exception = null;
+		try {
+			while ((this.result == null) && (i-- > 0)) {
+				this.result = session.find(this.type, this.dbKey);
+			}
+		} catch (final Exception ex) {
+			exception = new DatabaseException(ex.getMessage(), ex);
+		}
 
-        if (exception != null) {
-            DbConnectionManager.closeSession();
-            throw exception;
-        }
-    }
+		if (exception != null) {
+			DbConnectionManager.closeSession();
+			throw exception;
+		}
+	}
 
 }
