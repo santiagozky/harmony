@@ -140,7 +140,7 @@ public class TestDomSupportedAdaptionRelation extends DatabaseTest {
 		this.adaption.delete();
 		// deleting this.adaption removes secondAd because of cascade, I
 		// think....
-		// secondAd.delete();
+		secondAd.delete();
 		Assert.assertNull("first adaption should be deleted",
 				DomSupportedAdaption.load(this.adaption.getPK_Adaption()));
 		Assert.assertNull("second adaption should be deleted",

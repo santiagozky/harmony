@@ -357,8 +357,11 @@ public class Connections implements java.io.Serializable {
 	 * 
 	 * @return startpoint
 	 */
-	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Endpoint.class)
-	@JoinTable(name = "MAP_ConnEndpoint", joinColumns = @JoinColumn(name = "FK_Connection"), inverseJoinColumns = @JoinColumn(name = "FK_DestEndpointTNA"))
+	// @ManyToMany(fetch = FetchType.LAZY)
+	// @JoinTable(name = "MAP_ConnEndpoint", joinColumns = @JoinColumn(name =
+	// "FK_Connection"), inverseJoinColumns = @JoinColumn(name =
+	// "FK_DestEndpointTNA"))
+	@ManyToMany(mappedBy = "endpointInConnections")
 	public Set<Endpoint> getEndpoints() {
 		return this.endpoints;
 	}

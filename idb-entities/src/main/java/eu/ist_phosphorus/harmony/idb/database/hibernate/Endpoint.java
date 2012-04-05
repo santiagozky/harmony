@@ -46,6 +46,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.EntityManager;
 import javax.persistence.Column;
+import javax.persistence.JoinTable;
 
 import org.apache.openjpa.kernel.jpql.JPQL;
 
@@ -367,7 +368,9 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 	/**
 	 * @return the endpointInConnections
 	 */
-	@ManyToMany(mappedBy = "endpoints")
+	// @ManyToMany(mappedBy = "endpoints")
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "MAP_ConnEndpoint", joinColumns = @JoinColumn(name = "FK_DestEndpointTNA"), inverseJoinColumns = @JoinColumn(name = "FK_Connection"))
 	public Map<String, Connections> getEndpointInConnections() {
 		return this.endpointInConnections;
 	}
@@ -381,7 +384,7 @@ public class Endpoint implements java.io.Serializable, Comparable<Endpoint> {
 		this.endpointInConnections = endpointInConnections;
 	}
 
-	@OneToMany(mappedBy = "startpoint", fetch = FetchType.LAZY, cascade = { javax.persistence.CascadeType.REMOVE })
+	@OneToMany(mappedBy = "startpoint", fetch = FetchType.LAZY, orphanRemoval = true, cascade = { javax.persistence.CascadeType.REMOVE })
 	@MapKeyColumn(name = "connectionId")
 	public Map<Integer, Connections> getConnections() {
 		return this.connections;
