@@ -46,25 +46,7 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate</artifactId>
-			<version>3.2.6.ga</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<version>3.3.0.ga</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-annotations</artifactId>
-			<version>3.3.1.GA</version>
-		</dependency>
-
+		
 
 		<dependency>
 			<groupId>com.mockrunner</groupId>
@@ -135,11 +117,6 @@
 			<artifactId>jta</artifactId>
 			<version>1.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>ejb3-persistence</artifactId>
-			<version>1.0.2.GA</version>
-		</dependency>
 
 		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/muse-platform-mini-2.2.0 -->
 		<!-- SHA1: 81053ab68fb4dba8b4c387aa51d8eaaecc3eaec0 -->
@@ -185,22 +162,6 @@
 			<version>1</version>
 		</dependency>
 
-
-
-
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/hibernate-entitymanager -->
-		<!-- SHA1: 504b1cf5365aeda0f950f79b9a3ee9a5c9f18b9f -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.6.6.Final</version>
-
-		</dependency>
-
-
-
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/muse-complete-2.2.0 -->
-		<!-- SHA1: 859875e3ade3e76443c2c08a711022ee22df0c7a -->
 		<dependency>
 			<groupId>org.apache.muse</groupId>
 			<artifactId>muse-complete </artifactId>
@@ -208,42 +169,29 @@
 		</dependency>
 
 
-
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-idb -->
-		<!-- SHA1: b8c786fba5e3fe50232f21ecdad82f2d487945ba -->
 		<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>
-			<artifactId>idb </artifactId>
+			<artifactId>idb</artifactId>
 			<version>1</version>
 		</dependency>
 
-
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/dom4j -->
-		<!-- SHA1: 4c15608c562abd5ce6d0b1315465409606d847be -->
 		<dependency>
 			<groupId>dom4j</groupId>
-			<artifactId>dom4j </artifactId>
+			<artifactId>dom4j</artifactId>
 			<version>1.6.1</version>
 		</dependency>
 
 
-
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-database -->
-		<!-- SHA1: 08017102f781141fa7d640c6b1dca549ce5b2f39 -->
 		<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>
-			<artifactId>database </artifactId>
+			<artifactId>database</artifactId>
 			<version>1</version>
 		</dependency>
 
 
-
-
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.test/lib/harmony-notifications -->
-		<!-- SHA1: 13188479cfd36e9cfc3d88c96dd193f62130a474 -->
 		<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>
-			<artifactId>notifications </artifactId>
+			<artifactId>notifications</artifactId>
 			<version>1</version>
 		</dependency>
 

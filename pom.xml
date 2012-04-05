@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>eu.ist_phosphorus.harmony</groupId>
   <artifactId>harmony</artifactId>
@@ -20,6 +20,7 @@
 		<module>harmony.common.utils</module>
 		<module>harmony.common.synthesizer</module>
 		<module>harmony.database</module>
+		<module>idb-entities</module>
 		<module>harmony.idb</module>
 		<module>harmony.notifications</module>
 		<module>harmony.template</module>
@@ -31,7 +32,7 @@
 		<module>harmony.ui.topologygui</module>
 		<module>harmony.ui.webgui</module>
 
-	</modules>
+  </modules>
 <properties>
     <groupId>eu.ist_phosphorus.harmony</groupId>
     <artifactId>harmony</artifactId>
@@ -115,6 +116,23 @@
 		
 </dependencies>
 <repositories>
+
+<repository>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </snapshots>
+      <id>mysema</id>
+      <name>mysema</name>
+      <url>http://source.mysema.com/maven2/releases</url>
+      <layout>default</layout>
+    </repository>
 <repository>
       <releases>
         <enabled>true</enabled>
