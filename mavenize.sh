@@ -6,7 +6,7 @@ if [[ (-d "$i/src" ) && ! ( -d "$i/src/main") ]]; then
    
    
  mkdir -p main/java
- mkdir -p test/main/java/eu/ist_phosphorus/harmony
+ mkdir -p test/java/eu/ist_phosphorus/harmony
  mv eu main/java/
  mv main/java/eu/ist_phosphorus/harmony/test test/java/eu/ist_phosphorus/harmony/
    cd ../..
