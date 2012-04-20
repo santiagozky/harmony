@@ -9,25 +9,25 @@
   <packaging>pom</packaging>
 
   <modules>
+		<module>idb-entities</module>
 		<module>harmony.adapter.argon</module>
-		<module>harmony.adapter.arrm</module>
+		<!--module>harmony.adapter.arrm</module-->
 		<module>harmony.adapter.dummy</module>
 		<module>harmony.adapter.thin</module>
 		<module>harmony.adapter.uclp</module>
 		<module>harmony.common.ant</module>
-		<module>harmony.common.security</module>
-		<!-- module>harmony.common.serviceinterface</module -->
+		<module>harmony.common.serviceinterface</module>
 		<module>harmony.common.utils</module>
 		<module>harmony.common.synthesizer</module>
 		<module>harmony.database</module>
-		<module>idb-entities</module>
 		<module>harmony.idb</module>
 		<module>harmony.notifications</module>
-		<module>harmony.template</module>
+		<!--<module>harmony.template</module>
 		<module>harmony.test</module>
+		<module>harmony.common.security</module>
 		<module>harmony.translator.autobahn</module>
 		<module>harmony.translator.g2mpls</module>
-		<!--module>harmony.translator.idc</module-->
+		<module>harmony.translator.idc</module> -->
 		<module>harmony.ui.reservationcli</module>
 		<module>harmony.ui.topologygui</module>
 		<module>harmony.ui.webgui</module>

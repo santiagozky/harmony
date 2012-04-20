@@ -7,8 +7,9 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.ist_phosphorus.harmony</groupId>
-	<artifactId>common-serviceInterface</artifactId>
+	<artifactId>common-serviceinterface</artifactId>
 	<version>1</version>
+	<name>service interface</name>
 	<build>
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
