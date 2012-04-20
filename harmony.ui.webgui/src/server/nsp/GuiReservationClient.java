@@ -37,7 +37,7 @@ import org.apache.muse.ws.addressing.EndpointReference;
 
 import server.common.MethodReflectionCache;
 import server.common.NspConverter;
-import eu.ist_phosphorus.harmony.common.serviceinterface.reservation.SimpleReservationClient;
+import org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient;
 
 /**
  * @author gassen

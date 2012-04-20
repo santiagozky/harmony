@@ -7,19 +7,19 @@
               xsi:schemaLocation=" http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
   <jxb:bindings schemaLocation="Topology-Types.xsd">
     <jxb:schemaBindings>
-      <jxb:package name="eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb"/>
+      <jxb:package name="org.opennaas.extension.idb.serviceinterface.databinding.jaxb"/>
     </jxb:schemaBindings>
   </jxb:bindings>
 
   <jxb:bindings schemaLocation="Reservation-Types.xsd">
     <jxb:schemaBindings>
-      <jxb:package name="eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb"/>
+      <jxb:package name="org.opennaas.extension.idb.serviceinterface.databinding.jaxb"/>
     </jxb:schemaBindings>
   </jxb:bindings>
   
   <jxb:bindings schemaLocation="Notification-Types.xsd">
     <jxb:schemaBindings>
-      <jxb:package name="eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb"/>
+      <jxb:package name="org.opennaas.extension.idb.serviceinterface.databinding.jaxb"/>
     </jxb:schemaBindings>
   </jxb:bindings>
 

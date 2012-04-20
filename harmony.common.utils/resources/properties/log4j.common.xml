@@ -15,7 +15,7 @@
 
 
  	<!-- EMail Appender, activate: add HARMONY_EMAIL to root-category -->
- 	<appender name="HARMONY_EMAIL" class="eu.ist_phosphorus.harmony.common.utils.logging.PhosphorusSMTPAppender" >
+ 	<appender name="HARMONY_EMAIL" class="org.opennaas.core.utils.logging.PhosphorusSMTPAppender" >
 		<param name="SMTPHost" value="postfix.cs.uni-bonn.de" />
 		<param name="SMTPUsername" value="nsp" />
  		<param name="SMTPPassword" value="4Notifcation" />
@@ -23,10 +23,10 @@
  		<param name="To" value="nsp@cs.uni-bonn.de" />
 		<!-- %a Harmony-tag; %h Host-tag; %l Level-tag (static link to fatal) -->
 		<param name="Subject" value="%a: An error has appeared.Level on: [%h] %l" />
-		<param name="EvaluatorClass" value="eu.ist_phosphorus.harmony.common.utils.Log4JTriggerEvaluator" />
+		<param name="EvaluatorClass" value="org.opennaas.core.utils.Log4JTriggerEvaluator" />
 		<param name="BufferSize" value="1" />
  		<param name="threshold" value="fatal" />
-		<param name="EvaluatorClass" value="eu.ist_phosphorus.harmony.common.utils.Log4JTriggerEvaluator" />
+		<param name="EvaluatorClass" value="org.opennaas.core.utils.Log4JTriggerEvaluator" />
  		<layout class="org.apache.log4j.PatternLayout" >
  			<param name="ConversionPattern" value="%-5p %d{ISO8601} [%t] - %m%n %C" />
  		</layout>
@@ -127,7 +127,7 @@
 	
 	<!-- category for performance-outputs with individual Log-Level -->
  	<category name="Performance">
- 		<priority value="PERFORMANCE_LOG" class="eu.ist_phosphorus.harmony.common.utils.PerformanceLogLevel"></priority>
+ 		<priority value="PERFORMANCE_LOG" class="org.opennaas.core.utils.PerformanceLogLevel"></priority>
  		<appender-ref ref="PERFORMANCE_APP" />
  	</category>
 

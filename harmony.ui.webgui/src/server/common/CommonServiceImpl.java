@@ -40,8 +40,8 @@ import javax.servlet.http.HttpSession;
 
 import client.helper.GuiException;
 import client.interfaces.CommonService;
-import eu.ist_phosphorus.harmony.common.utils.Config;
-import eu.ist_phosphorus.harmony.common.utils.TNAHelper;
+import org.opennaas.core.utils.Config;
+import org.opennaas.core.utils.TNAHelper;
 
 /**
  * @author gassen

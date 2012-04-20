@@ -45,7 +45,7 @@
 						</goals>
 						<configuration>
 							<generateDirectory>${project.build.directory}/generated-sources/xsdClasses</generateDirectory>
-							<generatePackage>eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb</generatePackage>
+							<generatePackage>org.opennaas.extension.idb.serviceinterface.databinding.jaxb</generatePackage>
 							<schemaDirectory>resources/webservices</schemaDirectory>
 							<schemaIncludes>
 
@@ -86,7 +86,7 @@
 							<executable>perl</executable>
 							<arguments>
 								<argument>${scripts.dir}/makeJaxbClassesClonable.pl</argument>
-								<argument>${project.build.directory}/generated-sources/xsdClasses/eu/ist_phosphorus/harmony/common/serviceinterface/databinding/jaxb </argument>
+								<argument>${project.build.directory}/generated-sources/xsdClasses/org/opennaas/extension/idb/serviceinterface/databinding/jaxb </argument>
 								
 							</arguments>
 						</configuration>
@@ -102,8 +102,8 @@
 							<executable>perl</executable>
 							<arguments>
 								<argument>${scripts.dir}/generateFaultExceptions.pl</argument>
-								<argument>${project.build.directory}/generated-sources/xsdClasses/eu/ist_phosphorus/harmony/common/serviceinterface/databinding/jaxb </argument>
-								<argument>${project.build.directory}/generated-sources/xsdClasses/eu/ist_phosphorus/harmony/common/serviceinterface/databinding/jaxb/exceptions</argument>
+								<argument>${project.build.directory}/generated-sources/xsdClasses/org/opennaas/extension/idb/serviceinterface/databinding/jaxb</argument>
+								<argument>${project.build.directory}/generated-sources/xsdClasses/org/opennaas/extension/idb/serviceinterface/databinding/jaxb/exceptions</argument>
 							</arguments>
 						</configuration>
 					</execution>
@@ -135,13 +135,13 @@
 								<DIR_SERVLET_NOTIFICATION>${temp.dir}/servlets/notification</DIR_SERVLET_NOTIFICATION>
 							    <CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
-								<CLIENT_FLAGS>-synthesizer	eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer	-projectizer	org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
+								<CLIENT_FLAGS>-synthesizer	org.opennaas.extension.idb.serviceinterface.synthesizer.ProxySynthesizer	-projectizer	org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Topology-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/topology</ws>
 								<descriptor>Topology-Muse.xml</descriptor>
-								<server>harmony/common/serviceinterface/topology</server>
-								<client>nsp/webservice/topology</client>
+								<server>org/opennaas/nsp/webservice/topology</server>
+								<client>org.opennaas/extension/idb/nsp/webservice/topology</client>
 								<handler>CommonTopologyHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -172,13 +172,13 @@
 								<DIR_SERVLET_NOTIFICATION>${temp.dir}/servlets/notification</DIR_SERVLET_NOTIFICATION>
 								 <CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
-								<CLIENT_FLAGS>-synthesizer eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer -projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
+								<CLIENT_FLAGS>-synthesizer org.opennaas.extension.idb.serviceinterface.synthesizer.ProxySynthesizer -projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Topology-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/topology</ws>
 								<descriptor>Topology-Muse.xml</descriptor>
-								<server>harmony/common/serviceinterface/topology</server>
-								<client>nsp/webservice/topology</client>
+								<server>org/opennaas/nsp/webservice/topology</server>
+								<client>org/opennaas/nsp/webservice/topology</client>
 								<handler>CommonTopologyHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -210,13 +210,13 @@
 								<DIR_SERVLET_NOTIFICATION>${temp.dir}/servlets/notification</DIR_SERVLET_NOTIFICATION>
 								 <CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
-								<CLIENT_FLAGS>-synthesizer eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer -projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
+								<CLIENT_FLAGS>-synthesizer org.opennaas.extension.idb.serviceinterface.synthesizer.ProxySynthesizer -projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Reservation-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/reservation</ws>
 								<descriptor>Reservation-Muse.xml</descriptor>
-								<server>harmony/common/serviceinterface/reservation</server>
-								<client>nsp/webservice/reservation</client>
+								<server>org/opennaas/nsp/webservice/reservation</server>
+								<client>org/opennaas/nsp/webservice/reservation</client>
 								<handler>CommonReservationHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -248,13 +248,13 @@
 								<DIR_SERVLET_NOTIFICATION>${temp.dir}/servlets/notification</DIR_SERVLET_NOTIFICATION>
 								 <CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
-								<CLIENT_FLAGS>-synthesizer	eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer	-projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
+								<CLIENT_FLAGS>-synthesizer	org.opennaas.extension.idb.serviceinterface.synthesizer.ProxySynthesizer	-projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Reservation-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/reservation</ws>
 								<descriptor>Reservation-Muse.xml</descriptor>
-								<server>harmony/common/serviceinterface/reservation</server>
-								<client>nsp/webservice/reservation</client>
+								<server>org/opennaas/nsp/webservice/reservation</server>
+								<client>org/opennaas/nsp/webservice/reservation</client>
 								<handler>CommonReservationHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -288,15 +288,15 @@
 								 <CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
 								<CLIENT_FLAGS>-synthesizer
-									eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer
+									org.opennaas.extension.idb.serviceinterface.synthesizer.ProxySynthesizer
 									-projectizer
 									org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Notification-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/notification</ws>
 								<descriptor>Notification-Muse.xml</descriptor>
-								<server>harmony/common/serviceinterface/notification</server>
-								<client>nsp/webservice/notification</client>
+								<server>org/opennaas/nsp/webservice/notification</server>
+								<client>org/opennaas/nsp/webservice/notification</client>
 								<handler>CommonNotificationHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -327,13 +327,13 @@
 								<DIR_SERVLET_NOTIFICATION>${temp.dir}/servlets/notification</DIR_SERVLET_NOTIFICATION>
 								 <CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
-								<CLIENT_FLAGS>-synthesizer	eu.ist_phosphorus.harmony.common.serviceinterface.synthesizer.ProxySynthesizer -projectizer	org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
+								<CLIENT_FLAGS>-synthesizer	org.opennaas.extension.idb.serviceinterface.synthesizer.ProxySynthesizer -projectizer	org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Notification-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/notification</ws>
 								<descriptor>Notification-Muse.xml</descriptor>
-								<server>harmony/common/serviceinterface/notification</server>
-								<client>nsp/webservice/notification</client>
+								<server>org/opennaas/nsp/webservice/notification</server>
+								<client>org/opennaas/nsp/webservice/notification</client>
 								<handler>CommonNotificationHandler</handler>
 							</environmentVariables>
 						</configuration>

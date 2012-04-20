@@ -25,7 +25,7 @@
 
 -->
 
-<xs:schema xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2" xmlns:ns1="http://ist_phosphorus.eu/nsp" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:extensionBindingPrefixes="xjc" jaxb:version="2.0" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://ist_phosphorus.eu/nsp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2" xmlns:ns1="http://opennaas.org/nsp" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:extensionBindingPrefixes="xjc" jaxb:version="2.0" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://opennaas.org/nsp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="./wsrf/WS-Addressing-2005_08.xsd" namespace="http://www.w3.org/2005/08/addressing" />
   <xs:import schemaLocation="./wsrf/WS-BaseFaults-1_2.xsd" namespace="http://docs.oasis-open.org/wsrf/bf-2" />
   <xs:annotation>

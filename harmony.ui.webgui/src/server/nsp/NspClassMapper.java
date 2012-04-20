@@ -28,11 +28,11 @@ package server.nsp;
 
 import client.classes.Reservation;
 import client.classes.Service;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsComplexType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.ServiceConstraintType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
-import eu.ist_phosphorus.harmony.common.utils.Helpers;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
+import org.opennaas.core.utils.Helpers;
 
 public class NspClassMapper {
     public static final Reservation jaxb2gwt(

@@ -92,7 +92,7 @@ eu.ist_phosphorus.harmony.adapter.thin.implementation</FONT>
 Class CreationHandler</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>eu.ist_phosphorus.harmony.adapter.thin.implementation.CreationHandler</B>
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>org.opennaas.extension.idb.da.thin.impl.CreationHandler</B>
 </PRE>
 <HR>
 <DL>
@@ -127,8 +127,8 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationResponseType</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/implementation/CreationHandler.html#createReservation(eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationType)">createReservation</A></B>(eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;createReservationRequest)</CODE>
+<CODE>&nbsp;org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/implementation/CreationHandler.html#createReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType)">createReservation</A></B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;createReservationRequest)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new reservation in the thin Nrps.</TD>
@@ -144,7 +144,7 @@ java.lang.Object
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/implementation/CreationHandler.html#setUpConnection(eu.ist_phosphorus.harmony.adapter.thin.database.orm.GmplsConnection)">setUpConnection</A></B>(<A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/database/orm/GmplsConnection.html" title="class in eu.ist_phosphorus.harmony.adapter.thin.database.orm">GmplsConnection</A>&nbsp;gmplsConnection)</CODE>
+<TD><CODE><B><A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/implementation/CreationHandler.html#setUpConnection(org.opennaas.extension.idb.da.thin.persistence.orm.GmplsConnection)">setUpConnection</A></B>(<A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/database/orm/GmplsConnection.html" title="class in org.opennaas.extension.idb.da.thin.persistence.orm">GmplsConnection</A>&nbsp;gmplsConnection)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets up a gmpls connection through the gmpls web service.</TD>
@@ -186,10 +186,10 @@ public static <A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/
 </DL>
 <HR>
 
-<A NAME="setUpConnection(eu.ist_phosphorus.harmony.adapter.thin.database.orm.GmplsConnection)"><!-- --></A><H3>
+<A NAME="setUpConnection(org.opennaas.extension.idb.da.thin.persistence.orm.GmplsConnection)"><!-- --></A><H3>
 setUpConnection</H3>
 <PRE>
-public static int <B>setUpConnection</B>(<A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/database/orm/GmplsConnection.html" title="class in eu.ist_phosphorus.harmony.adapter.thin.database.orm">GmplsConnection</A>&nbsp;gmplsConnection)
+public static int <B>setUpConnection</B>(<A HREF="../../../../../../eu/ist_phosphorus/harmony/adapter/thin/database/orm/GmplsConnection.html" title="class in org.opennaas.extension.idb.da.thin.persistence.orm">GmplsConnection</A>&nbsp;gmplsConnection)
                            throws org.apache.muse.ws.addressing.soap.SoapFault</PRE>
 <DL>
 <DD>sets up a gmpls connection through the gmpls web service.
@@ -198,7 +198,7 @@ public static int <B>setUpConnection</B>(<A HREF="../../../../../../eu/ist_phosp
 <DT><B>Parameters:</B><DD><CODE>gmplsConnection</CODE> - connection to be established
 <DT><B>Returns:</B><DD>true if connection could be established
 <DT><B>Throws:</B>
-<DD><CODE>eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.exceptions.InvalidRequestFaultException</CODE> - request was not valid
+<DD><CODE>org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidRequestFaultException</CODE> - request was not valid
 <DD><CODE>org.apache.muse.ws.addressing.soap.SoapFault</CODE> - should not happen</DL>
 </DD>
 </DL>
@@ -224,12 +224,12 @@ public java.lang.Object <B>clone</B>()
 </DL>
 <HR>
 
-<A NAME="createReservation(eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationType)"><!-- --></A><H3>
+<A NAME="createReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType)"><!-- --></A><H3>
 createReservation</H3>
 <PRE>
-public eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationResponseType <B>createReservation</B>(eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;createReservationRequest)
-                                                                                                                   throws eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.exceptions.UnexpectedFaultException,
-                                                                                                                          eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException</PRE>
+public org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType <B>createReservation</B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;createReservationRequest)
+                                                                                                                   throws org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.UnexpectedFaultException,
+                                                                                                                          org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException</PRE>
 <DL>
 <DD>Creates a new reservation in the thin Nrps.
 <P>
@@ -237,8 +237,8 @@ public eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.Create
 <DT><B>Parameters:</B><DD><CODE>createReservationRequest</CODE> - request
 <DT><B>Returns:</B><DD>response for request as CreateReservationResponseType
 <DT><B>Throws:</B>
-<DD><CODE>eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.exceptions.UnexpectedFaultException</CODE> - if reservation is not of type fixed
-<DD><CODE>eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException</CODE></DL>
+<DD><CODE>org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.UnexpectedFaultException</CODE> - if reservation is not of type fixed
+<DD><CODE>org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException</CODE></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

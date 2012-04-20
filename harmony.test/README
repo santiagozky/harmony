@@ -1,9 +1,0 @@
-IST Phosphorus Harmony Nightly Build Test Suite
-===============================================
-
-Configuration
--------------
-In your build.local.properties:
- * To enable Webservice testing (you'll need a running servlet container):  test.webservice=true
-
-For further details please have a look at resources/buildbot.

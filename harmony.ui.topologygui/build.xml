@@ -13,7 +13,7 @@
 
         <target name="start" description="Start the topology client">
                <antcall target="build" />
-                <java classname="eu.ist_phosphorus.harmony.ui.topologygui.TopologyClient" classpath="${dir.dist}" fork="true">
+                <java classname="org.opennaas.ui.topology.TopologyClient" classpath="${dir.dist}" fork="true">
                         <classpath refid="classpath.tools" />
                 </java>
         </target>

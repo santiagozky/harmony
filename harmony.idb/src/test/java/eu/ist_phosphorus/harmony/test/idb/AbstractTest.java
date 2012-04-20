@@ -24,12 +24,12 @@
  */
 
 
-package eu.ist_phosphorus.harmony.test.idb;
+package org.opennaas.extension.idb.test;
 
 import org.apache.log4j.Logger;
 
-import eu.ist_phosphorus.harmony.common.utils.PhLogger;
-import eu.ist_phosphorus.harmony.idb.Constants;
+import org.opennaas.core.utils.PhLogger;
+import org.opennaas.extension.idb.Constants;
 
 /**
  * Abstract class for all webservice based tests.

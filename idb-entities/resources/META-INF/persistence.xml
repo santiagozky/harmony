@@ -7,23 +7,23 @@
     version="1.0">
     <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
     <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
-       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Reservation</class>
-       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Connections</class>
-       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Service</class>
-       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.Endpoint</class>
-       <class>eu.ist_phosphorus.harmony.idb.database.hibernate.NrpsConnections</class>
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.Subscription</class>
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.TNAPrefix</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_InterDomainLink</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_ReservationMapping</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_ReservationPeriod</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.VIEW_DomainReservationMapping</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.MAPNRPSResvID</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.Domain</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.InterDomainLink</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.DomSupportedAdaption</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.DomSupportedSwitch</class>        
-		<class>eu.ist_phosphorus.harmony.idb.database.hibernate.DomSupportedBandwidth</class>        
+       <class>org.opennaas.extension.idb.database.hibernate.Reservation</class>
+       <class>org.opennaas.extension.idb.database.hibernate.Connections</class>
+       <class>org.opennaas.extension.idb.database.hibernate.Service</class>
+       <class>org.opennaas.extension.idb.database.hibernate.Endpoint</class>
+       <class>org.opennaas.extension.idb.database.hibernate.NrpsConnections</class>
+		<class>org.opennaas.extension.idb.database.hibernate.Subscription</class>
+		<class>org.opennaas.extension.idb.database.hibernate.TNAPrefix</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.VIEW_InterDomainLink</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.VIEW_ReservationMapping</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.VIEW_ReservationPeriod</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.VIEW_DomainReservationMapping</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.MAPNRPSResvID</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.Domain</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.InterDomainLink</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.DomSupportedAdaption</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.DomSupportedSwitch</class>        
+		<class>org.opennaas.extension.idb.database.hibernate.DomSupportedBandwidth</class>        
         <properties>
             <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true, SchemaAction='add,refresh,deleteTableContents')"/>
             <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost/RealIDB"/>

@@ -54,19 +54,19 @@ sub init {
 
 	print "WSDL found ...\n";	
 	if($type eq "server") {
-		$in = "$ENV{'DIR_TEMP'}/wsdl2java/JavaSource/eu/ist_phosphorus/$ENV{'server'}";
-		$out = "$ENV{'DIR_SRC'}/eu/ist_phosphorus/$ENV{'server'}";
+		$in = "$ENV{'DIR_TEMP'}/wsdl2java/JavaSource/$ENV{'server'}";
+		$out = "$ENV{'DIR_SRC'}/$ENV{'server'}";
 		
-		$package = "eu/ist_phosphorus/" . $ENV{'server'};
+		$package = "" . $ENV{'server'};
 		$package =~ s/\//\./g;
 	} elsif($type eq "servlet") {
 		$in = "$ENV{'DIR_TEMP'}/wsdl2java/WebContent/";
 		$out = "$ENV{'ws'}";
 	} elsif($type eq "client") {
-		$in = "$ENV{'DIR_TEMP'}/wsdl2java/src/eu/ist_phosphorus/$ENV{'client'}";
-		$out = "$ENV{'DIR_SRC'}/eu/ist_phosphorus/$ENV{'server'}/";
+		$in = "$ENV{'DIR_TEMP'}/wsdl2java/src/$ENV{'client'}";
+		$out = "$ENV{'DIR_SRC'}/$ENV{'server'}/";
 		
-		$package = "eu/ist_phosphorus/" . $ENV{'server'};
+		$package = "" . $ENV{'server'};
 		$package =~ s/\//\./g;
 	} else {
 		die "Unsupported type";
@@ -137,7 +137,7 @@ sub organizeImports {
 	my $context = shift;
 	
 	if($type eq "server" && $classType eq "class" && $ENV{'handler'} ne "") {
-		$$context =~ s/(import org.w3c.dom.Element;)/$1\nimport eu.ist_phosphorus.harmony.common.serviceinterface.RequestHandler;/;
+		$$context =~ s/(import org.w3c.dom.Element;)/$1\nimport org.opennaas.extension.idb.serviceinterface.RequestHandler;/;
 	}
 }
 

@@ -56,13 +56,13 @@ import client.interfaces.ArgonManagementService;
 import de.unibonn.viola.argon.requestProcessor.exceptions.TopologyManagerException;
 import de.unibonn.viola.argon.requestProcessor.requestHandler.operator.externalInterface.OperatorInterface;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ReservationRequestType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CancelReservation;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CancelReservationResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CancelReservationType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CreateReservationType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.reservation.SimpleReservationClient;
-import eu.ist_phosphorus.harmony.common.utils.Config;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservation;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType;
+import org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient;
+import org.opennaas.core.utils.Config;
 
 /**
  * Implements the Service-interface and provides data via RMI-connection to
