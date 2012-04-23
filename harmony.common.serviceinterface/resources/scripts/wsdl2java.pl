@@ -59,6 +59,7 @@ sub init {
 		
 		$package = "" . $ENV{'server'};
 		$package =~ s/\//\./g;
+		
 	} elsif($type eq "servlet") {
 		$in = "$ENV{'DIR_TEMP'}/wsdl2java/WebContent/";
 		$out = "$ENV{'ws'}";
@@ -71,7 +72,6 @@ sub init {
 	} else {
 		die "Unsupported type";
 	}
-
 	#if (0 != system("/bin/bash ./scripts/checkRuntimeEnv.sh")) {
 	#	die "Evironment is missing required tool(s)";
 	#}

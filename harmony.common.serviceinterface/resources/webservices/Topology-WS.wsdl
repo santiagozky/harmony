@@ -24,7 +24,7 @@
  02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 -->
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:topology="http://opennaas.org/nsp/webservice/topology" xmlns:ns="http://opennaas.org/nsp/webservice/topology" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:ns1="http://opennaas.org/nspCommon" xmlns:ns2="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns3="http://opennaas.org/nsp" xmlns:ns4="http://docs.oasis-open.org/wsrf/bf-2" targetNamespace="http://opennaas.org/nsp/webservice/topology">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:topology="http://opennaas.org/nsp/webservice/topology" xmlns:ns="http://opennaas.org/nsp/webservice/topology" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:ns1="http://opennaas.org/NSPCommon" xmlns:ns2="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns3="http://opennaas.org/nsp" xmlns:ns4="http://docs.oasis-open.org/wsrf/bf-2" targetNamespace="http://opennaas.org/nsp/webservice/topology">
 	<types>
 		<xs:schema>
 			<xs:import namespace="http://opennaas.org/nsp/webservice/topology" schemaLocation="Topology-Types.xsd"/>

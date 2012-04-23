@@ -140,8 +140,7 @@
 								<wsdl>Topology-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/topology</ws>
 								<descriptor>Topology-Muse.xml</descriptor>
-								<server>org/opennaas/nsp/webservice/topology</server>
-								<client>org.opennaas/extension/idb/nsp/webservice/topology</client>
+								<server>org/opennaas/extension/idb/serviceinterface/topology</server>
 								<handler>CommonTopologyHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -177,7 +176,7 @@
 								<wsdl>Topology-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/topology</ws>
 								<descriptor>Topology-Muse.xml</descriptor>
-								<server>org/opennaas/nsp/webservice/topology</server>
+								<server>org/opennaas/extension/idb/serviceinterface/topology</server>
 								<client>org/opennaas/nsp/webservice/topology</client>
 								<handler>CommonTopologyHandler</handler>
 							</environmentVariables>
@@ -215,8 +214,7 @@
 								<wsdl>Reservation-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/reservation</ws>
 								<descriptor>Reservation-Muse.xml</descriptor>
-								<server>org/opennaas/nsp/webservice/reservation</server>
-								<client>org/opennaas/nsp/webservice/reservation</client>
+								<server>org/opennaas/extension/idb/serviceinterface/reservation</server>
 								<handler>CommonReservationHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -253,7 +251,7 @@
 								<wsdl>Reservation-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/reservation</ws>
 								<descriptor>Reservation-Muse.xml</descriptor>
-								<server>org/opennaas/nsp/webservice/reservation</server>
+								<server>org/opennaas/extension/idb/serviceinterface/reservation</server>
 								<client>org/opennaas/nsp/webservice/reservation</client>
 								<handler>CommonReservationHandler</handler>
 							</environmentVariables>
@@ -295,8 +293,7 @@
 								<wsdl>Notification-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/notification</ws>
 								<descriptor>Notification-Muse.xml</descriptor>
-								<server>org/opennaas/nsp/webservice/notification</server>
-								<client>org/opennaas/nsp/webservice/notification</client>
+								<server>org/opennaas/extension/idb/serviceinterface/notification</server>
 								<handler>CommonNotificationHandler</handler>
 							</environmentVariables>
 						</configuration>
@@ -332,7 +329,7 @@
 								<wsdl>Notification-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/notification</ws>
 								<descriptor>Notification-Muse.xml</descriptor>
-								<server>org/opennaas/nsp/webservice/notification</server>
+								<server>org/opennaas/extension/idb/serviceinterface/notification</server>
 								<client>org/opennaas/nsp/webservice/notification</client>
 								<handler>CommonNotificationHandler</handler>
 							</environmentVariables>
