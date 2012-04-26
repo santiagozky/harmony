@@ -1,4 +1,4 @@
-eu.ist_phosphorus.harmony.adapter.dummy
+org.opennaas.extension.gmpls.harmony.adapter.dummy
 org.opennaas.extension.idb.da.dummy.handler
 org.opennaas.extension.idb.da.dummy.webservice
-eu.ist_phosphorus.harmony.test.adapter.dummy.webservice
+org.opennaas.extension.gmpls.harmony.test.adapter.dummy.webservice

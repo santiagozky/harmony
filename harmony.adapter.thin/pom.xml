@@ -159,6 +159,13 @@
 			<artifactId>common-serviceinterface </artifactId>
 			<version>1</version>
 		</dependency>
+<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.adapter.thin/lib/phosphorus-gmpls -->
+		<!-- SHA1: e936c4609ae703d1f7471eaca781618e9945fdd7 -->
+		<dependency>
+			<groupId>eu.ist_phosphorus.harmony</groupId>
+			<artifactId>gmpls-bindings</artifactId>
+			<version>1</version>
+		</dependency>
 
 
 
@@ -176,18 +183,11 @@
 		<!-- SHA1: 641ac2bd2a44cb2bf015436528e7dd0165e68c1f -->
 		<dependency>
 			<groupId>com.adventnet.snmp</groupId>
-			<artifactId>adventnet-snmp </artifactId>
+			<artifactId>adventnet-snmp</artifactId>
 			<version>1</version>
 		</dependency>
 
-		<!-- /home/santiago/projects/harmony/ist-phosphours-wp1.harmony.src/harmony.adapter.thin/lib/phosphorus-gmpls -->
-		<!-- SHA1: e936c4609ae703d1f7471eaca781618e9945fdd7 -->
-		<dependency>
-			<groupId>eu.ist_phosphorus.gmpls</groupId>
-			<artifactId>phosphorus-gmpls </artifactId>
-			<version>1</version>
-		</dependency>
-
+		
 
 
 	</dependencies>

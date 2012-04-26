@@ -785,7 +785,7 @@ public final class DbManager {
      * @return
      */
     public static boolean insertEndpoint(
-	    final eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointType endpoint) {
+	    final org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointType endpoint) {
 	int count = 0;
 	try {
 	    Connection con = DbConnectionManager.getConnection();

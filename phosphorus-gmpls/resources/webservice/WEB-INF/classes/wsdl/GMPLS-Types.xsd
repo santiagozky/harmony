@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gmpls="http://ist_phosphorus.eu/gmpls/webservice"
+	xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2"
+	targetNamespace="http://ist_phosphorus.eu/gmpls/webservice">
+	<xs:import
+		namespace="http://docs.oasis-open.org/wsrf/bf-2"
+		schemaLocation="./wsrf/WS-BaseFaults-1_2.xsd" />
+
+	<!-- 
+	Create Path
+	-->
+	<xs:element name="createPath">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="createPath" 
+					type="gmpls:CreatePathType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="createPathResponse">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="createPathResponse"
+					type="gmpls:CreatePathResponseType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+<xs:element name="UnexpectedFault">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="wsbf:BaseFaultType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="sourceTNAFault">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="wsbf:BaseFaultType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="destinationTNAFault">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="wsbf:BaseFaultType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="createPathFault">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="wsbf:BaseFaultType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="bandwidthFault">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="wsbf:BaseFaultType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- 
+	Terminate Path
+	-->
+	<xs:element name="terminatePath">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="terminatePath"
+					type="gmpls:TerminatePathType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="terminatePathResponse">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="terminatePathResponse"
+					type="gmpls:TerminatePathResponseType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="pathNotFoundFault">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="wsbf:BaseFaultType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- 
+	Get List of paths
+	-->
+	<xs:element name="getPathDiscovery">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="getPathDiscovery"
+					type="gmpls:GetPathDiscoveryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getPathDiscoveryResponse">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="getPathDiscoveryResponse"
+					type="gmpls:GetPathDiscoveryResponseType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- 
+	Get Path Status
+	-->
+	<xs:element name="getPathStatus">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="getPathStatus"
+					type="gmpls:GetPathStatusType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getPathStatusResponse">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="getPathStatusResponse"
+					type="gmpls:GetPathStatusResponseType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- 
+	Get Topology
+	-->
+	<xs:element name="getEndpointDiscovery">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="getEndpointDiscovery"
+					type="gmpls:getEndpointDiscoveryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getEndpointDiscoveryResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="getEndpointDiscoveryResponse"
+					type="gmpls:getEndpointDiscoveryResponseType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- 
+	Create Path
+	-->
+	<xs:complexType name="CreatePathType">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="Path" type="gmpls:PathType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CreatePathResponseType">
+		<xs:sequence>
+			<xs:element name="PathIdentifier" type="gmpls:PathIdentifierType">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	Terminate Path
+	-->
+	<xs:complexType name="TerminatePathType">
+		<xs:sequence>
+			<xs:element name="PathIdentifier" type="gmpls:PathIdentifierType" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="Status" type="gmpls:StatusType" maxOccurs="1"
+				minOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>
+						Cause of terminate request.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		
+	</xs:complexType>
+
+	<xs:complexType name="TerminatePathResponseType"></xs:complexType>
+	<!-- 
+	Get List of paths
+	-->
+	<xs:complexType name="GetPathDiscoveryType"></xs:complexType>
+
+	<xs:complexType name="GetPathDiscoveryResponseType">
+		<xs:sequence>
+		<xs:element name="PathIdentifierList" type="gmpls:PathIdentifierType" minOccurs="0"
+				maxOccurs="unbounded">
+			<xs:annotation>
+					<xs:documentation></xs:documentation>
+			</xs:annotation>
+		</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	Get Path Status
+	-->
+	<xs:complexType name="GetPathStatusType">
+		<xs:sequence>
+			<xs:element name="PathIdentifier" type="gmpls:PathIdentifierType" minOccurs="1"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GetPathStatusResponseType">
+		<xs:sequence>
+			<xs:element name="Path" type="gmpls:PathType"
+				minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	Get Topology
+	-->
+	<xs:complexType name="getEndpointDiscoveryType">	</xs:complexType>
+	<xs:complexType name="getEndpointDiscoveryResponseType">
+		<xs:sequence>
+			<xs:element name="Endpoint" type="gmpls:EndpointType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+	Other Types
+	-->
+	<xs:complexType name="PathType">
+		<xs:sequence>
+			<xs:element name="SourceTNA" type="xs:string" maxOccurs="1"
+				minOccurs="1" />
+			<xs:element name="DestinationTNA" type="xs:string"
+				minOccurs="1" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Bandwidth" type="xs:int" maxOccurs="1"
+				minOccurs="1" />
+		</xs:sequence>		
+	</xs:complexType>
+
+	<xs:complexType name="PathIdentifierType">
+		<xs:sequence>
+			<xs:element name="PathIdentifier" type="xs:int" maxOccurs="1"
+				minOccurs="1" />
+			</xs:sequence>		
+	</xs:complexType>
+  
+  <xs:simpleType name="StatusType">
+		<xs:annotation>
+			<xs:documentation>
+                    		Enumeration of possible service / connection status values.
+                	</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="active"/>
+			<xs:enumeration value="setup_in_progress"/>
+			<xs:enumeration value="teardown_in_progress"/>
+			<xs:enumeration value="completed"/>
+			<xs:enumeration value="pending"/>
+			<xs:enumeration value="cancelled_by_user"/>
+			<xs:enumeration value="cancelled_by_system"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+  <xs:complexType name="EndpointType">
+		<xs:annotation>
+			<xs:documentation>
+				Information about an endpoint
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EndpointId" type="gmpls:EndpointIdentifierType">
+				<xs:annotation>
+					<xs:documentation>TNA</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Endpoint Name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Description provided by the user that creates
+						the endpoint object, e.g. port5 in switch
+						OME-NY01 allocated for apllication Z.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Interface" type="gmpls:EndpointInterfaceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Local or inter-domain endpoint?</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DomainId" type="gmpls:DomainIdentifierType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ID of the domain this endpoint is located in</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Bandwidth" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Bandwidth of the port in Mbps
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="DomainIdentifierType">
+		<xs:annotation>
+			<xs:documentation>
+				Type used to identify the domain
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+  
+  <xs:simpleType name="EndpointIdentifierType">
+		<xs:annotation>
+			<xs:documentation>
+				Type used to identify endpoints
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gmpls:TNAType"/>
+	</xs:simpleType>
+	<xs:simpleType name="EndpointInterfaceType">
+		<xs:annotation>
+			<xs:documentation>
+					Inter-domain, local end point
+				</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="user"/>
+			<xs:enumeration value="border"/>
+		</xs:restriction>
+	</xs:simpleType>
+    <xs:simpleType name="TNAType">
+		<xs:annotation>
+			<xs:documentation>
+                                Type used to TNA addresses
+                        </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+</xs:schema>

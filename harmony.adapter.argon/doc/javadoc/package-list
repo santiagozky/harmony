@@ -1,5 +1,5 @@
-eu.ist_phosphorus.harmony.adapter.argon
+org.opennaas.extension.gmpls.harmony.adapter.argon
 org.opennaas.extension.idb.da.argon.handler
 org.opennaas.extension.idb.da.argon.implementation
 org.opennaas.extension.idb.da.argon.webservice
-eu.ist_phosphorus.harmony.test.adapter.argon.webservice
+org.opennaas.extension.gmpls.harmony.test.adapter.argon.webservice

@@ -1,6 +1,6 @@
-eu.ist_phosphorus.harmony.adapter.uclp
+org.opennaas.extension.gmpls.harmony.adapter.uclp
 org.opennaas.extension.idb.da.argia.handler
 org.opennaas.extension.idb.da.argia.implementation
 org.opennaas.extension.idb.da.argia.utils
 org.opennaas.extension.idb.da.argia.webservice
-eu.ist_phosphorus.harmony.test.adapter.uclp.webservice
+org.opennaas.extension.gmpls.harmony.test.adapter.uclp.webservice

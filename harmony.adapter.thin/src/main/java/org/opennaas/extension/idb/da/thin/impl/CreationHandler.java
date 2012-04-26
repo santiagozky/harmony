@@ -36,8 +36,8 @@ import org.apache.log4j.Logger;
 import org.apache.muse.ws.addressing.soap.SoapFault;
 import org.quartz.SchedulerException;
 
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.CreatePathResponse;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.CreatePathResponseType;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.CreatePathResponse;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.CreatePathResponseType;
 import org.opennaas.extension.idb.da.thin.persistence.DbManager;
 import org.opennaas.extension.idb.da.thin.persistence.exceptions.DestinationPortUnavailableException;
 import org.opennaas.extension.idb.da.thin.persistence.exceptions.PathNotFoundException;
@@ -95,7 +95,7 @@ public final class CreationHandler {
      */
     public static int setUpConnection(final GmplsConnection gmplsConnection)
 	    throws SoapFault {
-	AJaxbSerializer jserGmpls = eu.ist_phosphorus.gmpls.serviceinterface.databinding.utils.JaxbSerializer
+	AJaxbSerializer jserGmpls = org.opennaas.extension.gmpls.serviceinterface.databinding.utils.JaxbSerializer
 		.getInstance();
 	try {
 	    gmplsConnection.setStatus(StatusType.SETUP_IN_PROGRESS);

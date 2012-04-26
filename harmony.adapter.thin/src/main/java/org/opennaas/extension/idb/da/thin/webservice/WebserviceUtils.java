@@ -35,9 +35,9 @@ import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType
 public class WebserviceUtils {
 
     public static List<EndpointType> convert(
-	    List<eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointType> gmplsEndpointList) {
+	    List<org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointType> gmplsEndpointList) {
 	List<EndpointType> harmonyEndpoints = new ArrayList<EndpointType>();
-	for (eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointType gmplsEndpointType : gmplsEndpointList) {
+	for (org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointType gmplsEndpointType : gmplsEndpointList) {
 	    harmonyEndpoints.add(convert(gmplsEndpointType));
 	}
 
@@ -45,7 +45,7 @@ public class WebserviceUtils {
     }
 
     public static EndpointType convert(
-	    eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointType gmplsEndpoint) {
+	    org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointType gmplsEndpoint) {
 	EndpointType harmonyEndpoint = new EndpointType();
 	harmonyEndpoint.setBandwidth(gmplsEndpoint.getBandwidth());
 	harmonyEndpoint.setDescription(gmplsEndpoint.getDescription());
@@ -58,7 +58,7 @@ public class WebserviceUtils {
     }
 
     public static EndpointInterfaceType convert(
-	    eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointInterfaceType gmplsEndpointInterfaceType) {
+	    org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointInterfaceType gmplsEndpointInterfaceType) {
 	switch (gmplsEndpointInterfaceType) {
 	case BORDER:
 	    return EndpointInterfaceType.BORDER;

@@ -39,10 +39,10 @@ import org.apache.muse.ws.addressing.EndpointReference;
 import org.apache.muse.ws.addressing.soap.SoapFault;
 import org.quartz.SchedulerException;
 
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.GetEndpointDiscovery;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.GetEndpointDiscoveryResponse;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.GetEndpointDiscoveryType;
-import eu.ist_phosphorus.gmpls.webservice.GmplsClient;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.GetEndpointDiscovery;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.GetEndpointDiscoveryResponse;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.GetEndpointDiscoveryType;
+import org.opennaas.extension.gmpls.webservice.GmplsClient;
 import org.opennaas.extension.idb.da.thin.persistence.DbManager;
 import org.opennaas.extension.idb.da.thin.persistence.orm.GmplsConnection;
 import org.opennaas.extension.idb.da.thin.impl.CancelHandler;
@@ -76,14 +76,14 @@ public class ContextListener extends AbstractTopologyRegistrator {
      * 
      * @return list of endpoints
      */
-    private List<eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointType> pullEndpoints() {
-	List<eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointType> endpoints = null;
+    private List<org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointType> pullEndpoints() {
+	List<org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointType> endpoints = null;
 
 	final GetEndpointDiscoveryType gtt = new GetEndpointDiscoveryType();
 	final GetEndpointDiscovery gt = new GetEndpointDiscovery();
 	gt.setGetEndpointDiscovery(gtt);
 
-	AJaxbSerializer jser = eu.ist_phosphorus.gmpls.serviceinterface.databinding.utils.JaxbSerializer
+	AJaxbSerializer jser = org.opennaas.extension.gmpls.serviceinterface.databinding.utils.JaxbSerializer
 		.getInstance();
 
 	try {
@@ -93,7 +93,7 @@ public class ContextListener extends AbstractTopologyRegistrator {
 	    endpoints = gmplsResponse.getGetEndpointDiscoveryResponse()
 		    .getEndpoint();
 
-	    for (eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.EndpointType endpointType : endpoints) {
+	    for (org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.EndpointType endpointType : endpoints) {
 		DbManager.insertEndpoint(endpointType);
 	    }
 

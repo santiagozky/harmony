@@ -114,6 +114,12 @@
 			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-serviceinterface </artifactId>
 			<version>1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xercesImpl</artifactId>
+					<groupId>org.apache.xerces</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>

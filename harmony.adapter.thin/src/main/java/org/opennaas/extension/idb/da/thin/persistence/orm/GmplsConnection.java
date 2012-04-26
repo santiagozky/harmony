@@ -38,12 +38,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.apache.log4j.Logger;
 
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.CreatePath;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.CreatePathType;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.PathIdentifierType;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.PathType;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.TerminatePath;
-import eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.TerminatePathType;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.CreatePath;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.CreatePathType;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.PathIdentifierType;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.PathType;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.TerminatePath;
+import org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.TerminatePathType;
 import org.opennaas.extension.idb.da.thin.persistence.DbManager;
 import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
 import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.UnexpectedFaultException;
@@ -309,7 +309,7 @@ public class GmplsConnection {
      * @return the request
      */
     public final TerminatePath getTerminatePathRequest(
-	    eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.StatusType status) {
+	    org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.StatusType status) {
 	final TerminatePathType tpt = new TerminatePathType();
 	final TerminatePath tp = new TerminatePath();
 	final PathIdentifierType pathId = new PathIdentifierType();

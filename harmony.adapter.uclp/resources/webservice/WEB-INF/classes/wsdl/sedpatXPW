@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ This code is part of the Harmony System implemented in Work Package 1 
+ of the Phosphorus project. This work is supported by the European 
+ Comission under the Sixth Framework Programme with contract number 
+ IST-034115.
+
+ Copyright (C) 2006-2009 Phosphorus WP1 partners. Phosphorus Consortium.
+ http://ist-phosphorus.eu/
+
+ This is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of
+ the License, or (at your option) any later version.
+ 
+ This software is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Lesser General Public License for more details.
+ 
+ You should have received a copy of the GNU Lesser General Public
+ License along with this software; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+<definitions
+    targetNamespace="http://ist_phosphorus.eu/nsp/webservice/topology"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:ns="http://ist_phosphorus.eu/nsp/webservice/topology"
+    xmlns:ns1="http://ist_phosphorus.eu/NSPCommon"
+    xmlns:ns2="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:ns3="http://ist_phosphorus.eu/nsp"
+    xmlns:ns4="http://docs.oasis-open.org/wsrf/bf-2"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:topology="http://ist_phosphorus.eu/nsp/webservice/topology"
+    xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <types>
+        <xs:schema>
+            <xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/topology"/>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://ist_phosphorus.eu/nsp/webservice/topology"
+            xmlns:nspc="http://ist_phosphorus.eu/nsp"
+            xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:y="http://ist_phosphorus.eu/nsp/webservice/topology">
+            <xs:import namespace="http://ist_phosphorus.eu/nsp"/>
+            <xs:import namespace="http://docs.oasis-open.org/wsrf/bf-2"/>
+            <xs:complexType name="LinkIdentifierType">
+                <xs:sequence>
+                    <xs:element name="SourceEndpoint" type="nspc:EndpointIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Source end point of the link
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="DestinationEndpoint" type="nspc:EndpointIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Destination end point of the link
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Link">
+                <xs:complexContent>
+                    <xs:extension base="y:LinkIdentifierType">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="Name" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>
+						Name of the link
+					</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="Description" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>
+						Description of the link
+					</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>

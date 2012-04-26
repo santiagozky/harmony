@@ -62,7 +62,7 @@ public class TearDownJob implements Job {
     public final void execute(final JobExecutionContext context) {
 	Logger logger = PhLogger.getLogger(this.getClass());
 	JobDataMap dataMap = context.getJobDetail().getJobDataMap();
-	AJaxbSerializer jser = eu.ist_phosphorus.gmpls.serviceinterface.databinding.utils.JaxbSerializer.getInstance();
+	AJaxbSerializer jser = org.opennaas.extension.gmpls.serviceinterface.databinding.utils.JaxbSerializer.getInstance();
 	GmplsConnection con = (GmplsConnection) dataMap.get("request");
 
 	try {
@@ -83,7 +83,7 @@ public class TearDownJob implements Job {
 				.terminatePath(
 					(jser
 						.objectToElement(con
-							.getTerminatePathRequest(eu.ist_phosphorus.gmpls.serviceinterface.databinding.jaxb.StatusType.COMPLETED)))));
+							.getTerminatePathRequest(org.opennaas.extension.gmpls.serviceinterface.databinding.jaxb.StatusType.COMPLETED)))));
 		logger.debug("Path terminated");
 		con.setStatus(StatusType.COMPLETED);
 		DbManager.updateStatus(con, "Connection has been Completed");

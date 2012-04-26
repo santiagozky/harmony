@@ -23,6 +23,7 @@
 		<module>harmony.ui.reservationcli</module>
 		<module>harmony.ui.topologygui</module>
 		<module>harmony.ui.webgui</module>
+		<module>phosphorus-gmpls</module>
 
   </modules>
 <properties>
