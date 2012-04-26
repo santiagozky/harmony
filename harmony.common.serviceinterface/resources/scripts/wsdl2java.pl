@@ -94,13 +94,13 @@ sub renameFiles {
 #
 sub copyFiles {
 	system("mkdir -p $out");
-
+     system("mkdir -p $ENV{'DIR_LOG'}");
 	if ($type eq "client") {
 		renameFiles();
 	}
 
 	my $call = "cp -r $in/* $out >> $ENV{'DIR_LOG'}/generator.log";
-
+     print "copying files from \n\t\t$in to \n\t\t $out\n";
 	system($call);
 }
 
