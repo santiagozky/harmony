@@ -1,9 +1,0 @@
-<cnl:CNLAuthnTicket xmlns:AAA="http://www.AAAarch.org/ns/AAA_BoD" xmlns:cnl="http://www.aaauthreach.org/ns/#CNL" Issuer="http://www.AAAarch.org/servers/AAA" TicketID="a392a20157698d201d77b2c6e8e444ef">
-<!-- Mandatory elements -->
-<cnl:Validity NotBefore="2005-02-16T16:51:33.435Z" NotOnOrAfter="2005-02-17T16:51:33.435Z"></cnl:Validity>
-<cnl:Subject Id="subject">
-<cnl:SubjectID>WHO740@users.collaboratory.nl</cnl:SubjectID>
-<cnl:SubjectConfirmationData>SeDFGVHYTY83ZXxEdsweOP8Iok</cnl:SubjectConfirmationData>
-<!--Optional elements -->
-<cnl:SubjectAttribute attrname="urn:cnl:subject:attribute:job-id">CNL2-XPS1-2005-02-02</cnl:SubjectAttribute><cnl:SubjectAttribute attrname="urn:cnl:subject:attribute:role">analyst@JobID;expert@JobID</cnl:SubjectAttribute>
-</cnl:Subject></cnl:CNLAuthnTicket>

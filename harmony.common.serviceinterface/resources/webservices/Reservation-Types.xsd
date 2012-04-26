@@ -25,13 +25,13 @@
 
 -->
 <xs:schema xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2"
-	xmlns:nspc="http://ist_phosphorus.eu/nsp" xmlns:nsp="http://ist_phosphorus.eu/nsp/webservice/reservation"
-	xmlns:not="http://ist_phosphorus.eu/nsp/webservice/notification"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ist_phosphorus.eu/nsp/webservice/reservation"
+	xmlns:nspc="http://opennaas.org/nsp" xmlns:nsp="http://opennaas.org/nsp/webservice/reservation"
+	xmlns:not="http://opennaas.org/nsp/webservice/notification"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://opennaas.org/nsp/webservice/reservation"
 	elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:import namespace="http://ist_phosphorus.eu/nsp"
+	<xs:import namespace="http://opennaas.org/nsp"
 		schemaLocation="CommonTypes.xsd" />
-	<xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/notification"
+	<xs:import namespace="http://opennaas.org/nsp/webservice/notification"
 		schemaLocation="Notification-Types.xsd" />
 	<xs:import namespace="http://docs.oasis-open.org/wsrf/bf-2"
 		schemaLocation="./wsrf/WS-BaseFaults-1_2.xsd" />

@@ -1,8 +1,0 @@
-<cnl:CNLAuthzToken xmlns:cnl="http://www.aaauthreach.org/ns/#CNL" TicketID="b2635505f34fc69b8362f06a5c88f109" SessionIndex="JobXPS1-2005-001" Issuer="http://www.AAAarch.org/servers/AAA">
-	<cnl:Validity NotBefore="2005-02-11T10:10:58.711Z" NotOnOrAfter="2005-02-12T10:10:58.711Z"/>
-	<cnl:TokenValue>
-mpcA3mOOnkVGFMRNh2t+6M0dq0o2PiLpCJRP9TBH931Pik66tS9v6xdfjECXFDp3YoC9SkLdWPCW
-2a8O3tiJa0YsbhxAQMnXp3VrTGrOvOlG1BY1eYhB3ZSLq+8Avbk6TT19tg+kvTb0rANqye+ssfuE
-Vgp76sEOP5y8EofQbdE=
-	</cnl:TokenValue>
-</cnl:CNLAuthzToken>

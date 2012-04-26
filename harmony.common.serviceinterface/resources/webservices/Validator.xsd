@@ -33,13 +33,13 @@ Note:
 If import has the same target namespace as this file use include, else import.
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	targetNamespace="http://ist_phosphorus.eu/nsp"
+	targetNamespace="http://opennaas.org/nsp"
 	elementFormDefault="qualified" attributeFormDefault="unqualified">
 	
 	<xs:include schemaLocation="CommonTypes.xsd"/>
 	
-	<xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/reservation" schemaLocation="Reservation-Types.xsd"/>
-	<xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/topology" schemaLocation="Topology-Types.xsd"/>
-	<xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/notification" schemaLocation="Notification-Types.xsd"/>
+	<xs:import namespace="http://opennaas.org/nsp/webservice/reservation" schemaLocation="Reservation-Types.xsd"/>
+	<xs:import namespace="http://opennaas.org/nsp/webservice/topology" schemaLocation="Topology-Types.xsd"/>
+	<xs:import namespace="http://opennaas.org/nsp/webservice/notification" schemaLocation="Notification-Types.xsd"/>
 	<xs:import namespace="http://docs.oasis-open.org/wsrf/bf-2" schemaLocation="./wsrf/WS-BaseFaults-1_2.xsd"/>
 </xs:schema>

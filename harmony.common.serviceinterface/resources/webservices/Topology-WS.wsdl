@@ -24,10 +24,10 @@
  02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 -->
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:topology="http://ist_phosphorus.eu/nsp/webservice/topology" xmlns:ns="http://ist_phosphorus.eu/nsp/webservice/topology" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:ns1="http://ist_phosphorus.eu/NSPCommon" xmlns:ns2="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns3="http://ist_phosphorus.eu/nsp" xmlns:ns4="http://docs.oasis-open.org/wsrf/bf-2" targetNamespace="http://ist_phosphorus.eu/nsp/webservice/topology">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:topology="http://opennaas.org/nsp/webservice/topology" xmlns:ns="http://opennaas.org/nsp/webservice/topology" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:ns1="http://opennaas.org/NSPCommon" xmlns:ns2="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns3="http://opennaas.org/nsp" xmlns:ns4="http://docs.oasis-open.org/wsrf/bf-2" targetNamespace="http://opennaas.org/nsp/webservice/topology">
 	<types>
 		<xs:schema>
-			<xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/topology" schemaLocation="Topology-Types.xsd"/>
+			<xs:import namespace="http://opennaas.org/nsp/webservice/topology" schemaLocation="Topology-Types.xsd"/>
 		</xs:schema>
 	</types>
 	<message name="addEndpoint">
@@ -135,8 +135,8 @@
 	<portType name="TopologyIFPortType">
 		<operation name="addOrEditDomain">
 			<documentation>Adds or edits a domain.</documentation>
-			<input message="topology:addOrEditDomain" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addOrEditDomain"/>
-			<output message="topology:addOrEditDomainResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addOrEditDomainResponse"/>
+			<input message="topology:addOrEditDomain" wsa:Action="http://opennaas.org/nsp/webservice/topology/addOrEditDomain"/>
+			<output message="topology:addOrEditDomainResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/addOrEditDomainResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -144,8 +144,8 @@
 		</operation>
 		<operation name="addDomain">
 			<documentation>Adds the domain to the NSP.</documentation>
-			<input message="topology:addDomain" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addDomain"/>
-			<output message="topology:addDomainResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addDomainResponse"/>
+			<input message="topology:addDomain" wsa:Action="http://opennaas.org/nsp/webservice/topology/addDomain"/>
+			<output message="topology:addDomainResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/addDomainResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -154,8 +154,8 @@
 		</operation>
 		<operation name="deleteDomain">
 			<documentation>Deletes the domain from the NSP.</documentation>
-			<input message="topology:deleteDomain" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/deleteDomain"/>
-			<output message="topology:deleteDomainResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/deleteDomainResponse"/>
+			<input message="topology:deleteDomain" wsa:Action="http://opennaas.org/nsp/webservice/topology/deleteDomain"/>
+			<output message="topology:deleteDomainResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/deleteDomainResponse"/>
 			<fault name="DomainNotFoundFault" message="topology:DomainNotFoundFault"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
@@ -164,8 +164,8 @@
 		</operation>
 		<operation name="editDomain">
 			<documentation>Edits the specified domain link available in the NSP.</documentation>
-			<input name="editDomain" message="topology:editDomain" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/editDomain"/>
-			<output message="topology:editDomainResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/editDomainResponse"/>
+			<input name="editDomain" message="topology:editDomain" wsa:Action="http://opennaas.org/nsp/webservice/topology/editDomain"/>
+			<output message="topology:editDomainResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/editDomainResponse"/>
 			<fault name="DomainNotFoundFault" message="topology:DomainNotFoundFault"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
@@ -174,8 +174,8 @@
 		</operation>
 		<operation name="getDomains">
 			<documentation>Retrieves all domains added to the NSP.</documentation>
-			<input message="topology:getDomains" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/getDomains"/>
-			<output message="topology:getDomainsResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/getDomainsResponse"/>
+			<input message="topology:getDomains" wsa:Action="http://opennaas.org/nsp/webservice/topology/getDomains"/>
+			<output message="topology:getDomainsResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/getDomainsResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -183,8 +183,8 @@
 		</operation>
 		<operation name="addEndpoint">
 			<documentation>Adds an endpoint to the NSP.</documentation>
-			<input message="topology:addEndpoint" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addEndpoint"/>
-			<output message="topology:addEndpointResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addEndpointResponse"/>
+			<input message="topology:addEndpoint" wsa:Action="http://opennaas.org/nsp/webservice/topology/addEndpoint"/>
+			<output message="topology:addEndpointResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/addEndpointResponse"/>
 			<fault name="DomainNotFoundFault" message="topology:DomainNotFoundFault"/>
 			<fault name="EndpointAlreadyExistsFault" message="topology:EndpointAlreadyExistsFault"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
@@ -194,8 +194,8 @@
 		</operation>
 		<operation name="deleteEndpoint">
 			<documentation>Deletes an endpoint from the NSP.</documentation>
-			<input message="topology:deleteEndpoint" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/deleteEndpoint"/>
-			<output message="topology:deleteEndpointResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/deleteEndpointResponse"/>
+			<input message="topology:deleteEndpoint" wsa:Action="http://opennaas.org/nsp/webservice/topology/deleteEndpoint"/>
+			<output message="topology:deleteEndpointResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/deleteEndpointResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -203,8 +203,8 @@
 		</operation>
 		<operation name="editEndpoint">
 			<documentation>Edits the specified endpoint link available in the NSP.</documentation>
-			<input message="topology:editEndpoint" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/editEndpoint"/>
-			<output message="topology:editEndpointResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/editEndpointResponse"/>
+			<input message="topology:editEndpoint" wsa:Action="http://opennaas.org/nsp/webservice/topology/editEndpoint"/>
+			<output message="topology:editEndpointResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/editEndpointResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -212,8 +212,8 @@
 		</operation>
 		<operation name="getEndpoints">
 			<documentation>Retrieves all endpoints added to the NSP.</documentation>
-			<input message="topology:getEndpoints" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/getEndpoints"/>
-			<output message="topology:getEndpointsResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/getEndpointsResponse"/>
+			<input message="topology:getEndpoints" wsa:Action="http://opennaas.org/nsp/webservice/topology/getEndpoints"/>
+			<output message="topology:getEndpointsResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/getEndpointsResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -221,8 +221,8 @@
 		</operation>
 		<operation name="addLink">
 			<documentation></documentation>
-			<input message="topology:addLink" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addLink"/>
-			<output message="topology:addLinkResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/addLinkResponse"/>
+			<input message="topology:addLink" wsa:Action="http://opennaas.org/nsp/webservice/topology/addLink"/>
+			<output message="topology:addLinkResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/addLinkResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -230,8 +230,8 @@
 		</operation>
 		<operation name="deleteLink">
 			<documentation></documentation>
-			<input message="topology:deleteLink" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/deleteLink"/>
-			<output message="topology:deleteLinkResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/deleteLinkResponse"/>
+			<input message="topology:deleteLink" wsa:Action="http://opennaas.org/nsp/webservice/topology/deleteLink"/>
+			<output message="topology:deleteLinkResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/deleteLinkResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -239,8 +239,8 @@
 		</operation>
 		<operation name="editLink">
 			<documentation></documentation>
-			<input message="topology:editLink" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/editLink"/>
-			<output message="topology:editLinkResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/editLinkResponse"/>
+			<input message="topology:editLink" wsa:Action="http://opennaas.org/nsp/webservice/topology/editLink"/>
+			<output message="topology:editLinkResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/editLinkResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -248,8 +248,8 @@
 		</operation>
 		<operation name="getLinks">
 			<documentation></documentation>
-			<input message="topology:getLinks" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/getLinks"/>
-			<output message="topology:getLinksResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/topology/getLinksResponse"/>
+			<input message="topology:getLinks" wsa:Action="http://opennaas.org/nsp/webservice/topology/getLinks"/>
+			<output message="topology:getLinksResponse" wsa:Action="http://opennaas.org/nsp/webservice/topology/getLinksResponse"/>
 			<fault name="UnexpectedFault" message="topology:UnexpectedFault"/>
 			<fault name="InvalidRequestFault" message="topology:InvalidRequestFault"/>
 			<fault name="OperationNotAllowedFault" message="topology:OperationNotAllowedFault"/>
@@ -259,7 +259,7 @@
 	<binding name="topologyIFBinding" type="topology:TopologyIFPortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<operation name="addOrEditDomain">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/addOrEditDomain" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/addOrEditDomain" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -280,7 +280,7 @@
 			</fault>
 		</operation>
 		<operation name="addDomain">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/addDomain" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/addDomain" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -304,7 +304,7 @@
 			</fault>
 		</operation>
 		<operation name="deleteDomain">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/deleteDomain" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/deleteDomain" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -328,7 +328,7 @@
 			</fault>
 		</operation>
 		<operation name="editDomain">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/editDomain" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/editDomain" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -352,7 +352,7 @@
 			</fault>
 		</operation>
 		<operation name="getDomains">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/getDomains" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/getDomains" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -373,7 +373,7 @@
 			</fault>
 		</operation>
 		<operation name="addEndpoint">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/addEndpoint" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/addEndpoint" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -400,7 +400,7 @@
 			</fault>
 		</operation>
 		<operation name="deleteEndpoint">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/deleteEndpoint" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/deleteEndpoint" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -421,7 +421,7 @@
 			</fault>
 		</operation>
 		<operation name="editEndpoint">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/editEndpoint" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/editEndpoint" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -442,7 +442,7 @@
 			</fault>
 		</operation>
 		<operation name="getEndpoints">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/getEndpoints" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/getEndpoints" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -463,7 +463,7 @@
 			</fault>
 		</operation>
 		<operation name="addLink">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/addLink" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/addLink" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -484,7 +484,7 @@
 			</fault>
 		</operation>
 		<operation name="deleteLink">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/deleteLink" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/deleteLink" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -505,7 +505,7 @@
 			</fault>
 		</operation>
 		<operation name="editLink">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/editLink" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/editLink" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>
@@ -526,7 +526,7 @@
 			</fault>
 		</operation>
 		<operation name="getLinks">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/topology/getLinks" style="document"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/topology/getLinks" style="document"/>
 			<input>
 				<soap:body use="literal"/>
 			</input>

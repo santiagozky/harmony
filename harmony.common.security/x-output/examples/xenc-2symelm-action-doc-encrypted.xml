@@ -1,9 +1,0 @@
-<!-- Comment before --><AAA:AAARequest Id="CNLhashID#" cnl:attr1="CNL2test#" version="2.0" xmlns="" xmlns:AAA="http://www.aaauthreach.org/ns/#AAA" xmlns:cnl="http://www.telin.nl/ns/#cnl">
-<AAA:Subject Id="subject" xmlns="" xmlns:AAA="http://www.aaauthreach.org/ns/#AAA" xmlns:cnl="http://www.telin.nl/ns/#cnl">Subject element will contain the SubjectID, AuthN token and Subject attributes
-</AAA:Subject>
-<AAA:Resource xmlns="" xmlns:AAA="http://www.aaauthreach.org/ns/#AAA" xmlns:cnl="http://www.telin.nl/ns/#cnl">Resource element defines the target resource
-</AAA:Resource>
-<AAA:Action xmlns="" xmlns:AAA="http://www.aaauthreach.org/ns/#AAA" xmlns:cnl="http://www.telin.nl/ns/#cnl"><xenc:EncryptedData Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"/><ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-<xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#kw-tripledes" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"/><xenc:CipherData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:CipherValue xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">WritRRcuENN5cSyHcUP9aYJtQTignD0ygSqFq+8mTLI=</xenc:CipherValue></xenc:CipherData></xenc:EncryptedKey></ds:KeyInfo><xenc:CipherData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:CipherValue xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">CCKri59BdCFKHEZPvBIkqH+57wGHT5cLDzkiQ5GJNRHOFSLsZSl1DyBVezRgNgR9YmqnjJul6rlT
-CjrsXwV9FP1vtXntYR1k0x6UPHd54/A=</xenc:CipherValue></xenc:CipherData></xenc:EncryptedData></AAA:Action>
-</AAA:AAARequest><!-- Comment after -->

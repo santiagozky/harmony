@@ -9,28 +9,21 @@
   <packaging>pom</packaging>
 
   <modules>
+		<module>idb-entities</module>
 		<module>harmony.adapter.argon</module>
-		<module>harmony.adapter.arrm</module>
 		<module>harmony.adapter.dummy</module>
 		<module>harmony.adapter.thin</module>
 		<module>harmony.adapter.uclp</module>
-		<module>harmony.common.ant</module>
-		<module>harmony.common.security</module>
-		<!-- module>harmony.common.serviceinterface</module -->
+		<module>harmony.common.serviceinterface</module>
 		<module>harmony.common.utils</module>
 		<module>harmony.common.synthesizer</module>
 		<module>harmony.database</module>
-		<module>idb-entities</module>
 		<module>harmony.idb</module>
 		<module>harmony.notifications</module>
-		<module>harmony.template</module>
-		<module>harmony.test</module>
-		<module>harmony.translator.autobahn</module>
-		<module>harmony.translator.g2mpls</module>
-		<!--module>harmony.translator.idc</module-->
 		<module>harmony.ui.reservationcli</module>
 		<module>harmony.ui.topologygui</module>
 		<module>harmony.ui.webgui</module>
+		<module>phosphorus-gmpls</module>
 
   </modules>
 <properties>
@@ -68,6 +61,22 @@
         </testResource>
     </testResources>
   <plugins>
+  <plugin>
+    <artifactId>maven-clean-plugin</artifactId>
+    <version>2.4.1</version>
+    <configuration>
+      <filesets>
+        <fileset>
+          <directory>${basedir}</directory>
+          <includes>
+            <include>temp/</include>
+            <include>log/</include>
+          </includes>
+          <followSymlinks>false</followSymlinks>
+        </fileset>
+      </filesets>
+    </configuration>
+  </plugin>
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>

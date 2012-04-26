@@ -36,7 +36,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>eu.ist_phosphorus.harmony.ui.topologygui.TopologyClient</mainClass>
+              <mainClass>org.opennaas.ui.topology.TopologyClient</mainClass>
             </manifest>
           </archive>
         </configuration>

@@ -24,8 +24,8 @@
  02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:y="http://ist_phosphorus.eu/nsp/webservice/topology" xmlns:nspc="http://ist_phosphorus.eu/nsp" xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2" targetNamespace="http://ist_phosphorus.eu/nsp/webservice/topology" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:import namespace="http://ist_phosphorus.eu/nsp" schemaLocation="CommonTypes.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:y="http://opennaas.org/nsp/webservice/topology" xmlns:nspc="http://opennaas.org/nsp" xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2" targetNamespace="http://opennaas.org/nsp/webservice/topology" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://opennaas.org/nsp" schemaLocation="CommonTypes.xsd"/>
 	<xs:import namespace="http://docs.oasis-open.org/wsrf/bf-2" schemaLocation="./wsrf/WS-BaseFaults-1_2.xsd"/>
 	<!-- Identifier-Types _______________________________________________________-->
 	<xs:complexType name="LinkIdentifierType">

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
- 	<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
-		       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		       xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-		       xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote"> 
-		<soap:Body><mh:reservation><isbn xsi:type="xsd:string">1234567</isbn></mh:reservation></soap:Body>
-	</soap:Envelope>

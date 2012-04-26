@@ -1,3 +1,0 @@
-<AAA:AuthzToken xmlns:AAA="http://www.aaauthreach.org/ns/AAA" Issuer="http://testbed.ist-phosphorus.eu/phosphorus/aaa/TVS" SessionId="83fee67830ce5ebbed4a60152ce128e33aaddeb4" TokenId="c63f35fe37d35b335ec89b536b83148e">
-<AAA:TokenValue>9c86f7933ca963be21d2f2a8bbe262ade71a093d</AAA:TokenValue>
-</AAA:AuthzToken>

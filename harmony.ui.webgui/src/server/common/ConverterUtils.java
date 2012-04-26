@@ -35,7 +35,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
 
-import eu.ist_phosphorus.harmony.common.utils.Helpers;
+import org.opennaas.core.utils.Helpers;
 
 /**
  * @author gassen

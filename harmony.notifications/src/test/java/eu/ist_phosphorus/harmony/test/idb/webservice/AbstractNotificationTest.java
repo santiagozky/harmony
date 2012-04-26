@@ -24,13 +24,13 @@
  */
 
 
-package eu.ist_phosphorus.harmony.test.idb.webservice;
+package org.opennaas.extension.idb.test.webservice;
 
 import java.net.URISyntaxException;
 
-import eu.ist_phosphorus.harmony.common.serviceinterface.notification.SimpleNotificationClient;
-import eu.ist_phosphorus.harmony.common.utils.Config;
-import eu.ist_phosphorus.harmony.idb.webservice.NotificationWS;
+import org.opennaas.extension.idb.serviceinterface.notification.SimpleNotificationClient;
+import org.opennaas.core.utils.Config;
+import org.opennaas.extension.idb.webservice.NotificationWS;
 
 /**
  * Abstract class for all webservice based tests.

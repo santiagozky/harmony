@@ -24,7 +24,7 @@
  */
 
 
-package eu.ist_phosphorus.harmony.test.idb.webservice;
+package org.opennaas.extension.idb.test.webservice;
 
 import org.apache.muse.ws.addressing.soap.SoapFault;
 import org.junit.AfterClass;
@@ -34,30 +34,30 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.w3c.dom.Element;
 
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.AddDomainType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.AddTopicResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.AddTopicType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.ConnectionStatusType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.DomainInformationType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.EndpointType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetTopicsResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetTopicsType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.NotificationMessageType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.PublishResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.PublishType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.RemoveTopicType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.ServiceStatusType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.StatusType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.SubscribeResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.SubscribeType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.UnsubscribeType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.utils.WebserviceUtils;
-import eu.ist_phosphorus.harmony.common.utils.Config;
-import eu.ist_phosphorus.harmony.common.utils.Helpers;
-import eu.ist_phosphorus.harmony.common.utils.NotificationTopic;
-import eu.ist_phosphorus.harmony.idb.database.hibernate.Subscription;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddDomainType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionStatusType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainInformationType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceStatusType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeType;
+import org.opennaas.extension.idb.serviceinterface.databinding.utils.WebserviceUtils;
+import org.opennaas.core.utils.Config;
+import org.opennaas.core.utils.Helpers;
+import org.opennaas.core.utils.NotificationTopic;
+import org.opennaas.extension.idb.database.hibernate.Subscription;
 
 /**
  * JUnit test cases for the IDB Notification webservice.

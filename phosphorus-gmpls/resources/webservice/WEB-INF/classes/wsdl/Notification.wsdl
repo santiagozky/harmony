@@ -1,0 +1,1833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Notification-WS"
+    targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification"
+    xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+    xmlns:notification="http://ist_phosphorus.eu/nsp/webservice/notification"
+    xmlns:ns="http://ist_phosphorus.eu/NSPCommon"
+    xmlns:ns1="http://ist_phosphorus.eu/nsp"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:wsa="http://www.w3.org/2005/08/addressing"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+        <xs:schema>
+            <xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/notification"/>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification"
+            xmlns:not="http://ist_phosphorus.eu/nsp/webservice/notification"
+            xmlns:nspc="http://ist_phosphorus.eu/nsp"
+            xmlns:res="http://ist_phosphorus.eu/nsp/webservice/reservation"
+            xmlns:wsa="http://www.w3.org/2005/08/addressing"
+            xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/reservation"/>
+            <xs:import namespace="http://ist_phosphorus.eu/nsp"/>
+            <xs:import namespace="http://docs.oasis-open.org/wsrf/bf-2"/>
+            <xs:import namespace="http://www.w3.org/2005/08/addressing"/>
+            <xs:element name="subscribe">
+                <xs:annotation>
+                    <xs:documentation>
+				Subscribes a EndpointReference to a topic
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="subscribe" type="not:subscribeType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="subscribeType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1"
+                        name="ConsumerReference" type="not:ConsumerIdentifierType"/>
+                    <xs:element maxOccurs="1" minOccurs="1" name="Topic" type="not:TopicIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="subscribeResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers an subscribe message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="subscribeResponse" type="not:subscribeResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="subscribeResponseType">
+                <xs:sequence>
+                    <xs:element name="Result" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="unsubscribe">
+                <xs:annotation>
+                    <xs:documentation>
+				Unsubscribes a EndpointReference from a topic
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="unsubscribe" type="not:unsubscribeType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="unsubscribeType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1"
+                        name="ConsumerReference" type="not:ConsumerIdentifierType"/>
+                    <xs:element maxOccurs="1" minOccurs="1" name="Topic" type="not:TopicIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="unsubscribeResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers a unsubscribe message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="unsubscribeResponse" type="not:unsubscribeResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="unsubscribeResponseType">
+                <xs:sequence>
+                    <xs:element name="Result" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="getTopics">
+                <xs:annotation>
+                    <xs:documentation>
+				Get all existing topics
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getTopics" type="not:getTopicsType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="getTopicsType">
+                <xs:sequence/>
+            </xs:complexType>
+            <xs:element name="getTopicsResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Returns all existing topics
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getTopicsResponse" type="not:getTopicsResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="getTopicsResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="Topics" type="not:TopicIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="notificationType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1" name="Topic" type="not:TopicIdentifierType"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="NotificationList" type="not:NotificationMessageType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="notificationResponseType">
+                <xs:sequence/>
+            </xs:complexType>
+            <xs:element name="publish">
+                <xs:annotation>
+                    <xs:documentation>
+				publish a message on a specific topic
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="publish" type="not:publishType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="publishType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1" name="Topic" type="not:TopicIdentifierType"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="NotificationList" type="not:NotificationMessageType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="publishResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="publishResponse" type="not:publishResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="publishResponseType">
+                <xs:sequence>
+                    <xs:element name="Result" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="addTopic">
+                <xs:annotation>
+                    <xs:documentation>
+				add a topic for notification
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="addTopic" type="not:addTopicType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="addTopicType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1" name="Topic" type="not:TopicIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="addTopicResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="addTopicResponse" type="not:addTopicResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="addTopicResponseType">
+                <xs:sequence>
+                    <xs:element name="Result" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="removeTopic">
+                <xs:annotation>
+                    <xs:documentation>
+				remove a topic from notification
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="removeTopic" type="not:removeTopicType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="removeTopicType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1" name="Topic" type="not:TopicIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="removeTopicResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="removeTopicResponse" type="not:removeTopicResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="removeTopicResponseType">
+                <xs:sequence>
+                    <xs:element name="Result" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="ConsumerIdentifierType">
+                <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+            <xs:simpleType name="TopicIdentifierType">
+                <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+            <xs:complexType name="NotificationMessageType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                        name="ServiceStatus" type="res:ServiceStatusType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Status of the reservation
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="TopicNotFoundFault">
+                <xs:annotation>
+                    <xs:documentation>
+				Returned in case a given topic is not existent.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="not:NotificationFault"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="NotificationFault">
+                <xs:complexContent>
+                    <xs:extension base="wsbf:BaseFaultType"/>
+                </xs:complexContent>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://ist_phosphorus.eu/nsp/webservice/reservation"
+            xmlns:not="http://ist_phosphorus.eu/nsp/webservice/notification"
+            xmlns:nsp="http://ist_phosphorus.eu/nsp/webservice/reservation"
+            xmlns:nspc="http://ist_phosphorus.eu/nsp"
+            xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="http://ist_phosphorus.eu/nsp"/>
+            <xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/notification"/>
+            <xs:import namespace="http://docs.oasis-open.org/wsrf/bf-2"/>
+            <xs:element name="isAvailable">
+                <xs:annotation>
+                    <xs:documentation>
+				Checks the availability of network resources
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="isAvailable" type="nsp:IsAvailableType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="isAvailableResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers an isAvailable message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="isAvailableResponse" type="nsp:IsAvailableResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="IsAvailableType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Service" type="nsp:ServiceConstraintType"/>
+                    <xs:element minOccurs="0" name="JobID" type="nsp:JobIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						If a job ID is defined, then this is a
+						pre-reservation request, else it is a
+						(permanent) reservation request. A value of 0
+						means that this request starts a new job and
+						hence, a new unique job ID is to be returned in
+						the ReqResponse.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="IsAvailableResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded"
+                        name="DetailedResult" type="nsp:ConnectionAvailabilityType"/>
+                    <xs:element minOccurs="0"
+                        name="AlternativeStartTimeOffset" type="xs:long">
+                        <xs:annotation>
+                            <xs:documentation>
+						Time offset (in seconds) to be added to start
+						times for feasible alternative start times.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="createReservation">
+                <xs:annotation>
+                    <xs:documentation>
+				Reserve network resources
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="createReservation" type="nsp:CreateReservationType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="createReservationResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers a createReservation message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="createReservationResponse" type="nsp:CreateReservationResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="CreateReservationType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Service" type="nsp:ServiceConstraintType"/>
+                    <xs:element minOccurs="0" name="JobID" type="nsp:JobIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						If a job ID is defined, then this is a
+						pre-reservation request, else it is a
+						(permanent) reservation request. A value of 0
+						means that this request starts a new job and
+						hence, a new unique job ID is to be returned in
+						the ReqResponse.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                        name="NotificationConsumerURL" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>
+						URL of a NotificationConsumer that is to be
+						notified when any of the services' status
+						changes.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CreateReservationResponseType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="JobID" type="nsp:JobIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						A new job ID is generated by the Network Service
+						Plane in reponse to a pre-reservation request
+						whose job ID was set to 0.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ReservationID" type="nsp:ReservationIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						If the reservation was successful, a new
+						reservation ID is generated.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="getReservations">
+                <xs:annotation>
+                    <xs:documentation>
+				Get all existing reservations
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getReservations" type="nsp:GetReservationsType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getReservationsResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Returns all existing reservations
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getReservationsResponse" type="nsp:GetReservationsResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="GetReservationsType">
+                <xs:annotation>
+                    <xs:documentation>
+				Get reservations ending or starting in a given time-period
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="PeriodStartTime" type="xs:dateTime">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates the beginning of the chosen time-period 
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="PeriodEndTime" type="xs:dateTime">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates the end of the chosen time-period 
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetReservationsResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="Reservation" type="nsp:GetReservationsComplexType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetReservationsComplexType">
+                <xs:sequence>
+                    <xs:element name="ReservationID" type="nsp:ReservationIdentifierType"/>
+                    <xs:element name="Reservation" type="nsp:GetReservationResponseType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="getReservation">
+                <xs:annotation>
+                    <xs:documentation>
+				Get input from createReservation request
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getReservation" type="nsp:GetReservationType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getReservationResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers a getReservation message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getReservationResponse" type="nsp:GetReservationResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="GetReservationType">
+                <xs:annotation>
+                    <xs:documentation>
+				Get input from createReservation request
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="ReservationID" type="nsp:ReservationIdentifierType"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="ServiceID" type="nsp:ServiceIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetReservationResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Service" type="nsp:ServiceConstraintType"/>
+                    <xs:element minOccurs="0" name="JobID" type="nsp:JobIdentifierType"/>
+                    <xs:element minOccurs="0"
+                        name="NotificationConsumerURL" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>
+						URL of a NotificationConsumer that is to be
+						notified when any of the services' status
+						changes.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="getStatus">
+                <xs:annotation>
+                    <xs:documentation>
+				Retrieves the status of a reservation
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getStatus" type="nsp:GetStatusType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getStatusResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers a getStatus message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="getStatusResponse" type="nsp:GetStatusResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="GetStatusType">
+                <xs:sequence>
+                    <xs:element name="ReservationID" type="nsp:ReservationIdentifierType"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="ServiceID" type="nsp:ServiceIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetStatusResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="ServiceStatus">
+                        <xs:complexType>
+                            <xs:complexContent>
+                                <xs:extension base="nsp:ServiceStatusType"/>
+                            </xs:complexContent>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="cancelReservation">
+                <xs:annotation>
+                    <xs:documentation>
+				Cancels a reservation
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cancelReservation" type="nsp:CancelReservationType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cancelReservationResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers a cancelReservation message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cancelReservationResponse" type="nsp:CancelReservationResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="CancelReservationType">
+                <xs:sequence>
+                    <xs:element name="ReservationID" type="nsp:ReservationIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						The Reservation identifier of the reservation to
+						be cancelled.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CancelReservationResponseType">
+                <xs:sequence>
+                    <xs:element name="Success" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates if the request has been successful
+						(True) or not (False)
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="completeJob">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="completeJob" type="nsp:CompleteJobType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="completeJobResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="completeJobResponse" type="nsp:CompleteJobResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="CompleteJobType">
+                <xs:sequence>
+                    <xs:element name="JobID" type="nsp:JobIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CompleteJobResponseType">
+                <xs:sequence>
+                    <xs:element name="Success" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="cancelJob">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cancelJob" type="nsp:CancelJobType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cancelJobResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cancelJobResponse" type="nsp:CancelJobResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="CancelJobType">
+                <xs:sequence>
+                    <xs:element name="JobID" type="nsp:JobIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CancelJobResponseType">
+                <xs:sequence>
+                    <xs:element name="Success" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="activate">
+                <xs:annotation>
+                    <xs:documentation>
+				Activates a service
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="activate" type="nsp:ActivateType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="activateResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers an activate message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="activateResponse" type="nsp:ActivateResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="ActivateType">
+                <xs:sequence>
+                    <xs:element name="ReservationID" type="nsp:ReservationIdentifierType"/>
+                    <xs:element name="ServiceID" type="nsp:ServiceIdentifierType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ActivateResponseType">
+                <xs:sequence>
+                    <xs:element name="Success" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates if the request has been successful
+						(True) or not (False)
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="bind">
+                <xs:annotation>
+                    <xs:documentation>
+				Create binding between NRPS endpoint and application endpoint
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="bind" type="nsp:BindType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="bindResponse">
+                <xs:annotation>
+                    <xs:documentation>
+				Answers a bind message
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="bindResponse" type="nsp:BindResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="BindType">
+                <xs:sequence>
+                    <xs:element name="ReservationID" type="nsp:ReservationIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Unique identifier of the reservation
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ServiceID" type="nsp:ServiceIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						The Service identifier of the service we want to
+						bind.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ConnectionID" type="nsp:ConnectionIdentifierType"/>
+                    <xs:element name="EndpointID" type="nspc:EndpointIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						The endpoint to bind
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="IPAdress" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>
+						List of IP adresses
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="BindResponseType">
+                <xs:sequence>
+                    <xs:element name="Success" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates if the request has been successful
+						(True) or not (False)
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="ConnectionIdentifierType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used for connection IDs (unique within a single
+				service)
+			</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:int"/>
+            </xs:simpleType>
+            <xs:simpleType name="ServiceIdentifierType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used for service IDs (unique within a single
+				reservation)
+			</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:int"/>
+            </xs:simpleType>
+            <xs:simpleType name="ReservationIdentifierType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used for reservation IDs
+			</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+            <xs:simpleType name="JobIdentifierType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used for job IDs
+			</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:long"/>
+            </xs:simpleType>
+            <xs:simpleType name="ReservationType">
+                <xs:annotation>
+                    <xs:documentation>
+                    		Type of reservation constraints: Fixed, deferrable, or malleable.
+                	</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="fixed"/>
+                    <xs:enumeration value="deferrable"/>
+                    <xs:enumeration value="malleable"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="StatusType">
+                <xs:annotation>
+                    <xs:documentation>
+                    		Enumeration of possible service / connection status values.
+                	</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="active"/>
+                    <xs:enumeration value="setup_in_progress"/>
+                    <xs:enumeration value="teardown_in_progress"/>
+                    <xs:enumeration value="completed"/>
+                    <xs:enumeration value="pending"/>
+                    <xs:enumeration value="cancelled_by_user"/>
+                    <xs:enumeration value="cancelled_by_system"/>
+                    <xs:enumeration value="unknown"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="AvailabilityCodeType">
+                <xs:annotation>
+                    <xs:documentation>
+                    		Possible return values for availability requests.
+                	</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="available"/>
+                    <xs:enumeration value="endpoint_not_available"/>
+                    <xs:enumeration value="path_not_available"/>
+                    <xs:enumeration value="availability_not_checked"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="ConnectionType">
+                <xs:annotation>
+                    <xs:documentation>
+				Stores connection data: Connection ID, involved endpoints and directionality
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="ConnectionID" type="nsp:ConnectionIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Identifier of the connection, unique
+						within a single service
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Source" type="nspc:EndpointType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Source end point TNA
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="Target" type="nspc:EndpointType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Destination(s) end point(s) TNA(s)
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Directionality" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Possible values: 0="unidirectional tree",
+						1="bidirectional tree", 3="full mesh"
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConnectionConstraintType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used to specify constraints for a requested connection.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexContent>
+                    <xs:extension base="nsp:ConnectionType">
+                        <xs:sequence>
+                            <xs:element name="MinBW" type="xs:int">
+                                <xs:annotation>
+                                    <xs:documentation>
+								Minimum bandwidth in Mbps
+							</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="MaxBW" type="xs:int">
+                                <xs:annotation>
+                                    <xs:documentation>
+								Maximum bandwidth in Mbps
+							</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="MaxDelay" type="xs:int">
+                                <xs:annotation>
+                                    <xs:documentation>
+								Maximum delay in milliseconds
+							</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="DataAmount" type="xs:long">
+                                <xs:annotation>
+                                    <xs:documentation>
+								Indicates the amount of data to be transferred,
+								in MBytes (required for and only for malleable
+								reservations!)
+							</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="ConnectionAvailabilityType">
+                <xs:annotation>
+                    <xs:documentation>
+				Stores the availability of a connection
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="ServiceID" type="nsp:ServiceIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Unique identifier of the service
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ConnectionID" type="nsp:ConnectionIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Unique identifier of the connection
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Availability" type="nsp:AvailabilityCodeType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Result of availability check for this connection
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="BlockedEndpoints" type="nspc:EndpointIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						If one or more of the requested endpoints are unavailable,
+						they are listed here
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="MaxBW" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Maximum available bandwidth in Mbps (only set if the
+						corresponding MaxBW was set in the availability request)
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConnectionStatusType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used to return status information for a connection.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexContent>
+                    <xs:extension base="nsp:ConnectionType">
+                        <xs:sequence>
+                            <xs:element name="Status" type="nsp:StatusType"/>
+                            <xs:element maxOccurs="unbounded"
+                                minOccurs="0" name="DomainStatus" type="nsp:DomainConnectionStatusType"/>
+                            <xs:element name="ActualBW" type="xs:int">
+                                <xs:annotation>
+                                    <xs:documentation>
+								Actual bandwidth in Mbps
+							</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="DomainConnectionStatusType">
+                <xs:annotation>
+                    <xs:documentation>
+				Tuple of domain ID and ConnectionStatusType
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Domain" type="nspc:DomainIdentifierType"/>
+                    <xs:element name="Status" type="nsp:ConnectionStatusType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="notification">
+                <xs:annotation>
+                    <xs:documentation>
+				notification about a topic
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="notification" type="not:notificationType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="notificationResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="notificationResponse" type="not:notificationResponseType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="ServiceConstraintType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used to specify constraints for a requested service.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="ServiceID" type="nsp:ServiceIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Identifier of a service, needs to be unique only
+						within the same reservation.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="TypeOfReservation" type="nsp:ReservationType">
+                        <xs:annotation>
+                            <xs:documentation>
+						The allowed values are: fixed, deferrable,
+						malleable
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:choice>
+                        <xs:annotation>
+                            <xs:documentation>
+						Depending on value of TypeOfReservation.
+					</xs:documentation>
+                        </xs:annotation>
+                        <xs:element name="FixedReservationConstraints" type="nsp:FixedReservationConstraintType"/>
+                        <xs:element
+                            name="DeferrableReservationConstraints" type="nsp:DeferrableReservationConstraintType"/>
+                        <xs:element
+                            name="MalleableReservationConstraints" type="nsp:MalleableReservationConstraintType"/>
+                    </xs:choice>
+                    <xs:element name="AutomaticActivation" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates if the Service will be set up
+						automatically at start time (true) or not
+						(false).
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="Connections" type="nsp:ConnectionConstraintType">
+                        <xs:annotation>
+                            <xs:documentation>
+						Requested connections and their constraints.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ServiceStatusType">
+                <xs:annotation>
+                    <xs:documentation>
+				Stores status information for a service
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="ServiceID" type="nsp:ServiceIdentifierType"/>
+                    <xs:element name="Status" type="nsp:StatusType"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="DomainStatus" type="nsp:DomainStatusType"/>
+                    <xs:element maxOccurs="unbounded" name="Connections" type="nsp:ConnectionStatusType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="DomainStatusType">
+                <xs:annotation>
+                    <xs:documentation>
+				Tuple of domain ID and StatusType
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="Domain" type="nspc:DomainIdentifierType"/>
+                    <xs:element name="Status" type="nsp:StatusType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="FixedReservationConstraintType">
+                <xs:annotation>
+                    <xs:documentation>
+				Constraints for fixed reservations
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="StartTime" type="xs:dateTime">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates the time when the service should start
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Duration" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates the duration of the service in seconds
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="DeferrableReservationConstraintType">
+                <xs:annotation>
+                    <xs:documentation>
+				Constraints for deferrable reservations
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="StartTime" type="xs:dateTime">
+                        <xs:annotation>
+                            <xs:documentation>
+						The earliest point in time when the connection
+						would be useful
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Duration" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Indicates the duration of the service in seconds
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Deadline" type="xs:dateTime">
+                        <xs:annotation>
+                            <xs:documentation>
+						The latest point in time when the service will
+						be useful
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="MalleableReservationConstraintType">
+                <xs:annotation>
+                    <xs:documentation>
+				Constraints for malleable reservations
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="StartTime" type="xs:dateTime">
+                        <xs:annotation>
+                            <xs:documentation>
+						The earliest point in time when the connection
+						would be useful
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Deadline" type="xs:dateTime">
+                        <xs:annotation>
+                            <xs:documentation>
+						The latest point in time when the service will
+						be useful
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="pathNotFoundFault">
+                <xs:annotation>
+                    <xs:documentation/>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="wsbf:BaseFaultType"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EndpointNotFoundFault">
+                <xs:annotation>
+                    <xs:documentation>
+				Returned in case a given endpoint cannot be located.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="nsp:ReservationFault"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InvalidServiceIDFault">
+                <xs:annotation>
+                    <xs:documentation>
+				Returned in case a given service ID is not known.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="nsp:ReservationFault"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InvalidReservationIDFault">
+                <xs:annotation>
+                    <xs:documentation>
+				Returned in case a given reservation ID is not valid.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="nsp:ReservationFault"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ReservationIDNotFoundFault">
+                <xs:annotation>
+                    <xs:documentation>
+				Returned in case a given reservation ID is not known.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="nsp:ReservationFault"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="TimeoutFault">
+                <xs:annotation>
+                    <xs:documentation>
+				Returned in case a request sent to an underlying NRPS times out.
+			</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="nsp:ReservationFault"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="ReservationFault">
+                <xs:complexContent>
+                    <xs:extension base="wsbf:BaseFaultType"/>
+                </xs:complexContent>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            jaxb:extensionBindingPrefixes="xjc" jaxb:version="2.0"
+            targetNamespace="http://ist_phosphorus.eu/nsp"
+            xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+            xmlns:ns1="http://ist_phosphorus.eu/nsp"
+            xmlns:wsa="http://www.w3.org/2005/08/addressing"
+            xmlns:wsbf="http://docs.oasis-open.org/wsrf/bf-2"
+            xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="http://www.w3.org/2005/08/addressing"/>
+            <xs:import namespace="http://docs.oasis-open.org/wsrf/bf-2"/>
+            <xs:annotation>
+                <xs:appinfo>
+                    <jaxb:globalBindings generateIsSetMethod="true">
+                        <xjc:serializable/>
+                    </jaxb:globalBindings>
+                </xs:appinfo>
+            </xs:annotation>
+            <xs:simpleType name="TNAType">
+                <xs:annotation>
+                    <xs:documentation>
+                                Type used to TNA addresses
+                        </xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="TNAPrefixType">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[0-9]{1,2}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="EndpointIdentifierType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used to identify endpoints
+			</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="ns1:TNAType"/>
+            </xs:simpleType>
+            <xs:simpleType name="EndpointInterfaceType">
+                <xs:annotation>
+                    <xs:documentation>
+					Inter-domain, local end point
+				</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="user"/>
+                    <xs:enumeration value="border"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="EndpointType">
+                <xs:annotation>
+                    <xs:documentation>
+				Information about an endpoint
+			</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="EndpointId" type="ns1:EndpointIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>TNA</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Name" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Endpoint Name</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Description" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>
+						Description provided by the user that creates
+						the endpoint object, e.g. port5 in switch
+						OME-NY01 allocated for apllication Z.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Interface" type="ns1:EndpointInterfaceType">
+                        <xs:annotation>
+                            <xs:documentation>Local or inter-domain endpoint?</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="DomainId" type="ns1:DomainIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>ID of the domain this endpoint is located in</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Bandwidth" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Bandwidth of the port in Mbps
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="DomainIdentifierType">
+                <xs:annotation>
+                    <xs:documentation>
+				Type used to identify the domain
+			</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+            <xs:simpleType name="DomainRelationshipType">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="superdomain"/>
+                    <xs:enumeration value="peer"/>
+                    <xs:enumeration value="subdomain"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="DomainInformationType">
+                <xs:sequence>
+                    <xs:element name="DomainId" type="ns1:DomainIdentifierType">
+                        <xs:annotation>
+                            <xs:documentation>
+                        Unique identifier for the domain
+                    </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Relationship" type="ns1:DomainRelationshipType"/>
+                    <xs:element minOccurs="0" name="SequenceNumber" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Increased by the origin domain, allows others to check if information has changed and is more current than previously stored information.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Description" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>
+						Short description of the domain
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ReservationEPR" type="xs:anyURI">
+                        <xs:annotation>
+                            <xs:documentation>
+						Endpoint reference of the NRPS reservation adapter
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="TopologyEPR" type="xs:anyURI">
+                        <xs:annotation>
+                            <xs:documentation>
+                        Endpoint reference of the NRPS topology adapter
+                    </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="NotificationEPR" type="xs:anyURI">
+                        <xs:annotation>
+                            <xs:documentation>
+                        Endpoint reference of the NRPS notification producer
+                    </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="TNAPrefix" type="ns1:TNAPrefixType">
+                        <xs:annotation>
+                            <xs:documentation>
+						List of TNA prefixes the domain is responsible
+						for
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="InterdomainLink" type="ns1:InterdomainLinkType"/>
+                    <xs:element minOccurs="0" name="avgDelay" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Average delay for paths in this domain;
+						path computer optimization.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="maxBW" type="xs:int">
+                        <xs:annotation>
+                            <xs:documentation>
+						Maximum bandwidth for paths in this domain;
+						path computer optimization.
+					</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="Feature" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="InterdomainLinkType">
+                <xs:sequence>
+                    <xs:element name="LinkID" type="xs:string"/>
+                    <xs:element name="SourceEndpoint" type="ns1:EndpointType"/>
+                    <xs:element name="DestinationDomain" type="ns1:DomainIdentifierType"/>
+                    <xs:element minOccurs="0" name="costs" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="UnexpectedFault">
+                <xs:annotation>
+                    <xs:documentation>
+                Returned in case that internally an error occured
+            </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="wsbf:BaseFaultType"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InvalidRequestFault">
+                <xs:annotation>
+                    <xs:documentation>
+                Returned in case that the request doesn't match the specification
+            </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="wsbf:BaseFaultType"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OperationNotAllowedFault">
+                <xs:annotation>
+                    <xs:documentation>
+                Returned in case that the operation is not allowed with the given user credentials
+            </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="wsbf:BaseFaultType"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OperationNotSupportedFault">
+                <xs:annotation>
+                    <xs:documentation>
+                Returned in case an operation is not supported by the system
+            </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="wsbf:BaseFaultType"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.w3.org/2005/08/addressing"
+            xmlns:tns="http://www.w3.org/2005/08/addressing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="EndpointReference" type="tns:EndpointReferenceType"/>
+            <xs:complexType mixed="false" name="EndpointReferenceType">
+                <xs:sequence>
+                    <xs:element name="Address" type="tns:AttributedURIType"/>
+                    <xs:element minOccurs="0" name="ReferenceParameters" type="tns:ReferenceParametersType"/>
+                    <xs:element minOccurs="0" ref="tns:Metadata"/>
+                    <xs:any maxOccurs="unbounded" minOccurs="0"
+                        namespace="##other" processContents="lax"/>
+                </xs:sequence>
+                <xs:anyAttribute namespace="##other" processContents="lax"/>
+            </xs:complexType>
+            <xs:complexType mixed="false" name="ReferenceParametersType">
+                <xs:sequence>
+                    <xs:any maxOccurs="unbounded" minOccurs="0"
+                        namespace="##any" processContents="lax"/>
+                </xs:sequence>
+                <xs:anyAttribute namespace="##other" processContents="lax"/>
+            </xs:complexType>
+            <xs:element name="Metadata" type="tns:MetadataType"/>
+            <xs:complexType mixed="false" name="MetadataType">
+                <xs:sequence>
+                    <xs:any maxOccurs="unbounded" minOccurs="0"
+                        namespace="##any" processContents="lax"/>
+                </xs:sequence>
+                <xs:anyAttribute namespace="##other" processContents="lax"/>
+            </xs:complexType>
+            <xs:element name="MessageID" type="tns:AttributedURIType"/>
+            <xs:element name="RelatesTo" type="tns:RelatesToType"/>
+            <xs:complexType mixed="false" name="RelatesToType">
+                <xs:simpleContent>
+                    <xs:extension base="xs:anyURI">
+                        <xs:attribute
+                            default="http://www.w3.org/2005/08/addressing/reply"
+                            name="RelationshipType"
+                            type="tns:RelationshipTypeOpenEnum" use="optional"/>
+                        <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+            <xs:simpleType name="RelationshipTypeOpenEnum">
+                <xs:union memberTypes="tns:RelationshipType xs:anyURI"/>
+            </xs:simpleType>
+            <xs:simpleType name="RelationshipType">
+                <xs:restriction base="xs:anyURI">
+                    <xs:enumeration value="http://www.w3.org/2005/08/addressing/reply"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="ReplyTo" type="tns:EndpointReferenceType"/>
+            <xs:element name="From" type="tns:EndpointReferenceType"/>
+            <xs:element name="FaultTo" type="tns:EndpointReferenceType"/>
+            <xs:element name="To" type="tns:AttributedURIType"/>
+            <xs:element name="Action" type="tns:AttributedURIType"/>
+            <xs:complexType mixed="false" name="AttributedURIType">
+                <xs:simpleContent>
+                    <xs:extension base="xs:anyURI">
+                        <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+            <xs:attribute name="IsReferenceParameter" type="xs:boolean"/>
+            <xs:simpleType name="FaultCodesOpenEnumType">
+                <xs:union memberTypes="tns:FaultCodesType xs:QName"/>
+            </xs:simpleType>
+            <xs:simpleType name="FaultCodesType">
+                <xs:restriction base="xs:QName">
+                    <xs:enumeration value="tns:InvalidAddressingHeader"/>
+                    <xs:enumeration value="tns:InvalidAddress"/>
+                    <xs:enumeration value="tns:InvalidEPR"/>
+                    <xs:enumeration value="tns:InvalidCardinality"/>
+                    <xs:enumeration value="tns:MissingAddressInEPR"/>
+                    <xs:enumeration value="tns:DuplicateMessageID"/>
+                    <xs:enumeration value="tns:ActionMismatch"/>
+                    <xs:enumeration value="tns:MessageAddressingHeaderRequired"/>
+                    <xs:enumeration value="tns:DestinationUnreachable"/>
+                    <xs:enumeration value="tns:ActionNotSupported"/>
+                    <xs:enumeration value="tns:EndpointUnavailable"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="RetryAfter" type="tns:AttributedUnsignedLongType"/>
+            <xs:complexType mixed="false" name="AttributedUnsignedLongType">
+                <xs:simpleContent>
+                    <xs:extension base="xs:unsignedLong">
+                        <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+            <xs:element name="ProblemHeaderQName" type="tns:AttributedQNameType"/>
+            <xs:complexType mixed="false" name="AttributedQNameType">
+                <xs:simpleContent>
+                    <xs:extension base="xs:QName">
+                        <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+            <xs:element name="ProblemHeader" type="tns:AttributedAnyType"/>
+            <xs:complexType mixed="false" name="AttributedAnyType">
+                <xs:sequence>
+                    <xs:any maxOccurs="1" minOccurs="1"
+                        namespace="##any" processContents="lax"/>
+                </xs:sequence>
+                <xs:anyAttribute namespace="##other" processContents="lax"/>
+            </xs:complexType>
+            <xs:element name="ProblemIRI" type="tns:AttributedURIType"/>
+            <xs:element name="ProblemAction" type="tns:ProblemActionType"/>
+            <xs:complexType mixed="false" name="ProblemActionType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" ref="tns:Action"/>
+                    <xs:element minOccurs="0" name="SoapAction" type="xs:anyURI"/>
+                </xs:sequence>
+                <xs:anyAttribute namespace="##other" processContents="lax"/>
+            </xs:complexType>
+        </xs:schema>
+        <xsd:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://docs.oasis-open.org/wsrf/bf-2"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:wsa="http://www.w3.org/2005/08/addressing"
+            xmlns:wsrf-bf="http://docs.oasis-open.org/wsrf/bf-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <xsd:import namespace="http://www.w3.org/2005/08/addressing"/>
+            <xsd:import namespace="http://www.w3.org/XML/1998/namespace">
+                <xsd:annotation>
+                    <xsd:documentation>
+        Get access to the xml: attribute groups for xml:lang as declared on 'schema'
+        and 'documentation' below
+      </xsd:documentation>
+                </xsd:annotation>
+            </xsd:import>
+            <xsd:element name="BaseFault" type="wsrf-bf:BaseFaultType"/>
+            <xsd:complexType name="BaseFaultType">
+                <xsd:sequence>
+                    <xsd:any maxOccurs="unbounded" minOccurs="0"
+                        namespace="##other" processContents="lax"/>
+                    <xsd:element maxOccurs="1" minOccurs="1"
+                        name="Timestamp" type="xsd:dateTime"/>
+                    <xsd:element maxOccurs="1" minOccurs="0"
+                        name="Originator" type="wsa:EndpointReferenceType"/>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="ErrorCode">
+                        <xsd:complexType>
+                            <xsd:complexContent mixed="true">
+                                <xsd:extension base="xsd:anyType">
+                                    <xsd:attribute name="dialect"
+                                    type="xsd:anyURI" use="required"/>
+                                </xsd:extension>
+                            </xsd:complexContent>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Description">
+                        <xsd:complexType>
+                            <xsd:simpleContent>
+                                <xsd:extension base="xsd:string">
+                                    <xsd:attribute ref="xml:lang" use="optional"/>
+                                </xsd:extension>
+                            </xsd:simpleContent>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="FaultCause">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:any maxOccurs="1" minOccurs="1"
+                                    namespace="##other" processContents="lax"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+                <xsd:anyAttribute namespace="##other" processContents="lax"/>
+            </xsd:complexType>
+        </xsd:schema>
+        <xs:schema
+            targetNamespace="http://www.w3.org/XML/1998/namespace"
+            xml:lang="en" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:attribute name="lang" type="xs:language"/>
+            <xs:attribute default="preserve" name="space">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="default"/>
+                        <xs:enumeration value="preserve"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="base" type="xs:anyURI"/>
+            <xs:attributeGroup name="specialAttrs">
+                <xs:attribute ref="xml:base"/>
+                <xs:attribute ref="xml:lang"/>
+                <xs:attribute ref="xml:space"/>
+            </xs:attributeGroup>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="subscribe">
+        <wsdl:part element="notification:subscribe" name="subscribe"/>
+    </wsdl:message>
+    <wsdl:message name="subscribeResponse">
+        <wsdl:part element="notification:subscribeResponse" name="subscribeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="unsubscribe">
+        <wsdl:part element="notification:unsubscribe" name="unsubscribe"/>
+    </wsdl:message>
+    <wsdl:message name="unsubscribeResponse">
+        <wsdl:part element="notification:unsubscribeResponse" name="unsubscribeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getTopics">
+        <wsdl:part element="notification:getTopics" name="getTopics"/>
+    </wsdl:message>
+    <wsdl:message name="getTopicsResponse">
+        <wsdl:part element="notification:getTopicsResponse" name="getTopicsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="publish">
+        <wsdl:part element="notification:publish" name="publish"/>
+    </wsdl:message>
+    <wsdl:message name="publishResponse">
+        <wsdl:part element="notification:publishResponse" name="publishResponse"/>
+    </wsdl:message>
+    <wsdl:message name="addTopic">
+        <wsdl:part element="notification:addTopic" name="addTopic"/>
+    </wsdl:message>
+    <wsdl:message name="addTopicResponse">
+        <wsdl:part element="notification:addTopicResponse" name="addTopicResponse"/>
+    </wsdl:message>
+    <wsdl:message name="removeTopic">
+        <wsdl:part element="notification:removeTopic" name="removeTopic"/>
+    </wsdl:message>
+    <wsdl:message name="removeTopicResponse">
+        <wsdl:part element="notification:removeTopicResponse" name="removeTopicResponse"/>
+    </wsdl:message>
+    <wsdl:message name="TopicNotFoundFault">
+        <wsdl:part element="notification:TopicNotFoundFault" name="TopicNotFoundFault"/>
+    </wsdl:message>
+    <wsdl:portType name="networkNotificationPortType">
+        <wsdl:operation name="subscribe">
+            <wsdl:input message="notification:subscribe" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/subscribe"/>
+            <wsdl:output message="notification:subscribeResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/subscribeResponse"/>
+            <wsdl:fault message="notification:TopicNotFoundFault" name="TopicNotFoundFault"/>
+        </wsdl:operation>
+        <wsdl:operation name="unsubscribe">
+            <wsdl:input message="notification:unsubscribe" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/unsubscribe"/>
+            <wsdl:output message="notification:unsubscribeResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/unsubscribeResponse"/>
+            <wsdl:fault message="notification:TopicNotFoundFault" name="TopicNotFoundFault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getTopics">
+            <wsdl:input message="notification:getTopics" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/getTopics"/>
+            <wsdl:output message="notification:getTopicsResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/getTopicsResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="publish">
+            <wsdl:input message="notification:publish" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/publish"/>
+            <wsdl:output message="notification:publishResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/publishResponse"/>
+            <wsdl:fault message="notification:TopicNotFoundFault" name="TopicNotFoundFault"/>
+        </wsdl:operation>
+        <wsdl:operation name="addTopic">
+            <wsdl:input message="notification:addTopic" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/addTopic"/>
+            <wsdl:output message="notification:addTopicResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/addTopicResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="removeTopic">
+            <wsdl:input message="notification:removeTopic" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/removeTopic"/>
+            <wsdl:output message="notification:removeTopicResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/removeTopicResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="networkNotificationBinding" type="notification:networkNotificationPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="subscribe">
+            <soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/subscribe"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="TopicNotFoundFault">
+                <soap:fault name="TopicNotFoundFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="unsubscribe">
+            <soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/unsubscribe"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="TopicNotFoundFault">
+                <soap:fault name="TopicNotFoundFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getTopics">
+            <soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/getTopics"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="publish">
+            <soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/publish"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="TopicNotFoundFault">
+                <soap:fault name="TopicNotFoundFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="addTopic">
+            <soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/addTopic"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="removeTopic">
+            <soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/removeTopic"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="networkNotificationService">
+        <wsdl:port binding="notification:networkNotificationBinding" name="networkNotificationPortType"/>
+    </wsdl:service>
+</wsdl:definitions>

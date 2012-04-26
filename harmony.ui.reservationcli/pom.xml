@@ -10,7 +10,7 @@
   <artifactId>ui-reservationcli</artifactId>
   <version>1</version>
   <properties>
-  <main-class>eu.ist_phosphorus.harmony.ui.reservationcli.CommandlineReservationClient</main-class>
+  <main-class>org.opennaas.extension.idb.shell.CommandlineReservationClient</main-class>
   </properties>
 <build>
  <directory>target</directory>

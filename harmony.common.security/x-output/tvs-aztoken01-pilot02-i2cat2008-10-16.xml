@@ -1,4 +1,0 @@
-<AAA:AuthzToken xmlns:AAA="http://www.aaauthreach.org/ns/AAA" Issuer="http://testbed.ist-phosphorus.eu/i2cat/aaa/TVS/token-pilot" SessionId="250401bb815a7a39c99136ca3a3ea3af26b9c47a" TokenId="ae88c118d5813299cf50674422571d72" type="pilot-type2">
-<AAA:TokenValue>e8cf1f435a63178857bf6df053c03bf8b3810f8e</AAA:TokenValue>
-<AAA:Conditions NotBefore="2008-10-15T19:28:50.234Z" NotOnOrAfter="2008-10-16T19:28:50.234Z"></AAA:Conditions>
-</AAA:AuthzToken>

@@ -51,21 +51,21 @@ import client.classes.nsp.GetLinksResponseType;
 import client.classes.nsp.GetLinksType;
 import client.helper.GuiException;
 import client.interfaces.NspClientProxy;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CancelReservation;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CancelReservationResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.CancelReservationType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.DomainConnectionStatusType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservations;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsComplexType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsResponse;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetReservationsType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetStatusResponseType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.GetStatusType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.utils.JaxbSerializer;
-import eu.ist_phosphorus.harmony.common.utils.Config;
-import eu.ist_phosphorus.harmony.common.utils.Helpers;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservation;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainConnectionStatusType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservations;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsResponse;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusResponseType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusType;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
+import org.opennaas.extension.idb.serviceinterface.databinding.utils.JaxbSerializer;
+import org.opennaas.core.utils.Config;
+import org.opennaas.core.utils.Helpers;
 
 public class NspClientProxyImpl extends RemoteLoggableServiceServlet implements
         NspClientProxy {
