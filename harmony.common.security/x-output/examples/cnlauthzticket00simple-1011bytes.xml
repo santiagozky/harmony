@@ -1,8 +1,0 @@
-<cnl:CNLAuthzTicket xmlns:AAA="http://www.AAAarch.org/ns/AAA_BoD" xmlns:cnl="http://www.aaauthreach.org/ns/#CNL" Issuer="http://www.AAAarch.org/servers/AAA" PolicyURIs="CNLpolicy01" SessionIndex="JobXPS1-2005-001" TicketID="d5e9b230c86aaa21956921a8aca6b982"><!-- Mandatory elements -->
-<cnl:Decision ResourceID="http://resources.collaboratory.nl/Philips_XPS1">Permit</cnl:Decision>
-<cnl:Validity NotBefore="2005-02-16T16:50:27.861Z" NotOnOrAfter="2005-02-17T16:50:27.861Z"></cnl:Validity>
-<!-- Additional elements -->
-<cnl:Subject Id="subject"><cnl:SubjectID>WHO740@users.collaboratory.nl</cnl:SubjectID><cnl:SubjectConfirmationData>SeDFGVHYTY83ZXxEdsweOP8Iok</cnl:SubjectConfirmationData><cnl:JobID>CNL2-XPS1-2005-02-02</cnl:JobID><cnl:Role>analyst@JobID;expert@JobID</cnl:Role></cnl:Subject>
-<cnl:Resource>http://resources.collaboratory.nl/Philips_XPS1</cnl:Resource>
-<cnl:Actions><cnl:Action>cnl:actions:CtrlInstr</cnl:Action><cnl:Action>cnl:actions:CtrlExper</cnl:Action></cnl:Actions>
-</cnl:CNLAuthzTicket>

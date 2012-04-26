@@ -1,9 +1,0 @@
-<AAA:AuthzTicket xmlns:AAA="http://www.aaauthreach.org/ns/AAA" Issuer="http://www.AAAarch.org/servers/AAA" PolicyRef="CNLPolicy01" SessionId="session-id" TicketId="fba0f2e9e1dd41010ec409ae88642576">
-<!-- Mandatory elements -->
-<AAA:Decision ResourceId="http://resources.collaboratory.nl/Philips_XPS1"></AAA:Decision>
-<AAA:Validity NotBefore="2005-02-04T23:00:00.000Z" NotOnOrAfter="2005-02-07T23:00:00.000Z"></AAA:Validity>
-<!-- Additional elements -->
-<AAA:Subject Id="subject"><AAA:SubjectId>WHO740@users.collaboratory.nl</AAA:SubjectId><AAA:SubjectConfirmationData>2SeDFGVHYTY83ZXxEdsweOP8Iok</AAA:SubjectConfirmationData><AAA:SubjectAttribute AttributeId="subject-role">analyst@JobID;expert@JobID</AAA:SubjectAttribute><AAA:SubjectContext>demo001-testX</AAA:SubjectContext></AAA:Subject>
-<AAA:Resource>http://resources.collaboratory.nl/Philips_XPS1</AAA:Resource>
-<AAA:Actions><AAA:Actions>CtrlInstr</AAA:Actions><AAA:Resource>CtrlExper</AAA:Resource></AAA:Actions>
-</AAA:AuthzTicket>

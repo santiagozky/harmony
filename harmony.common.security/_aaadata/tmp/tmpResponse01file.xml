@@ -1,8 +1,0 @@
-<Response xmlns="urn:oasis:names:tc:xacml:1.0:context">
-	<Result ResourceID="WHO740@users.collaboratory.nl">
-		<Decision>Deny</Decision>
-		<Status>
-			<StatusCode Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
-		</Status>
-	</Result>
-</Response>

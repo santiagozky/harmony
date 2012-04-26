@@ -1,9 +1,0 @@
-<AAA:AuthzToken xmlns:AAA="http://www.aaauthreach.org/ns/AAA" Issuer="http://testbed.ist-phosphorus.eu/phosphorus/aaa/TVS/token-pilot" SessionId="ff8ecf50110c675bbe0ee030b489e168389ba6a8" TokenId="e4aa92ddb257f69143a7d10335345f03" type="pilot-type3">
-	<AAA:TokenValue>bad7148caf1b82463037792c77a493cae211a7d4</AAA:TokenValue>
-	<AAA:Conditions NotBefore="2008-07-20T09:15:33.234Z" NotOnOrAfter="2008-07-21T09:15:33.234Z"/>
-	<AAA:DomainsContext>
-		<AAA:Domain domainId="http://testbed.ist-phosphorus.eu/viola">
-			<AAA:KeyInfo>http://testbed.ist-phosphorus.eu/viola/_public_key_</AAA:KeyInfo>
-		</AAA:Domain>
-	</AAA:DomainsContext>
-</AAA:AuthzToken>

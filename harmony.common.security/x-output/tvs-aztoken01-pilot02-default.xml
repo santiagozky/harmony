@@ -1,4 +1,0 @@
-<AAA:AuthzToken xmlns:AAA="http://www.aaauthreach.org/ns/AAA" Issuer="http://testbed.ist-phosphorus.eu/viola/aaa/TVS/token-pilot" SessionId="61b0fee50320136268548b6498ac038392dae241" TokenId="a0c3a270cb7ff9041dd110c8b1d8b915" type="pilot-type2">
-<AAA:TokenValue>663cd5e9e87a5afcecddf7e8f08fed44dff6133e</AAA:TokenValue>
-<AAA:Conditions NotBefore="2008-11-21T17:13:53.375Z" NotOnOrAfter="2008-11-21T18:13:53.375Z"></AAA:Conditions>
-</AAA:AuthzToken>

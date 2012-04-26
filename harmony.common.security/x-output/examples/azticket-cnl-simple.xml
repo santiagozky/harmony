@@ -1,7 +1,0 @@
-<AAA:AuthzTicket xmlns:AAA="http://www.aaauthreach.org/ns/#AAA" Issuer="urn:cnl:trust:tickauth:pep" PolicyRef="CNL2policy01-test" SessionID="sessionIDtest" TicketID="e382aed1c51aa0d6b5e936927ac784d2">
-<AAA:Decision ResourceID="http://resources.collaboratory.nl/Phillips_XPS1">Permit</AAA:Decision>
-<AAA:Validity NotBefore="2007-01-10T16:33:47.157Z" NotOnOrAfter="2007-01-11T16:33:47.157Z"></AAA:Validity>
-<AAA:Subject Id="subject"><AAA:SubjectID>WHO740@users.collaboratory.nl</AAA:SubjectID><AAA:SubjectConfirmationData>IGhA11vwa8YQomTgB9Ege9JRNnld84AggaDkOb5WW4U=</AAA:SubjectConfirmationData><AAA:Role>analyst</AAA:Role><AAA:JobID>CNL2-XPS1-2005-02-02</AAA:JobID></AAA:Subject>
-<AAA:Resource>http://resources.collaboratory.nl/Phillips_XPS1</AAA:Resource>
-<AAA:Actions><AAA:Action>ControlInstrument</AAA:Action></AAA:Actions>
-</AAA:AuthzTicket>
