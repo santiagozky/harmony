@@ -1,8 +1,0 @@
-<cnl:CNLAuthnToken xmlns:cnl="http://www.aaauthreach.org/ns/#CNL" TokenID="a392a20157698d201d77b2c6e8e444ef">
-<cnl:SubjectID>WHO740@users.collaboratory.nl</cnl:SubjectID>
-<cnl:TokenValue>
-PBLIR0aZRtdZmq979lj8eDpJ5VT6BxxWBtSApC5BPnIsfHRUcOOpWQowXBw2TmOZdJGNzFWhMinz
-XU3/wSdLjv+siO2JGfyZ7U9eqkM0GqY8VizMl5uRuUAsrr7AIHv9/DP1ksJMNDZ5DnGosMc+Zyqn
-KogfMqhK+DKqPwfHF6U=
-</cnl:TokenValue>
-</cnl:CNLAuthnToken>

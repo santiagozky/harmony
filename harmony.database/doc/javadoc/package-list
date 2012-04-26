@@ -1,2 +1,2 @@
-eu.ist_phosphorus.harmony.idb.database
-eu.ist_phosphorus.harmony.idb.exceptions.database
+org.opennaas.extension.idb.database
+org.opennaas.extension.idb.exceptions.database

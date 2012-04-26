@@ -48,7 +48,7 @@
 		<wsdl>
 			<wsdl-file>Reservation-WS.wsdl</wsdl-file>
 			<wsdl-port-type
-				xmlns:pfx="http://ist_phosphorus.eu/nsp/webservice/reservation">
+				xmlns:pfx="http://opennaas.org/nsp/webservice/reservation">
 				pfx:networkReservationPortType
 			</wsdl-port-type>
 		</wsdl>
@@ -61,10 +61,10 @@
 		<desc:capability
 			xmlns:desc="http://ws.apache.org/muse/descriptor">
 			<desc:capability-uri>
-				http://ist_phosphorus.eu/nsp/webservice/reservation
+				http://opennaas.org/nsp/webservice/reservation
 			</desc:capability-uri>
 			<desc:java-capability-class>
-                                eu.ist_phosphorus.harmony.common.serviceinterface.reservation.ReservationWS
+                                org.opennaas.extension.idb.serviceinterface.reservation.ReservationWS
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>

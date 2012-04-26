@@ -1,8 +1,0 @@
-<AAA:AuthzTicket xmlns:cnl="http://www.aaauthreach.org/ns/AAA" Issuer="x-urn:aaa:trust:tickauth:pep" PolicyRef="nsp-policy-demo001" SessionId="Demo001-2008-06-16" TicketId="ea1b5039a2b2b01b7563313d564a07bd"><!-- Mandatory elements -->
-<AAA:Decision ResourceId="http://testbed.ist-phosphorus.eu/resource-type/nsp">Permit</AAA:Decision>
-<AAA:Validity NotBefore="2008-06-17T10:46:06.765Z" NotOnOrAfter="2008-06-18T10:46:06.765Z"></AAA:Validity>
-<!-- Additional elements -->
-<AAA:Subject Id="subject"><AAA:SubjectId>WHO740@users.testbed.ist-phosphorus.eu</AAA:SubjectId><AAA:SubjectConfirmationData>IGhA11vwa8bUktYhuU9que+d4XLUvJFHrtDC/OE3Ui1bxtmuCxLldw==</AAA:SubjectConfirmationData><AAA:SubjectAttribute AttributeId="subject-role">researcher</AAA:SubjectAttribute><AAA:SubjectContext>demo001</AAA:SubjectContext></AAA:Subject>
-<AAA:Resource>http://testbed.ist-phosphorus.eu/resource-type/nsp</AAA:Resource>
-<AAA:Actions><AAA:Action>cnl:actions:CtrlInstr</AAA:Action><AAA:Action>cnl:actions:CtrlExper</AAA:Action></AAA:Actions>
-</AAA:AuthzTicket>

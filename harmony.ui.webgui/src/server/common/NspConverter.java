@@ -43,7 +43,7 @@ public final class NspConverter extends Converter {
 
     public NspConverter() {
         super(
-                "eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb",
+                "org.opennaas.extension.idb.serviceinterface.databinding.jaxb",
                 "client.classes.nsp");
 
         this.addExemption(Date.class, XMLGregorianCalendar.class);
@@ -52,10 +52,10 @@ public final class NspConverter extends Converter {
         this
                 .addExemption(
                         ReservationType.class,
-                        eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.ReservationType.class);
+                        org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType.class);
         this
                 .addExemption(
-                        eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.StatusType.class,
+                        org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType.class,
                         StatusType.class);
     }
 
@@ -76,9 +76,9 @@ public final class NspConverter extends Converter {
      * @param src
      * @return
      */
-    public eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.ReservationType convertExemption(
+    public org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType convertExemption(
             final ReservationType src) {
-        return eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.ReservationType
+        return org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType
                 .fromValue(src.value());
     }
 
@@ -89,7 +89,7 @@ public final class NspConverter extends Converter {
      * @return
      */
     public StatusType convertExemption(
-            final eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.StatusType src) {
+            final org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType src) {
         return new StatusType(src.value());
     }
 }

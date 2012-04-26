@@ -24,10 +24,10 @@
  02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 -->
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:reservation="http://ist_phosphorus.eu/nsp/webservice/reservation" xmlns:ns="http://ist_phosphorus.eu/NSPCommon" xmlns:ns1="http://ist_phosphorus.eu/nsp" xmlns:notification="http://ist_phosphorus.eu/nsp/webservice/notification" xmlns:ns2="http://docs.oasis-open.org/wsrf/bf-2" name="Reservation-WS" targetNamespace="http://ist_phosphorus.eu/nsp/webservice/reservation">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:reservation="http://opennaas.org/nsp/webservice/reservation" xmlns:ns="http://opennaas.org/nspCommon" xmlns:ns1="http://opennaas.org/nsp" xmlns:notification="http://opennaas.org/nsp/webservice/notification" xmlns:ns2="http://docs.oasis-open.org/wsrf/bf-2" name="Reservation-WS" targetNamespace="http://opennaas.org/nsp/webservice/reservation">
 	<wsdl:types>
 		<xs:schema>
-			<xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/reservation" schemaLocation="Reservation-Types.xsd"/>
+			<xs:import namespace="http://opennaas.org/nsp/webservice/reservation" schemaLocation="Reservation-Types.xsd"/>
 		</xs:schema>
 	</wsdl:types>
 	<wsdl:message name="UnexpectedFault">
@@ -117,8 +117,8 @@
 	<wsdl:portType name="networkReservationPortType">
 		<wsdl:operation name="isAvailable">
                         <wsdl:documentation>Checks whether the specified service is available.</wsdl:documentation>
-			<wsdl:input message="reservation:isAvailable" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/isAvailable"/>
-			<wsdl:output message="reservation:isAvailableResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/isAvailableResponse"/>
+			<wsdl:input message="reservation:isAvailable" wsa:Action="http://opennaas.org/nsp/webservice/reservation/isAvailable"/>
+			<wsdl:output message="reservation:isAvailableResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/isAvailableResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -128,8 +128,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="createReservation">
                         <wsdl:documentation>Creates the reservation of a path between 2 endpoints considering the specified constraints.</wsdl:documentation>
-			<wsdl:input message="reservation:createReservation" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/createReservation"/>
-			<wsdl:output message="reservation:createReservationResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/createReservationResponse"/>
+			<wsdl:input message="reservation:createReservation" wsa:Action="http://opennaas.org/nsp/webservice/reservation/createReservation"/>
+			<wsdl:output message="reservation:createReservationResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/createReservationResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -139,8 +139,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="getReservation">
                         <wsdl:documentation>Retrieves the input by which a reservation request was made.</wsdl:documentation>
-			<wsdl:input message="reservation:getReservation" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/getReservation"/>
-			<wsdl:output message="reservation:getReservationResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/getReservationResponse"/>
+			<wsdl:input message="reservation:getReservation" wsa:Action="http://opennaas.org/nsp/webservice/reservation/getReservation"/>
+			<wsdl:output message="reservation:getReservationResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/getReservationResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -148,8 +148,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="getReservations">
                         <wsdl:documentation>Retrieves all existing reservations for the specified period of time.</wsdl:documentation>
-			<wsdl:input message="reservation:getReservations" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/getReservations"/>
-			<wsdl:output message="reservation:getReservationsResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/getReservationsResponse"/>
+			<wsdl:input message="reservation:getReservations" wsa:Action="http://opennaas.org/nsp/webservice/reservation/getReservations"/>
+			<wsdl:output message="reservation:getReservationsResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/getReservationsResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -158,8 +158,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="getStatus">
                         <wsdl:documentation>Returns the status of a service.</wsdl:documentation>
-			<wsdl:input message="reservation:getStatus" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/getStatus"/>
-			<wsdl:output message="reservation:getStatusResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/getStatusResponse"/>
+			<wsdl:input message="reservation:getStatus" wsa:Action="http://opennaas.org/nsp/webservice/reservation/getStatus"/>
+			<wsdl:output message="reservation:getStatusResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/getStatusResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -168,8 +168,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="cancelReservation">
                         <wsdl:documentation>Cancels a network resource reservation.</wsdl:documentation>
-			<wsdl:input message="reservation:cancelReservation" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/cancelReservation"/>
-			<wsdl:output message="reservation:cancelReservationResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/cancelReservationResponse"/>
+			<wsdl:input message="reservation:cancelReservation" wsa:Action="http://opennaas.org/nsp/webservice/reservation/cancelReservation"/>
+			<wsdl:output message="reservation:cancelReservationResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/cancelReservationResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -178,8 +178,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="completeJob">
                         <wsdl:documentation>Modifies all pre-reservations belonging to the job to permanent reservations.</wsdl:documentation>
-			<wsdl:input message="reservation:completeJob" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/completeJob"/>
-			<wsdl:output message="reservation:completeJobResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/completeJobResponse"/>
+			<wsdl:input message="reservation:completeJob" wsa:Action="http://opennaas.org/nsp/webservice/reservation/completeJob"/>
+			<wsdl:output message="reservation:completeJobResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/completeJobResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -188,8 +188,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="cancelJob">
                         <wsdl:documentation>Cancels all reservations in the job. Ie. all resources are freed.</wsdl:documentation>
-			<wsdl:input message="reservation:cancelJob" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/cancelJob"/>
-			<wsdl:output message="reservation:cancelJobResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/cancelJobResponse"/>
+			<wsdl:input message="reservation:cancelJob" wsa:Action="http://opennaas.org/nsp/webservice/reservation/cancelJob"/>
+			<wsdl:output message="reservation:cancelJobResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/cancelJobResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -198,8 +198,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="activate">
                         <wsdl:documentation>Activates a service.</wsdl:documentation>
-			<wsdl:input message="reservation:activate" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/activate"/>
-			<wsdl:output message="reservation:activateResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/activateResponse"/>
+			<wsdl:input message="reservation:activate" wsa:Action="http://opennaas.org/nsp/webservice/reservation/activate"/>
+			<wsdl:output message="reservation:activateResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/activateResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -208,8 +208,8 @@
 		</wsdl:operation>
 		<wsdl:operation name="bind">
                         <wsdl:documentation>Create binding between NRPS endpoint and application endpoint.</wsdl:documentation>
-			<wsdl:input message="reservation:bind" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/bind"/>
-			<wsdl:output message="reservation:bindResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/bindResponse"/>
+			<wsdl:input message="reservation:bind" wsa:Action="http://opennaas.org/nsp/webservice/reservation/bind"/>
+			<wsdl:output message="reservation:bindResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/bindResponse"/>
 			<wsdl:fault name="UnexpectedFault" message="reservation:UnexpectedFault"/>
 			<wsdl:fault name="InvalidRequestFault" message="reservation:InvalidRequestFault"/>
 			<wsdl:fault name="OperationNotAllowedFault" message="reservation:OperationNotAllowedFault"/>
@@ -218,15 +218,15 @@
 		</wsdl:operation>
 		<wsdl:operation name="notification">
                         <wsdl:documentation></wsdl:documentation>
-			<wsdl:input message="reservation:notification" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/notification"/>
-			<wsdl:output message="reservation:notificationResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/reservation/notificationResponse"/>
+			<wsdl:input message="reservation:notification" wsa:Action="http://opennaas.org/nsp/webservice/reservation/notification"/>
+			<wsdl:output message="reservation:notificationResponse" wsa:Action="http://opennaas.org/nsp/webservice/reservation/notificationResponse"/>
 			<wsdl:fault name="OperationNotSupportedFault" message="reservation:OperationNotSupportedFault"/>
 		</wsdl:operation>
 	</wsdl:portType>
 	<wsdl:binding name="networkReservationBinding" type="reservation:networkReservationPortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<wsdl:operation name="isAvailable">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/isAvailable"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/isAvailable"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -253,7 +253,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="createReservation">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/createReservation"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/createReservation"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -280,7 +280,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="getReservation">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/getReservation"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/getReservation"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -301,7 +301,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="getReservations">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/getReservations"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/getReservations"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -325,7 +325,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="getStatus">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/getStatus"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/getStatus"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -349,7 +349,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="cancelReservation">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/cancelReservation"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/cancelReservation"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -373,7 +373,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="completeJob">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/completeJob"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/completeJob"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -397,7 +397,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="cancelJob">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/cancelJob"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/cancelJob"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -421,7 +421,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="activate">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/activate"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/activate"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -445,7 +445,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="bind">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/bind"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/bind"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -469,7 +469,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="notification">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/reservation/notification"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/reservation/notification"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>

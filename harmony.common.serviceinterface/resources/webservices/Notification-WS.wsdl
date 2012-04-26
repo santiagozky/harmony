@@ -33,13 +33,13 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema"
 xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
 xmlns:wsa="http://www.w3.org/2005/08/addressing"
-xmlns:notification="http://ist_phosphorus.eu/nsp/webservice/notification"
-xmlns:ns="http://ist_phosphorus.eu/NSPCommon"
-xmlns:ns1="http://ist_phosphorus.eu/nsp"
-targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification">
+xmlns:notification="http://opennaas.org/nsp/webservice/notification"
+xmlns:ns="http://opennaas.org/nspCommon"
+xmlns:ns1="http://opennaas.org/nsp"
+targetNamespace="http://opennaas.org/nsp/webservice/notification">
 	<wsdl:types>
 		<xs:schema>
-			<xs:import namespace="http://ist_phosphorus.eu/nsp/webservice/notification" schemaLocation="Notification-Types.xsd"/>
+			<xs:import namespace="http://opennaas.org/nsp/webservice/notification" schemaLocation="Notification-Types.xsd"/>
 		</xs:schema>
 	</wsdl:types>
 	<wsdl:message name="subscribe">
@@ -83,37 +83,37 @@ targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification">
 	</wsdl:message>
 	<wsdl:portType name="networkNotificationPortType">
 		<wsdl:operation name="subscribe">
-			<wsdl:input message="notification:subscribe" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/subscribe"/>
-			<wsdl:output message="notification:subscribeResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/subscribeResponse"/>
+			<wsdl:input message="notification:subscribe" wsa:Action="http://opennaas.org/nsp/webservice/notification/subscribe"/>
+			<wsdl:output message="notification:subscribeResponse" wsa:Action="http://opennaas.org/nsp/webservice/notification/subscribeResponse"/>
 			<wsdl:fault name="TopicNotFoundFault" message="notification:TopicNotFoundFault"/>
 		</wsdl:operation>
 		<wsdl:operation name="unsubscribe">
-			<wsdl:input message="notification:unsubscribe" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/unsubscribe"/>
-			<wsdl:output message="notification:unsubscribeResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/unsubscribeResponse"/>
+			<wsdl:input message="notification:unsubscribe" wsa:Action="http://opennaas.org/nsp/webservice/notification/unsubscribe"/>
+			<wsdl:output message="notification:unsubscribeResponse" wsa:Action="http://opennaas.org/nsp/webservice/notification/unsubscribeResponse"/>
 			<wsdl:fault name="TopicNotFoundFault" message="notification:TopicNotFoundFault"/>
 		</wsdl:operation>
 		<wsdl:operation name="getTopics">
-			<wsdl:input message="notification:getTopics" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/getTopics"/>
-			<wsdl:output message="notification:getTopicsResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/getTopicsResponse"/>
+			<wsdl:input message="notification:getTopics" wsa:Action="http://opennaas.org/nsp/webservice/notification/getTopics"/>
+			<wsdl:output message="notification:getTopicsResponse" wsa:Action="http://opennaas.org/nsp/webservice/notification/getTopicsResponse"/>
 		</wsdl:operation>
 		<wsdl:operation name="publish">
-			<wsdl:input message="notification:publish" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/publish"/>
-			<wsdl:output message="notification:publishResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/publishResponse"/>
+			<wsdl:input message="notification:publish" wsa:Action="http://opennaas.org/nsp/webservice/notification/publish"/>
+			<wsdl:output message="notification:publishResponse" wsa:Action="http://opennaas.org/nsp/webservice/notification/publishResponse"/>
 			<wsdl:fault name="TopicNotFoundFault" message="notification:TopicNotFoundFault"/>
 		</wsdl:operation>
 		<wsdl:operation name="addTopic">
-			<wsdl:input message="notification:addTopic" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/addTopic"/>
-			<wsdl:output message="notification:addTopicResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/addTopicResponse"/>
+			<wsdl:input message="notification:addTopic" wsa:Action="http://opennaas.org/nsp/webservice/notification/addTopic"/>
+			<wsdl:output message="notification:addTopicResponse" wsa:Action="http://opennaas.org/nsp/webservice/notification/addTopicResponse"/>
 		</wsdl:operation>
 		<wsdl:operation name="removeTopic">
-			<wsdl:input message="notification:removeTopic" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/removeTopic"/>
-			<wsdl:output message="notification:removeTopicResponse" wsa:Action="http://ist_phosphorus.eu/nsp/webservice/notification/removeTopicResponse"/>
+			<wsdl:input message="notification:removeTopic" wsa:Action="http://opennaas.org/nsp/webservice/notification/removeTopic"/>
+			<wsdl:output message="notification:removeTopicResponse" wsa:Action="http://opennaas.org/nsp/webservice/notification/removeTopicResponse"/>
 		</wsdl:operation>
 	</wsdl:portType>
 	<wsdl:binding name="networkNotificationBinding" type="notification:networkNotificationPortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<wsdl:operation name="subscribe">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/subscribe"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/notification/subscribe"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -125,7 +125,7 @@ targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification">
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="unsubscribe">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/unsubscribe"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/notification/unsubscribe"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -137,7 +137,7 @@ targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification">
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="getTopics">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/getTopics"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/notification/getTopics"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -146,7 +146,7 @@ targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification">
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="publish">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/publish"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/notification/publish"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -158,7 +158,7 @@ targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification">
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="addTopic">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/addTopic"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/notification/addTopic"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -167,7 +167,7 @@ targetNamespace="http://ist_phosphorus.eu/nsp/webservice/notification">
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="removeTopic">
-			<soap:operation soapAction="http://ist_phosphorus.eu/nsp/webservice/notification/removeTopic"/>
+			<soap:operation soapAction="http://opennaas.org/nsp/webservice/notification/removeTopic"/>
 			<wsdl:input>
 				<soap:body use="literal"/>
 			</wsdl:input>

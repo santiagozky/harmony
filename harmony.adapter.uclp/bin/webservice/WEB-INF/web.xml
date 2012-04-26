@@ -4,11 +4,11 @@
 	<servlet>
 		<display-name>IST Phosphorus Harmony Servlet</display-name>
 		<servlet-name>HarmonyAdapterServlet</servlet-name>
-		<servlet-class>eu.ist_phosphorus.harmony.adapter.uclp.webservice.StartupServlet</servlet-class>
+		<servlet-class>org.opennaas.extension.idb.da.argia.webservice.StartupServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<listener>
-		<listener-class>eu.ist_phosphorus.harmony.adapter.uclp.webservice.ContextListener</listener-class>
+		<listener-class>org.opennaas.extension.idb.da.argia.webservice.ContextListener</listener-class>
     </listener>
 	<servlet-mapping>
 		<servlet-name>HarmonyAdapterServlet</servlet-name>
@@ -16,7 +16,7 @@
 	</servlet-mapping>
 	<filter>
         <filter-name>Security Filter</filter-name>
-        <filter-class>eu.ist_phosphorus.harmony.common.serviceinterface.utils.CommonServletFilter</filter-class>
+        <filter-class>org.opennaas.extension.idb.serviceinterface.utils.CommonServletFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>Security Filter</filter-name>

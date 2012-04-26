@@ -1,8 +1,0 @@
-<Request xmlns="urn:oasis:names:tc:SAML:1.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:1.0:protocol" xmlns:xsd="http://www.w3.org/XMLSchema" xmlns:xsi="http://www.w3.org
-XMLSchema-instance" IssueInstant="2006-07-11T14:02:57Z"  MajorVersion="1" MinorVersion="1"  RequestID="_5aade02792f0034a532d2d94b5e10301"> 
-<AttributeQuery Resource="https://kelimutu.switch.ch/shibboleth">
- <Subject  xmlns="urn:oasis:names:tc:SAML:1.0:assertion"> 
-<NameIdentifier Format="urn:mace:shibboleth:1.0:nameIdentifier" NameQualifier="urn:mace:switch.ch:aaitest:dukono.switch.ch"> _614e7308534f8d630119b0d1ac8f898a  </NameIdentifier> 
- </Subject>
- </AttributeQuery> 
- </Request> 

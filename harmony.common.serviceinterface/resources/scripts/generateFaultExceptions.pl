@@ -10,11 +10,11 @@
 #
 
 # Config part =================================================================
-my $pathRoot = "eu/";
+my $pathRoot = "org/";
 
 my @commonFiles = ("BaseFaultType", "EndpointReferenceType", "AttributedURIType", "ReferenceParametersType", "MetadataType");
 
-my $extensionPackage = "eu.ist_phosphorus.harmony.common.serviceinterface.databinding.utils";
+my $extensionPackage = "org.opennaas.extension.idb.serviceinterface.databinding.utils";
 my $extensionClass = "AbstractFaultException";
 
 my @commonDependencies = ("ObjectFactory.java", "ProblemActionType.java");
@@ -86,7 +86,7 @@ sub createHeader {
     $res = "package ".$package.";\n\n";
     
     $res .= "import ".$srcPackage.".".$fileName.";\n";
-    $res .= "import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.BaseFaultType;\n";
+    $res .= "import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.BaseFaultType;\n";
     
     if($package ne $extensionPackage) {
         $res .= "import ".$extensionPackage.".".$extensionClass.";\n";

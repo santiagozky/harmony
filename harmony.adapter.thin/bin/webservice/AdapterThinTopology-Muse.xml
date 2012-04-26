@@ -39,7 +39,7 @@
 				http://ist_phosphorus.eu/nsp/webservice/topology
 			</desc:capability-uri>
 			<desc:java-capability-class>
-				eu.ist_phosphorus.nrps.thin.webservice.topology.MyCapability
+				org.opennaas.extension.gmpls.nrps.thin.webservice.topology.MyCapability
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>

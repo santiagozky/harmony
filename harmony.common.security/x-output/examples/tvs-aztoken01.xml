@@ -1,4 +1,0 @@
-<AAA:AuthzToken xmlns:AAA="http://www.aaauthreach.org/ns/#AAA" Issuer="urn:aaa:gaaapi:token:TVS" SessionId="115d4e21ec1d5eff6b159ade3433a2da8eeb8cca" TokenId="adf1ece72abd944486336febd8c49b7e">
-<AAA:TokenValue>7a21af8bf7a0eb6a91a83c39e2f5374c33a24eda</AAA:TokenValue>
-<AAA:Conditions NotBefore="2007-08-12T15:01:35.546Z" NotOnOrAfter="2007-08-13T15:01:35.546Z"></AAA:Conditions>
-</AAA:AuthzToken>

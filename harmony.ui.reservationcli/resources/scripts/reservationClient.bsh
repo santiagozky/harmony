@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # setup ########################################################################
-clientClass=eu.ist_phosphorus.harmony.ui.reservationcli.CommandlineReservationClient
+clientClass=org.opennaas.extension.idb.shell.CommandlineReservationClient
 ################################################################################
 
 

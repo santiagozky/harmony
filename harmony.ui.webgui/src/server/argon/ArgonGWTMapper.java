@@ -39,8 +39,8 @@ import de.unibonn.viola.argon.requestProcessor.utils.StatusManager;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ConnectionType;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ReservationRequestType;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ServiceType;
-import eu.ist_phosphorus.harmony.common.serviceinterface.databinding.jaxb.StatusType;
-import eu.ist_phosphorus.harmony.common.utils.Helpers;
+import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
+import org.opennaas.core.utils.Helpers;
 
 /**
  * maps external argon information to common Gui-information.

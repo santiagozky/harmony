@@ -1,6 +1,6 @@
-eu.ist_phosphorus.harmony.idb.database.hibernate
-eu.ist_phosphorus.harmony.idb.notification
-eu.ist_phosphorus.harmony.idb.notification.handler
-eu.ist_phosphorus.harmony.idb.notification.producer
-eu.ist_phosphorus.harmony.idb.webservice
-eu.ist_phosphorus.harmony.test.idb.webservice
+org.opennaas.extension.idb.database.hibernate
+org.opennaas.extension.idb.notification
+org.opennaas.extension.idb.notification.handler
+org.opennaas.extension.idb.notification.producer
+org.opennaas.extension.idb.webservice
+org.opennaas.extension.idb.test.webservice

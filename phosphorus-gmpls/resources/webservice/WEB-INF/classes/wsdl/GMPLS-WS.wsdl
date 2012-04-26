@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+		xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+		xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+		xmlns:wsa="http://www.w3.org/2005/08/addressing" 
+		xmlns:ns2="http://docs.oasis-open.org/wsrf/bf-2" 
+		xmlns:gmpls="http://ist_phosphorus.eu/gmpls/webservice"	
+		targetNamespace="http://ist_phosphorus.eu/gmpls/webservice">
+	<wsdl:types>
+		<xs:schema>
+			<xs:import
+					namespace="http://ist_phosphorus.eu/gmpls/webservice"
+					schemaLocation="GMPLS-Types.xsd" />
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="UnexpectedFault">
+		<wsdl:part name="UnexpectedFault" element="gmpls:UnexpectedFault" />
+	</wsdl:message>
+	<wsdl:message name="sourceTNAFault">
+		<wsdl:part name="sourceTNAFault" element="gmpls:sourceTNAFault" />
+	</wsdl:message>
+	<wsdl:message name="destinationTNAFault">
+		<wsdl:part name="destinationTNAFault" element="gmpls:destinationTNAFault" />
+	</wsdl:message>
+	<wsdl:message name="createPathFault">
+		<wsdl:part name="createPathFault" element="gmpls:createPathFault" />
+	</wsdl:message>
+	<wsdl:message name="bandwidthFault">
+		<wsdl:part name="bandwidthFault" element="gmpls:bandwidthFault" />
+	</wsdl:message>
+	<wsdl:message name="pathNotFoundFault">
+		<wsdl:part name="pathNotFoundFault" element="gmpls:pathNotFoundFault" />
+	</wsdl:message>
+
+	<wsdl:message name="createPath">
+		<wsdl:part name="createPath" element="gmpls:createPath" />
+	</wsdl:message>
+	<wsdl:message name="createPathResponse">
+		<wsdl:part name="createPathResponse"
+				element="gmpls:createPathResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="terminatePath">
+		<wsdl:part name="terminatePath" element="gmpls:terminatePath" />
+	</wsdl:message>
+	<wsdl:message name="terminatePathResponse">
+		<wsdl:part name="terminatePathResponse"
+				element="gmpls:terminatePathResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="getPathDiscovery">
+		<wsdl:part name="getPathDiscovery"
+				element="gmpls:getPathDiscovery" />
+	</wsdl:message>
+	<wsdl:message name="getPathDiscoveryResponse">
+		<wsdl:part name="getPathDiscoveryResponse"
+				element="gmpls:getPathDiscoveryResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="getPathStatus">
+		<wsdl:part name="getPathStatus" element="gmpls:getPathStatus" />
+	</wsdl:message>
+	<wsdl:message name="getPathStatusResponse">
+		<wsdl:part name="getPathStatusResponse"
+				element="gmpls:getPathStatusResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="getEndpointDiscovery">
+		<wsdl:part name="getEndpointDiscovery" element="gmpls:getEndpointDiscovery" />
+	</wsdl:message>
+	<wsdl:message name="getEndpointDiscoveryResponse">
+		<wsdl:part name="getEndpointDiscoveryResponse"
+				element="gmpls:getEndpointDiscoveryResponse" />
+	</wsdl:message>
+
+	<wsdl:portType name="gmplsPortType">
+
+		<wsdl:operation name="createPath">
+			<wsdl:input message="gmpls:createPath"
+					wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/createPath" />
+			<wsdl:output message="gmpls:createPathResponse"
+					wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/createPathResponse" />
+			<wsdl:fault name="UnexpectedFault" message="gmpls:UnexpectedFault" />
+			<!-- Invalid source TNA  -->
+			<wsdl:fault name="sourceTNAFault" message="gmpls:sourceTNAFault" />
+			<!-- Invalid destination TNA  -->
+			<wsdl:fault name="destinationTNAFault" message="gmpls:destinationTNAFault" />
+			<!-- Path could not be created  -->
+			<wsdl:fault name="createPathFault" message="gmpls:createPathFault" />
+			<!-- Invalid bandwidth or bandwidth not supported  -->
+			<wsdl:fault name="bandwidthFault" message="gmpls:bandwidthFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="terminatePath">
+			<wsdl:input message="gmpls:terminatePath" wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/terminatePath"/>
+			<wsdl:output message="gmpls:terminatePathResponse" wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/terminatePathResponse"/>
+			<wsdl:fault name="UnexpectedFault" message="gmpls:UnexpectedFault" />
+			<!-- Path not found  -->
+			<wsdl:fault name="pathNotFoundFault" message="gmpls:pathNotFoundFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="getPathDiscovery">
+			<wsdl:input message="gmpls:getPathDiscovery" wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/getPathDiscovery"/>
+			<wsdl:output message="gmpls:getPathDiscoveryResponse" wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/getPathDiscoveryResponse"/>
+			<wsdl:fault name="UnexpectedFault" message="gmpls:UnexpectedFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="getPathStatus">
+			<wsdl:input message="gmpls:getPathStatus"
+					wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/getPathStatus" />
+			<wsdl:output message="gmpls:getPathStatusResponse"
+					wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/getPathStatusResponse" />
+			<wsdl:fault name="UnexpectedFault" message="gmpls:UnexpectedFault" />
+			<!-- Path not found  -->
+			<wsdl:fault name="pathNotFoundFault" message="gmpls:pathNotFoundFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="getEndpointDiscovery">
+			<wsdl:input message="gmpls:getEndpointDiscovery"
+					wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/getEndpointDiscovery" />
+			<wsdl:output message="gmpls:getEndpointDiscoveryResponse"
+					wsa:Action="http://ist_phosphorus.eu/gmpls/webservice/getEndpointDiscoveryResponse" />
+			<wsdl:fault name="UnexpectedFault" message="gmpls:UnexpectedFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="gmplsBinding"
+			type="gmpls:gmplsPortType">
+		<soap:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<wsdl:operation name="createPath">
+			<soap:operation
+					soapAction="http://ist_phosphorus.eu/gmpls/webservice/createPath" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnexpectedFault" />
+			<wsdl:fault name="sourceTNAFault" />
+			<wsdl:fault name="destinationTNAFault" />
+			<wsdl:fault name="createPathFault" />
+			<wsdl:fault name="bandwidthFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="terminatePath">
+			<soap:operation
+					soapAction="http://ist_phosphorus.eu/gmpls/webservice/terminatePath" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnexpectedFault" />
+			<wsdl:fault name="pathNotFoundFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="getPathDiscovery">
+			<soap:operation
+					soapAction="http://ist_phosphorus.eu/gmpls/webservice/getPathDiscovery" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnexpectedFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="getPathStatus">
+			<soap:operation
+					soapAction="http://ist_phosphorus.eu/gmpls/webservice/getPathStatus" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnexpectedFault" />
+			<wsdl:fault name="pathNotFoundFault" />
+		</wsdl:operation>
+
+		<wsdl:operation name="getEndpointDiscovery">
+			<soap:operation
+					soapAction="http://ist_phosphorus.eu/gmpls/webservice/getEndpointDiscovery" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="UnexpectedFault" />
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="gmplsService">
+		<wsdl:port name="gmplsPortType"
+				binding="gmpls:gmplsBinding">
+			<soap:address location="http://localhost:9080/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,4 +1,0 @@
-<AAA:AuthzToken xmlns:AAA="http://www.aaauthreach.org/ns/AAA" Issuer="http://testbed.ist-phosphorus.eu/viola/aaa/TVS" SessionId="e71e2d52f6aac48255e059b7bd01df68ae6a2ceb" TokenId="d6f64d3f84f2bdce22e2f9b9b7874342">
-<AAA:TokenValue>3c737133af96ffda131aaf82aa82fb84e26e2777</AAA:TokenValue>
-<AAA:Conditions NotBefore="2008-11-26T20:39:10.156Z" NotOnOrAfter="2008-11-27T20:39:10.156Z"></AAA:Conditions>
-</AAA:AuthzToken>

@@ -31,7 +31,7 @@ package server.common;
 
 import org.apache.log4j.Logger;
 
-import eu.ist_phosphorus.harmony.common.utils.PhLogger;
+import org.opennaas.core.utils.PhLogger;
 
 /**
  * @author gassen

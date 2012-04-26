@@ -48,7 +48,7 @@
 		<wsdl>
 			<wsdl-file>Topology-WS.wsdl</wsdl-file>
 			<wsdl-port-type
-				xmlns:pfx="http://ist_phosphorus.eu/nsp/webservice/topology">
+				xmlns:pfx="http://opennaas.org/nsp/webservice/topology">
 				pfx:TopologyIFPortType
 			</wsdl-port-type>
 		</wsdl>
@@ -61,10 +61,10 @@
 		<desc:capability
 			xmlns:desc="http://ws.apache.org/muse/descriptor">
 			<desc:capability-uri>
-				http://ist_phosphorus.eu/nsp/webservice/topology
+				http://opennaas.org/nsp/webservice/topology
 			</desc:capability-uri>
 			<desc:java-capability-class>
-				eu.ist_phosphorus.harmony.common.serviceinterface.topology.TopologyWS
+				org.opennaas.extension.idb.serviceinterface.topology.TopologyWS
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>
