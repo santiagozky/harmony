@@ -24,18 +24,18 @@
  */
 
 
-package org.opennaas.extension.idb.notification.producer;
+package org.opennaas.extensions.idb.notification.producer;
 
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.apache.muse.ws.addressing.soap.SoapFault;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.NotificationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishType;
-import org.opennaas.extension.idb.serviceinterface.notification.SimpleNotificationClient;
-import org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.NotificationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.PublishType;
+import org.opennaas.extensions.idb.serviceinterface.notification.SimpleNotificationClient;
+import org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient;
 import org.opennaas.core.utils.PhLogger;
 
 public class NotificationSender extends Thread {

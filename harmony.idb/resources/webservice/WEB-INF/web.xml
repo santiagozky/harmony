@@ -4,11 +4,11 @@
 	<servlet>
 		<display-name>IST Phosphorus Harmony IDB Servlet</display-name>
 		<servlet-name>HarmonyServlet</servlet-name>
-		<servlet-class>org.opennaas.extension.idb.serviceinterface.CommonServlet</servlet-class>
+		<servlet-class>org.opennaas.extensions.idb.serviceinterface.CommonServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<listener>
-		<listener-class>org.opennaas.extension.idb.webservice.ContextListener</listener-class>
+		<listener-class>org.opennaas.extensions.idb.webservice.ContextListener</listener-class>
     </listener>
 	<servlet-mapping>
 		<servlet-name>HarmonyServlet</servlet-name>
@@ -16,7 +16,7 @@
 	</servlet-mapping>
 	<filter>
         <filter-name>Security Filter</filter-name>
-        <filter-class>org.opennaas.extension.idb.serviceinterface.utils.CommonServletFilter</filter-class>
+        <filter-class>org.opennaas.extensions.idb.serviceinterface.utils.CommonServletFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>Security Filter</filter-name>

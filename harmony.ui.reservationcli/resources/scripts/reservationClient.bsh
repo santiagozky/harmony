@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # setup ########################################################################
-clientClass=org.opennaas.extension.idb.shell.CommandlineReservationClient
+clientClass=org.opennaas.extensions.idb.shell.CommandlineReservationClient
 ################################################################################
 
 

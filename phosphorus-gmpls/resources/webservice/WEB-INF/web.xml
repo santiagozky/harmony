@@ -4,11 +4,11 @@
 	<servlet>
 		<display-name>Apache Muse Servlet</display-name>
 		<servlet-name>ApacheMuseServlet</servlet-name>
-		<servlet-class>org.opennaas.extension.gmpls.serviceinterface.databinding.utils.CommonServlet</servlet-class>
+		<servlet-class>org.opennaas.extensions.gmpls.serviceinterface.databinding.utils.CommonServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<listener>
-		<listener-class>org.opennaas.extension.gmpls.handler.StartupServlet</listener-class>
+		<listener-class>org.opennaas.extensions.gmpls.handler.StartupServlet</listener-class>
     </listener>
 	<servlet-mapping>
 		<servlet-name>ApacheMuseServlet</servlet-name>

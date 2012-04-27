@@ -24,13 +24,13 @@
  */
 
 
-package org.opennaas.extension.idb.webservice;
+package org.opennaas.extensions.idb.webservice;
 
 import org.apache.muse.core.AbstractCapability;
 import org.w3c.dom.Element;
 
-import org.opennaas.extension.idb.serviceinterface.notification.INotificationWS;
-import org.opennaas.extension.idb.notification.handler.NotificationRequestHandler;
+import org.opennaas.extensions.idb.serviceinterface.notification.INotificationWS;
+import org.opennaas.extensions.idb.notification.handler.NotificationRequestHandler;
 
 /**
  * nrpsDummyTopology server.
@@ -40,42 +40,42 @@ import org.opennaas.extension.idb.notification.handler.NotificationRequestHandle
  */
 public class NotificationWS extends AbstractCapability implements INotificationWS {
     /* (non-Javadoc)
-     * @see org.opennaas.extension.idb.serviceinterface.notification.INotificationWS#addTopic(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.serviceinterface.notification.INotificationWS#addTopic(org.w3c.dom.Element)
      */
     public Element addTopic(Element request) throws Exception {
         return NotificationRequestHandler.getInstance().handle(request, "addTopic");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extension.idb.serviceinterface.notification.INotificationWS#getTopics(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.serviceinterface.notification.INotificationWS#getTopics(org.w3c.dom.Element)
      */
     public Element getTopics(Element request) throws Exception {
         return NotificationRequestHandler.getInstance().handle(request, "getTopics");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extension.idb.serviceinterface.notification.INotificationWS#publish(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.serviceinterface.notification.INotificationWS#publish(org.w3c.dom.Element)
      */
     public Element publish(Element request) throws Exception {
         return NotificationRequestHandler.getInstance().handle(request, "publish");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extension.idb.serviceinterface.notification.INotificationWS#removeTopic(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.serviceinterface.notification.INotificationWS#removeTopic(org.w3c.dom.Element)
      */
     public Element removeTopic(Element request) throws Exception {
         return NotificationRequestHandler.getInstance().handle(request, "removeTopic");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extension.idb.serviceinterface.notification.INotificationWS#subscribe(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.serviceinterface.notification.INotificationWS#subscribe(org.w3c.dom.Element)
      */
     public Element subscribe(Element request) throws Exception {
         return NotificationRequestHandler.getInstance().handle(request, "subscribe");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extension.idb.serviceinterface.notification.INotificationWS#unsubscribe(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.serviceinterface.notification.INotificationWS#unsubscribe(org.w3c.dom.Element)
      */
     public Element unsubscribe(Element request) throws Exception {
         return NotificationRequestHandler.getInstance().handle(request, "unsubscribe");

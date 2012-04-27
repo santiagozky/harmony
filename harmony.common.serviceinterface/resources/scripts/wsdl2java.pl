@@ -138,7 +138,7 @@ sub organizeImports {
 	my $context = shift;
 	
 	if($type eq "server" && $classType eq "class" && $ENV{'handler'} ne "") {
-		$$context =~ s/(import org.w3c.dom.Element;)/$1\nimport org.opennaas.extension.idb.serviceinterface.RequestHandler;/;
+		$$context =~ s/(import org.w3c.dom.Element;)/$1\nimport org.opennaas.extensions.idb.serviceinterface.RequestHandler;/;
 	}
 }
 

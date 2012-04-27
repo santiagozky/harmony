@@ -24,24 +24,24 @@
  */
 
 
-package org.opennaas.extension.idb.notification.handler;
+package org.opennaas.extensions.idb.notification.handler;
 
-import org.opennaas.extension.idb.serviceinterface.RequestHandler;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.TopicNotFoundFaultException;
-import org.opennaas.extension.idb.notification.producer.NotificationProducerHandler;
-import org.opennaas.extension.idb.notification.producer.NotificationSubscriptionHandler;
+import org.opennaas.extensions.idb.serviceinterface.RequestHandler;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddTopicResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddTopicType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetTopicsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetTopicsType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.PublishResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.PublishType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.RemoveTopicType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.SubscribeResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.SubscribeType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.UnsubscribeType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.TopicNotFoundFaultException;
+import org.opennaas.extensions.idb.notification.producer.NotificationProducerHandler;
+import org.opennaas.extensions.idb.notification.producer.NotificationSubscriptionHandler;
 
 /** Provision Request Handler. */
 public final class NotificationRequestHandler extends RequestHandler {

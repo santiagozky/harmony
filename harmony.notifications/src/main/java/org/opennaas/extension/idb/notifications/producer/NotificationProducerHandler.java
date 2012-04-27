@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.notification.producer;
+package org.opennaas.extensions.idb.notification.producer;
 
 import java.util.HashMap;
 import java.util.List;
@@ -33,20 +33,20 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.TopicNotFoundFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddTopicResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddTopicType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetTopicsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetTopicsType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.PublishResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.PublishType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.RemoveTopicType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.TopicNotFoundFaultException;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.PhLogger;
-import org.opennaas.extension.idb.database.hibernate.Subscription;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.database.hibernate.Subscription;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 
 public class NotificationProducerHandler {
 

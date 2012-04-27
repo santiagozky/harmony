@@ -39,7 +39,7 @@
 				http://ist_phosphorus.eu/nsp/webservice/reservation
 			</desc:capability-uri>
 			<desc:java-capability-class>
-				org.opennaas.extension.gmpls.nrps.thin.webservice.reservation.MyCapability
+				org.opennaas.extensions.gmpls.nrps.thin.webservice.reservation.MyCapability
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>

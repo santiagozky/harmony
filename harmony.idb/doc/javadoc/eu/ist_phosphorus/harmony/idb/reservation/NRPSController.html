@@ -54,8 +54,8 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/MockNrpsManager.html" title="class in org.opennaas.extension.idb.reservation"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSResponseCache.html" title="class in org.opennaas.extension.idb.reservation"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/MockNrpsManager.html" title="class in org.opennaas.extensions.idb.reservation"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSResponseCache.html" title="class in org.opennaas.extensions.idb.reservation"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="NRPSController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -87,13 +87,13 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&n
 <!-- ======== START OF CLASS DATA ======== -->
 <H2>
 <FONT SIZE="-1">
-org.opennaas.extension.idb.reservation</FONT>
+org.opennaas.extensions.idb.reservation</FONT>
 <BR>
 Class NRPSController</H2>
 <PRE>
 java.lang.Object
   <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">java.lang.Thread
-      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>org.opennaas.extension.idb.reservation.NRPSController</B>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>org.opennaas.extensions.idb.reservation.NRPSController</B>
 </PRE>
 <DL>
 <DT><B>All Implemented Interfaces:</B> <DD>java.lang.Runnable</DD>
@@ -160,7 +160,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#NRPSController(org.opennaas.extension.idb.database.hibernate.Domain, java.lang.String, java.io.Serializable, boolean, org.apache.log4j.Logger)">NRPSController</A></B>(<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extension.idb.database.hibernate">Domain</A>&nbsp;dom,
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#NRPSController(org.opennaas.extensions.idb.database.hibernate.Domain, java.lang.String, java.io.Serializable, boolean, org.apache.log4j.Logger)">NRPSController</A></B>(<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extensions.idb.database.hibernate">Domain</A>&nbsp;dom,
                java.lang.String&nbsp;operation,
                java.io.Serializable&nbsp;message,
                boolean&nbsp;malleable,
@@ -182,7 +182,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#activateReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ActivateType)">activateReservation</A></B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ActivateType&nbsp;request)</CODE>
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#activateReservation(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ActivateType)">activateReservation</A></B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ActivateType&nbsp;request)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This Method is used to send an ActivationRequest message to the NRPS.</TD>
@@ -190,7 +190,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#cancelReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType)">cancelReservation</A></B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType&nbsp;request)</CODE>
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#cancelReservation(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationType)">cancelReservation</A></B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationType&nbsp;request)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This Method is used to send a CancelReservation message to the NRPS.</TD>
@@ -198,7 +198,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#createReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType)">createReservation</A></B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;request)</CODE>
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#createReservation(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType)">createReservation</A></B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;request)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This Method is used to send a ReservationRequest message to the NRPS.</TD>
@@ -213,7 +213,7 @@ This class implements a NRPS controller. It is used to communicate with an
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extension.idb.database.hibernate">Domain</A></CODE></FONT></TD>
+<CODE>&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extensions.idb.database.hibernate">Domain</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#getDomain()">getDomain</A></B>()</CODE>
 
 <BR>
@@ -237,7 +237,7 @@ This class implements a NRPS controller. It is used to communicate with an
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient</CODE></FONT></TD>
+<CODE>&nbsp;org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#getProxyRSV()">getProxyRSV</A></B>()</CODE>
 
 <BR>
@@ -246,7 +246,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#getReservations(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsType)">getReservations</A></B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsType&nbsp;request)</CODE>
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#getReservations(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsType)">getReservations</A></B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsType&nbsp;request)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -262,7 +262,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#getStatus(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusType)">getStatus</A></B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusType&nbsp;request)</CODE>
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#getStatus(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusType)">getStatus</A></B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusType&nbsp;request)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This Method is used to send a getStatus message to the NRPS.</TD>
@@ -286,7 +286,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#isAvailable(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.IsAvailableType)">isAvailable</A></B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.IsAvailableType&nbsp;request)</CODE>
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#isAvailable(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableType)">isAvailable</A></B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableType&nbsp;request)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This Method is used to send a isAvailable message to the NRPS.</TD>
@@ -318,7 +318,7 @@ This class implements a NRPS controller. It is used to communicate with an
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#setProxyRSV(org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient)">setProxyRSV</A></B>(org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient&nbsp;proxyRSV)</CODE>
+<TD><CODE><B><A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html#setProxyRSV(org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient)">setProxyRSV</A></B>(org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient&nbsp;proxyRSV)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -371,10 +371,10 @@ This class implements a NRPS controller. It is used to communicate with an
 </TR>
 </TABLE>
 
-<A NAME="NRPSController(org.opennaas.extension.idb.database.hibernate.Domain, java.lang.String, java.io.Serializable, boolean, org.apache.log4j.Logger)"><!-- --></A><H3>
+<A NAME="NRPSController(org.opennaas.extensions.idb.database.hibernate.Domain, java.lang.String, java.io.Serializable, boolean, org.apache.log4j.Logger)"><!-- --></A><H3>
 NRPSController</H3>
 <PRE>
-public <B>NRPSController</B>(<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extension.idb.database.hibernate">Domain</A>&nbsp;dom,
+public <B>NRPSController</B>(<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extensions.idb.database.hibernate">Domain</A>&nbsp;dom,
                       java.lang.String&nbsp;operation,
                       java.io.Serializable&nbsp;message,
                       boolean&nbsp;malleable,
@@ -396,10 +396,10 @@ public <B>NRPSController</B>(<A HREF="../../../../../eu/ist_phosphorus/harmony/i
 </TR>
 </TABLE>
 
-<A NAME="activateReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ActivateType)"><!-- --></A><H3>
+<A NAME="activateReservation(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ActivateType)"><!-- --></A><H3>
 activateReservation</H3>
 <PRE>
-public void <B>activateReservation</B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ActivateType&nbsp;request)</PRE>
+public void <B>activateReservation</B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ActivateType&nbsp;request)</PRE>
 <DL>
 <DD>This Method is used to send an ActivationRequest message to the NRPS. It
  uses a request sender that executes the work in a thread.
@@ -410,10 +410,10 @@ public void <B>activateReservation</B>(org.opennaas.extension.idb.serviceinterfa
 </DL>
 <HR>
 
-<A NAME="cancelReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType)"><!-- --></A><H3>
+<A NAME="cancelReservation(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationType)"><!-- --></A><H3>
 cancelReservation</H3>
 <PRE>
-public void <B>cancelReservation</B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType&nbsp;request)</PRE>
+public void <B>cancelReservation</B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationType&nbsp;request)</PRE>
 <DL>
 <DD>This Method is used to send a CancelReservation message to the NRPS. It
  uses a request sender that executes the work in a thread.
@@ -424,10 +424,10 @@ public void <B>cancelReservation</B>(org.opennaas.extension.idb.serviceinterface
 </DL>
 <HR>
 
-<A NAME="createReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType)"><!-- --></A><H3>
+<A NAME="createReservation(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType)"><!-- --></A><H3>
 createReservation</H3>
 <PRE>
-public void <B>createReservation</B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;request)</PRE>
+public void <B>createReservation</B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType&nbsp;request)</PRE>
 <DL>
 <DD>This Method is used to send a ReservationRequest message to the NRPS. It
  uses a request sender that executes the work in a thread.
@@ -455,7 +455,7 @@ protected final void <B>finalize</B>()</PRE>
 <A NAME="getDomain()"><!-- --></A><H3>
 getDomain</H3>
 <PRE>
-public <A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extension.idb.database.hibernate">Domain</A> <B>getDomain</B>()</PRE>
+public <A HREF="../../../../../eu/ist_phosphorus/harmony/idb/database/hibernate/Domain.html" title="class in org.opennaas.extensions.idb.database.hibernate">Domain</A> <B>getDomain</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -488,7 +488,7 @@ public java.io.Serializable <B>getMsg</B>()</PRE>
 <A NAME="getProxyRSV()"><!-- --></A><H3>
 getProxyRSV</H3>
 <PRE>
-public org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient <B>getProxyRSV</B>()</PRE>
+public org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient <B>getProxyRSV</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -496,10 +496,10 @@ public org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservation
 </DL>
 <HR>
 
-<A NAME="getReservations(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsType)"><!-- --></A><H3>
+<A NAME="getReservations(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsType)"><!-- --></A><H3>
 getReservations</H3>
 <PRE>
-public void <B>getReservations</B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsType&nbsp;request)</PRE>
+public void <B>getReservations</B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsType&nbsp;request)</PRE>
 <DL>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>request</CODE> - </DL>
@@ -521,10 +521,10 @@ public final java.io.Serializable <B>getResult</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="getStatus(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusType)"><!-- --></A><H3>
+<A NAME="getStatus(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusType)"><!-- --></A><H3>
 getStatus</H3>
 <PRE>
-public void <B>getStatus</B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusType&nbsp;request)</PRE>
+public void <B>getStatus</B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusType&nbsp;request)</PRE>
 <DL>
 <DD>This Method is used to send a getStatus message to the NRPS. It uses a
  request sender that executes the work in a thread.
@@ -557,10 +557,10 @@ public org.apache.muse.ws.addressing.EndpointReference <B>getWsTopoEpr</B>()</PR
 </DL>
 <HR>
 
-<A NAME="isAvailable(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.IsAvailableType)"><!-- --></A><H3>
+<A NAME="isAvailable(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableType)"><!-- --></A><H3>
 isAvailable</H3>
 <PRE>
-public void <B>isAvailable</B>(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.IsAvailableType&nbsp;request)</PRE>
+public void <B>isAvailable</B>(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableType&nbsp;request)</PRE>
 <DL>
 <DD>This Method is used to send a isAvailable message to the NRPS. It uses a
  request sender that executes the work in a thread.
@@ -607,10 +607,10 @@ public void <B>run</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="setProxyRSV(org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient)"><!-- --></A><H3>
+<A NAME="setProxyRSV(org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient)"><!-- --></A><H3>
 setProxyRSV</H3>
 <PRE>
-public void <B>setProxyRSV</B>(org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient&nbsp;proxyRSV)</PRE>
+public void <B>setProxyRSV</B>(org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient&nbsp;proxyRSV)</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -668,8 +668,8 @@ public void <B>setWsTopoEpr</B>(org.apache.muse.ws.addressing.EndpointReference&
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/MockNrpsManager.html" title="class in org.opennaas.extension.idb.reservation"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSResponseCache.html" title="class in org.opennaas.extension.idb.reservation"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/MockNrpsManager.html" title="class in org.opennaas.extensions.idb.reservation"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../eu/ist_phosphorus/harmony/idb/reservation/NRPSResponseCache.html" title="class in org.opennaas.extensions.idb.reservation"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?eu/ist_phosphorus/harmony/idb/reservation/NRPSController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="NRPSController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

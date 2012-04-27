@@ -4,11 +4,11 @@
 	<servlet>
 		<display-name>IST Phosphorus Harmony Notification Servlet</display-name>
 		<servlet-name>NotificationServlet</servlet-name>
-		<servlet-class>org.opennaas.extension.idb.serviceinterface.CommonServlet</servlet-class>
+		<servlet-class>org.opennaas.extensions.idb.serviceinterface.CommonServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<listener>
-		<listener-class>org.opennaas.extension.idb.notification.NotificationInitiator</listener-class>
+		<listener-class>org.opennaas.extensions.idb.notification.NotificationInitiator</listener-class>
     </listener>
 	<servlet-mapping>
 		<servlet-name>NotificationServlet</servlet-name>
