@@ -46,7 +46,7 @@ import org.opennaas.extensions.idb.database.hibernate.Domain;
 import org.opennaas.extensions.idb.database.hibernate.Endpoint;
 import org.opennaas.extensions.idb.database.hibernate.InterDomainLink;
 import org.opennaas.extensions.idb.database.hibernate.TNAPrefix;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 import org.opennaas.extensions.idb.topology.handler.TopologyRequestHandler;
 
 public class ContextListener extends AbstractTopologyRegistrator {

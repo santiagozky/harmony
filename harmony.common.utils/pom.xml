@@ -60,12 +60,10 @@
 			<artifactId>muse-complete</artifactId>
 			<version>2.2.0</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>xerces</groupId>
 			<artifactId>xercesImpl</artifactId>
-			<version>2.9.1</version>
+			<version>2.4.0</version>
 			
 		</dependency>
 	</dependencies>

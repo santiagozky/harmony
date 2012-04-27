@@ -41,35 +41,35 @@ import org.opennaas.extensions.idb.topology.handler.TopologyRequestHandler;
  */
 public class TopologyWS extends AbstractCapability implements ITopologyWS {
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#addDomain(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#addDomain(org.w3c.dom.Element)
      */
     public Element addDomain(final Element addDomain) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(addDomain, "addDomain");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#addEndpoint(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#addEndpoint(org.w3c.dom.Element)
      */
     public Element addEndpoint(final Element addEndpoint) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(addEndpoint, "addEndpoint");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#addLink(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#addLink(org.w3c.dom.Element)
      */
     public Element addLink(final Element addLink) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(addLink, "addLink");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#deleteDomain(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#deleteDomain(org.w3c.dom.Element)
      */
     public Element deleteDomain(final Element deleteDomain) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(deleteDomain, "deleteDomain");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#deleteEndpoint(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#deleteEndpoint(org.w3c.dom.Element)
      */
     public Element deleteEndpoint(final Element deleteEndpoint)
             throws SoapFault {
@@ -77,49 +77,49 @@ public class TopologyWS extends AbstractCapability implements ITopologyWS {
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#deleteLink(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#deleteLink(org.w3c.dom.Element)
      */
     public Element deleteLink(final Element deleteLink) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(deleteLink, "deleteLink");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#editDomain(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#editDomain(org.w3c.dom.Element)
      */
     public Element editDomain(final Element editDomain) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(editDomain, "editDomain");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#editEndpoint(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#editEndpoint(org.w3c.dom.Element)
      */
     public Element editEndpoint(final Element editEndpoint) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(editEndpoint, "editEndpoint");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#editLink(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#editLink(org.w3c.dom.Element)
      */
     public Element editLink(final Element editLink) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(editLink, "editLink");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#getDomains(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#getDomains(org.w3c.dom.Element)
      */
     public Element getDomains(final Element getDomains) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(getDomains, "getDomains");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#getEndpoints(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#getEndpoints(org.w3c.dom.Element)
      */
     public Element getEndpoints(final Element getEndpoints) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(getEndpoints, "getEndpoints");
     }
 
     /* (non-Javadoc)
-     * @see org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#getLinks(org.w3c.dom.Element)
+     * @see org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#getLinks(org.w3c.dom.Element)
      */
     public Element getLinks(final Element getLinks) throws SoapFault {
         return TopologyRequestHandler.getInstance().handle(getLinks, "getLinks");

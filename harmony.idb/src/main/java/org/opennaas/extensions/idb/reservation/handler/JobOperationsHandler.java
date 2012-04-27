@@ -31,7 +31,7 @@ import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelJobTy
 import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CompleteJobResponseType;
 import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CompleteJobType;
 import org.opennaas.extensions.idb.database.hibernate.Reservation;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 
 /**
  * . Handler for Reservation-Job-operations

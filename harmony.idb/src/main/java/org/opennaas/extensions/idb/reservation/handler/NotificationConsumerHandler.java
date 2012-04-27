@@ -54,7 +54,7 @@ import org.opennaas.core.utils.PhLogger;
 import org.opennaas.extensions.idb.Constants;
 import org.opennaas.extensions.idb.database.hibernate.NrpsConnections;
 import org.opennaas.extensions.idb.database.hibernate.VIEW_ReservationMapping;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 import org.opennaas.extensions.idb.notification.producer.NotificationSender;
 
 public class NotificationConsumerHandler implements INotificationConsumer {

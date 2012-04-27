@@ -48,7 +48,7 @@ import org.opennaas.extensions.idb.database.hibernate.Domain;
 import org.opennaas.extensions.idb.database.hibernate.Endpoint;
 import org.opennaas.extensions.idb.database.hibernate.Reservation;
 import org.opennaas.extensions.idb.database.hibernate.Service;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 import org.opennaas.extensions.idb.reservation.handler.MalleableReservationHelpers;
 
 public class FixedAvailabilityRequestsConverter {

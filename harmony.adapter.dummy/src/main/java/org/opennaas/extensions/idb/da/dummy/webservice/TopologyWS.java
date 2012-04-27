@@ -42,7 +42,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#addDomain
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#addDomain
      * (org.w3c.dom.Element)
      */
     public Element addDomain(final Element addDomain) throws SoapFault {
@@ -52,7 +52,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#addEndpoint
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#addEndpoint
      * (org.w3c.dom.Element)
      */
     public Element addEndpoint(final Element addEndpoint) throws SoapFault {
@@ -63,7 +63,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#addLink
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#addLink
      * (org.w3c.dom.Element)
      */
     public Element addLink(final Element addLink) throws SoapFault {
@@ -73,7 +73,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS
      * #deleteDomain
      * (org.w3c.dom.Element)
      */
@@ -85,7 +85,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS
      * #deleteEndpoint
      * (org.w3c.dom.Element)
      */
@@ -98,7 +98,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#deleteLink
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#deleteLink
      * (org.w3c.dom.Element)
      */
     public Element deleteLink(final Element deleteLink) throws SoapFault {
@@ -108,7 +108,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS
      * #editDomain
      * (org.w3c.dom.Element)
      */
@@ -119,7 +119,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS
      * #editEndpoint
      * (org.w3c.dom.Element)
      */
@@ -131,7 +131,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#editLink
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#editLink
      * (org.w3c.dom.Element)
      */
     public Element editLink(final Element editLink) throws SoapFault {
@@ -141,7 +141,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#getDomains
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#getDomains
      * (org.w3c.dom.Element)
      */
     public Element getDomains(final Element getDomains) throws SoapFault {
@@ -151,7 +151,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS
      * #getEndpoints
      * (org.w3c.dom.Element)
      */
@@ -163,7 +163,7 @@ public final class TopologyWS extends AbstractCapability implements
     /*
      * (non-Javadoc)
      * @see
-     * org.opennaas.extensions.idb.da.dummy.webservice.ITopologyWS#getLinks
+     * org.opennaas.extensions.idb.da.dummy.webservice.test.ITopologyWS#getLinks
      * (org.w3c.dom.Element)
      */
     public Element getLinks(final Element getLinks) throws SoapFault {

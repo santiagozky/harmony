@@ -39,7 +39,7 @@ import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.PerformanceLogLevel;
 import org.opennaas.core.utils.PhLogger;
 import org.opennaas.extensions.idb.database.hibernate.Subscription;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 import org.opennaas.extensions.idb.notification.producer.NotificationProducerHandler;
 
 public class NotificationInitiator implements ServletContextListener {

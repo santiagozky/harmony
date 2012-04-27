@@ -55,7 +55,7 @@ import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.PhLogger;
 import org.opennaas.extensions.idb.Constants;
 import org.opennaas.extensions.idb.database.hibernate.Domain;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 import org.opennaas.extensions.idb.reservation.handler.ReservationRequestHandler;
 
 /**

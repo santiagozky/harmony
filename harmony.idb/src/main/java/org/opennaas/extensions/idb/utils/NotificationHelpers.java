@@ -47,7 +47,7 @@ import org.opennaas.core.utils.NotificationTopic;
 import org.opennaas.core.utils.PhLogger;
 import org.opennaas.extensions.idb.Constants;
 import org.opennaas.extensions.idb.database.hibernate.Domain;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 
 public class NotificationHelpers {
     /** Logger. */

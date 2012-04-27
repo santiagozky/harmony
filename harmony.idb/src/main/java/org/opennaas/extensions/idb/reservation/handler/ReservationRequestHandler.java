@@ -56,7 +56,7 @@ import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.Notificatio
 import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
 import org.opennaas.extensions.idb.serviceinterface.databinding.utils.WebserviceUtils;
 import org.opennaas.extensions.idb.serviceinterface.reservation.CommonReservationHandler;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 
 /** Provision Request Handler. */
 public final class ReservationRequestHandler extends CommonReservationHandler {

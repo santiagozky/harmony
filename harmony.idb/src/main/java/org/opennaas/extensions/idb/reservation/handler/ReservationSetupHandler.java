@@ -63,7 +63,7 @@ import org.opennaas.extensions.idb.database.hibernate.MAPNRPSResvID;
 import org.opennaas.extensions.idb.database.hibernate.NrpsConnections;
 import org.opennaas.extensions.idb.database.hibernate.Reservation;
 import org.opennaas.extensions.idb.database.hibernate.Service;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 import org.opennaas.extensions.idb.reservation.AdapterManager;
 import org.opennaas.extensions.idb.reservation.IManager;
 import org.opennaas.extensions.idb.reservation.PathFinderNG;

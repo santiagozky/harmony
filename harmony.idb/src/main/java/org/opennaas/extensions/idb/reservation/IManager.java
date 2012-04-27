@@ -41,7 +41,7 @@ import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusTy
 import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableResponseType;
 import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableType;
 import org.opennaas.extensions.idb.database.hibernate.Domain;
-import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.exception.database.DatabaseException;
 
 public interface IManager {
 

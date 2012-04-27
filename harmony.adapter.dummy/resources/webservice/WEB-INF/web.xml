@@ -8,7 +8,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<listener>
-		<listener-class>org.opennaas.extensions.idb.da.dummy.webservice.ContextListener</listener-class>
+		<listener-class>org.opennaas.extensions.idb.da.dummy.webservice.test.ContextListener</listener-class>
     </listener>
 	<servlet-mapping>
 		<servlet-name>HarmonyDummyAdapterServlet</servlet-name>
