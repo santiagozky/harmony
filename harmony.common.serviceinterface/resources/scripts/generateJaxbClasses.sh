@@ -14,7 +14,7 @@ mkdir $1/org/opennaas/extension/idb/serviceinterface/databinding/jaxb/
 
 chmod +x $3/bin/xjc.sh
 
-$3/bin/xjc.sh -extension -no-header -d $1 -p org.opennaas.extension.idb.serviceinterface.databinding.jaxb $2/Reservation-Types.xsd $2/Topology-Types.xsd $2/Notification-Types.xsd >> $4/generator.log 2>&1
+$3/bin/xjc.sh -extension -no-header -d $1 -p org.opennaas.extensions.idb.serviceinterface.databinding.jaxb $2/Reservation-Types.xsd $2/Topology-Types.xsd $2/Notification-Types.xsd >> $4/generator.log 2>&1
 if [ "$?" != "0" ]; then
   echo "failed. (please press enter to see the log file)";
   read

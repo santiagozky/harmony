@@ -1,4 +1,4 @@
-org.opennaas.extension.gmpls.harmony.adapter.dummy
-org.opennaas.extension.idb.da.dummy.handler
-org.opennaas.extension.idb.da.dummy.webservice
-org.opennaas.extension.gmpls.harmony.test.adapter.dummy.webservice
+org.opennaas.extensions.gmpls.harmony.adapter.dummy
+org.opennaas.extensions.idb.da.dummy.handler
+org.opennaas.extensions.idb.da.dummy.webservice
+org.opennaas.extensions.gmpls.harmony.test.adapter.dummy.webservice

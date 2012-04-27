@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.handler.test;
+package org.opennaas.extensions.idb.handler.test;
 
 import java.net.URISyntaxException;
 import java.util.Hashtable;
@@ -35,24 +35,24 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddDomainType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DeleteDomainType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.FixedReservationConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.IsAvailableType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.DomainNotFoundFaultException;
-import org.opennaas.extension.idb.serviceinterface.topology.SimpleTopologyClient;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddDomainType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DeleteDomainType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.FixedReservationConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.DomainNotFoundFaultException;
+import org.opennaas.extensions.idb.serviceinterface.topology.SimpleTopologyClient;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.Helpers;
-import org.opennaas.extension.idb.Constants;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.reservation.AdapterManager;
-import org.opennaas.extension.idb.reservation.IManager;
-import org.opennaas.extension.idb.utils.TopologyHelpers;
-import org.opennaas.extension.idb.webservice.TopologyWS;
-import org.opennaas.extension.idb.test.webservice.AbstractReservationTest;
+import org.opennaas.extensions.idb.Constants;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.reservation.AdapterManager;
+import org.opennaas.extensions.idb.reservation.IManager;
+import org.opennaas.extensions.idb.utils.TopologyHelpers;
+import org.opennaas.extensions.idb.webservice.TopologyWS;
+import org.opennaas.extensions.idb.test.webservice.AbstractReservationTest;
 
 /**
  * JUnit test case for the response-cahce of the AdapterManager.

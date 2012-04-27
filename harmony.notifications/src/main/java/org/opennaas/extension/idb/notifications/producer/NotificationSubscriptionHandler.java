@@ -24,13 +24,13 @@
  */
 
 
-package org.opennaas.extension.idb.notification.producer;
+package org.opennaas.extensions.idb.notification.producer;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.TopicNotFoundFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.SubscribeResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.SubscribeType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.UnsubscribeType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.TopicNotFoundFaultException;
 
 public class NotificationSubscriptionHandler {
 

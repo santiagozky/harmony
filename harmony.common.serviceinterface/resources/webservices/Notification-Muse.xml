@@ -64,7 +64,7 @@
 				http://opennaas.org/nsp/webservice/notification
 			</desc:capability-uri>
 			<desc:java-capability-class>
-                                org.opennaas.extension.idb.serviceinterface.notification.NotificationWS
+                                org.opennaas.extensions.idb.serviceinterface.notification.NotificationWS
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>

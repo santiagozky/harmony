@@ -28,10 +28,10 @@ package server.nsp;
 
 import client.classes.Reservation;
 import client.classes.Service;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
 import org.opennaas.core.utils.Helpers;
 
 public class NspClassMapper {

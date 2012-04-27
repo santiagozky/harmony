@@ -43,7 +43,7 @@ public final class NspConverter extends Converter {
 
     public NspConverter() {
         super(
-                "org.opennaas.extension.idb.serviceinterface.databinding.jaxb",
+                "org.opennaas.extensions.idb.serviceinterface.databinding.jaxb",
                 "client.classes.nsp");
 
         this.addExemption(Date.class, XMLGregorianCalendar.class);
@@ -52,10 +52,10 @@ public final class NspConverter extends Converter {
         this
                 .addExemption(
                         ReservationType.class,
-                        org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType.class);
+                        org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ReservationType.class);
         this
                 .addExemption(
-                        org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType.class,
+                        org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.StatusType.class,
                         StatusType.class);
     }
 
@@ -76,9 +76,9 @@ public final class NspConverter extends Converter {
      * @param src
      * @return
      */
-    public org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType convertExemption(
+    public org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ReservationType convertExemption(
             final ReservationType src) {
-        return org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType
+        return org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ReservationType
                 .fromValue(src.value());
     }
 
@@ -89,7 +89,7 @@ public final class NspConverter extends Converter {
      * @return
      */
     public StatusType convertExemption(
-            final org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType src) {
+            final org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.StatusType src) {
         return new StatusType(src.value());
     }
 }

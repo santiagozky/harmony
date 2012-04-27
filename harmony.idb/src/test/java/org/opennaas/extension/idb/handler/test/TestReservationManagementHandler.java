@@ -27,7 +27,7 @@
 /**
  *
  */
-package org.opennaas.extension.idb.handler.test;
+package org.opennaas.extensions.idb.handler.test;
 
 import java.net.URISyntaxException;
 import java.util.Date;
@@ -39,24 +39,24 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
-import org.opennaas.extension.idb.serviceinterface.databinding.utils.WebserviceUtils;
-import org.opennaas.extension.idb.database.hibernate.Connections;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.database.hibernate.Endpoint;
-import org.opennaas.extension.idb.database.hibernate.Reservation;
-import org.opennaas.extension.idb.database.hibernate.Service;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
-import org.opennaas.extension.idb.reservation.handler.ReservationRequestHandler;
-import org.opennaas.extension.idb.utils.ReservationHelpers;
-import org.opennaas.extension.idb.utils.TopologyHelpers;
-import org.opennaas.extension.idb.test.webservice.AbstractReservationTest;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.utils.WebserviceUtils;
+import org.opennaas.extensions.idb.database.hibernate.Connections;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.database.hibernate.Endpoint;
+import org.opennaas.extensions.idb.database.hibernate.Reservation;
+import org.opennaas.extensions.idb.database.hibernate.Service;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.reservation.handler.ReservationRequestHandler;
+import org.opennaas.extensions.idb.utils.ReservationHelpers;
+import org.opennaas.extensions.idb.utils.TopologyHelpers;
+import org.opennaas.extensions.idb.test.webservice.AbstractReservationTest;
 
 /**
  * @author zimmerm2
@@ -154,7 +154,7 @@ public class TestReservationManagementHandler extends AbstractReservationTest {
 
     /**
      * Test method for
-     * {@link org.opennaas.extension.idb.reservation.handler.ReservationManagementHandler#getReservation(org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationType)}.
+     * {@link org.opennaas.extensions.idb.reservation.handler.ReservationManagementHandler#getReservation(org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationType)}.
      * 
      * @throws URISyntaxException
      * @throws DatabaseException

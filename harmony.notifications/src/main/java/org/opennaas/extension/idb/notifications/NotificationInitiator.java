@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.notification;
+package org.opennaas.extensions.idb.notification;
 
 import java.util.HashMap;
 import java.util.List;
@@ -38,9 +38,9 @@ import org.apache.log4j.Logger;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.PerformanceLogLevel;
 import org.opennaas.core.utils.PhLogger;
-import org.opennaas.extension.idb.database.hibernate.Subscription;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
-import org.opennaas.extension.idb.notification.producer.NotificationProducerHandler;
+import org.opennaas.extensions.idb.database.hibernate.Subscription;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.notification.producer.NotificationProducerHandler;
 
 public class NotificationInitiator implements ServletContextListener {
 

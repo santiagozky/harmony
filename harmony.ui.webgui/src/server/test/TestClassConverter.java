@@ -30,10 +30,10 @@
 package server.test;
 
 import server.common.NspConverter;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainInformationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainStatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetDomainsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainInformationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainStatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetDomainsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.StatusType;
 
 /**
  * @author gassen

@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.test.webservice;
+package org.opennaas.extensions.idb.test.webservice;
 
 import org.apache.muse.ws.addressing.soap.SoapFault;
 import org.junit.AfterClass;
@@ -34,30 +34,30 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.w3c.dom.Element;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddDomainType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddTopicType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionStatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainInformationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetTopicsType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.PublishType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.RemoveTopicType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceStatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.SubscribeType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.UnsubscribeType;
-import org.opennaas.extension.idb.serviceinterface.databinding.utils.WebserviceUtils;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddDomainType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddTopicResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddTopicType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ConnectionStatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainInformationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetTopicsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetTopicsType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.PublishResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.PublishType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.RemoveTopicResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.RemoveTopicType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ServiceStatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.StatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.SubscribeResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.SubscribeType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.UnsubscribeResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.UnsubscribeType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.utils.WebserviceUtils;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.Helpers;
 import org.opennaas.core.utils.NotificationTopic;
-import org.opennaas.extension.idb.database.hibernate.Subscription;
+import org.opennaas.extensions.idb.database.hibernate.Subscription;
 
 /**
  * JUnit test cases for the IDB Notification webservice.

@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.test.webservice;
+package org.opennaas.extensions.idb.test.webservice;
 
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
@@ -37,32 +37,32 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ActivateResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.BindResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.BindType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.FixedReservationConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetReservationsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
-import org.opennaas.extension.idb.serviceinterface.topology.SimpleTopologyClient;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ActivateResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.BindResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.BindType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.FixedReservationConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsComplexType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetReservationsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.StatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.InvalidReservationIDFaultException;
+import org.opennaas.extensions.idb.serviceinterface.topology.SimpleTopologyClient;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.Helpers;
 import org.opennaas.core.utils.PhLogger;
-import org.opennaas.extension.idb.Constants;
-import org.opennaas.extension.idb.database.hibernate.Reservation;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
-import org.opennaas.extension.idb.reservation.handler.ReservationRequestHandler;
-import org.opennaas.extension.idb.webservice.TopologyWS;
-import org.opennaas.extension.idb.test.AbstractTest;
+import org.opennaas.extensions.idb.Constants;
+import org.opennaas.extensions.idb.database.hibernate.Reservation;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.reservation.handler.ReservationRequestHandler;
+import org.opennaas.extensions.idb.webservice.TopologyWS;
+import org.opennaas.extensions.idb.test.AbstractTest;
 
 /**
  * JUnit test cases for the IDB Reservation webservice.

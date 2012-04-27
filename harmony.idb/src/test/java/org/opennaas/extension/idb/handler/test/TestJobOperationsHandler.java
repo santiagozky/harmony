@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.handler.test;
+package org.opennaas.extensions.idb.handler.test;
 
 import java.util.List;
 
@@ -36,22 +36,22 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.w3c.dom.Element;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelJob;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelJobResponse;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelJobType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CompleteJob;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CompleteJobResponse;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CompleteJobType;
-import org.opennaas.extension.idb.serviceinterface.databinding.utils.JaxbSerializer;
-import org.opennaas.extension.idb.database.hibernate.Connections;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.database.hibernate.Endpoint;
-import org.opennaas.extension.idb.database.hibernate.Reservation;
-import org.opennaas.extension.idb.database.hibernate.Service;
-import org.opennaas.extension.idb.utils.ReservationHelpers;
-import org.opennaas.extension.idb.utils.TopologyHelpers;
-import org.opennaas.extension.idb.test.AbstractTest;
-import org.opennaas.extension.idb.test.webservice.AbstractReservationTest;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelJob;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelJobResponse;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelJobType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CompleteJob;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CompleteJobResponse;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CompleteJobType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.utils.JaxbSerializer;
+import org.opennaas.extensions.idb.database.hibernate.Connections;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.database.hibernate.Endpoint;
+import org.opennaas.extensions.idb.database.hibernate.Reservation;
+import org.opennaas.extensions.idb.database.hibernate.Service;
+import org.opennaas.extensions.idb.utils.ReservationHelpers;
+import org.opennaas.extensions.idb.utils.TopologyHelpers;
+import org.opennaas.extensions.idb.test.AbstractTest;
+import org.opennaas.extensions.idb.test.webservice.AbstractReservationTest;
 
 /**
  * JUnit test cases for the ReservationSetupHandler.

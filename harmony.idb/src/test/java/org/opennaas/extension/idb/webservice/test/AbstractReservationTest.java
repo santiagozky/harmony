@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.test.webservice;
+package org.opennaas.extensions.idb.test.webservice;
 
 import java.net.URISyntaxException;
 import java.util.HashSet;
@@ -37,29 +37,29 @@ import junit.framework.Assert;
 import org.apache.muse.ws.addressing.soap.SoapFault;
 import org.junit.After;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionStatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainStatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.FixedReservationConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.MalleableReservationConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusResponseType.ServiceStatus;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetStatusType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.IsAvailableResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.IsAvailableType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
-import org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ConnectionStatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainStatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.FixedReservationConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.MalleableReservationConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusResponseType.ServiceStatus;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetStatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.IsAvailableType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.StatusType;
+import org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient;
 import org.opennaas.core.utils.Config;
-import org.opennaas.extension.idb.Constants;
-import org.opennaas.extension.idb.webservice.ReservationWS;
-import org.opennaas.extension.idb.test.AbstractTest;
+import org.opennaas.extensions.idb.Constants;
+import org.opennaas.extensions.idb.webservice.ReservationWS;
+import org.opennaas.extensions.idb.test.AbstractTest;
 
 /**
  * Abstract class for all webservice based tests.

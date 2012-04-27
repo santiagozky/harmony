@@ -7,17 +7,17 @@
               xsi:schemaLocation=" http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
  <jxb:bindings wsdlLocation="Reservation-WS.wsdl" jaxws:xmlns="http://java.sun.com/xml/ns/jaxws">
     <jxb:schemaBindings>
-      <jxb:package name="org.opennaas.extension.idb.serviceinterface.reservation"/>
+      <jxb:package name="org.opennaas.extensions.idb.serviceinterface.reservation"/>
     </jxb:schemaBindings>
   </jxb:bindings>
    <jxb:bindings wsdlLocation="Notification-WS.wsdl" jaxws:xmlns="http://java.sun.com/xml/ns/jaxws">
     <jxb:schemaBindings>
-      <jxb:package name="org.opennaas.extension.idb.serviceinterface.notification"/>
+      <jxb:package name="org.opennaas.extensions.idb.serviceinterface.notification"/>
     </jxb:schemaBindings>
   </jxb:bindings>
     <jxb:bindings wsdlLocation="Topology-WS.wsdl" jaxws:xmlns="http://java.sun.com/xml/ns/jaxws">
     <jxb:schemaBindings>
-      <jxb:package name="org.opennaas.extension.idb.serviceinterface.topology"/>
+      <jxb:package name="org.opennaas.extensions.idb.serviceinterface.topology"/>
     </jxb:schemaBindings>
   </jxb:bindings>
   </jxb:bindings>

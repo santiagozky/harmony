@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.handler.test;
+package org.opennaas.extensions.idb.handler.test;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -33,7 +33,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.reservation.handler.ReservationRequestHandler;
+import org.opennaas.extensions.idb.reservation.handler.ReservationRequestHandler;
 
 /**
  * JUnit test cases for the request handler.

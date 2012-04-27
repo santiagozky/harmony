@@ -33,7 +33,7 @@
             <desc:capability-uri>
 				http://ist_phosphorus.eu/nsp/webservice/reservation
 			</desc:capability-uri>
-            <desc:java-capability-class>org.opennaas.extension.idb.da.dummy.webservice.ReservationWS</desc:java-capability-class>
+            <desc:java-capability-class>org.opennaas.extensions.idb.da.dummy.webservice.ReservationWS</desc:java-capability-class>
         </desc:capability>
     </resource-type>
     <resource-type use-router-persistence="true">
@@ -52,7 +52,7 @@
             <desc:capability-uri>
                                 http://ist_phosphorus.eu/nsp/webservice/topology
                         </desc:capability-uri>
-            <desc:java-capability-class>org.opennaas.extension.idb.da.dummy.webservice.TopologyWS</desc:java-capability-class>
+            <desc:java-capability-class>org.opennaas.extensions.idb.da.dummy.webservice.TopologyWS</desc:java-capability-class>
         </desc:capability>
     </resource-type>
     <resource-type use-router-persistence="true">
@@ -71,7 +71,7 @@
             <desc:capability-uri>
                                 http://ist_phosphorus.eu/nsp/webservice/notification
                         </desc:capability-uri>
-            <desc:java-capability-class>org.opennaas.extension.idb.da.dummy.webservice.NotificationWS</desc:java-capability-class>
+            <desc:java-capability-class>org.opennaas.extensions.idb.da.dummy.webservice.NotificationWS</desc:java-capability-class>
         </desc:capability>
     </resource-type>
 </muse>

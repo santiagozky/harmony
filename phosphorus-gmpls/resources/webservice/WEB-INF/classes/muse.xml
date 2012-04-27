@@ -38,7 +38,7 @@
 				http://ist_phosphorus.eu/gmpls/webservice
 			</desc:capability-uri>
 			<desc:java-capability-class>
-				org.opennaas.extension.gmpls.webservice.MyCapability
+				org.opennaas.extensions.gmpls.webservice.MyCapability
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>
@@ -58,7 +58,7 @@
             <desc:capability-uri>
                                 http://ist_phosphorus.eu/nsp/webservice/notification
                         </desc:capability-uri>
-            <desc:java-capability-class>org.opennaas.extension.gmpls.webservice.NotificationWS</desc:java-capability-class>
+            <desc:java-capability-class>org.opennaas.extensions.gmpls.webservice.NotificationWS</desc:java-capability-class>
         </desc:capability>
     </resource-type>
 </muse>

@@ -1,5 +1,5 @@
-org.opennaas.extension.gmpls.harmony.adapter.argon
-org.opennaas.extension.idb.da.argon.handler
-org.opennaas.extension.idb.da.argon.implementation
-org.opennaas.extension.idb.da.argon.webservice
-org.opennaas.extension.gmpls.harmony.test.adapter.argon.webservice
+org.opennaas.extensions.gmpls.harmony.adapter.argon
+org.opennaas.extensions.idb.da.argon.handler
+org.opennaas.extensions.idb.da.argon.implementation
+org.opennaas.extensions.idb.da.argon.webservice
+org.opennaas.extensions.gmpls.harmony.test.adapter.argon.webservice

@@ -27,7 +27,7 @@
 /**
  *
  */
-package org.opennaas.extension.idb.test.webservice;
+package org.opennaas.extensions.idb.test.webservice;
 
 import org.apache.muse.ws.addressing.soap.SoapFault;
 import org.junit.AfterClass;
@@ -35,28 +35,28 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.AddOrEditDomainType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainInformationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetDomainsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.InterdomainLinkType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.MalleableReservationConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.PathNotFoundFaultException;
-import org.opennaas.extension.idb.serviceinterface.topology.SimpleTopologyClient;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.AddOrEditDomainType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ConnectionConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainInformationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetDomainsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.InterdomainLinkType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.MalleableReservationConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ServiceConstraintType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.PathNotFoundFaultException;
+import org.opennaas.extensions.idb.serviceinterface.topology.SimpleTopologyClient;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.Helpers;
-import org.opennaas.extension.idb.Constants;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.database.hibernate.Endpoint;
-import org.opennaas.extension.idb.database.hibernate.Reservation;
-import org.opennaas.extension.idb.utils.TopologyHelpers;
-import org.opennaas.extension.idb.webservice.TopologyWS;
+import org.opennaas.extensions.idb.Constants;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.database.hibernate.Endpoint;
+import org.opennaas.extensions.idb.database.hibernate.Reservation;
+import org.opennaas.extensions.idb.utils.TopologyHelpers;
+import org.opennaas.extensions.idb.webservice.TopologyWS;
 
 /**
  * Test malleable reservations

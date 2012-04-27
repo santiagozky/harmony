@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.test.webservice;
+package org.opennaas.extensions.idb.test.webservice;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 
@@ -34,15 +34,15 @@ import org.apache.log4j.Logger;
 import org.apache.muse.ws.addressing.soap.SoapFault;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient;
-import org.opennaas.extension.idb.serviceinterface.topology.SimpleTopologyClient;
+import org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient;
+import org.opennaas.extensions.idb.serviceinterface.topology.SimpleTopologyClient;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.PhLogger;
-import org.opennaas.extension.idb.Constants;
-import org.opennaas.extension.idb.database.hibernate.Reservation;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
-import org.opennaas.extension.idb.webservice.ReservationWS;
-import org.opennaas.extension.idb.webservice.TopologyWS;
+import org.opennaas.extensions.idb.Constants;
+import org.opennaas.extensions.idb.database.hibernate.Reservation;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.webservice.ReservationWS;
+import org.opennaas.extensions.idb.webservice.TopologyWS;
 
 /**
  * 

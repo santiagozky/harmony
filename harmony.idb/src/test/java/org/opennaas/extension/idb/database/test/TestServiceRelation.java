@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.database.test;
+package org.opennaas.extensions.idb.database.test;
 
 import java.net.URISyntaxException;
 
@@ -33,14 +33,14 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.database.hibernate.Connections;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.database.hibernate.Endpoint;
-import org.opennaas.extension.idb.database.hibernate.Reservation;
-import org.opennaas.extension.idb.database.hibernate.Service;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
-import org.opennaas.extension.idb.utils.ReservationHelpers;
-import org.opennaas.extension.idb.utils.TopologyHelpers;
+import org.opennaas.extensions.idb.database.hibernate.Connections;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.database.hibernate.Endpoint;
+import org.opennaas.extensions.idb.database.hibernate.Reservation;
+import org.opennaas.extensions.idb.database.hibernate.Service;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.utils.ReservationHelpers;
+import org.opennaas.extensions.idb.utils.TopologyHelpers;
 
 public class TestServiceRelation extends DatabaseTest {
 

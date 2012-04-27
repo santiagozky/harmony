@@ -24,17 +24,17 @@
  */
 
 
-package org.opennaas.extension.idb.database.test;
+package org.opennaas.extensions.idb.database.test;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 
-import org.opennaas.extension.idb.database.hibernate.Connections;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.database.hibernate.Service;
-import org.opennaas.extension.idb.database.hibernate.TNAPrefix;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.database.hibernate.Connections;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.database.hibernate.Service;
+import org.opennaas.extensions.idb.database.hibernate.TNAPrefix;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
 
 public class TestTNAPrefixRelation extends DatabaseTest {
 

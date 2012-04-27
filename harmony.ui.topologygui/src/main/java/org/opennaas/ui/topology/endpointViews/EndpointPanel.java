@@ -48,10 +48,10 @@ import javax.swing.JTextField;
 
 import org.apache.log4j.Logger;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainInformationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.ObjectFactory;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainInformationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.ObjectFactory;
 import org.opennaas.ui.topology.ws.WSProxy;
 
 public class EndpointPanel extends JPanel {

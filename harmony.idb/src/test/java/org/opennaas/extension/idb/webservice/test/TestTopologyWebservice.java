@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.test.webservice;
+package org.opennaas.extensions.idb.test.webservice;
 
 import java.util.Date;
 import java.util.List;
@@ -36,25 +36,25 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainInformationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.DomainTechnologyType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetDomainsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetEndpointsResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.GetLinksResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.InterdomainLinkType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.Link;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.DomainAlreadyExistsFaultException;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.DomainNotFoundFaultException;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.EndpointAlreadyExistsFaultException;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.EndpointNotFoundFaultException;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.exceptions.InvalidRequestFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainInformationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.DomainTechnologyType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetDomainsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetEndpointsResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.GetLinksResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.InterdomainLinkType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.Link;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.DomainAlreadyExistsFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.DomainNotFoundFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.EndpointAlreadyExistsFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.EndpointNotFoundFaultException;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.exceptions.InvalidRequestFaultException;
 import org.opennaas.core.utils.Helpers;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.topology.handler.TopologyRequestHandler;
-import org.opennaas.extension.idb.utils.TopologyHelpers;
-import org.opennaas.extension.idb.test.AbstractTest;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.topology.handler.TopologyRequestHandler;
+import org.opennaas.extensions.idb.utils.TopologyHelpers;
+import org.opennaas.extensions.idb.test.AbstractTest;
 
 /**
  * JUnit test cases for the network service plane web service.

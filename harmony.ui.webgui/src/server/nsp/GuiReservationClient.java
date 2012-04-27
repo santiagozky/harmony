@@ -37,7 +37,7 @@ import org.apache.muse.ws.addressing.EndpointReference;
 
 import server.common.MethodReflectionCache;
 import server.common.NspConverter;
-import org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient;
+import org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient;
 
 /**
  * @author gassen

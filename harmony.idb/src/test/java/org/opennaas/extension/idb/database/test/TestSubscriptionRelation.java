@@ -23,12 +23,12 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
 
-package org.opennaas.extension.idb.database.test;
+package org.opennaas.extensions.idb.database.test;
 
 import org.junit.Assert;
 
-import org.opennaas.extension.idb.database.hibernate.Subscription;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.database.hibernate.Subscription;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
 
 public class TestSubscriptionRelation extends DatabaseTest {
 

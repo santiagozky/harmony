@@ -23,7 +23,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
 
-package org.opennaas.extension.idb.database.test;
+package org.opennaas.extensions.idb.database.test;
 
 import java.io.IOException;
 
@@ -35,18 +35,18 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.EndpointInterfaceType;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.Helpers;
-import org.opennaas.extension.idb.Constants;
-import org.opennaas.extension.idb.database.hibernate.Connections;
-import org.opennaas.extension.idb.database.hibernate.Domain;
-import org.opennaas.extension.idb.database.hibernate.Endpoint;
-import org.opennaas.extension.idb.database.hibernate.Reservation;
-import org.opennaas.extension.idb.database.hibernate.Service;
-import org.opennaas.extension.idb.exceptions.database.DatabaseException;
-import org.opennaas.extension.idb.utils.TopologyHelpers;
-import org.opennaas.extension.idb.test.AbstractTest;
+import org.opennaas.extensions.idb.Constants;
+import org.opennaas.extensions.idb.database.hibernate.Connections;
+import org.opennaas.extensions.idb.database.hibernate.Domain;
+import org.opennaas.extensions.idb.database.hibernate.Endpoint;
+import org.opennaas.extensions.idb.database.hibernate.Reservation;
+import org.opennaas.extensions.idb.database.hibernate.Service;
+import org.opennaas.extensions.idb.exceptions.database.DatabaseException;
+import org.opennaas.extensions.idb.utils.TopologyHelpers;
+import org.opennaas.extensions.idb.test.AbstractTest;
 
 /**
  * abstract test-class for DB-Tests. every test for a relation should contain
