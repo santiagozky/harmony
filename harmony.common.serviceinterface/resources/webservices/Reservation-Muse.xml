@@ -64,7 +64,7 @@
 				http://opennaas.org/nsp/webservice/reservation
 			</desc:capability-uri>
 			<desc:java-capability-class>
-                                org.opennaas.extension.idb.serviceinterface.reservation.ReservationWS
+                                org.opennaas.extensions.idb.serviceinterface.reservation.ReservationWS
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>

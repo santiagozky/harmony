@@ -43,7 +43,7 @@
 				<artifactId>openjpa-maven-plugin</artifactId>
 				<version>2.2.0</version>
 				<configuration>
-					<includes>**/database/hibernate/*.class</includes>
+					<includes>**/persistence/hibernate/*.class</includes>
 					<excludes>**/hibernate/XML*.class</excludes>
 					<addDefaultConstructor>true</addDefaultConstructor>
 					<enforcePropertyRestrictions>true</enforcePropertyRestrictions>
@@ -64,6 +64,13 @@
 						<!-- set the version to be the same as the level in your runtime -->
 						<version>2.2.0</version>
 					</dependency>
+					
+			<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.4.0</version>
+			</dependency>
+			
 				</dependencies>
 			</plugin>
 		</plugins>
@@ -78,7 +85,6 @@
 			<groupId>com.mysema.querydsl</groupId>
 			<artifactId>querydsl-apt</artifactId>
 			<version>2.3.3</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -114,23 +120,24 @@
 			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>common-serviceinterface </artifactId>
 			<version>1</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>xercesImpl</artifactId>
-					<groupId>org.apache.xerces</groupId>
-				</exclusion>
-			</exclusions>
+			
 		</dependency>
 		<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>
 			<artifactId>database</artifactId>
 			<version>1</version>
 
+
 		</dependency>
 		<dependency>
    <groupId>org.apache.openjpa</groupId>
    <artifactId>openjpa</artifactId>
    <version>2.2.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.openjpa</groupId>
+    <artifactId>openjpa-lib</artifactId>
+    <version>2.2.0</version>
 </dependency>
 		
 	</dependencies>

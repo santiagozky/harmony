@@ -14,7 +14,7 @@ my $pathRoot = "org/";
 
 my @commonFiles = ("BaseFaultType", "EndpointReferenceType", "AttributedURIType", "ReferenceParametersType", "MetadataType");
 
-my $extensionPackage = "org.opennaas.extension.idb.serviceinterface.databinding.utils";
+my $extensionPackage = "org.opennaas.extensions.idb.serviceinterface.databinding.utils";
 my $extensionClass = "AbstractFaultException";
 
 my @commonDependencies = ("ObjectFactory.java", "ProblemActionType.java");
@@ -86,7 +86,7 @@ sub createHeader {
     $res = "package ".$package.";\n\n";
     
     $res .= "import ".$srcPackage.".".$fileName.";\n";
-    $res .= "import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.BaseFaultType;\n";
+    $res .= "import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.BaseFaultType;\n";
     
     if($package ne $extensionPackage) {
         $res .= "import ".$extensionPackage.".".$extensionClass.";\n";

@@ -56,12 +56,12 @@ import client.interfaces.ArgonManagementService;
 import de.unibonn.viola.argon.requestProcessor.exceptions.TopologyManagerException;
 import de.unibonn.viola.argon.requestProcessor.requestHandler.operator.externalInterface.OperatorInterface;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ReservationRequestType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservation;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CancelReservationType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.CreateReservationType;
-import org.opennaas.extension.idb.serviceinterface.reservation.SimpleReservationClient;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservation;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CancelReservationType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationResponseType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.CreateReservationType;
+import org.opennaas.extensions.idb.serviceinterface.reservation.SimpleReservationClient;
 import org.opennaas.core.utils.Config;
 
 /**

@@ -24,7 +24,7 @@
  */
 
 
-package org.opennaas.extension.idb.notification.producer;
+package org.opennaas.extensions.idb.notification.producer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +34,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import org.apache.log4j.Logger;
 
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.NotificationMessageType;
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.PerformanceLogLevel;
 import org.opennaas.core.utils.PhLogger;

@@ -64,7 +64,7 @@
 				http://opennaas.org/nsp/webservice/topology
 			</desc:capability-uri>
 			<desc:java-capability-class>
-				org.opennaas.extension.idb.serviceinterface.topology.TopologyWS
+				org.opennaas.extensions.idb.serviceinterface.topology.TopologyWS
 			</desc:java-capability-class>
 		</desc:capability>
 	</resource-type>

@@ -24,13 +24,13 @@
  */
 
 
-package org.opennaas.extension.idb.test.webservice;
+package org.opennaas.extensions.idb.test.webservice;
 
 import java.net.URISyntaxException;
 
-import org.opennaas.extension.idb.serviceinterface.notification.SimpleNotificationClient;
+import org.opennaas.extensions.idb.serviceinterface.notification.SimpleNotificationClient;
 import org.opennaas.core.utils.Config;
-import org.opennaas.extension.idb.webservice.NotificationWS;
+import org.opennaas.extensions.idb.webservice.NotificationWS;
 
 /**
  * Abstract class for all webservice based tests.

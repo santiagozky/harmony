@@ -39,7 +39,7 @@ import de.unibonn.viola.argon.requestProcessor.utils.StatusManager;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ConnectionType;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ReservationRequestType;
 import de.unibonn.viola.argon.utils.jaxb.external.classes.IRes.ServiceType;
-import org.opennaas.extension.idb.serviceinterface.databinding.jaxb.StatusType;
+import org.opennaas.extensions.idb.serviceinterface.databinding.jaxb.StatusType;
 import org.opennaas.core.utils.Helpers;
 
 /**
