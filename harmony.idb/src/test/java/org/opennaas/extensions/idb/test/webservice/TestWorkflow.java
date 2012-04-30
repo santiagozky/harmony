@@ -38,7 +38,6 @@ import org.opennaas.extensions.idb.serviceinterface.topology.SimpleTopologyClien
 import org.opennaas.core.utils.Config;
 import org.opennaas.core.utils.PhLogger;
 import org.opennaas.extensions.idb.Constants;
-import org.opennaas.extensions.idb.database.hibernate.Reservation;
 import org.opennaas.extensions.idb.exception.database.DatabaseException;
 import org.opennaas.extensions.idb.webservice.ReservationWS;
 import org.opennaas.extensions.idb.webservice.TopologyWS;

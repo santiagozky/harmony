@@ -13,8 +13,61 @@
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
 
+<!-- build plugins for openjpa -->
+    		<plugins>
 
-    
+			<plugin>
+				<groupId>com.mysema.maven</groupId>
+				<artifactId>maven-apt-plugin</artifactId>
+				<version>0.3.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>process</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/generated-sources/java</outputDirectory>
+							<processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.openjpa</groupId>
+				<artifactId>openjpa-maven-plugin</artifactId>
+				<version>2.2.0</version>
+				<configuration>
+					<includes>**/persistence/hibernate/*.class</includes>
+					<excludes>**/hibernate/XML*.class</excludes>
+					<addDefaultConstructor>true</addDefaultConstructor>
+					<enforcePropertyRestrictions>true</enforcePropertyRestrictions>
+				</configuration>
+				<executions>
+					<execution>
+						<id>enhancer</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>enhance</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.openjpa</groupId>
+						<artifactId>openjpa</artifactId>
+						<!-- set the version to be the same as the level in your runtime -->
+						<version>2.2.0</version>
+					</dependency>
+					
+			<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.4.0</version>
+			</dependency>
+			
+				</dependencies>
+			</plugin>
+		</plugins>
     
 	</build>
 	<dependencies>
@@ -175,11 +228,7 @@
 			<artifactId>database </artifactId>
 			<version>1</version>
 		</dependency>
-	<dependency>
-			<groupId>eu.ist_phosphorus.harmony</groupId>
-			<artifactId>idb-entities</artifactId>
-			<version>1</version>
-		</dependency>
+
 
 
 	<dependency>
@@ -224,7 +273,16 @@
   <artifactId>slf4j-log4j12</artifactId>
   <version>1.6.1</version>
 </dependency>   
-
+<dependency>
+   <groupId>org.apache.openjpa</groupId>
+   <artifactId>openjpa</artifactId>
+   <version>2.2.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.openjpa</groupId>
+    <artifactId>openjpa-lib</artifactId>
+    <version>2.2.0</version>
+</dependency>
 	</dependencies>
 </project>
 
