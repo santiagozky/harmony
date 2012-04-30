@@ -181,11 +181,6 @@
 			<version>1</version>
 		</dependency>
 
-		<dependency>
-			<groupId>eu.ist_phosphorus.harmony</groupId>
-			<artifactId>notifications</artifactId>
-			<version>1</version>
-		</dependency>
 
 	<dependency>
 			<groupId>eu.ist_phosphorus.harmony</groupId>
