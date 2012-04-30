@@ -192,7 +192,7 @@ public class PhLogger extends Logger {
 			configured = true;
 			loadProperty();
 		}
-		Logger logger = LogManager.getLogger("org.opennaas.extension.idb");
+		Logger logger = LogManager.getLogger("org.opennaas.extensions.idb");
 
 		/* If for print logs in configuration files */
 		// if (!infoGPL) {

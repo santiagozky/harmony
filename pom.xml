@@ -15,7 +15,6 @@
 		<module>harmony.common.synthesizer</module>
 		<module>harmony.common.serviceinterface</module>
 		<module>harmony.idb</module>
-		<module>harmony.notifications</module>
 		<module>harmony.ui.reservationcli</module>
 		<module>harmony.ui.topologygui</module>
 		<module>harmony.ui.webgui</module>

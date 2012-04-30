@@ -1,6 +1,0 @@
-org.opennaas.extensions.idb.database.hibernate
-org.opennaas.extensions.idb.notification
-org.opennaas.extensions.idb.notification.handler
-org.opennaas.extensions.idb.notification.producer
-org.opennaas.extensions.idb.webservice
-org.opennaas.extensions.idb.test.webservice
