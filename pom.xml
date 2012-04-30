@@ -11,7 +11,6 @@
   <modules>
   		<module>harmony.common.utils</module>
   		<module>harmony.database</module>
-		<module>idb-entities</module>
 		<module>harmony.common.synthesizer</module>
 		<module>harmony.common.serviceinterface</module>
 		<module>harmony.idb</module>
