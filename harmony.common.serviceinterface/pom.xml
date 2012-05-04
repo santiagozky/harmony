@@ -295,7 +295,7 @@
 								<DIR_SERVLET_NOTIFICATION>${temp.dir}/servlets/notification</DIR_SERVLET_NOTIFICATION>
 								<CLASSPATH>${settings.localRepository}/eu/ist_phosphorus/harmony/common-synthesizer/1/common-synthesizer-1.jar</CLASSPATH>
 								<SERVER_FLAGS>-j2ee mini</SERVER_FLAGS>
-								<CLIENT_FLAGS>-synthesizer rg.opennaas.extensions.idb.serviceinterface.synthesizer.ProxySynthesizer -projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
+								<CLIENT_FLAGS>-synthesizer org.opennaas.extensions.idb.serviceinterface.synthesizer.ProxySynthesizer -projectizer org.apache.muse.tools.generator.projectizer.ProxyProjectizer</CLIENT_FLAGS>
 								<JAVA_HOME>${env.JAVA_HOME}</JAVA_HOME>
 								<wsdl>Notification-WS.wsdl</wsdl>
 								<ws>${temp.dir}/servlets/notification</ws>
@@ -402,12 +402,12 @@
 			<version>1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.muse</groupId>
+			<groupId>muse</groupId>
 			<artifactId>muse-platform-mini</artifactId>
 			<version>2.2.0</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.muse</groupId>
+			<groupId>muse</groupId>
 			<artifactId>muse-tools</artifactId>
 			<version>2.2.0</version>
 		</dependency>

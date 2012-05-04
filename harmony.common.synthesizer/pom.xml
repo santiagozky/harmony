@@ -38,12 +38,12 @@
 			<version>2.1.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.muse</groupId>
+			<groupId>muse</groupId>
 			<artifactId>muse-tools</artifactId>
 			<version>2.2.0</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.muse</groupId>
+			<groupId>muse.osgi-bundles</groupId>
 			<artifactId>muse-complete</artifactId>
 			<version>2.2.0</version>
 		</dependency>
